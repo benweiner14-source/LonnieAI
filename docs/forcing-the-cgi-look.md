@@ -21,11 +21,19 @@ Fix the **workflow first** (biggest levers), then the **prompt**.
    Drop the reference adherence (aim ~0.4–0.6, not max) so the **style prompt dominates** and
    the model re-renders instead of retouching. High strength = photo stays a photo.
 
-3. **Attach a game screenshot as an additional STYLE reference.**
-   GPT Image 2 accepts multiple `--image-references`. Give it **two**: the creator (identity)
-   *and* a real NBA 2K / GTA VI / Cyberpunk screenshot (the CGI target). Now the model has an
-   actual "this is what CGI looks like" example to match. Use the frames in each skill's
-   `reference/` folder or `reference-material/`.
+3. **Attach a game screenshot as a style reference — with a caveat for GPT Image 2.**
+   GPT Image 2 is an *edit* model: it treats every attached image as **content**, not as a
+   separate "style" slot. A screenshot showing a *different person* (an NBA player) reads as a
+   competing subject and **gets dropped** — this is why attaching a full 2K frame often does
+   nothing. Workarounds:
+   - Use a **faceless texture crop** of the 2K frame (CGI skin/arm, jersey mesh, court) — no
+     recognizable face — so it reads as "this surface texture," not another person. See
+     `reference-material/2k-screenshots/textures/`.
+   - Or use **one** identity ref + the style ref (2 identity refs will outvote the style).
+   - Or skip the style image entirely and rely on **Soul ID + text-to-image + prompt** (#1),
+     which needs no style image. On GPT Image 2 this is the reliable path.
+   Models with a real style-reference slot (some Flux/style-adapter models) honor a full
+   screenshot better — consider them if you want image-driven style transfer.
 
 4. **If GPT Image 2 still refuses to stylize, switch models.**
    Some Higgsfield models stylize harder than GPT Image 2 (which is edit-biased). Try a
