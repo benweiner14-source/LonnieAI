@@ -127,11 +127,9 @@ Posed with a cyberpunk sports car or neon-underlit motorcycle on a wet Night Cit
 4. Add: `Based on the composition, likeness, and framing of the provided reference photo.`
 5. Keep it **SFW** — techwear/latex styling is fine as fashion; no nudity or explicit posing.
 
-### The two looks
-- **full-render:** everything is the Cyberpunk 2077 engine (subject + Night City environment).
-- **cgi-in-scene:** stylize the *subject* as a Cyberpunk character composited into a photoreal
-  city-at-night backdrop. Add: `photorealistic real-world night-city background, subject
-  rendered as a stylized Cyberpunk 2077 game character.`
+### Look: full CGI render
+Everything is the Cyberpunk 2077 engine — subject *and* Night City environment (an in-game
+shot). (The composited-into-a-photo look was dropped — GPT Image 2 couldn't hold it.)
 
 ---
 
@@ -142,9 +140,9 @@ Posed with a cyberpunk sports car or neon-underlit motorcycle on a wet Night Cit
 Cyberpunk 2077 video game screenshot, RED Engine, Night City in-game render. A woman with a slick teal-and-magenta undercut, chrome cheek implant and faintly glowing cyber-eyes, in a neon-trimmed techwear jacket, standing in a rain-slick alley. Holographic ads glow overhead, puddles mirror the neon, steam rises from vents. Ray-traced reflections, volumetric fog, bloom, anamorphic flare, subtle chromatic aberration and grain. Teal-and-magenta lighting, electric-yellow accents, deep blacks, high contrast. Low-angle cinematic framing, neon bokeh. 9:16 vertical.
 ```
 
-**Cosplay hero splash, cgi-in-scene:**
+**Cosplay hero splash, full-render:**
 ```
-Cyberpunk 2077 style. A woman in glossy techwear with chrome nails and an LED face tattoo, confident direct pose, character-select splash framing. Subject rendered as a stylized Cyberpunk 2077 game character — chrome cyberware, glowing Kiroshi optics — composited onto a photorealistic dark neon-city background with holo-signage bokeh. Teal rim light one side, magenta the other, electric-yellow accent, bloom and grain. 9:16 vertical. Based on the likeness and framing of the provided reference photo. SFW.
+Cyberpunk 2077 video game screenshot, RED Engine, character-select splash, full in-game render. A woman in glossy techwear with chrome nails and an LED face tattoo, confident direct pose — stylized Cyberpunk 2077 game character with chrome cyberware and glowing Kiroshi optics, against a dark in-engine neon-city background with holo-signage bokeh. Teal rim light one side, magenta the other, electric-yellow accent, bloom. 9:16 vertical. Based on the likeness / Soul ID. SFW.
 ```
 
 ---

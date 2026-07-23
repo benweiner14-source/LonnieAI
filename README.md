@@ -32,20 +32,20 @@ reference-material/         # the original 2K_Cutscene_Style_Skill.md (baseline)
 
 ## How to use a prompt pack
 
-1. Open `prompts/<creator>.md`. Each entry is a copy-paste prompt tagged with **style**,
-   **scene**, and **look** (see below).
+1. Open `prompts/<creator>.md`. Each entry is a copy-paste prompt tagged with **style** and **scene**.
 2. In Higgsfield, pick **GPT Image 2**, set aspect ratio **9:16**, resolution 2k, quality high.
-3. For the **cgi-in-scene** look, attach a clean reference photo of the creator (image-to-image).
-   For the **full-render** look, you can run text-only or lightly reference a photo; use a
-   **Soul ID** trained on the creator's photos for consistent identity across a set.
+3. **Bind identity with a Soul ID** trained on the creator's `refs/`, used with **text-to-image**
+   (no source photo). Feeding a real photo makes GPT Image 2 stay photoreal; a Soul ID text-to-image
+   renders fresh and actually obeys the CGI style. Replace the creator name in a prompt with your
+   Soul ID `<<<token>>>`.
 4. Generate 2–3 variants per prompt and keep the best (the CG look has natural variation).
 
-### The two "looks"
+### The look: full CGI render
 
-- **full-render** — the entire frame is the game engine (character *and* environment), like
-  an in-game cutscene. Cleanest "video-game character" read.
-- **cgi-in-scene** — a stylized CGI character composited into a **photoreal** backdrop. The
-  true Lil Miquela effect; more uncanny and scroll-stopping.
+Every prompt renders the **entire frame — character *and* environment — in the game engine** (an
+in-game cutscene): the cleanest "video-game character" read. We dropped the earlier
+"CGI-character-composited-into-a-photo" look — GPT Image 2 couldn't hold it (it kept the photo
+photoreal or ignored the style). See `docs/higgsfield-cgi-playbook.md`.
 
 ## Scaling later
 

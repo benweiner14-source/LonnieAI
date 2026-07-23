@@ -30,10 +30,10 @@
 - **Luxury / exotic car** (GTA VI) — supercar cover-art posing.
 - **Penthouse / cosplay hero** — rooftop glamour + character-splash hero shots.
 
-## Looks (produce both)
-- **full-render** — subject + environment fully in-engine (game character).
-- **cgi-in-scene** — Kazumi stylized as a CGI game character on a photoreal city/night backdrop
-  (the Lil Miquela effect).
+## Look: FULL CGI RENDER
+- Entire frame (subject + environment) rendered in the game engine — a stylized in-game shot.
+- We dropped the "CGI character composited into a photoreal scene" look — GPT Image 2 couldn't
+  hold it. Best path: Soul ID + text-to-image (no source photo).
 
 ## Guardrails — SFW / brand-safe (strict for this POC)
 - **Glam but clothed.** Swimwear, streetwear, techwear, cosplay-style outfits are fine **as

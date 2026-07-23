@@ -118,11 +118,9 @@ WWE 2K broadcast close-up, hero athlete at maximum fidelity, intense expression,
 4. Add: `Based on the composition, likeness, and framing of the provided reference photo.`
 5. Keep it heroic and SFW — powerful, intense, aspirational.
 
-### The two looks
-- **full-render:** everything is the WWE 2K engine (athlete + arena/stage).
-- **cgi-in-scene:** stylize the *athlete* as a WWE 2K character composited into a photoreal
-  arena/stage backdrop. Add: `photorealistic real-world arena background, subject rendered as
-  a stylized WWE 2K game character.`
+### Look: full CGI render
+Everything is the WWE 2K engine — athlete *and* arena/stage (an in-game shot). (The
+composited-into-a-photo look was dropped — GPT Image 2 couldn't hold it.)
 
 ---
 
@@ -133,9 +131,9 @@ WWE 2K broadcast close-up, hero athlete at maximum fidelity, intense expression,
 WWE 2K video game screenshot, 2K sports engine, in-game render. A powerful muscular athlete in custom entrance gear walking onto the stage, arms slightly raised, intense focused face. Giant LED wall glowing behind, cold-spark pyro fountains, follow-spot beams through haze, dark packed crowd with phone lights at low detail. Oiled skin with strong specular sheen, plastic face sheen, decal tattoos, simplified hair. Hard colored stage lighting, strong rim light against black arena, high contrast. Low-angle hero framing, poster-like. Clean geometry, no grain. 9:16 vertical. WWE 2K aesthetic.
 ```
 
-**Turnbuckle victory, cgi-in-scene:**
+**Turnbuckle victory, full-render:**
 ```
-WWE 2K style. An athlete on the turnbuckle, arms raised in victory, backlit by stage lighting and pyro. Subject rendered as a stylized WWE 2K game character — oiled muscular sheen, decal tattoos, plastic face sheen — composited into a photorealistic real-world arena backdrop with a dark roaring crowd. Dramatic rim light, saturated colored beams, epic low-angle hero framing. 9:16 vertical. Based on the likeness and framing of the provided reference photo.
+WWE 2K video game screenshot, 2K sports engine, full in-engine render of character and arena. An athlete on the turnbuckle, arms raised in victory, backlit by stage lighting and pyro — oiled muscular sheen, decal tattoos, plastic face sheen, clean CG geometry. Dark roaring crowd and arena all rendered in-engine. Dramatic rim light, saturated colored beams, epic low-angle hero framing. 9:16 vertical. Based on the likeness / Soul ID.
 ```
 
 ---

@@ -120,11 +120,9 @@ Athlete emerging from a stadium tunnel into the light, concrete corridor with ov
 4. Add: `Based on the composition, likeness, and framing of the provided reference photo.`
 5. Keep the athletic, motivational tone — clean and heroic.
 
-### The two looks
-- **full-render:** everything is the 2K engine (athlete + environment).
-- **cgi-in-scene:** stylize the *athlete* as a 2K game character composited into a photoreal
-  gym/track backdrop. Add: `photorealistic real-world background, subject rendered as a
-  stylized 2K Sports game character.`
+### Look: full CGI render
+Everything is the 2K engine — athlete *and* environment (an in-game cutscene). (The
+composited-into-a-photo look was dropped — GPT Image 2 couldn't hold it.)
 
 ---
 
@@ -135,9 +133,9 @@ Athlete emerging from a stadium tunnel into the light, concrete corridor with ov
 2K Sports video game cutscene screenshot. A muscular athlete mid-workout gripping a loaded barbell, chalked hands, focused expression, in a black branded compression top. Modern weight room with power racks, rubber flooring, motivational wall type, bright even overhead light. Real-time 3D render, plastic sheen and sweat specular on forehead and shoulders, decal tattoos, simplified hair texture map, warm amber skin. Low-angle hero framing, rim light, shallow DOF on background. Warm slightly desaturated palette, clean geometry, no grain. 9:16 vertical. NBA 2K cutscene aesthetic.
 ```
 
-**Track walkout, cgi-in-scene:**
+**Track, full-render:**
 ```
-2K Sports style. An athlete at the start line of a stadium track, determined pose, branded kit. Subject rendered as a stylized 2K game character — plastic sheen, sweat specular, decal tattoos — composited into a photorealistic real-world stadium track backdrop. Bright daylight, red track lanes, low-angle hero framing down the lane. 9:16 vertical. Based on the likeness and framing of the provided reference photo.
+2K Sports video game cutscene screenshot, full in-engine render of athlete and environment. An athlete at the start line of a stadium track, determined pose, branded kit — plastic sheen, sweat specular, decal tattoos, clean CG geometry. Bright daylight, red track lanes, grandstands, sponsor banners, all rendered in-engine. Low-angle hero framing down the lane. 9:16 vertical. NBA 2K aesthetic. Based on the likeness / Soul ID.
 ```
 
 ---

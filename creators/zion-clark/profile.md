@@ -43,9 +43,10 @@ brand, not something to hide, erase, or sensationalize. Prompts should depict hi
 - **Gym / weight room** — upper-body strength training, chalk, dramatic hero framing.
 - **Track / stadium** — wheelchair racing lane, start line, victory.
 
-## Looks (produce both)
-- **full-render** — athlete + environment fully in-engine.
-- **cgi-in-scene** — Zion stylized as a 2K game character on a photoreal gym/track backdrop.
+## Look: FULL CGI RENDER
+- Entire frame (athlete + environment) rendered in the game engine — an in-game cutscene.
+- We dropped the "CGI character composited into a photoreal scene" look — GPT Image 2 couldn't
+  hold it. Best path: Soul ID + text-to-image (no source photo).
 
 ## Guardrails
 - SFW, heroic, aspirational. Authentic body representation per above. No fabricated legs.

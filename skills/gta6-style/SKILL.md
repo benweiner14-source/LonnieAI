@@ -136,12 +136,9 @@ Wide establishing shot of the Vice City skyline at sunset or night, causeway and
 4. Add: `Based on the composition, likeness, and framing of the provided reference photo.`
 5. Keep it **SFW / glam-but-clothed** — swimwear/streetwear is fine; no nudity or explicit posing.
 
-### The two looks
-- **full-render:** everything is the GTA VI engine (subject + environment). Emphasize
-  "in-game render, realistic game character."
-- **cgi-in-scene:** stylize the *subject* as a GTA VI character composited into a
-  photoreal Miami backdrop. Add: `photorealistic real-world background, subject rendered as a
-  stylized GTA VI game character.`
+### Look: full CGI render
+Everything is the GTA VI engine — subject *and* environment (an in-game shot). Emphasize
+"in-game render, stylized game character." (The composited-into-a-photo look was dropped.)
 
 ---
 
@@ -152,9 +149,9 @@ Wide establishing shot of the Vice City skyline at sunset or night, causeway and
 Grand Theft Auto VI video game screenshot, Rockstar RAGE engine, in-game render. A confident young woman with long dark hair in a cropped designer top and gold hoops, leaning against a neon-underlit convertible on Ocean Drive at night. Art-deco hotels with hot-pink and cyan neon, wet reflective asphalt, palm trees with lights, distant skyline glow. Grounded photorealistic render, realistic proportions, strand-level hair, humid sheen on skin, wet specular reflections. Cinematic teal-and-orange grade, neon bloom, deep blue night shadows. Low hero camera angle, poster-like composition. 9:16 vertical. Vice City aesthetic — glossy satirical realism.
 ```
 
-**Luxury car sunset, cgi-in-scene:**
+**Luxury car sunset, full-render:**
 ```
-Grand Theft Auto VI style. A young woman in a linen set and designer sunglasses seated on the hood of a glossy candy-orange supercar at golden hour, palm-lined boulevard behind. Subject rendered as a stylized GTA VI game character with the Rockstar render look — humid skin sheen, saturated grade — composited into a photorealistic real-world Miami backdrop. Gold jewelry catching sunset light, long shadows, atmospheric haze. Confident low-angle hero framing. 9:16 vertical. Based on the likeness and framing of the provided reference photo. SFW.
+Grand Theft Auto VI video game screenshot, RAGE engine, full in-game render of character and environment. A young woman in a linen set and designer sunglasses seated on the hood of a glossy candy-orange supercar at golden hour, palm-lined Vice City boulevard behind — all rendered in-engine. Rockstar render look — humid skin sheen, saturated grade, gold jewelry catching sunset light, long shadows, atmospheric haze. Confident low-angle hero framing. 9:16 vertical. Based on the likeness / Soul ID. SFW.
 ```
 
 ---
