@@ -7,12 +7,15 @@
 - **Brand:** Inspirational, elite fitness, relentless perseverance, "no excuses." Aspirational
   and powerful, never pitiable.
 
-## Appearance (from scraped refs — `refs/`)
-- Black man, athletic and powerfully built; **very muscular upper body, back, and shoulders**.
-- **Medium-length dreadlocks / locs**, usually pulled up or back off the face.
-- Short beard and mustache; bright, confident smile; often sunglasses resting on his head.
-- Signature **"NO EXCUSES" tattoo across the upper back / shoulders**; additional arm tattoos.
-- Gold chain necklace; often in his own branded gear — **"Z" lightning-bolt "No Excuses" logo**.
+## Appearance (from scraped refs `refs/` + additional refs Ben shared)
+- Black man, athletic and powerfully built; **very muscular chest, back, shoulders, and arms**;
+  often trains shirtless on parallettes / benches / on his hands.
+- **Medium-length dreadlocks**, frequently in a **top-knot / half-up** style, off the face.
+- Full short **beard and mustache**; bright, confident smile; sometimes visor-style sunglasses.
+- **Gold chain**, often with a **cross pendant**; **chest/collarbone tattoos** plus arm tattoos.
+- Signature **"NO EXCUSES" tattoo across the upper back / shoulders**.
+- Own branded gear — **"Z" lightning-bolt "No Excuses" logo** (seen on tees); pink training
+  shorts; green boxing gloves; a lightweight **racing wheelchair** on the track.
 - Personal brand palette leans **purple/violet + gold + black**. Motivational, high-energy.
 
 > Bake these specifics into prompts (dreadlocks, "NO EXCUSES" back tattoo, beard, gold chain,

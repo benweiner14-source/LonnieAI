@@ -9,9 +9,10 @@ on his **hands** or in a **racing wheelchair**. **Do NOT generate fabricated leg
 figure.** He is the hero of every frame: elite, dignified, motivational.
 
 **His real look (from `refs/`, woven into the prompts below):** a muscular Black adaptive
-athlete, **medium-length dreadlocks pulled back**, short beard, **gold chain**, bold
-**"NO EXCUSES" tattoo across his upper back/shoulders**, often in his own **"Z" lightning
-"No Excuses"** branded gear (purple/gold/black).
+athlete, **medium-length dreadlocks often in a top-knot**, full short beard, **gold chain with
+a cross pendant**, **chest/collarbone tattoos**, and a bold **"NO EXCUSES" tattoo across his
+upper back/shoulders**; often in his own **"Z" lightning "No Excuses"** branded gear
+(purple/gold/black), or shirtless training.
 
 **How to run each prompt**
 1. Higgsfield → GPT Image 2 → aspect ratio **9:16**, resolution 2k, quality high.
