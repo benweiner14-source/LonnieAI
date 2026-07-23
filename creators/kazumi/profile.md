@@ -7,15 +7,18 @@
 - **Brand:** Glamorous, confident, stylish, a little edgy; cosplay-adjacent and very
   camera-aware. Fits naturally into stylized "game character" worlds.
 
-## Appearance (refs PENDING — scrape blocked)
-- Filipina-American; typically long dark hair, bold glam styling, fashion-forward wardrobe.
-- ⚠️ **The Apify scrape returned "Restricted profile"** — @KazumisWorld is age-gated, so it
-  can't be pulled anonymously. To get her refs, either:
-  1. Provide an Instagram **`sessionid` cookie** (from a logged-in account) so the Apify
-     `instagram-scraper` can pass the age gate, **or**
-  2. Drop 4–6 clean, SFW photos of her directly into `refs/`.
-- Once refs land, update this section with her exact hair/makeup/wardrobe/poses and re-tune
-  `prompts/kazumi.md` (currently general on appearance specifics).
+## Appearance (from refs `refs/`)
+- Filipina-American woman, striking glam look, **hourglass figure**.
+- **Long wavy balayage hair** — blonde with darker roots, ranging caramel-brown to platinum;
+  worn down in loose waves or in a **high ponytail**.
+- **Full glam makeup**: bold winged/smoky eyeliner, long lashes, sharply arched brows,
+  contoured cheeks, glossy nude-pink lips; almond eyes.
+- Jewelry: **gold hoop earrings, gold chains, a green jade/emerald teardrop pendant**.
+- Wardrobe: fashion-forward and glam — printed cut-out sets, halter tops, leather, denim;
+  luxury-home / mirror-selfie settings. Confident, sultry, camera-aware.
+
+> (Apify couldn't scrape her age-gated @KazumisWorld; these refs came from photos Ben
+> shared in chat, recovered into `refs/`.)
 
 ## Styles (stylized / artistic — leans into cosplay)
 - **GTA VI** (`skills/gta6-style/`) — Vice City neon, glossy Rockstar realism, cover-art energy.
