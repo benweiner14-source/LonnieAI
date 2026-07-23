@@ -18,6 +18,10 @@ out/
 .env.*
 !.env.example
 *.local
+# API tokens (Apify, Higgsfield, etc.) — never commit
+*.token
+secrets/
+apify_token*
 
 # Logs
 *.log
