@@ -21,12 +21,17 @@ upper back/shoulders**; often in his own **"Z" lightning "No Excuses"** branded 
    his `refs/`. Where a prompt says `Zion`, you can replace it with your real `<<<uuid>>>`.
 3. Generate 2–3 variants, keep the best. Verify the body is represented authentically.
 
-**Photoreal ↔ CGI dial (you noted Zion trends photoreal — good).** Each prompt below is the
-neutral 2K look. To push **photoreal** (recommended for Zion), append:
-`face-scanned maximum fidelity, visible skin pores and fine skin detail, broadcast close-up
-realism` and it reads near-photographic. To push **obvious game-character CGI**, append:
-`MyCAREER cutscene doll look, smoother simplified features, plastic subsurface sheen`.
-See `skills/nba2k-style/` → "Fidelity dial" for the full switch.
+**⚠️ Getting a CGI character, not a photo.** GPT Image 2 in img2img tends to keep the real
+photo looking real. The goal is an obvious **CGI game character**. If output is too photoreal,
+follow **`docs/forcing-the-cgi-look.md`** — short version: train a **Soul ID** and use
+text-to-image (not img2img), or lower img2img strength; attach a 2K screenshot as a style
+reference; and **append the CGI-enforcement block** below. Do **not** add "face-scanned
+maximum fidelity / skin pores / broadcast realism" — those pull it back to photo.
+
+**CGI-enforcement block (append to any prompt that comes out too real):**
+```
+— rendered as a 3D CGI video-game character, NOT a photograph, NOT photorealistic. Real-time game-engine render (PS5 / Unreal Engine cutscene). Smooth waxy subsurface-scattering skin with a subtle plastic sheen, slightly simplified pores, clean CG geometry, rendered hair, ambient occlusion. The subject must read as a stylized computer-generated character model, obviously CGI — like a playable video-game character, not a real person.
+```
 
 **Tags:** `[style · scene · look]`. **look** = `full-render` (all in-engine) or
 `cgi-in-scene` (stylized character on a photoreal backdrop). Full style detail in
@@ -94,12 +99,12 @@ lean photoreal. Replace `<<<ZION>>>` with your Higgsfield token._
 
 **[nba2k · signature · chalk-clap · photoreal]**
 ```
-NBA 2K broadcast close-up. <<<ZION>>>, a muscular Black adaptive athlete born without legs with medium-length dreadlocks in a top-knot, full short beard, and a gold chain with a cross pendant, clapping both chalked hands together in front of his chest to explode a burst of white chalk dust into the air, arms flexed, mouth open in an intense fired-up yell, eyes locked forward (see ref images). Chest and collarbone tattoos visible, shirtless or in a black "No Excuses" cutoff, sweat specular sheen on shoulders and forehead. Gym backdrop blurred into shallow depth of field, dramatic rim light. Face-scanned maximum fidelity, visible skin pores and fine skin detail, realistic proportions, broadcast close-up realism. Warm slightly desaturated palette, clean geometry, no film grain. 9:16 vertical. NBA 2K26 broadcast close-up aesthetic. Authentic body — no fabricated legs.
+NBA 2K broadcast close-up. <<<ZION>>>, a muscular Black adaptive athlete born without legs with medium-length dreadlocks in a top-knot, full short beard, and a gold chain with a cross pendant, clapping both chalked hands together in front of his chest to explode a burst of white chalk dust into the air, arms flexed, mouth open in an intense fired-up yell, eyes locked forward (see ref images). Chest and collarbone tattoos visible, shirtless or in a black "No Excuses" cutoff, sweat specular sheen on shoulders and forehead. Gym backdrop blurred into shallow depth of field, dramatic rim light. Rendered as a 3D CGI video-game character, NOT a photograph — real-time game-engine cutscene render, smooth waxy subsurface-scattering skin with plastic sheen, simplified pores, clean CG geometry, rendered hair, ambient occlusion; obviously computer-generated, like a playable NBA 2K character model. Warm slightly desaturated palette, no film grain. 9:16 vertical. NBA 2K26 MyCAREER cutscene aesthetic. Authentic body — no fabricated legs.
 ```
 
 **[nba2k · signature · double-flex · photoreal]**
 ```
-NBA 2K broadcast close-up. <<<ZION>>>, a muscular Black adaptive athlete born without legs with dreadlocks pulled back and a full beard, supported on one hand while raising the other arm in a hard double-take flex — bicep peaked, veins showing, fist clenched, jaw set in a roaring intense expression (see ref images). "NO EXCUSES" tattoo across his upper back catching the light, gold cross chain, sweat specular on skin. Dark moody gym, hard rim and key light, shallow depth of field. Face-scanned maximum fidelity, visible skin pores, realistic proportions, broadcast realism. Clean geometry, no film grain. 9:16 vertical. NBA 2K26 broadcast close-up aesthetic. Authentic body — no fabricated legs.
+NBA 2K broadcast close-up. <<<ZION>>>, a muscular Black adaptive athlete born without legs with dreadlocks pulled back and a full beard, supported on one hand while raising the other arm in a hard double-take flex — bicep peaked, veins showing, fist clenched, jaw set in a roaring intense expression (see ref images). "NO EXCUSES" tattoo across his upper back catching the light, gold cross chain, sweat specular on skin. Dark moody gym, hard rim and key light, shallow depth of field. Rendered as a 3D CGI video-game character, NOT a photograph — real-time game-engine cutscene render, smooth waxy subsurface-scattering skin with plastic sheen, simplified pores, clean CG geometry, rendered hair, ambient occlusion; obviously computer-generated, like a playable NBA 2K character model. Clean geometry, no film grain. 9:16 vertical. NBA 2K26 MyCAREER cutscene aesthetic. Authentic body — no fabricated legs.
 ```
 
 ---
