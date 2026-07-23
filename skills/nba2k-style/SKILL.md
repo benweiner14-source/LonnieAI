@@ -142,11 +142,44 @@ Athlete emerging from a stadium tunnel into the light, concrete corridor with ov
 
 ---
 
+## Fidelity dial — photoreal ↔ stylized-CGI
+
+The 2K engine spans two tiers (see Characters, above). Treat it as a **dial** and pick per shot:
+
+- **Photoreal end** (broadcast face-scan tier — often the best read for a real athlete like
+  Zion): append
+  `face-scanned maximum fidelity, visible skin pores and fine skin detail, realistic facial
+  proportions, broadcast close-up realism` and **drop** the "CG doll / plastic sheen /
+  simplified" cues. Keep sweat specular and decal tattoos. This lands *near-photographic*.
+- **Stylized-CGI end** (MyCAREER cutscene tier — clearly "a video-game character"): append
+  `MyCAREER cutscene doll look, smoother simplified features, obvious real-time game-engine
+  render, plastic subsurface sheen, simplified hair as texture maps`.
+
+If output skews too real when you wanted obvious-CGI (or vice-versa), move along this dial
+first before changing anything else.
+
+## Reference-token convention (Higgsfield)
+
+In Higgsfield you bind the subject to a face by an **inline token** — e.g.
+`<<<37582d56-e801-48b1-ba5b-0acde252fc3a>>>` — which is the id of an attached reference image
+or a trained character / **Soul ID**. In practice, write the subject as the token, then a short
+descriptor for pose/wardrobe:
+
+```
+... Close-up of <<<ZION_TOKEN>>>, a muscular Black adaptive athlete ... (see ref images) ...
+```
+
+Replace `<<<ZION_TOKEN>>>` with your real `<<<uuid>>>`. Add **`(see ref images)`** right after a
+precise pose/gesture so the model copies it from the attached references. This locks identity far
+better than a generic "based on the reference photo" line.
+
 ## Tool Guidance
 
 - **Tool:** Higgsfield GPT Image 2. **Aspect ratio:** 9:16, resolution 2k, quality high.
-- **Reference photo:** attach it (image-to-image); add the "based on the provided reference
-  photo" line for likeness.
+- **Identity:** prefer the `<<<token>>>` convention above (attached ref image or Soul ID).
 - **Generate 2–3 variants** per prompt — the CG look has natural variation.
-- **DO keep:** plastic sheen, sweat specular, decal tattoos, simplified hair, clean geometry.
-- **AVOID:** film grain, lens flare, chromatic aberration, bokeh circles, photographic artifacts.
+- **Lock identity-critical details explicitly** (his dreadlocks, beard, gold chain, and the
+  "NO EXCUSES" back tattoo) — and, like the reference prompt's "no tattoos" for a clean-armed
+  player, state what to *exclude* when it matters.
+- **AVOID** (photoreal end): plastic-doll smoothing. **AVOID** (both): unwanted film grain,
+  lens flare, chromatic aberration unless the shot calls for it.

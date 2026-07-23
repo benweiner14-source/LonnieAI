@@ -16,9 +16,17 @@ upper back/shoulders**; often in his own **"Z" lightning "No Excuses"** branded 
 
 **How to run each prompt**
 1. Higgsfield → GPT Image 2 → aspect ratio **9:16**, resolution 2k, quality high.
-2. Attach a clean reference photo of Zion (image-to-image) for likeness + accurate physique.
-   For a consistent set, train a **Soul ID** on his `refs/` and use it.
+2. **Bind his identity:** attach a clean reference photo (image-to-image) or, better, use the
+   Higgsfield **`<<<token>>>`** — the id of an attached ref image or a trained **Soul ID** on
+   his `refs/`. Where a prompt says `Zion`, you can replace it with your real `<<<uuid>>>`.
 3. Generate 2–3 variants, keep the best. Verify the body is represented authentically.
+
+**Photoreal ↔ CGI dial (you noted Zion trends photoreal — good).** Each prompt below is the
+neutral 2K look. To push **photoreal** (recommended for Zion), append:
+`face-scanned maximum fidelity, visible skin pores and fine skin detail, broadcast close-up
+realism` and it reads near-photographic. To push **obvious game-character CGI**, append:
+`MyCAREER cutscene doll look, smoother simplified features, plastic subsurface sheen`.
+See `skills/nba2k-style/` → "Fidelity dial" for the full switch.
 
 **Tags:** `[style · scene · look]`. **look** = `full-render` (all in-engine) or
 `cgi-in-scene` (stylized character on a photoreal backdrop). Full style detail in
@@ -78,6 +86,20 @@ NBA 2K style. Zion, a muscular Black adaptive athlete born without legs with dre
 **[nba2k · portrait · cgi-in-scene]**
 ```
 NBA 2K style. A powerful upper-body hero portrait of Zion — dreadlocks pulled back, short beard, gold chain, determined gaze. Subject rendered as a stylized 2K game character — plastic sheen, sweat specular, decal tattoos — composited onto a photorealistic real-world gym backdrop with shallow depth of field. Dramatic rim light. 9:16 vertical. Based on the likeness and framing of the provided reference photo. Authentic representation.
+```
+
+### Signature moments (exact-gesture, photoreal-leaning)
+_Model on your Brunson-celebration prompt: name the pose precisely, add `(see ref images)`,
+lean photoreal. Replace `<<<ZION>>>` with your Higgsfield token._
+
+**[nba2k · signature · chalk-clap · photoreal]**
+```
+NBA 2K broadcast close-up. <<<ZION>>>, a muscular Black adaptive athlete born without legs with medium-length dreadlocks in a top-knot, full short beard, and a gold chain with a cross pendant, clapping both chalked hands together in front of his chest to explode a burst of white chalk dust into the air, arms flexed, mouth open in an intense fired-up yell, eyes locked forward (see ref images). Chest and collarbone tattoos visible, shirtless or in a black "No Excuses" cutoff, sweat specular sheen on shoulders and forehead. Gym backdrop blurred into shallow depth of field, dramatic rim light. Face-scanned maximum fidelity, visible skin pores and fine skin detail, realistic proportions, broadcast close-up realism. Warm slightly desaturated palette, clean geometry, no film grain. 9:16 vertical. NBA 2K26 broadcast close-up aesthetic. Authentic body — no fabricated legs.
+```
+
+**[nba2k · signature · double-flex · photoreal]**
+```
+NBA 2K broadcast close-up. <<<ZION>>>, a muscular Black adaptive athlete born without legs with dreadlocks pulled back and a full beard, supported on one hand while raising the other arm in a hard double-take flex — bicep peaked, veins showing, fist clenched, jaw set in a roaring intense expression (see ref images). "NO EXCUSES" tattoo across his upper back catching the light, gold cross chain, sweat specular on skin. Dark moody gym, hard rim and key light, shallow depth of field. Face-scanned maximum fidelity, visible skin pores, realistic proportions, broadcast realism. Clean geometry, no film grain. 9:16 vertical. NBA 2K26 broadcast close-up aesthetic. Authentic body — no fabricated legs.
 ```
 
 ---

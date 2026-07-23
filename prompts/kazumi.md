@@ -10,9 +10,14 @@ nude-pink lips), and **gold hoops + a green jade teardrop pendant**. Confident, 
 
 **How to run each prompt**
 1. Higgsfield → GPT Image 2 → aspect ratio **9:16**, resolution 2k, quality high.
-2. Attach a clean reference photo of Kazumi (image-to-image) for likeness. For a consistent
-   set, train a **Soul ID** on her `refs/` and use it.
+2. **Bind her identity:** attach a clean reference photo (image-to-image) or use the Higgsfield
+   **`<<<token>>>`** — the id of an attached ref image or a trained **Soul ID** on her `refs/`.
+   Where a prompt says `Kazumi`, you can replace it with your real `<<<uuid>>>`.
 3. Generate 2–3 variants, keep the best. Keep everything SFW.
+
+**Note on fidelity:** unlike Zion (who trends photoreal), Kazumi's GTA VI / Cyberpunk looks are
+meant to read as a **stylized game character** — keep the render cues in. If a result looks like
+a plain photo, push harder on the style DNA ("in-game render, RAGE/RED engine, game character").
 
 **Tags:** `[style · scene · look]`. **look** = `full-render` (all in-engine) or
 `cgi-in-scene` (stylized character on a photoreal backdrop). Full style detail in
