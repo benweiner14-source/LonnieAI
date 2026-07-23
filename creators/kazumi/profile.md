@@ -7,11 +7,15 @@
 - **Brand:** Glamorous, confident, stylish, a little edgy; cosplay-adjacent and very
   camera-aware. Fits naturally into stylized "game character" worlds.
 
-## Appearance (fill/confirm from refs)
+## Appearance (refs PENDING — scrape blocked)
 - Filipina-American; typically long dark hair, bold glam styling, fashion-forward wardrobe.
-- Exact hair length/color, signature makeup, tattoos, and go-to poses should be pulled from
-  `refs/` (Apify scrape) so prompts match her real look. Until then, prompts stay general on
-  specifics and precise on styling direction.
+- ⚠️ **The Apify scrape returned "Restricted profile"** — @KazumisWorld is age-gated, so it
+  can't be pulled anonymously. To get her refs, either:
+  1. Provide an Instagram **`sessionid` cookie** (from a logged-in account) so the Apify
+     `instagram-scraper` can pass the age gate, **or**
+  2. Drop 4–6 clean, SFW photos of her directly into `refs/`.
+- Once refs land, update this section with her exact hair/makeup/wardrobe/poses and re-tune
+  `prompts/kazumi.md` (currently general on appearance specifics).
 
 ## Styles (stylized / artistic — leans into cosplay)
 - **GTA VI** (`skills/gta6-style/`) — Vice City neon, glossy Rockstar realism, cover-art energy.
