@@ -31,10 +31,13 @@ prompt) doesn't stop the model from copying a logo it can literally see in a ref
 ## Worked example — Zion, 4-image role-tagged gym scene
 
 **Attach in this exact order:**
-1. `creators/zion-clark/refs/soul-id/soul_09.jpg` (clean frontal face)
+1. `creators/zion-clark/refs/zion_gym_parallette.jpg` (clean frontal face)
 2. `creators/zion-clark/refs/zion_back_noexcuses_tattoo.jpg` (tattoo)
-3. `creators/zion-clark/refs/zion_gym_parallette.jpg` (body/pose)
-4. `reference-material/2k-screenshots/2k_01.jpg` (style)
+3. `creators/zion-clark/refs/soul-id/soul_12.jpg` (body/pose)
+4. `reference-material/2k-screenshots/2k_02.jpg` (style)
+
+> Full ready-to-paste version (plus a **multi-style variant** using 6 style images at once,
+> within the 14-image cap) is in `prompts/zion-clark.md` under "multi-ref role-tagged."
 
 **Prompt:**
 ```

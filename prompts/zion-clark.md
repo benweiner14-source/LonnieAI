@@ -94,17 +94,37 @@ Sports-sim broadcast close-up portrait, full in-engine render. Zion, a muscular 
 _Full technique + how to extend it: `docs/multi-image-role-tagging.md`. Attach images in this
 exact order — the text numbering must match the actual upload order._
 
-**[nba2k · gym · multi-ref role-tagged]**
-_Attach: 1) `refs/soul-id/soul_09.jpg` (face) 2) `refs/zion_back_noexcuses_tattoo.jpg` (tattoo)
-3) `refs/zion_gym_parallette.jpg` (body/pose) 4) `reference-material/2k-screenshots/2k_01.jpg` (style)_
+**[nba2k · gym · multi-ref role-tagged]** — single style ref (simplest, start here)
+_Attach: 1) `refs/zion_gym_parallette.jpg` (face) 2) `refs/zion_back_noexcuses_tattoo.jpg` (tattoo)
+3) `refs/soul-id/soul_12.jpg` (body) 4) `reference-material/2k-screenshots/2k_02.jpg` (style)_
 ```
-REFERENCE IMAGE 1: use ONLY for facial identity and likeness — his exact face shape, eyes, nose, beard. Ignore the clothing, pose, and background in this image.
+REFERENCE IMAGE 1: use ONLY for facial identity and likeness — his exact face shape, eyes, nose, beard. Ignore the pose and background in this image.
 
 REFERENCE IMAGE 2: use ONLY for the "NO EXCUSES" tattoo artwork and its exact placement across the upper back and shoulders. Ignore the pose and background in this image.
 
-REFERENCE IMAGE 3: use ONLY for body proportions, muscular build, and the authentic hand-supported pose/composition. His body ends at/just past the belly button — no hips, no thighs, no legs, no stump legs, nothing below that point. Ignore the specific gym in this image.
+REFERENCE IMAGE 3: use ONLY for body proportions, muscular build, and the authentic hand-supported pose/composition. His body ends at/just past the belly button — no hips, no thighs, no legs, no stump legs, nothing below that point. Ignore the specific gym and background in this image.
 
 REFERENCE IMAGE 4: use ONLY for the rendering STYLE — polished sports-simulation CGI game-engine look: waxy subsurface-scattering skin, plastic sheen, clean CG geometry, simplified hair, ambient occlusion. Ignore and do NOT reproduce any logos, team names, league marks, jersey text, or watermarks visible in this reference — style/rendering-technique only, nothing else from this image.
+
+Now render: a muscular Black adaptive athlete born without legs, medium-length dreadlocks in a top-knot, short beard, gold chain with a cross pendant, supporting himself on his hands mid-training on a gym floor, chalked palms, focused intense expression, black "No Excuses" branded tee. Modern weight room with power racks, rubber flooring, motivational wall typography, bright even overhead lighting — the entire frame (character AND environment) rendered in a polished sports-simulation CGI game-engine style, obviously computer-generated, NOT a photograph. No real league, team, studio, or brand logos or trademarks anywhere in the output; no readable brand text. His body ends at/just past the belly button — no hips, no legs, no stump legs. 9:16 vertical.
+```
+
+**[nba2k · gym · multi-ref role-tagged — MULTI-STYLE variant]** — several style refs for a
+stronger style "consensus." **14-image cap math:** 3 non-style refs (face/tattoo/body) leaves
+**up to 11** style slots. Below uses **6** (a good balance — more than 6 tends to dilute focus
+without adding much). Swap in more of `reference-material/2k-screenshots/` (up to 11) if you
+want to go further; all 14 minus the 3 non-style refs would only leave room for 11, not 14.
+_Attach: 1) `refs/zion_gym_parallette.jpg` (face) 2) `refs/zion_back_noexcuses_tattoo.jpg` (tattoo)
+3) `refs/soul-id/soul_12.jpg` (body) 4–9) `reference-material/2k-screenshots/2k_01.jpg`,
+`2k_02.jpg`, `2k_04.jpg`, `2k_06.jpg`, `2k_07.jpg`, `2k_10.jpg` (style, 6 images)_
+```
+REFERENCE IMAGE 1: use ONLY for facial identity and likeness — his exact face shape, eyes, nose, beard. Ignore the pose and background in this image.
+
+REFERENCE IMAGE 2: use ONLY for the "NO EXCUSES" tattoo artwork and its exact placement across the upper back and shoulders. Ignore the pose and background in this image.
+
+REFERENCE IMAGE 3: use ONLY for body proportions, muscular build, and the authentic hand-supported pose/composition. His body ends at/just past the belly button — no hips, no thighs, no legs, no stump legs, nothing below that point. Ignore the specific gym and background in this image.
+
+REFERENCE IMAGES 4 THROUGH 9: use these ONLY, collectively, for the rendering STYLE — polished sports-simulation CGI game-engine look: waxy subsurface-scattering skin, plastic sheen, clean CG geometry, simplified hair, ambient occlusion, consistent character-render quality. Ignore and do NOT reproduce any logos, team names, league marks, jersey text, or watermarks visible in ANY of these reference images — style/rendering-technique only, nothing else from them.
 
 Now render: a muscular Black adaptive athlete born without legs, medium-length dreadlocks in a top-knot, short beard, gold chain with a cross pendant, supporting himself on his hands mid-training on a gym floor, chalked palms, focused intense expression, black "No Excuses" branded tee. Modern weight room with power racks, rubber flooring, motivational wall typography, bright even overhead lighting — the entire frame (character AND environment) rendered in a polished sports-simulation CGI game-engine style, obviously computer-generated, NOT a photograph. No real league, team, studio, or brand logos or trademarks anywhere in the output; no readable brand text. His body ends at/just past the belly button — no hips, no legs, no stump legs. 9:16 vertical.
 ```
