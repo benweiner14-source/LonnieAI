@@ -51,5 +51,30 @@ download/initialize in the Comfy Cloud runtime (sandboxed). Dead end.
 - **Flux.1-Dev** remains a backup for style, but SDXL already delivers and keeps FaceID identity, so
   no reason to switch bases now.
 
+## RESULT: full-pipeline SDXL test was a downgrade — pivoting
+`ip-adapter-plus-face @0.85 + cyberpunk LoRA @0.45 + img2img(parallette, denoise 0.75)` produced a
+**standing figure with full legs and bare feet** (hard-rule violation), a warped/generic face, and
+garbled tattoos — worse than the Higgsfield GPT Image 2 baseline on every axis except "not a plain
+photo," and it didn't even read as clean CGI (read as a damaged photo instead).
+**Root cause of the legs:** this was **img2img at high denoise**, not real ControlNet — at
+denoise 0.75, img2img only loosely nudges toward the source image's structure, so the model was
+free to invent a standing pose. Real pose lock needs an actual ControlNet Depth/OpenPose node.
+
+## PIVOT: use ComfyUI's official "GPT Image 2" partner node instead of SDXL/LoRA/IP-Adapter
+Ben's ask: same models as Higgsfield, but with real control sliders. **This exists.** ComfyUI /
+Comfy Cloud has an official **GPT Image 2 node** (same underlying OpenAI model Higgsfield calls)
+reachable via the `partner_generate` MCP tool. Two fixes over Higgsfield's black-box UI:
+- **True multi-image input** (up to ~9 refs per ComfyUI docs) — Higgsfield silently kept only one
+  and dropped the rest; this may let "identity photo + 2K style screenshot" actually work together.
+- **A structural-fidelity / input-fidelity control** — the missing "denoise knob": low = let the
+  prompt restyle more (push toward CGI); high = cling closer to the reference (push toward photo).
+
+**Next test (simpler than SDXL — no LoRA/IP-Adapter/ControlNet needed):**
+`partner_generate` with provider **openai / gpt-image-2**, inputs: Zion identity ref(s) from
+`refs/soul-id/` + a 2K screenshot from `reference-material/2k-screenshots/` as a **second** image,
+**input fidelity LOW**, the CGI prompt from `prompts/zion-clark.md`, 9:16. Check whether both
+images are actually honored (identity AND style) — that's the thing to verify first.
+See https://docs.comfy.org/tutorials/partner-nodes/openai/gpt-image-2 for the exact param names.
+
 ## Constraints (unchanged)
 Zion: authentic body, **no fabricated legs**. Both: 9:16, SFW (Kazumi strict).

@@ -53,9 +53,13 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 - **Style baseline works** on SDXL (RealVisXL + CGI prompt + `sdxl-cyberpunk_anime_style @0.45`),
   but no-identity/no-pose baselines read generic. GPT Image 2 in Comfy = no gain (closed model,
   can't take FaceID/ControlNet).
-- **Next (the real test):** full SDXL pipeline in one shot — FaceID Plus v2 @0.85 from
-  `refs/soul-id/` (identity) + ControlNet Depth from a hand-support ref (kills legs — HARD RULE)
-  + the style recipe. Judge that. If not good enough → Flux.1-Dev for quality + two-stage identity.
+- **Full SDXL pipeline test FAILED**: IP-Adapter Plus Face + LoRA + img2img(denoise 0.75) produced
+  a standing figure with full legs (hard-rule violation — img2img ≠ ControlNet, didn't hold pose),
+  warped face, garbled tattoos. Worse than Higgsfield's GPT Image 2 baseline on every axis.
+- **PIVOTED:** use ComfyUI's official **GPT Image 2 partner node** (`partner_generate` MCP tool) —
+  same model as Higgsfield but with real params: true multi-image input (~9 refs, vs Higgsfield's
+  silent 1-image limit) + an input-fidelity slider (the missing "denoise knob"). Next test: identity
+  ref + a 2K screenshot as a 2nd image, fidelity LOW, CGI prompt. See `docs/comfy-cloud-catalog.md`.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k}-style/` — style DNA + scene modifiers (9:16).
