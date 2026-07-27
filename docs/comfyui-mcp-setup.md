@@ -47,12 +47,11 @@ Ask Claude Code to call `get_server_info` (and `get_billing_status`). If they re
 
 ## Step 5 — First run (what to tell local Claude Code)
 Point it at the plan we already wrote:
-> Read `docs/comfyui-handoff.md` and `docs/comfyui-workflow.md`. Using the comfy-cloud MCP:
-> `search_models` for an SDXL checkpoint + an IP-Adapter FaceID (or InstantID) + a game/3D-render
-> LoRA. Build a workflow that locks Zion's identity from `creators/zion-clark/refs/soul-id/`,
-> pushes the CGI style with the LoRA + prompt, and holds his pose with ControlNet. `upload_file`
-> the refs, `submit_workflow`, `wait_for_job`, `get_output`. Respect the hard constraints:
-> authentic representation (born without legs — no fabricated legs), SFW, 9:16.
+> Read `CLAUDE.md`, `docs/comfyui-handoff.md`, and `docs/comfy-cloud-catalog.md` first — they
+> record what's already been tried and the currently recommended path (the GPT Image 2 partner
+> node via `partner_generate`, not raw SDXL/ControlNet — that path underperformed). Respect the
+> hard constraints: exact anatomy (his body ends at/just past the belly button — no hips, no
+> legs, no stump legs), no real game/league/studio logos or trademarks in output, SFW, 9:16.
 
 ## Notes on your LoRA-tier concern
 Use `search_models` to see which checkpoints/LoRAs Comfy Cloud exposes on your plan, and

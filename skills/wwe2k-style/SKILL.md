@@ -15,6 +15,14 @@ Image 2, retargeted to **9:16 vertical**.
 >
 > **Reference library:** drop WWE 2K character renders / entrance screen grabs into `reference/`.
 
+> **⚠️ Brand safety:** this file references the real "WWE 2K" game internally as the aesthetic
+> we're describing — fine for OUR understanding. But the actual **prompt text sent to the image
+> model must never name a real game, league, promotion, or studio** — doing so caused real
+> NBA/2K/WWE logos and league branding to leak into outputs elsewhere in this project. **Use the
+> already-genericized, paste-ready prompts in `prompts/zion-clark.md`** for actual generation.
+> New prompts built from this file should describe the *aesthetic* (theatrical wrestling-sim CGI
+> render) — never the brand — and end with "no real promotion/league logos or brand trademarks."
+
 ---
 
 ## When to Use

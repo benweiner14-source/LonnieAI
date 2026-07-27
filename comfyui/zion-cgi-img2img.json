@@ -51,7 +51,7 @@
         { "name": "CONDITIONING", "type": "CONDITIONING", "links": [6], "slot_index": 0 }
       ],
       "properties": { "Node name for S&R": "CLIPTextEncode" },
-      "widgets_values": ["3D CGI video-game character render of a muscular Black male athlete, born without legs, seated and supported on his hands, medium-length dreadlocks in a top-knot, short beard, gold chain with a cross pendant, NBA 2K / Unreal Engine cutscene render, waxy subsurface-scattering skin with a plastic sheen, clean CG geometry, rendered hair, ambient occlusion, gym background, dramatic rim light, highly detailed, obviously computer-generated, NOT a photograph"]
+      "widgets_values": ["3D CGI video-game character render of a muscular Black male athlete, born without legs, his body ending at/just past the belly button with no hips, no thighs, no legs, no stump legs, nothing below that point, supported on his hands, medium-length dreadlocks in a top-knot, short beard, gold chain with a cross pendant, polished sports-simulation cutscene render, waxy subsurface-scattering skin with a plastic sheen, clean CG geometry, rendered hair, ambient occlusion, gym background, dramatic rim light, highly detailed, obviously computer-generated, NOT a photograph, no real league/team/studio logos or brand trademarks"]
     },
     {
       "id": 4,
@@ -66,7 +66,7 @@
         { "name": "CONDITIONING", "type": "CONDITIONING", "links": [7], "slot_index": 0 }
       ],
       "properties": { "Node name for S&R": "CLIPTextEncode" },
-      "widgets_values": ["photograph, photorealistic, real skin pores, DSLR photo, film grain, fake legs, extra legs, prosthetic legs, standing, blurry, deformed, extra fingers, text, watermark, logo"]
+      "widgets_values": ["photograph, photorealistic, real skin pores, DSLR photo, film grain, legs, thighs, hips, pelvis, stump legs, fake legs, extra legs, prosthetic legs, knees, standing, crouching, full body, blurry, deformed, extra fingers, text, watermark, logo, real brand logos, real team logos"]
     },
     {
       "id": 5,

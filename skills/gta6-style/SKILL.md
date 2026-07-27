@@ -15,6 +15,14 @@ GPT Image 2.
 > **Reference library:** drop in-game screen grabs (GTA VI Trailer 1 & 2, cover art, GTA V
 > photo-mode) into `reference/` to sharpen accuracy. `gtav_keyart` is included as a starter.
 
+> **⚠️ Brand safety:** this file references the real game internally as the aesthetic we're
+> describing — fine for OUR understanding. But the actual **prompt text sent to the image model
+> must never name a real game, studio, or engine** — doing so has caused real logos/branding to
+> leak into outputs elsewhere in this project. **Use the already-genericized, paste-ready prompts
+> in `prompts/kazumi.md`** for actual generation. New prompts built from this file should describe
+> the *aesthetic* (open-world crime-saga neon look) — never the brand — and end with "no real
+> studio/game logos or brand trademarks."
+
 ---
 
 ## When to Use

@@ -21,15 +21,19 @@
 > Bake these specifics into prompts (dreadlocks, "NO EXCUSES" back tattoo, beard, gold chain,
 > Z/No-Excuses branding) so the render reads as *him*, not a generic athlete.
 
-## Authentic representation (important)
+## Authentic representation (important — exact anatomy)
 Zion was **born without legs** — this is central to his identity, his athletics, and his
 brand, not something to hide, erase, or sensationalize. Prompts should depict him
 **authentically and heroically**:
+- **His body ends at/just past his belly button** — there is no hip, pelvis, thigh, or leg
+  structure below that at all. NOT "torso ending at the hips." NOT partial/"stump" legs.
+  Nothing extends past roughly the belly-button line.
 - Powerful, defined **upper body and core**; moves on his **hands** and via **wheelchair**.
 - Contexts that are true to him: **hand-walking / hand-balancing** strength work, wrestling,
   **wheelchair racing** on the track, gym training with upper-body focus.
-- Do **not** generate fabricated legs or a standing full-body figure. Frame him the way he
-  presents himself: seated, on his hands, on the racing chair, or upper-body hero shots.
+- Do **not** generate fabricated legs, stump legs, hips/pelvis, or a standing full-body figure.
+  Frame him the way he presents himself: seated, on his hands, on the racing chair, or
+  upper-body/torso hero shots that don't imply anything below the belly button.
 - Tone: elite, dignified, motivational. He is the hero of the frame.
 
 > Reference stills in `refs/` (from the Apify scrape) should guide his exact physique, gear,

@@ -13,6 +13,14 @@ aesthetic using Higgsfield GPT Image 2 — here generalized from basketball to a
 > The rendering DNA is unchanged — the proven 2K "polished-CG, identifiably rendered" look —
 > with basketball-specific scenes swapped for gym + track/stadium.
 
+> **⚠️ Brand safety:** this file references the real "NBA 2K" game internally as the aesthetic
+> we're describing — that's fine for OUR understanding. But the actual **prompt text sent to the
+> image model must never name a real game, league, studio, or team** — doing so caused real
+> NBA/2K logos and league branding to render into outputs. **Use the already-genericized,
+> paste-ready prompts in `prompts/zion-clark.md`** for actual generation. If you write a new
+> prompt from this file's templates, describe the *aesthetic* (polished sports-simulation CGI
+> render) — never the brand — and end with "no real league/team/studio logos or brand trademarks."
+
 ---
 
 ## When to Use

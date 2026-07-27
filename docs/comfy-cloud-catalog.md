@@ -41,11 +41,13 @@ download/initialize in the Comfy Cloud runtime (sandboxed). Dead end.
 
 ## Remaining path (in order)
 1. **Identity** — IP-Adapter Plus Face (above), 3 clean face refs, ~0.8.
-2. **⚠️ Authentic body (no legs) — hard rule.** Baselines generated full legs + sneakers. For Zion,
-   enforce: prompt "born without legs, torso ending at hips, supported on both hands, no legs";
-   negatives "legs, thighs, knees, sneakers, standing, crouching, full body"; and **ControlNet
+2. **⚠️ Authentic body — hard rule, exact anatomy.** His body ends **at/just past the belly
+   button** — no hips, pelvis, thighs, or any leg/stump structure below that. Baselines generated
+   full legs + sneakers (wrong) — enforce: prompt "born without legs, body ends at the belly
+   button, nothing below that point, supported on both hands"; negatives "legs, thighs, hips,
+   pelvis, stump legs, knees, sneakers, standing, crouching, full body"; and **ControlNet
    Depth/OpenPose from a real hand-support photo** (`refs/zion_gym_parallette.jpg` or a `soul-id`
-   hand-balance shot) to guarantee the composition. Prompt alone may leak legs.
+   hand-balance shot) to guarantee the composition. Prompt alone may leak legs/stumps.
 3. **Then:** lock full recipe into `prompts/`, batch Zion's scenes, repeat for Kazumi (her Cyberpunk
    already suits the anime LoRA).
 - **Flux.1-Dev** remains a backup for style, but SDXL already delivers and keeps FaceID identity, so
@@ -77,4 +79,5 @@ images are actually honored (identity AND style) — that's the thing to verify 
 See https://docs.comfy.org/tutorials/partner-nodes/openai/gpt-image-2 for the exact param names.
 
 ## Constraints (unchanged)
-Zion: authentic body, **no fabricated legs**. Both: 9:16, SFW (Kazumi strict).
+Zion: exact anatomy — body ends **at/just past the belly button**, no hips/legs/stump legs.
+Both: 9:16, SFW (Kazumi strict), no real brand/game/league logos or trademarks in output.
