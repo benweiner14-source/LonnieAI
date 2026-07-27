@@ -46,10 +46,16 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   2 profiles, refs + 20-image Soul ID set (Zion), 14 NBA 2K style frames + texture crops,
   starter ComfyUI workflow, and setup/handoff/playbook docs.
 - **Ben's LOCAL Claude Code is connected to the Comfy Cloud MCP (authenticated, 36 tools).**
-  Generation now happens there; this web session is strategy/repo upkeep.
-- **Next:** in local Claude Code — `search_models` (SDXL checkpoint + IP-Adapter FaceID/InstantID
-  + game/3D LoRA), build a workflow, run ONE Zion CGI test, tune, then batch. Then repeat for
-  Kazumi. Bake the winning recipe into `prompts/` and (later) automate the full batch via the API.
+  Generation happens there; this web session is strategy/repo upkeep.
+- **Catalog reality:** only SDXL identity tool is FaceID Plus v2 (no PuLID/InstantID); base is
+  photoreal RealVisXL; no game LoRA; Flux.1-Dev available but no Flux identity adapter. Custom
+  LoRA upload not possible via MCP (image-only). See `docs/comfy-cloud-catalog.md`.
+- **Style baseline works** on SDXL (RealVisXL + CGI prompt + `sdxl-cyberpunk_anime_style @0.45`),
+  but no-identity/no-pose baselines read generic. GPT Image 2 in Comfy = no gain (closed model,
+  can't take FaceID/ControlNet).
+- **Next (the real test):** full SDXL pipeline in one shot — FaceID Plus v2 @0.85 from
+  `refs/soul-id/` (identity) + ControlNet Depth from a hand-support ref (kills legs — HARD RULE)
+  + the style recipe. Judge that. If not good enough → Flux.1-Dev for quality + two-stage identity.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k}-style/` — style DNA + scene modifiers (9:16).
