@@ -68,10 +68,23 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 - **Full SDXL pipeline test FAILED**: IP-Adapter Plus Face + LoRA + img2img(denoise 0.75) produced
   a standing figure with full legs (hard-rule violation — img2img ≠ ControlNet, didn't hold pose),
   warped face, garbled tattoos. Worse than Higgsfield's GPT Image 2 baseline on every axis.
-- **PIVOTED:** use ComfyUI's official **GPT Image 2 partner node** (`partner_generate` MCP tool) —
-  same model as Higgsfield but with real params: true multi-image input (~9 refs, vs Higgsfield's
-  silent 1-image limit) + an input-fidelity slider (the missing "denoise knob"). Next test: identity
-  ref + a 2K screenshot as a 2nd image, fidelity LOW, CGI prompt. See `docs/comfy-cloud-catalog.md`.
+- **GPT Image 2 partner-node test (text-only vs 2-image) — style FAILED, identity inconclusive.**
+  Both outputs were fully photoreal (no CGI tell at all) — GPT Image 2 has now failed to
+  de-photoreal 3 separate ways (Higgsfield img2img, Higgsfield Soul ID, Comfy partner node).
+  Also: text-only output contained a **real "NBA 2K" logo** baked in (model default association,
+  not from our prompt) — reinforces that reference IMAGES can leak real logos even when the TEXT
+  is genericized. Multi-image version misplaced the "NO EXCUSES" tattoo (chest, should be back).
+- **PIVOTED AGAIN: Nano Banana Pro** (Google Gemini partner node, up to 14 ref images — the
+  highest multi-image ceiling found) + **multi-image role-tagging**: assign each attached image
+  ONE explicit job in the text ("REFERENCE IMAGE 1: use ONLY for X, ignore everything else"),
+  since none of these partner nodes have a real role field. Ready-to-paste example in
+  `prompts/zion-clark.md` ("multi-ref role-tagged"); full technique in
+  `docs/multi-image-role-tagging.md`. **Style refs must also be told to ignore/not-reproduce any
+  logos visible in the reference photo itself** — genericized text alone doesn't stop the model
+  copying a logo it can see. Note: this targets IDENTITY, not proven to fix the CGI-style problem
+  — judge those two axes separately. If style still fails here too, pivot back to the SDXL +
+  `sdxl-cyberpunk_anime_style` LoRA path (the only thing that's produced genuine CGI so far) and
+  focus effort on fixing ITS identity/pose problems instead of chasing more edit-model options.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k}-style/` — style DNA + scene modifiers (9:16).

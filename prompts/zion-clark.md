@@ -90,6 +90,25 @@ Sports-sim video game cutscene screenshot, full 3D game-engine render. Zion, a m
 Sports-sim broadcast close-up portrait, full in-engine render. Zion, a muscular Black adaptive athlete with medium-length dreadlocks pulled back, short beard, and gold chain, intense determined expression, plastic sheen and sweat specular on forehead and shoulders, decal tattoos on arms and neck, black "No Excuses" compression top. Shallow depth of field with a blurred in-engine facility behind, dramatic broadcast lighting, clean CG geometry. 9:16 vertical. sports-sim cutscene aesthetic — no real league/team logos or brand trademarks. Upper-body hero portrait — body ends at/just past the belly button, no legs, no hips, no stump legs.
 ```
 
+### Multi-image role-tagged (Nano Banana Pro — up to 14 refs, one job per image)
+_Full technique + how to extend it: `docs/multi-image-role-tagging.md`. Attach images in this
+exact order — the text numbering must match the actual upload order._
+
+**[nba2k · gym · multi-ref role-tagged]**
+_Attach: 1) `refs/soul-id/soul_09.jpg` (face) 2) `refs/zion_back_noexcuses_tattoo.jpg` (tattoo)
+3) `refs/zion_gym_parallette.jpg` (body/pose) 4) `reference-material/2k-screenshots/2k_01.jpg` (style)_
+```
+REFERENCE IMAGE 1: use ONLY for facial identity and likeness — his exact face shape, eyes, nose, beard. Ignore the clothing, pose, and background in this image.
+
+REFERENCE IMAGE 2: use ONLY for the "NO EXCUSES" tattoo artwork and its exact placement across the upper back and shoulders. Ignore the pose and background in this image.
+
+REFERENCE IMAGE 3: use ONLY for body proportions, muscular build, and the authentic hand-supported pose/composition. His body ends at/just past the belly button — no hips, no thighs, no legs, no stump legs, nothing below that point. Ignore the specific gym in this image.
+
+REFERENCE IMAGE 4: use ONLY for the rendering STYLE — polished sports-simulation CGI game-engine look: waxy subsurface-scattering skin, plastic sheen, clean CG geometry, simplified hair, ambient occlusion. Ignore and do NOT reproduce any logos, team names, league marks, jersey text, or watermarks visible in this reference — style/rendering-technique only, nothing else from this image.
+
+Now render: a muscular Black adaptive athlete born without legs, medium-length dreadlocks in a top-knot, short beard, gold chain with a cross pendant, supporting himself on his hands mid-training on a gym floor, chalked palms, focused intense expression, black "No Excuses" branded tee. Modern weight room with power racks, rubber flooring, motivational wall typography, bright even overhead lighting — the entire frame (character AND environment) rendered in a polished sports-simulation CGI game-engine style, obviously computer-generated, NOT a photograph. No real league, team, studio, or brand logos or trademarks anywhere in the output; no readable brand text. His body ends at/just past the belly button — no hips, no legs, no stump legs. 9:16 vertical.
+```
+
 ### Signature moments (exact-gesture, full CGI render)
 _Name the pose precisely, add `(see ref images)`. Replace `<<<ZION>>>` with your Soul ID token._
 
