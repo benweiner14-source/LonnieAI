@@ -81,10 +81,18 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   `prompts/zion-clark.md` ("multi-ref role-tagged"); full technique in
   `docs/multi-image-role-tagging.md`. **Style refs must also be told to ignore/not-reproduce any
   logos visible in the reference photo itself** — genericized text alone doesn't stop the model
-  copying a logo it can see. Note: this targets IDENTITY, not proven to fix the CGI-style problem
-  — judge those two axes separately. If style still fails here too, pivot back to the SDXL +
-  `sdxl-cyberpunk_anime_style` LoRA path (the only thing that's produced genuine CGI so far) and
-  focus effort on fixing ITS identity/pose problems instead of chasing more edit-model options.
+  copying a logo it can see.
+- **3-ref role-tagged test (face/body/style, no tattoo ref) — best result yet.** Identity: strong,
+  specific likeness (not generic). Logo leakage: clean, none. Style: NOT flat photoreal this
+  time — drifted to a **Disney/Pixar animated-movie** look instead of sports-game cutscene. This
+  is a *different, more fixable* failure than the earlier flat-photoreal ones: "3D CGI, not a
+  photograph" alone pulls toward animated-film associations (dominant in training data) rather
+  than game-engine renders. **Fix applied:** added an explicit anti-Disney/Pixar/cartoon clause +
+  "realistic proportions, muted broadcast color grading" to the style-role instructions in
+  `prompts/zion-clark.md` and `docs/multi-image-role-tagging.md`. **Next test: re-run the same
+  3-ref role-tagged prompt (now updated) and check whether it lands on sports-sim cutscene
+  instead of animated-film.** This reopens Nano Banana Pro as a live style path — don't abandon
+  it for the SDXL/LoRA fallback until this retest is judged.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k}-style/` — style DNA + scene modifiers (9:16).

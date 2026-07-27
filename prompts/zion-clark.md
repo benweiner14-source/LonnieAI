@@ -42,6 +42,15 @@ Append the **CGI-enforcement block** below to any prompt that comes out too real
 — rendered as a 3D CGI video-game character, NOT a photograph, NOT photorealistic. Real-time game-engine render (PS5 / Unreal Engine cutscene). Smooth waxy subsurface-scattering skin with a subtle plastic sheen, slightly simplified pores, clean CG geometry, rendered hair, ambient occlusion. The subject must read as a stylized computer-generated character model, obviously CGI — like a playable video-game character, not a real person.
 ```
 
+**⚠️ If it instead renders too much like an animated FILM (Disney/Pixar/DreamWorks look —
+rounded/cute proportions, glossy toon shading, storybook feel):** that's a *different* failure
+mode than photoreal — "3D CGI character" alone pulls toward animated movies because that's the
+dominant "CGI human" association in most models' training data, not sports-game cutscenes.
+Append this **instead of/in addition to** the block above:
+```
+— NOT a Disney/Pixar/DreamWorks animated movie character, NOT cartoon-stylized, NOT storybook or toy-like, NOT cute/rounded/exaggerated proportions. Realistic human anatomical proportions and detail level — think a modern sports-simulation video game's broadcast-quality character render, not an animated film. Muted, slightly desaturated broadcast sports color grading, not warm saturated animated-movie colors.
+```
+
 **Tags:** `[style · scene]`. Full style detail in `skills/nba2k-style/` and `skills/wwe2k-style/`.
 
 > v3 — all full CGI render; tuned to scraped refs in `creators/zion-clark/refs/`.
@@ -104,7 +113,7 @@ REFERENCE IMAGE 2: use ONLY for the "NO EXCUSES" tattoo artwork and its exact pl
 
 REFERENCE IMAGE 3: use ONLY for body proportions, muscular build, and the authentic hand-supported pose/composition. His body ends at/just past the belly button — no hips, no thighs, no legs, no stump legs, nothing below that point. Ignore the specific gym and background in this image.
 
-REFERENCE IMAGE 4: use ONLY for the rendering STYLE — polished sports-simulation CGI game-engine look: waxy subsurface-scattering skin, plastic sheen, clean CG geometry, simplified hair, ambient occlusion. Ignore and do NOT reproduce any logos, team names, league marks, jersey text, or watermarks visible in this reference — style/rendering-technique only, nothing else from this image.
+REFERENCE IMAGE 4: use ONLY for the rendering STYLE — polished sports-simulation CGI game-engine look: waxy subsurface-scattering skin, plastic sheen, clean CG geometry, simplified hair, ambient occlusion. This is a broadcast sports-simulation video game render, NOT a Disney/Pixar/DreamWorks animated movie style — NOT cartoon-stylized, NOT storybook or toy-like, NOT cute/rounded/exaggerated proportions. Realistic human anatomical proportions; muted, slightly desaturated broadcast color grading, not warm saturated animated-film colors. Ignore and do NOT reproduce any logos, team names, league marks, jersey text, or watermarks visible in this reference — style/rendering-technique only, nothing else from this image.
 
 Now render: a muscular Black adaptive athlete born without legs, medium-length dreadlocks in a top-knot, short beard, gold chain with a cross pendant, supporting himself on his hands mid-training on a gym floor, chalked palms, focused intense expression, black "No Excuses" branded tee. Modern weight room with power racks, rubber flooring, motivational wall typography, bright even overhead lighting — the entire frame (character AND environment) rendered in a polished sports-simulation CGI game-engine style, obviously computer-generated, NOT a photograph. No real league, team, studio, or brand logos or trademarks anywhere in the output; no readable brand text. His body ends at/just past the belly button — no hips, no legs, no stump legs. 9:16 vertical.
 ```
@@ -124,7 +133,7 @@ REFERENCE IMAGE 2: use ONLY for the "NO EXCUSES" tattoo artwork and its exact pl
 
 REFERENCE IMAGE 3: use ONLY for body proportions, muscular build, and the authentic hand-supported pose/composition. His body ends at/just past the belly button — no hips, no thighs, no legs, no stump legs, nothing below that point. Ignore the specific gym and background in this image.
 
-REFERENCE IMAGES 4 THROUGH 9: use these ONLY, collectively, for the rendering STYLE — polished sports-simulation CGI game-engine look: waxy subsurface-scattering skin, plastic sheen, clean CG geometry, simplified hair, ambient occlusion, consistent character-render quality. Ignore and do NOT reproduce any logos, team names, league marks, jersey text, or watermarks visible in ANY of these reference images — style/rendering-technique only, nothing else from them.
+REFERENCE IMAGES 4 THROUGH 9: use these ONLY, collectively, for the rendering STYLE — polished sports-simulation CGI game-engine look: waxy subsurface-scattering skin, plastic sheen, clean CG geometry, simplified hair, ambient occlusion, consistent character-render quality. This is a broadcast sports-simulation video game render, NOT a Disney/Pixar/DreamWorks animated movie style — NOT cartoon-stylized, NOT storybook or toy-like, NOT cute/rounded/exaggerated proportions. Realistic human anatomical proportions; muted, slightly desaturated broadcast color grading, not warm saturated animated-film colors. Ignore and do NOT reproduce any logos, team names, league marks, jersey text, or watermarks visible in ANY of these reference images — style/rendering-technique only, nothing else from them.
 
 Now render: a muscular Black adaptive athlete born without legs, medium-length dreadlocks in a top-knot, short beard, gold chain with a cross pendant, supporting himself on his hands mid-training on a gym floor, chalked palms, focused intense expression, black "No Excuses" branded tee. Modern weight room with power racks, rubber flooring, motivational wall typography, bright even overhead lighting — the entire frame (character AND environment) rendered in a polished sports-simulation CGI game-engine style, obviously computer-generated, NOT a photograph. No real league, team, studio, or brand logos or trademarks anywhere in the output; no readable brand text. His body ends at/just past the belly button — no hips, no legs, no stump legs. 9:16 vertical.
 ```

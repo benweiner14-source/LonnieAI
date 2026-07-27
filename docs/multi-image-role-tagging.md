@@ -26,6 +26,16 @@ reproduce any logos, team names, league marks, jersey text, or watermarks visibl
 reference — use it for rendering technique only."* Text genericization alone (no "NBA 2K" in the
 prompt) doesn't stop the model from copying a logo it can literally see in a reference photo.
 
+**⚠️ "3D CGI, not a photograph" can drift to Disney/Pixar instead of a game render.** Confirmed
+in testing: pushing "obviously CGI, computer-generated" without more can pull the output toward
+an *animated-film* look (rounded/cute proportions, glossy toon shading) rather than a
+sports-game cutscene — because "3D CGI human" training data skews heavily toward animated
+movies, not game engines. This is a *different* failure from staying photoreal, and needs its
+own counter-instruction in the style role: explicitly rule out Disney/Pixar/DreamWorks/cartoon,
+and state realistic (not exaggerated/cute) human proportions + muted broadcast color grading
+instead of warm saturated animated-movie color. See the style-role text in
+`prompts/zion-clark.md`'s "multi-ref role-tagged" entries for the exact wording.
+
 ---
 
 ## Worked example — Zion, 4-image role-tagged gym scene
