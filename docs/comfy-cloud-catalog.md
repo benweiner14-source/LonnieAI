@@ -28,9 +28,19 @@ OFF. So the *look* is reachable on SDXL, but the real test is the full pipeline 
 but gives **no** stronger face lock or CGI control — it's a closed model; FaceID/ControlNet/LoRA only
 attach to open models (SDXL/Flux). So there's no reason to route GPT Image 2 through Comfy.
 
+## Identity: FaceID is BLOCKED on Comfy Cloud — use IP-Adapter Plus Face
+**FaceID (any variant) fails**: `IPAdapterFaceID` needs InsightFace `buffalo_l`, which can't
+download/initialize in the Comfy Cloud runtime (sandboxed). Dead end.
+**Working identity path (confirmed):** `IPAdapterAdvanced` + `ip-adapter-plus-face_sdxl_vit-h`
++ `CLIPVisionLoader` (CLIP-ViT-H) — CLIP-vision face conditioning, no InsightFace.
+- Feed it **clean, frontal FACE shots** (not action/body shots) — best from `refs/soul-id/`
+  (the tight face angles); **3 refs as a batch** = stronger composite identity. Crop to the face if easy.
+- **Weight ~0.75–0.85.** Caution: Plus-Face borrows the photo's face *texture*, so pushing weight
+  too high drags back toward PHOTOREAL. If likeness is weak, add more/better face refs rather than
+  cranking weight to 1.0; let the LoRA + CGI prompt carry the stylization.
+
 ## Remaining path (in order)
-1. **Identity** — add **FaceID Plus v2 ~0.85** from `refs/soul-id/` to make it Zion. If it crashes on
-   the InsightFace dependency, try the **`faceid-portrait_sdxl_unnorm`** variant.
+1. **Identity** — IP-Adapter Plus Face (above), 3 clean face refs, ~0.8.
 2. **⚠️ Authentic body (no legs) — hard rule.** Baselines generated full legs + sneakers. For Zion,
    enforce: prompt "born without legs, torso ending at hips, supported on both hands, no legs";
    negatives "legs, thighs, knees, sneakers, standing, crouching, full body"; and **ControlNet
