@@ -159,7 +159,12 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k}-style/` — style DNA + scene modifiers (9:16).
-- `prompts/{zion-clark,kazumi}.md` — paste-ready prompts (full CGI render).
+- `prompts/{zion-clark,kazumi}.md` — **Comfy Cloud / Nano Banana Pro** paste-ready prompts, full
+  multi-image role-tagging (`REFERENCE IMAGE 1/2/3...`), full CGI render.
+- `prompts/{zion-clark,kazumi}-higgsfield.md` — **Higgsfield** paste-ready prompts, same scenes,
+  no role-tagging — single flowing paragraph per scene (Higgsfield's img2img/Nano Banana flow
+  doesn't reliably use more than one attached photo, so explicit multi-image role text there is
+  dead weight). Same hard rules (anatomy, brand safety, anti-Disney) baked into each paragraph.
 - `creators/<name>/{profile.md, refs/}` — brand + guardrails + reference stills;
   `creators/zion-clark/refs/soul-id/` = 20-image identity set.
 - `reference-material/2k-screenshots/` — NBA 2K CGI style frames + `textures/` crops.
