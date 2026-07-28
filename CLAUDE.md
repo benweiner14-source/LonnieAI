@@ -93,6 +93,19 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   3-ref role-tagged prompt (now updated) and check whether it lands on sports-sim cutscene
   instead of animated-film.** This reopens Nano Banana Pro as a live style path — don't abandon
   it for the SDXL/LoRA fallback until this retest is judged.
+- **✅ v2 retest CONFIRMED — RECIPE LOCKED.** Disney/Pixar drift gone; Ben called it "one of the
+  best ones yet." Locked recipe: **Nano Banana Pro**, refs in order — face=`zion_gym_parallette.jpg`
+  (always), tattoo=`zion_back_noexcuses_tattoo.jpg` (only when back is visible in-scene),
+  body=`soul-id/soul_12.jpg` (gym/portrait) or `zion_track_noexcuses.webp` (track) or
+  `zion_boxing_ring.jpg` (WWE/combat), style=`2k_02.jpg` (always, anti-Disney wording locked in).
+  **All 16 of Zion's scenes (NBA 2K + WWE 2K, incl. signature moments) are now built this way in
+  `prompts/zion-clark.md`** — ready to run as a batch. Note: I initially misjudged the v1 image as
+  "fully photoreal" when Ben confirmed it was actually a 3D render (just wrong style bucket,
+  Disney-leaning) — be more careful/humble calling photoreal-vs-CGI from a compressed image;
+  defer to Ben's full-resolution judgment on that specific axis.
+- **Next up:** run the 16-scene batch for Zion, curate best into `output/zion-clark/` (or push
+  straight to Drive), then apply the same locked recipe + role-tagging technique to Kazumi
+  (adjust refs to her `creators/kazumi/refs/`, GTA VI/Cyberpunk style refs instead of 2K).
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k}-style/` — style DNA + scene modifiers (9:16).

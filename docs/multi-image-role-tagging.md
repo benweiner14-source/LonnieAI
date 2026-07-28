@@ -38,16 +38,19 @@ instead of warm saturated animated-movie color. See the style-role text in
 
 ---
 
-## Worked example — Zion, 4-image role-tagged gym scene
+## ✅ LOCKED — this recipe is confirmed (Ben's v2 test, "one of the best so far")
 
 **Attach in this exact order:**
-1. `creators/zion-clark/refs/zion_gym_parallette.jpg` (clean frontal face)
-2. `creators/zion-clark/refs/zion_back_noexcuses_tattoo.jpg` (tattoo)
-3. `creators/zion-clark/refs/soul-id/soul_12.jpg` (body/pose)
-4. `reference-material/2k-screenshots/2k_02.jpg` (style)
+1. `creators/zion-clark/refs/zion_gym_parallette.jpg` (face — locked, used in every prompt)
+2. `creators/zion-clark/refs/zion_back_noexcuses_tattoo.jpg` (tattoo — only when his back is
+   visible in the scene)
+3. `creators/zion-clark/refs/soul-id/soul_12.jpg` (body — gym/portrait scenes; swap to
+   `zion_track_noexcuses.webp` for track scenes, `zion_boxing_ring.jpg` for WWE/combat scenes)
+4. `reference-material/2k-screenshots/2k_02.jpg` (style — locked, used in every prompt, with the
+   anti-Disney/Pixar clause)
 
-> Full ready-to-paste version (plus a **multi-style variant** using 6 style images at once,
-> within the 14-image cap) is in `prompts/zion-clark.md` under "multi-ref role-tagged."
+All 16 of Zion's scenes are now built this way in `prompts/zion-clark.md` — that file is the
+source of truth; this doc explains *why* the pattern works.
 
 **Prompt:**
 ```
