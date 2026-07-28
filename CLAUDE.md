@@ -219,6 +219,20 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   instead of her body. **Rule of thumb going forward:** avoid "looking up at [her]" camera phrasing
   on Kazumi's prompts specifically; low angles emphasizing an object (a car, a building) she's
   merely standing near are fine, low angles whose subject is literally her body from below are not.
+- **"Bayview City" / "Neo City" were rendering as literal signage in the output.** Ben noticed the
+  invented placeholder city names kept showing up as readable text/signs in the generated images.
+  Root cause: those names were literal words in the prompt text (e.g. "...9:16 vertical. Bayview
+  City. Fully clothed, SFW."), so the model rendered them the same way it would any other text in
+  a prompt — this is the same underlying mechanism that caused real logo leakage before, just with
+  a fictional name instead of a trademarked one. **Fixed:** stripped every literal "Bayview City"
+  and "Neo City" mention out of the actual scene prompt text in all 15 scenes across both
+  `prompts/kazumi.md` and `prompts/kazumi-higgsfield.md` — the visual scene-setting (art-deco
+  hotels, neon streets, marina, gas station, megabuildings, etc.) already establishes the setting
+  without needing a place name spelled out. The explainer note in each file's header (documenting
+  *why* invented names were chosen over real ones) still mentions them, but that text is never
+  itself pasted into a generation. **Lesson:** any proper-noun-shaped phrase in a prompt — real or
+  invented — risks getting rendered as literal on-screen text; only put a name in the prompt if you
+  actually want it legible in the output.
 - **Next up:** re-test `[gta6 · nightlife]` and `[cyberpunk · street]` once each against the v7
   Kazumi prompts to confirm the earlier photoreal/composited-look fixes AND the new camera variety
   hold, then batch the remaining 7 GTA + 6 Cyberpunk scenes. Separately: re-test the fixed Zion
