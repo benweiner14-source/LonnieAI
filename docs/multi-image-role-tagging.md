@@ -45,7 +45,7 @@ instead of warm saturated animated-movie color. See the style-role text in
 2. `creators/zion-clark/refs/zion_back_noexcuses_tattoo.jpg` (tattoo — only when his back is
    visible in the scene)
 3. `creators/zion-clark/refs/soul-id/soul_12.jpg` (body — gym/portrait scenes; swap to
-   `zion_track_noexcuses.webp` for track scenes, `zion_boxing_ring.jpg` for WWE/combat scenes)
+   `zion_track_noexcuses.jpg` for track scenes, `zion_boxing_ring.jpg` for WWE/combat scenes)
 4. `reference-material/2k-screenshots/2k_02.jpg` (style — locked, used in every prompt, with the
    anti-Disney/Pixar clause)
 

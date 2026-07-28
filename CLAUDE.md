@@ -96,7 +96,7 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 - **✅ v2 retest CONFIRMED — RECIPE LOCKED.** Disney/Pixar drift gone; Ben called it "one of the
   best ones yet." Locked recipe: **Nano Banana Pro**, refs in order — face=`zion_gym_parallette.jpg`
   (always), tattoo=`zion_back_noexcuses_tattoo.jpg` (only when back is visible in-scene),
-  body=`soul-id/soul_12.jpg` (gym/portrait) or `zion_track_noexcuses.webp` (track) or
+  body=`soul-id/soul_12.jpg` (gym/portrait) or `zion_track_noexcuses.jpg` (track) or
   `zion_boxing_ring.jpg` (WWE/combat), style=`2k_02.jpg` (always, anti-Disney wording locked in).
   **All 16 of Zion's scenes (NBA 2K + WWE 2K, incl. signature moments) are now built this way in
   `prompts/zion-clark.md`** — ready to run as a batch. Note: I initially misjudged the v1 image as

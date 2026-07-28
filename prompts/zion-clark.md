@@ -47,7 +47,7 @@ explicitly rules that out and asks for realistic proportions + muted broadcast c
 **Reference files used throughout** (all in `creators/zion-clark/refs/`):
 - **Face (identity, every prompt):** `zion_gym_parallette.jpg`
 - **Tattoo (only when his back is visible in the scene):** `zion_back_noexcuses_tattoo.jpg`
-- **Body/pose (varies by scene — gym: `soul-id/soul_12.jpg`; track: `zion_track_noexcuses.webp`;
+- **Body/pose (varies by scene — gym: `soul-id/soul_12.jpg`; track: `zion_track_noexcuses.jpg`;
   combat/wrestling: `zion_boxing_ring.jpg`)**
 - **Style (every prompt):** `reference-material/2k-screenshots/2k_02.jpg`
 
@@ -129,7 +129,7 @@ REFERENCE IMAGE 3: use ONLY for the rendering STYLE — polished sports-simulati
 Now render: driving a weight sled with his arms across a performance turf floor, equipment visible in the background — the entire frame rendered in the CGI style described above. No real league, team, studio, or brand logos or trademarks anywhere in the output. His body ends at/just past the belly button — no hips, no legs, no stump legs. 9:16 vertical.
 ```
 
-**[nba2k · track]** — _1) `zion_gym_parallette.jpg` (face) 2) `zion_track_noexcuses.webp` (body)
+**[nba2k · track]** — _1) `zion_gym_parallette.jpg` (face) 2) `zion_track_noexcuses.jpg` (body)
 3) `2k_02.jpg` (style)_
 ```
 REFERENCE IMAGE 1: use ONLY for facial identity and likeness — his exact face shape, eyes, nose, beard. Ignore the pose and background in this image.
