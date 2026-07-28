@@ -33,7 +33,15 @@
 ## Look: FULL CGI RENDER
 - Entire frame (subject + environment) rendered in the game engine — a stylized in-game shot.
 - We dropped the "CGI character composited into a photoreal scene" look — GPT Image 2 couldn't
-  hold it. Best path: Soul ID + text-to-image (no source photo).
+  hold it.
+- **Recipe (same technique as Zion, applied fresh — not yet test-confirmed for her):**
+  **Nano Banana Pro**, multi-image role-tagging (face/body/style, each with one explicit job in
+  the text), anti-Disney/Pixar wording on the style role. Face ref: `kazumi_yellow_polo_
+  portrait.jpg`. Body ref: `kazumi_olive_tank_denim.jpg`. Style refs: real gameplay screenshots
+  (not cover art — cover art is dominated by the real trademarked logo/title, too risky) —
+  `skills/gta6-style/reference/gtav_skyline_dusk.jpg` for GTA scenes,
+  `skills/cyberpunk-2077-style/reference/cp2077_neon_street.jpg` for Cyberpunk scenes. Full
+  prompts in `prompts/kazumi.md`.
 
 ## Guardrails — SFW / brand-safe (strict for this POC)
 - **Glam but clothed.** Swimwear, streetwear, techwear, cosplay-style outfits are fine **as

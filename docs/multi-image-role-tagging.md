@@ -76,6 +76,15 @@ Add more slots the same way, e.g.:
 More images ≠ automatically better — prioritize *distinct, clean* signal per role over stacking
 near-duplicates. If results get confused, cut back to the 4 core roles above first.
 
+## Applied to Kazumi (not yet test-confirmed)
+Same method, `prompts/kazumi.md`: face=`kazumi_yellow_polo_portrait.jpg`,
+body=`kazumi_olive_tank_denim.jpg`, style=real GTA V / Cyberpunk 2077 **gameplay** screenshots
+(`skills/gta6-style/reference/gtav_skyline_dusk.jpg`,
+`skills/cyberpunk-2077-style/reference/cp2077_neon_street.jpg`) — deliberately NOT the cover-art
+images (`gtav_keyart.jpg`, `cp2077_boxart.jpg`), which are dominated by the real trademarked
+logo/title itself and are too risky even with an "ignore logos" instruction. Run one scene first
+to confirm before batching, same as Zion's process.
+
 ## Report back
 Note which images/roles you used and paste the result — we judge identity, tattoo accuracy, body
 authenticity, and style separately, then tune whichever axis is weakest.

@@ -103,9 +103,16 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   "fully photoreal" when Ben confirmed it was actually a 3D render (just wrong style bucket,
   Disney-leaning) — be more careful/humble calling photoreal-vs-CGI from a compressed image;
   defer to Ben's full-resolution judgment on that specific axis.
-- **Next up:** run the 16-scene batch for Zion, curate best into `output/zion-clark/` (or push
-  straight to Drive), then apply the same locked recipe + role-tagging technique to Kazumi
-  (adjust refs to her `creators/kazumi/refs/`, GTA VI/Cyberpunk style refs instead of 2K).
+- **Zion batch running** (local agent working through all 16 scenes in `prompts/zion-clark.md`).
+- **Kazumi pack built in parallel** while waiting on Zion's renders: same multi-ref role-tagging
+  technique, 15 scenes converted in `prompts/kazumi.md`. Face=`kazumi_yellow_polo_portrait.jpg`,
+  body=`kazumi_olive_tank_denim.jpg`, style=real **gameplay** screenshots sourced fresh via Steam
+  (`gtav_skyline_dusk.jpg`, `cp2077_neon_street.jpg`) — NOT the existing cover-art images
+  (`gtav_keyart.jpg`, `cp2077_boxart.jpg`), which are dominated by the real logo/title itself and
+  too risky even with an "ignore logos" instruction. **Not yet test-confirmed** — run one GTA
+  scene + one Cyberpunk scene first, same validate-before-batch process as Zion.
+- **Next up:** curate Zion's best renders into `output/zion-clark/` (or push to Drive), validate
+  Kazumi's recipe with a test scene, then batch her remaining 14.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k}-style/` — style DNA + scene modifiers (9:16).
