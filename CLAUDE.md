@@ -168,11 +168,41 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   prompt packs): shorts/trunks/shirt hem drape loosely and *emptily* past the end of his torso
   (not shaped like a leg) instead of ending in bare skin. Upper-body-only portrait crops (framed
   above the waist) skip this since they don't reach that part of the frame.
-- **Next up:** run one scene with the new refs (2 face images + tattoo ref) to confirm identity
-  and tattoo both render consistently, re-test the fixed WWE scenes (esp. `victory` for the
-  wardrobe-drape fix) + confirm gym's photoreal issue resolves with the seed-variant approach,
-  then finish the remaining batch, curate best into `output/zion-clark/` (or push to Drive),
-  validate Kazumi's recipe with a test scene, then batch her remaining 14.
+- **Zion batch mostly complete via Google Drive** (40 outputs uploaded across 16 scenes). Since
+  the connected Google Drive tools can only search/read/copy/create (no rename, move, or delete),
+  organized the 22 clearly-scene-named files into `Zion - organized/{NBA2K,WWE2K}/<scene>/` with
+  clean filenames via copy — originals are still sitting in the top-level folder too (Ben needs to
+  delete those manually once he's confirmed the copies). The other 18 files (opaque `hf_*`
+  Higgsfield-timestamp names + `Untitled-*`) were dumped as-is into an `unsorted/` subfolder,
+  not inspected, per Ben's call.
+- **Kazumi's first test round (`nightlife` + `street`, 4 seeds each) — found real issues on both
+  styles, both reworked in `prompts/kazumi.md` (now v6):**
+  - `gta6_nightlife`: read too photoreal (real-world Miami, not a CGI screenshot — same "plainest
+    scene" issue as Zion's gym) **and** 3/4 seeds got refused by Gemini's safety filter, traced to
+    the body ref `kazumi_olive_tank_denim.jpg` combined with "cropped designer top" in the prompt.
+    Checked all 8 Kazumi ref photos for a less-revealing replacement — none work (the covered ones
+    are tight headshot crops, not figure shots; the figure shots are all similarly or more
+    revealing than the current ref). **Fix:** dropped the image body ref for GTA scenes entirely
+    (now 2-ref: face + style, figure carried by text only), added explicit "obviously
+    computer-generated, NOT a real photograph" to the GTA style role, punched up `nightlife`'s
+    environment with more exaggerated neon/lighting.
+  - `cyberpunk_street`: passed the automated check (identity/logos/SFW clean 4/4) but Ben's direct
+    look caught something the checklist missed — it read as a **CGI character composited onto a
+    photoreal background**, exactly the look this project dropped early on (see "Locked
+    decisions" above), plus the environments were busy/over-stylized (too many simultaneous
+    neon/fog/bloom layers). **Fix:** added an explicit "character and environment must render in
+    the SAME unified CGI style, not composited" instruction to the Cyberpunk style role, and
+    trimmed the 4 busiest scene environments (`street`, `megabuilding`, `cyber-bar`,
+    `cosplay-hero`) from 3-5 stacked elements down to 1-2 clean ones.
+  - **Lesson:** an automated per-axis checklist (identity/style/logos/SFW) can still miss a
+    composited-look failure that's obvious on direct look — keep having Ben eyeball results even
+    when the checklist passes clean.
+- **Next up:** re-test `[gta6 · nightlife]` and `[cyberpunk · street]` once each against the v6
+  prompts to confirm both fixes hold, then batch the remaining 7 GTA + 6 Cyberpunk scenes.
+  Separately: re-test the fixed Zion WWE scenes (esp. `victory` for the wardrobe-drape fix) +
+  confirm gym's photoreal issue resolves with the seed-variant approach, then finish the remaining
+  Zion batch and have Ben delete the un-organized originals from the Drive folder once the
+  organized copies are confirmed good.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k}-style/` — style DNA + scene modifiers (9:16).
