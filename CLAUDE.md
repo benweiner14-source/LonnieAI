@@ -208,6 +208,17 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   `cyberpunk · cosplay-hero` stays centered on purpose (mimics a character-select screen). While
   touching Kazumi's Higgsfield pack, also ported over the Cyberpunk declutter/unified-style fix
   from the Comfy pack (it still had the old busy effect stack) so both packs stay in sync.
+- **⚠️ "Extreme low angle looking up" auto-failed in Higgsfield (`kazumi cyberpunk · megabuilding`
+  scene) — likely a safety-filter trigger, not a rendering issue.** Camera phrasing that frames a
+  female subject from a low angle looking up at her is a known sensitive pattern for image-gen
+  safety filters (reads as upskirt/creepshot-adjacent framing regardless of intent), separate from
+  the Gemini-body-ref-image trigger found earlier on GTA nightlife. **Fixed:** replaced "extreme
+  low angle looking up" on both Kazumi scenes that had it (`megabuilding`, `luxury-car`) in both
+  prompt packs with angles that keep the scale/drama without literally looking up at her — eye-level
+  wide with a large background environment, or a low three-quarter angle framed around the car
+  instead of her body. **Rule of thumb going forward:** avoid "looking up at [her]" camera phrasing
+  on Kazumi's prompts specifically; low angles emphasizing an object (a car, a building) she's
+  merely standing near are fine, low angles whose subject is literally her body from below are not.
 - **Next up:** re-test `[gta6 · nightlife]` and `[cyberpunk · street]` once each against the v7
   Kazumi prompts to confirm the earlier photoreal/composited-look fixes AND the new camera variety
   hold, then batch the remaining 7 GTA + 6 Cyberpunk scenes. Separately: re-test the fixed Zion
