@@ -197,9 +197,21 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   - **Lesson:** an automated per-axis checklist (identity/style/logos/SFW) can still miss a
     composited-look failure that's obvious on direct look — keep having Ben eyeball results even
     when the checklist passes clean.
-- **Next up:** re-test `[gta6 · nightlife]` and `[cyberpunk · street]` once each against the v6
-  prompts to confirm both fixes hold, then batch the remaining 7 GTA + 6 Cyberpunk scenes.
-  Separately: re-test the fixed Zion WWE scenes (esp. `victory` for the wardrobe-drape fix) +
+- **Everything was reading too centered/symmetrical — no camera variety in any pack.** Ben
+  flagged both Zion's and Kazumi's renders as flat, always-centered hero shots. Root cause on
+  inspection: the prompts genuinely had almost no camera-angle/lens language — most scenes ended
+  in a generic "Hero framing, rim light." or nothing at all. **Fixed across all 4 prompt packs**
+  (`zion-clark.md`, `zion-clark-higgsfield.md`, `kazumi.md`, `kazumi-higgsfield.md`): every one of
+  the 62 scenes now ends with a distinct **Camera:** clause — angle (low/high/Dutch tilt/
+  three-quarter/overhead), focal length (20mm wide through 135mm telephoto), and off-center/
+  asymmetrical framing, no two scenes alike within a pack. One deliberate exception: Kazumi's
+  `cyberpunk · cosplay-hero` stays centered on purpose (mimics a character-select screen). While
+  touching Kazumi's Higgsfield pack, also ported over the Cyberpunk declutter/unified-style fix
+  from the Comfy pack (it still had the old busy effect stack) so both packs stay in sync.
+- **Next up:** re-test `[gta6 · nightlife]` and `[cyberpunk · street]` once each against the v7
+  Kazumi prompts to confirm the earlier photoreal/composited-look fixes AND the new camera variety
+  hold, then batch the remaining 7 GTA + 6 Cyberpunk scenes. Separately: re-test the fixed Zion
+  WWE scenes (esp. `victory` for the wardrobe-drape fix, now also carrying new camera angles) +
   confirm gym's photoreal issue resolves with the seed-variant approach, then finish the remaining
   Zion batch and have Ben delete the un-organized originals from the Drive folder once the
   organized copies are confirmed good.
