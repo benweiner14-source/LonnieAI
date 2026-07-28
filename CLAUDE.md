@@ -137,9 +137,25 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
     rather than trying to fix them after the fact.
   - **Not yet re-tested** — re-run `wwe2k_entrance` (and ideally the other 2 fixed WWE scenes)
     to confirm the grounding fix actually holds before resuming the remaining batch.
-- **Next up:** re-test the fixed WWE scenes + confirm gym's photoreal issue resolves with the
-  seed-variant approach, then finish the remaining batch, curate best into `output/zion-clark/`
-  (or push to Drive), validate Kazumi's recipe with a test scene, then batch her remaining 14.
+- **Arm/chest tattoos were "getting generated willy nilly" (Ben's report) — fixed.** Root cause:
+  only the back tattoo had a photo reference; his chest/arm ink had no visual anchor at all, so
+  the model improvised a different design every generation. Fix: Ben linked an Instagram post +
+  a promiflash.de article; a **promo photo from the article**
+  (`content.promiflash.de/article-images/video_1080/zion-clark-wrestler.jpg`) turned out to be a
+  sharp, well-lit close-up of his real **"330 Clark" chest/collarbone script tattoo** and his
+  **left arm/bicep tattoo** — clearer than any existing ref. Saved as
+  `creators/zion-clark/refs/zion_chest_arm_tattoo.jpg`. Added as a new **always-included role**
+  (like face and style) on every scene where his front/arms are visible; scenes shot from behind
+  or in silhouette keep using only the back-tattoo ref. `prompts/zion-clark.md` is now v3 — all
+  16 scenes renumbered with the new reference wired in (4 refs normally, 5 for `double-flex`
+  which shows both tattoos). Also updated `docs/multi-image-role-tagging.md` and
+  `creators/zion-clark/profile.md`. **Not yet test-rendered — this is the next thing to validate**
+  before resuming the batch.
+- **Next up:** run one scene with the new tattoo ref (e.g. `nba2k_gym` or `nba2k_signature_chalk-clap`,
+  both show chest/arms clearly) to confirm the tattoo now renders consistently, re-test the fixed
+  WWE scenes + confirm gym's photoreal issue resolves with the seed-variant approach, then finish
+  the remaining batch, curate best into `output/zion-clark/` (or push to Drive), validate Kazumi's
+  recipe with a test scene, then batch her remaining 14.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k}-style/` — style DNA + scene modifiers (9:16).

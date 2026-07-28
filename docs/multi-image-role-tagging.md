@@ -40,23 +40,35 @@ instead of warm saturated animated-movie color. See the style-role text in
 
 ## ✅ LOCKED — this recipe is confirmed (Ben's v2 test, "one of the best so far")
 
-**Attach in this exact order:**
+**Attach in this exact order (v3 — added dedicated arm/chest tattoo reference):**
 1. `creators/zion-clark/refs/zion_gym_parallette.jpg` (face — locked, used in every prompt)
-2. `creators/zion-clark/refs/zion_back_noexcuses_tattoo.jpg` (tattoo — only when his back is
-   visible in the scene)
-3. `creators/zion-clark/refs/soul-id/soul_12.jpg` (body — gym/portrait scenes; swap to
+2. `creators/zion-clark/refs/zion_chest_arm_tattoo.jpg` (arm/chest tattoo — used whenever his
+   front/arms are visible; see below)
+3. `creators/zion-clark/refs/zion_back_noexcuses_tattoo.jpg` (back tattoo — only when his back is
+   visible in the scene, in place of the arm/chest tattoo ref)
+4. `creators/zion-clark/refs/soul-id/soul_12.jpg` (body — gym/portrait scenes; swap to
    `zion_track_noexcuses.jpg` for track scenes, `zion_boxing_ring.jpg` for WWE/combat scenes)
-4. `reference-material/2k-screenshots/2k_02.jpg` (style — locked, used in every prompt, with the
+5. `reference-material/2k-screenshots/2k_02.jpg` (style — locked, used in every prompt, with the
    anti-Disney/Pixar clause)
+
+**Why the arm/chest tattoo ref was added:** Ben flagged that arm/chest tattoos were "getting
+generated willy nilly" — only the back tattoo had a photo reference, so the model had nothing to
+anchor his chest/arm ink to and improvised a different design each generation. Fix: sourced a
+sharp, well-lit close-up (`zion_chest_arm_tattoo.jpg`, from a promo photo Ben linked) showing his
+real "330 Clark" chest/collarbone script tattoo and his left arm/bicep tattoo clearly, and gave it
+its own always-included role (like face and style) in every scene where he's shown front-on or
+with bare arms. Scenes shot from behind or in silhouette keep using the back-tattoo reference
+instead — see `prompts/zion-clark.md` for the per-scene reference lists.
 
 All 16 of Zion's scenes are now built this way in `prompts/zion-clark.md` — that file is the
 source of truth; this doc explains *why* the pattern works.
 
-**Prompt:**
+**Prompt** (v3 example — see `prompts/zion-clark.md`'s `[nba2k · gym]` entry for the current
+canonical version, kept in sync there; this is illustrative):
 ```
-REFERENCE IMAGE 1: use ONLY for facial identity and likeness — his exact face shape, eyes, nose, beard. Ignore the clothing, pose, and background in this image.
+REFERENCE IMAGE 1: use ONLY for facial identity and likeness — his exact face shape, eyes, nose, beard. Ignore the pose and background in this image.
 
-REFERENCE IMAGE 2: use ONLY for the "NO EXCUSES" tattoo artwork and its exact placement across the upper back and shoulders. Ignore the pose and background in this image.
+REFERENCE IMAGE 2: use ONLY for the exact tattoo designs on his chest/collarbone (a script-lettering tattoo) and his left arm/bicep — their exact linework, lettering, and placement. Ignore the pose and background in this image.
 
 REFERENCE IMAGE 3: use ONLY for body proportions, muscular build, and the authentic hand-supported pose/composition. His body ends at/just past the belly button — no hips, no thighs, no legs, no stump legs, nothing below that point. Ignore the specific gym in this image.
 

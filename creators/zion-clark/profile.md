@@ -12,8 +12,11 @@
   often trains shirtless on parallettes / benches / on his hands.
 - **Medium-length dreadlocks**, frequently in a **top-knot / half-up** style, off the face.
 - Full short **beard and mustache**; bright, confident smile; sometimes visor-style sunglasses.
-- **Gold chain**, often with a **cross pendant**; **chest/collarbone tattoos** plus arm tattoos.
-- Signature **"NO EXCUSES" tattoo across the upper back / shoulders**.
+- **Gold chain**, often with a **cross pendant**; a **"330 Clark" script tattoo across his
+  chest/collarbone** plus a tattoo on his **left arm/bicep** (clean reference:
+  `refs/zion_chest_arm_tattoo.jpg`).
+- Signature **"NO EXCUSES" tattoo across the upper back / shoulders** (reference:
+  `refs/zion_back_noexcuses_tattoo.jpg`).
 - Own branded gear — **"Z" lightning-bolt "No Excuses" logo** (seen on tees); pink training
   shorts; green boxing gloves; a lightweight **racing wheelchair** on the track.
 - Personal brand palette leans **purple/violet + gold + black**. Motivational, high-energy.
