@@ -40,15 +40,18 @@ instead of warm saturated animated-movie color. See the style-role text in
 
 ## ✅ LOCKED — this recipe is confirmed (Ben's v2 test, "one of the best so far")
 
-**Attach in this exact order (v3 — added dedicated arm/chest tattoo reference):**
-1. `creators/zion-clark/refs/zion_gym_parallette.jpg` (face — locked, used in every prompt)
-2. `creators/zion-clark/refs/zion_chest_arm_tattoo.jpg` (arm/chest tattoo — used whenever his
+**Attach in this exact order (v4 — added a second face angle + dedicated arm/chest tattoo
+reference):**
+1. `creators/zion-clark/refs/zion_gym_parallette.jpg` (face, angle 1 — locked, used in every prompt)
+2. `creators/zion-clark/refs/zion_face_agt.jpg` (face, angle 2 — same person, different
+   angle/lighting; used alongside Image 1 in every prompt, not instead of it)
+3. `creators/zion-clark/refs/zion_chest_arm_tattoo.jpg` (arm/chest tattoo — used whenever his
    front/arms are visible; see below)
-3. `creators/zion-clark/refs/zion_back_noexcuses_tattoo.jpg` (back tattoo — only when his back is
+4. `creators/zion-clark/refs/zion_back_noexcuses_tattoo.jpg` (back tattoo — only when his back is
    visible in the scene, in place of the arm/chest tattoo ref)
-4. `creators/zion-clark/refs/soul-id/soul_12.jpg` (body — gym/portrait scenes; swap to
+5. `creators/zion-clark/refs/soul-id/soul_12.jpg` (body — gym/portrait scenes; swap to
    `zion_track_noexcuses.jpg` for track scenes, `zion_boxing_ring.jpg` for WWE/combat scenes)
-5. `reference-material/2k-screenshots/2k_02.jpg` (style — locked, used in every prompt, with the
+6. `reference-material/2k-screenshots/2k_02.jpg` (style — locked, used in every prompt, with the
    anti-Disney/Pixar clause)
 
 **Why the arm/chest tattoo ref was added:** Ben flagged that arm/chest tattoos were "getting
@@ -87,6 +90,17 @@ Add more slots the same way, e.g.:
 
 More images ≠ automatically better — prioritize *distinct, clean* signal per role over stacking
 near-duplicates. If results get confused, cut back to the 4 core roles above first.
+
+## Alternate/additional refs (sourced from a Google Images sweep, Ben-approved)
+Three more candidates were pulled from public press/podcast coverage (filtered to ≥2MP via image
+search metadata, downloaded, and reviewed) and approved by Ben for specific roles:
+- `zion_face_agt.jpg` — an AGT red-carpet photo, sharp and front-facing. **Added as a second face
+  reference alongside `zion_gym_parallette.jpg`** (used together, not as a replacement — Ben
+  wants both angles feeding identity).
+- `zion_plyobox_bodycomp.jpg` — approved for body composition; a good alternate to `soul_12.jpg`
+  if that one isn't reading well in testing.
+- `zion_chest_tattoo_closeup_alt.jpg` — approved as a second clean look at the chest tattoo;
+  alternate to `zion_chest_arm_tattoo.jpg` if that one isn't reading well in testing.
 
 ## Applied to Kazumi (not yet test-confirmed)
 Same method, `prompts/kazumi.md`: face=`kazumi_yellow_polo_portrait.jpg`,

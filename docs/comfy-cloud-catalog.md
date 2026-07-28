@@ -46,7 +46,7 @@ download/initialize in the Comfy Cloud runtime (sandboxed). Dead end.
    full legs + sneakers (wrong) — enforce: prompt "born without legs, body ends at the belly
    button, nothing below that point, supported on both hands"; negatives "legs, thighs, hips,
    pelvis, stump legs, knees, sneakers, standing, crouching, full body"; and **ControlNet
-   Depth/OpenPose from a real hand-support photo** (`refs/zion_gym_parallette.jpg` or a `soul-id`
+   Depth/OpenPose from a real hand-support photo** (`refs/zion_face_agt.jpg` or a `soul-id`
    hand-balance shot) to guarantee the composition. Prompt alone may leak legs/stumps.
 3. **Then:** lock full recipe into `prompts/`, batch Zion's scenes, repeat for Kazumi (her Cyberpunk
    already suits the anime LoRA).

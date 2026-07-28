@@ -75,7 +75,7 @@ Fix what failed in attempt #2 above, don't repeat it:
 2. **Style** — `sdxl-cyberpunk_anime_style` LoRA @0.45 (confirmed good CGI push in baseline
    testing) + the genericized CGI prompt.
 3. **Pose/body** — **real ControlNet Depth or OpenPose** (NOT img2img) from a hand-support photo
-   (e.g. `refs/zion_gym_parallette.jpg`), to actually lock the composition and prevent legs/stumps.
+   (e.g. `refs/zion_face_agt.jpg`), to actually lock the composition and prevent legs/stumps.
 4. Negative prompt must include: `legs, thighs, hips, pelvis, stump legs, knees, sneakers,
    standing, crouching, full body` in addition to the standard photoreal negatives.
 

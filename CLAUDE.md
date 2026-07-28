@@ -94,7 +94,7 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   instead of animated-film.** This reopens Nano Banana Pro as a live style path — don't abandon
   it for the SDXL/LoRA fallback until this retest is judged.
 - **✅ v2 retest CONFIRMED — RECIPE LOCKED.** Disney/Pixar drift gone; Ben called it "one of the
-  best ones yet." Locked recipe: **Nano Banana Pro**, refs in order — face=`zion_gym_parallette.jpg`
+  best ones yet." Locked recipe: **Nano Banana Pro**, refs in order — face=`zion_face_agt.jpg`
   (always), tattoo=`zion_back_noexcuses_tattoo.jpg` (only when back is visible in-scene),
   body=`soul-id/soul_12.jpg` (gym/portrait) or `zion_track_noexcuses.jpg` (track) or
   `zion_boxing_ring.jpg` (WWE/combat), style=`2k_02.jpg` (always, anti-Disney wording locked in).
@@ -151,11 +151,28 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   which shows both tattoos). Also updated `docs/multi-image-role-tagging.md` and
   `creators/zion-clark/profile.md`. **Not yet test-rendered — this is the next thing to validate**
   before resuming the batch.
-- **Next up:** run one scene with the new tattoo ref (e.g. `nba2k_gym` or `nba2k_signature_chalk-clap`,
-  both show chest/arms clearly) to confirm the tattoo now renders consistently, re-test the fixed
-  WWE scenes + confirm gym's photoreal issue resolves with the seed-variant approach, then finish
-  the remaining batch, curate best into `output/zion-clark/` (or push to Drive), validate Kazumi's
-  recipe with a test scene, then batch her remaining 14.
+- **Also added a Higgsfield-only prompt pack per creator** (`prompts/{zion-clark,kazumi}-higgsfield.md`)
+  — same scenes, single flowing paragraph, no `REFERENCE IMAGE N` tagging, for messing around
+  directly in Higgsfield without the full role-tagging system.
+- **Sourced 10 more Zion photos via a Google/Bing image search sweep (≥2MP, filtered by real
+  resolution metadata), Ben approved 3 for specific roles — added as ADDITIONS, not replacements:**
+  `zion_face_agt.jpg` (AGT red-carpet photo — now a **second face reference used alongside**
+  `zion_gym_parallette.jpg`, not instead of it — both feed identity together on every prompt),
+  `zion_plyobox_bodycomp.jpg` (approved alternate for body composition), and
+  `zion_chest_tattoo_closeup_alt.jpg` (approved alternate second look at the chest tattoo).
+  `prompts/zion-clark.md` is now **v4** — every scene carries both face refs (5–6 images total per
+  prompt now). Also updated `docs/multi-image-role-tagging.md` and the Higgsfield pack.
+- **Torso-cutoff was reading bare/exposed in some WWE renders (Ben flagged on `victory`).** His
+  real reference photos never show bare skin right at the cutoff — a shirt hem or loose
+  shorts/trunks typically drapes past it. Added a universal line to every full-body scene (both
+  prompt packs): shorts/trunks/shirt hem drape loosely and *emptily* past the end of his torso
+  (not shaped like a leg) instead of ending in bare skin. Upper-body-only portrait crops (framed
+  above the waist) skip this since they don't reach that part of the frame.
+- **Next up:** run one scene with the new refs (2 face images + tattoo ref) to confirm identity
+  and tattoo both render consistently, re-test the fixed WWE scenes (esp. `victory` for the
+  wardrobe-drape fix) + confirm gym's photoreal issue resolves with the seed-variant approach,
+  then finish the remaining batch, curate best into `output/zion-clark/` (or push to Drive),
+  validate Kazumi's recipe with a test scene, then batch her remaining 14.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k}-style/` — style DNA + scene modifiers (9:16).

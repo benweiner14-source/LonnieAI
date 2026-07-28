@@ -31,7 +31,7 @@ nothing to install** — so it just works. Once it runs, we level it up (stronge
 1. **Load model group** (top-left, "Load Checkpoint"): click the model dropdown and pick **your**
    SDXL checkpoint. (The file name in the workflow is just a placeholder.)
 2. **Your Zion photo group** ("Load Image"): click **choose file to upload** and upload one of
-   his refs from `creators/zion-clark/refs/` (a clear one like `zion_gym_parallette.jpg` or
+   his refs from `creators/zion-clark/refs/` (a clear one like `zion_face_agt.jpg` or
    `zion_stage_visor.jpg`). Use a photo whose pose you want to keep.
 
 ## Step 3 — Run it
