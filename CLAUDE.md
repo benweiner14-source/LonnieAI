@@ -111,8 +111,35 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   (`gtav_keyart.jpg`, `cp2077_boxart.jpg`), which are dominated by the real logo/title itself and
   too risky even with an "ignore logos" instruction. **Not yet test-confirmed** — run one GTA
   scene + one Cyberpunk scene first, same validate-before-batch process as Zion.
-- **Next up:** curate Zion's best renders into `output/zion-clark/` (or push to Drive), validate
-  Kazumi's recipe with a test scene, then batch her remaining 14.
+- **3-scene cross-check (gym/track/wwe-entrance) — found a real anatomy violation + repetition
+  issue, both fixed.**
+  - `nba2k_gym`: Ben confirmed this one came out **too photorealistic** (the "plainest" scene —
+    least dramatic lighting/environment to reinforce the CGI tell).
+  - `nba2k_track`: anatomy correct (torso into the racing-chair seat, no legs), identity strong,
+    clean logos. Proof the recipe works when the body ref is scene-matched.
+  - `wwe2k_entrance`: **hard-rule violation** — a bent leg + sneaker was visible under his torso
+    in a mid-air "diving/leaping" pose. Root cause: ambiguous dynamic-motion wording ("arms
+    mid-stride") + no real reference photo of him airborne, so the model filled in a leg to
+    complete a physically plausible flying-human silhouette. Grounded, static poses matched to
+    real refs (gym, track) didn't have this problem.
+  - Ben also flagged **pose repetition** — too many scenes were the same parallette/propped-on-
+    hands shot; he specifically suggested torso-flat-on-ground as a valid alternative.
+  - **Fixes applied to `prompts/zion-clark.md`:** (1) grounded the 3 riskiest WWE poses
+    (entrance, entrance-silhouette, victory) — explicit "hands/forearms clearly planted,
+    nothing below his torso is in frame" language, no more airborne/ambiguous-balance wording;
+    (2) added real pose variety — parallette-hold → reclined flat-on-floor, sled → low/flat
+    posture, chalk-clap → seated upright; (3) strengthened the universal anatomy closer on ALL
+    16 scenes to explicitly include "no feet, no shoes visible anywhere in the frame — the
+    composition must not require or imply a leg" (previously said "no legs" but not "no feet",
+    which is exactly what leaked); (4) added guidance to generate **3–4 seed variants per
+    prompt** (Ben's fix) since anatomy compliance and photoreal/CGI balance both vary
+    noticeably by seed even with identical wording — discard bad-anatomy or logo-leak variants
+    rather than trying to fix them after the fact.
+  - **Not yet re-tested** — re-run `wwe2k_entrance` (and ideally the other 2 fixed WWE scenes)
+    to confirm the grounding fix actually holds before resuming the remaining batch.
+- **Next up:** re-test the fixed WWE scenes + confirm gym's photoreal issue resolves with the
+  seed-variant approach, then finish the remaining batch, curate best into `output/zion-clark/`
+  (or push to Drive), validate Kazumi's recipe with a test scene, then batch her remaining 14.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k}-style/` — style DNA + scene modifiers (9:16).
