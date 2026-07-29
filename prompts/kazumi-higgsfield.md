@@ -108,6 +108,26 @@ Neon-noir cyberpunk video game cutscene screenshot, full in-engine render of cha
 
 ---
 
-_15 scenes matching `prompts/kazumi.md` 1:1, reformatted as single-paragraph prompts for
-Higgsfield. Not yet test-confirmed for Kazumi (same caveat as the Comfy pack) — run one GTA and
-one Cyberpunk scene first and check identity, style, and brand-safety before batching the rest._
+## iPhone Selfie
+
+**This is a camera/photography style, not a different look-category** — the entire frame still
+renders fully in-engine, character and environment together. Only the camera language changes to
+a real iPhone front-facing selfie: close, wide-angle-distorted, hard on-camera flash, chaotic
+energy. Nothing in the frame is a real photograph — see `skills/iphone-selfie-style/SKILL.md`.
+
+**[iphone-selfie · nightlife]**
+```
+A CGI video-game character taking a selfie of herself with her own phone extended in one hand — the entire frame, character and environment together, renders in the same real-time 3D game-engine style, nothing photoreal anywhere in the image. Kazumi, a glamorous Filipina-American woman with long wavy balayage-blonde hair, full glam makeup, gold hoops and a green jade pendant, in a modest fitted top, holding her phone out toward the lens with a natural arm's-length selfie tilt, a bright excited laughing expression, amid a dense, glittering nightlife crowd. Simulated wide-angle selfie-lens distortion, strongest at the frame edges. Hard, direct, on-camera flash lighting her and the nearest people with sharp falloff into a darker background of blurred neon signage and streetlights. Simulated sensor grain and slight motion blur on the packed crowd figures, all rendered as part of the CG shot, not composited from a real photograph. Camera: selfie framing, 20mm ultra-wide lens, subject slightly off-center with natural arm-extended tilt. 9:16 vertical. Obviously computer-generated, not a photograph. No real brand logos, event names, or readable signage anywhere in the output. Fully clothed, SFW.
+```
+
+**[iphone-selfie · penthouse-party]**
+```
+A CGI video-game character taking a selfie of herself with her own phone extended in one hand — the entire frame, character and environment together, renders in the same real-time 3D game-engine style, nothing photoreal anywhere in the image. Kazumi, a glamorous Filipina-American woman with a long blonde ponytail, full glam makeup, gold jewelry, in elegant modest eveningwear, holding her phone out toward the lens with a playful confident smile, a lively rooftop party blurred behind her — string lights, a city skyline, a few guests in soft focus. Simulated wide-angle selfie-lens distortion, strongest at the frame edges. Hard, direct, on-camera flash lighting her with sharp falloff into the softly lit party background. Simulated sensor grain and a touch of motion blur, all rendered as part of the CG shot, not composited from a real photograph. Camera: selfie framing, 18mm ultra-wide lens, slight high tilt as if the phone is held above her, off-center. 9:16 vertical. Obviously computer-generated, not a photograph. No real brand logos or readable signage anywhere in the output. Fully clothed, SFW.
+```
+
+---
+
+_17 scenes (8 GTA, 7 Cyberpunk, 2 iPhone-selfie) matching `prompts/kazumi.md` 1:1, reformatted as
+single-paragraph prompts for Higgsfield. Not yet test-confirmed for Kazumi (same caveat as the
+Comfy pack) — run one GTA and one Cyberpunk scene first and check identity, style, and
+brand-safety before batching the rest._

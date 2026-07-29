@@ -74,7 +74,8 @@ out both.
    Aspect ratio **9:16**.
 2. Attach the reference images **in the exact order listed** — the numbering in the text
    ("REFERENCE IMAGE 1", "2", "3") must match the actual upload order. **GTA scenes use 2 refs
-   (face + style); Cyberpunk scenes use 3 (face + body + style)** — don't mix them up.
+   (face + style); Cyberpunk scenes use 3 (face + body + style); iPhone Selfie scenes use 1
+   (face only)** — don't mix them up.
 3. Paste the prompt text unmodified.
 4. Generate 3–4 variants, keep the best. Keep everything **SFW** and verify no real logos leaked.
 
@@ -95,8 +96,14 @@ STYLE (GTA) — REFERENCE IMAGE: use ONLY for the rendering STYLE — polished o
 STYLE (Cyberpunk) — REFERENCE IMAGE: use ONLY for the rendering STYLE — polished neon-noir cyberpunk CGI game-engine look: teal-and-magenta lighting, clean CG geometry, restrained neon accents. This is a stylized futuristic action game render, NOT a Disney/Pixar/DreamWorks animated movie style — NOT cartoon-stylized, NOT storybook or toy-like, NOT cute/rounded/exaggerated proportions. Realistic human anatomical proportions. The character and the environment must render in the SAME unified CGI game-engine style — do NOT composite a CGI-looking character onto a photoreal background, and do NOT let the environment read as a real photograph while the character reads as CGI; skin, environment, lighting, and materials all match one consistent render. Keep the environment clean and uncluttered — a few clear light sources and clean geometry, not stacked layers of neon signage, fog, and bloom competing for attention. Ignore and do NOT reproduce any logos, brand names, readable signage/text, or watermarks visible in this reference — style/rendering-technique only, nothing else from this image.
 ```
 
-**Tags:** `[style · scene]`. Full style DNA in `skills/gta6-style/` and `skills/cyberpunk-2077-style/`.
+**Tags:** `[style · scene]`. Full style DNA in `skills/gta6-style/`, `skills/cyberpunk-2077-style/`,
+and `skills/iphone-selfie-style/`.
 
+> v8 — added a new **iPhone Selfie** camera style (2 scenes, face-only ref): still full CGI
+> render, character AND environment both in-engine — only the camera language changes (wide-angle
+> selfie distortion, on-camera flash, chaotic energy). Not a return to the dropped "composited
+> into a real photo" look — see the style's own header note in
+> `skills/iphone-selfie-style/SKILL.md`.
 > v7 — added a distinct Camera clause (angle + focal length + off-center framing) to every scene;
 > everything was defaulting to flat, centered "hero framing" with no lens or angle variety. v6 —
 > both style tracks reworked from round-1 feedback. GTA: dropped the body image (tripped Gemini's
@@ -264,8 +271,38 @@ Now render: long balayage hair with neon streaks, full glam, posed beside a neon
 
 ---
 
-_15 scenes (8 GTA, 7 Cyberpunk). Both style tracks reworked from round-1 feedback — retest
-`[gta6 · nightlife]` and `[cyberpunk · street]` each once more to confirm before batching the
-remaining 7 GTA and 6 Cyberpunk scenes. Add more by mixing any scene modifier from the skill files
-into the same "Now render: ..." pattern, keeping the reference blocks and every guardrail exactly
-as written._
+## iPhone Selfie  (`skills/iphone-selfie-style/`) — **1 ref: face only**
+
+**This is a camera/photography style, not a different look-category.** The entire frame —
+character AND environment — still renders fully in the CGI game engine, same as GTA VI and
+Cyberpunk above. The only thing that changes is *what kind of shot it is*: a real iPhone
+front-facing selfie — close, wide-angle-distorted, hard on-camera flash, chaotic energy — instead
+of a cinematic game camera. Nothing in the frame is a real photograph. No body reference is used
+here (same lesson as the GTA rework — a tight selfie crop doesn't need one, and it avoids the
+safety-filter risk found with GTA's body ref); her figure and outfit are carried by text only, and
+the tight framing keeps everything modest and SFW by construction. No dedicated style-reference
+screenshot exists for this look yet, so the CGI-render instruction is carried entirely in the
+prompt text — keep it explicit and early in the prompt.
+
+**[iphone-selfie · nightlife]**
+```
+REFERENCE IMAGE 1: use ONLY for facial identity and likeness — her exact face shape, eyes, brows, lips, and glam makeup style. Ignore the clothing, pose, and background in this image.
+
+Now render: a CGI video-game character taking a selfie of herself with her own phone extended in one hand — the entire frame, character and environment together, renders in the same real-time 3D game-engine style, nothing photoreal anywhere in the image. A glamorous Filipina-American woman with long wavy balayage-blonde hair, full glam makeup, gold hoops and a green jade pendant, in a modest fitted top, holding her phone out toward the lens with a natural arm's-length selfie tilt, a bright excited laughing expression, amid a dense, glittering nightlife crowd. Simulated wide-angle selfie-lens distortion, strongest at the frame edges; hard, direct, on-camera flash lighting her and the nearest people with sharp falloff into a darker background of blurred neon signage and streetlights; simulated sensor grain and slight motion blur on the packed crowd figures — all rendered as part of the CG shot, not composited from a real photograph. No real brand logos, event names, or readable signage anywhere in the output. Camera: selfie framing, 20mm ultra-wide lens, subject slightly off-center with natural arm-extended tilt. 9:16 vertical. Fully clothed, SFW.
+```
+
+**[iphone-selfie · penthouse-party]**
+```
+REFERENCE IMAGE 1: use ONLY for facial identity and likeness — her exact face shape, eyes, brows, lips, and glam makeup style. Ignore the clothing, pose, and background in this image.
+
+Now render: a CGI video-game character taking a selfie of herself with her own phone extended in one hand — the entire frame, character and environment together, renders in the same real-time 3D game-engine style, nothing photoreal anywhere in the image. A glamorous Filipina-American woman with a long blonde ponytail, full glam makeup, gold jewelry, in elegant modest eveningwear, holding her phone out toward the lens with a playful confident smile, a lively rooftop party blurred behind her — string lights, a city skyline, a few guests in soft focus. Simulated wide-angle selfie-lens distortion, strongest at the frame edges; hard, direct, on-camera flash lighting her with sharp falloff into the softly lit party background; simulated sensor grain and a touch of motion blur — all rendered as part of the CG shot, not composited from a real photograph. No real brand logos or readable signage anywhere in the output. Camera: selfie framing, 18mm ultra-wide lens, slight high tilt as if the phone is held above her, off-center. 9:16 vertical. Fully clothed, SFW.
+```
+
+---
+
+_17 scenes (8 GTA, 7 Cyberpunk, 2 iPhone-selfie). GTA and Cyberpunk were both reworked from
+round-1 feedback — retest `[gta6 · nightlife]` and `[cyberpunk · street]` each once more to
+confirm before batching the remaining 7 GTA and 6 Cyberpunk scenes. Add more by mixing any scene
+modifier from the skill files into the same "Now render: ..." pattern, keeping the reference
+blocks and every guardrail (brand safety, anti-Disney, anti-photoreal, SFW, fully-CGI) exactly as
+written._

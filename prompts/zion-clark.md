@@ -1,6 +1,6 @@
 # Prompt Pack — Zion Clark
 
-**✅ RECIPE LOCKED (v5 — added per-scene camera variety).** Every prompt
+**✅ RECIPE LOCKED (v6 — added an iPhone-selfie camera style).** Every prompt
 below uses the proven multi-image role-tagged recipe: **Nano Banana Pro** (Google Gemini partner
 node / `gemini-3-pro-image-preview` in Comfy, or "Nano Banana" in Higgsfield), 5–6 reference
 images each assigned ONE explicit job in the text, 9:16. This beat every other approach tested
@@ -95,9 +95,14 @@ BODY — REFERENCE IMAGE: use ONLY for body proportions, muscular build, and the
 STYLE — REFERENCE IMAGE: use ONLY for the rendering STYLE — polished sports-simulation CGI game-engine look: waxy subsurface-scattering skin, plastic sheen, clean CG geometry, simplified hair, ambient occlusion. This is a broadcast sports-simulation video game render, NOT a Disney/Pixar/DreamWorks animated movie style — NOT cartoon-stylized, NOT storybook or toy-like, NOT cute/rounded/exaggerated proportions. Realistic human anatomical proportions; muted, slightly desaturated broadcast color grading, not warm saturated animated-film colors. Ignore and do NOT reproduce any logos, team names, league marks, jersey text, or watermarks visible in this reference — style/rendering-technique only, nothing else from this image.
 ```
 
-**Tags:** `[style · scene]`. Full style DNA in `skills/nba2k-style/` and `skills/wwe2k-style/`.
+**Tags:** `[style · scene]`. Full style DNA in `skills/nba2k-style/`, `skills/wwe2k-style/`, and
+`skills/iphone-selfie-style/`.
 
-> v5 — added a distinct Camera clause (angle + focal length + off-center framing) to every scene
+> v6 — added a new **iPhone Selfie** camera style (2 scenes): still full CGI render, character
+> AND environment both in-engine — only the camera language changes (wide-angle selfie
+> distortion, on-camera flash, chaotic energy). Not a return to the dropped "composited into a
+> real photo" look — see the style's own header note in `skills/iphone-selfie-style/SKILL.md`.
+> v5 added a distinct Camera clause (angle + focal length + off-center framing) to every scene
 > to break the default centered/symmetrical look. v4 added the second face angle
 > (`zion_face_agt.jpg`) alongside the original face ref, all scenes renumbered.
 
@@ -364,7 +369,50 @@ Now render: intense expression, oiled skin with strong specular and sweat highli
 
 ---
 
-_16 scenes, all locked to the proven multi-ref role-tagged recipe with two face angles + the
-dedicated arm/chest tattoo reference. Add more by mixing any scene modifier from the skill files
-into the same "Now render: ..." pattern, keeping the reference blocks and every guardrail
-(anatomy, brand safety, anti-Disney style) exactly as written._
+## iPhone Selfie  (`skills/iphone-selfie-style/`)
+
+**This is a camera/photography style, not a different look-category.** The entire frame —
+character AND environment — still renders fully in the CGI game engine, same as every other
+scene in this pack. The only thing that changes is *what kind of shot it is*: instead of a
+cinematic broadcast/cutscene camera, it's shot like a real iPhone front-facing selfie — close,
+wide-angle-distorted, hard on-camera flash, chaotic energy. Nothing in the frame is a real
+photograph. No dedicated style-reference screenshot exists for this look yet, so these two
+scenes run on 4 refs (both face angles + the arm/chest tattoo + a body/pose ref) with the
+CGI-render instruction carried entirely in the prompt text — keep that instruction explicit and
+early in the prompt, it's the detail most likely to drift toward a real-photo read if dropped.
+
+**[iphone-selfie · celebration]** — _1) `zion_gym_parallette.jpg` (face) 2) `zion_face_agt.jpg`
+(face, 2nd angle) 3) `zion_chest_arm_tattoo.jpg` (arm/chest tattoo) 4) `zion_track_noexcuses.jpg` (body)_
+```
+REFERENCE IMAGE 1: use ONLY for facial identity and likeness — his exact face shape, eyes, nose, beard. Ignore the pose and background in this image.
+
+REFERENCE IMAGE 2: use ONLY as an additional facial reference of the same person as Image 1, to reinforce identity and likeness from a different angle/lighting. Ignore the pose, clothing, and background in this image.
+
+REFERENCE IMAGE 3: use ONLY for the exact tattoo designs on his chest/collarbone (a script-lettering tattoo) and his left arm/bicep — their exact linework, lettering, and placement. Ignore the pose and background in this image.
+
+REFERENCE IMAGE 4: use ONLY for body proportions, muscular build, and the authentic composition with his racing wheelchair. His body ends at/just past the belly button — no hips, no thighs, no legs, no stump legs, nothing below that point. Ignore the specific background in this image.
+
+Now render: a CGI video-game character taking a selfie of himself with his own phone extended in one hand — the entire frame, character and environment together, renders in the same real-time 3D game-engine style, nothing photoreal anywhere in the image. Seated upright in his racing wheelchair amid a dense, chaotic celebratory crowd at night, phone held out toward the lens in his right hand with a natural arm's-length selfie tilt, mouth open mid-shout of celebration, gold chain with a cross pendant, medium-length dreadlocks in a top-knot, short beard, chest and left-arm tattoos visible on his sleeveless "No Excuses" gear. Simulated wide-angle selfie-lens distortion, strongest at the frame edges; hard, direct, on-camera flash lighting him and the nearest fans with sharp falloff into a darker background of blurred neon signage, streetlights, and scattered flashes from other phones in the crowd; simulated sensor grain and slight motion blur on the densely packed, overlapping crowd figures — all rendered as part of the CG shot, not composited from a real photograph. No real league, team, studio, brand logos, event names, or readable signage anywhere in the output. His body ends at/just past the belly button — no hips, no legs, no stump legs, no feet, no shoes visible anywhere in the frame — he is seated in the racing wheelchair's seat, torso upright, the composition must not require or imply a leg. Camera: selfie framing, 20mm ultra-wide lens, subject slightly off-center with natural arm-extended tilt. 9:16 vertical.
+```
+
+**[iphone-selfie · gym]** — _1) `zion_gym_parallette.jpg` (face) 2) `zion_face_agt.jpg`
+(face, 2nd angle) 3) `zion_chest_arm_tattoo.jpg` (arm/chest tattoo) 4) `soul-id/soul_12.jpg` (body)_
+```
+REFERENCE IMAGE 1: use ONLY for facial identity and likeness — his exact face shape, eyes, nose, beard. Ignore the pose and background in this image.
+
+REFERENCE IMAGE 2: use ONLY as an additional facial reference of the same person as Image 1, to reinforce identity and likeness from a different angle/lighting. Ignore the pose, clothing, and background in this image.
+
+REFERENCE IMAGE 3: use ONLY for the exact tattoo designs on his chest/collarbone (a script-lettering tattoo) and his left arm/bicep — their exact linework, lettering, and placement. Ignore the pose and background in this image.
+
+REFERENCE IMAGE 4: use ONLY for body proportions, muscular build, and the authentic hand-supported pose/composition. His body ends at/just past the belly button — no hips, no thighs, no legs, no stump legs, nothing below that point. Ignore the specific background in this image.
+
+Now render: a CGI video-game character taking a selfie of himself mid-training — the entire frame, character and environment together, renders in the same real-time 3D game-engine style, nothing photoreal anywhere in the image. Torso propped on one forearm on the gym floor, chalk dust hanging in the air, extending his phone toward the lens with his other hand at arm's length, a playful confident grin, gold chain, sweat sheen on his shoulders, chest and left-arm tattoos visible. Simulated wide-angle selfie-lens distortion, strongest at the frame edges; hard, direct, on-camera flash lighting him with sharp falloff into a dim gym background of blurred power racks and rim-lit equipment; simulated sensor grain and a touch of motion blur — all rendered as part of the CG shot, not composited from a real photograph. No real league, team, studio, or brand logos anywhere in the output. His body ends at/just past the belly button — no hips, no legs, no stump legs, no feet, no shoes visible anywhere in the frame — the composition must not require or imply a leg. His shorts, trunks, or shirt hem drape loosely and naturally past the end of his torso — empty, unfilled fabric, not shaped like a leg underneath. Camera: selfie framing, 18mm ultra-wide lens, slight high tilt as if the phone is propped above him, off-center. 9:16 vertical.
+```
+
+---
+
+_18 scenes (16 broadcast/cutscene + 2 iPhone-selfie), all locked to the proven multi-ref
+role-tagged recipe with two face angles + the dedicated arm/chest tattoo reference. Add more by
+mixing any scene modifier from the skill files into the same "Now render: ..." pattern, keeping
+the reference blocks and every guardrail (anatomy, brand safety, anti-Disney style, fully-CGI)
+exactly as written._

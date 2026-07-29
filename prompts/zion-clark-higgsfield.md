@@ -124,6 +124,26 @@ Professional wrestling video game cutscene screenshot, full in-engine render of 
 
 ---
 
-_16 scenes matching `prompts/zion-clark.md` 1:1, reformatted as single-paragraph prompts for
-Higgsfield. If a scene keeps coming out too photorealistic (this happened on the plainest gym
-shot), try a few different seeds before rewriting the prompt — that axis is seed-sensitive._
+## iPhone Selfie
+
+**This is a camera/photography style, not a different look-category** — the entire frame still
+renders fully in-engine, character and environment together. Only the camera language changes to
+a real iPhone front-facing selfie: close, wide-angle-distorted, hard on-camera flash, chaotic
+energy. Nothing in the frame is a real photograph — see `skills/iphone-selfie-style/SKILL.md`.
+
+**[iphone-selfie · celebration]**
+```
+A CGI video-game character taking a selfie of himself with his own phone extended in one hand — the entire frame, character and environment together, renders in the same real-time 3D game-engine style, nothing photoreal anywhere in the image. Zion, a muscular Black adaptive athlete born without legs, seated upright in his racing wheelchair amid a dense, chaotic celebratory crowd at night, phone held out toward the lens in his right hand with a natural arm's-length selfie tilt, mouth open mid-shout of celebration, gold chain with a cross pendant, medium-length dreadlocks in a top-knot, short beard, chest and left-arm tattoos visible on his sleeveless "No Excuses" gear. His body ends at just past the belly button — no hips, no thighs, no legs, no stump legs, nothing below that point; he is seated in the racing wheelchair's seat, torso upright. Simulated wide-angle selfie-lens distortion, strongest at the frame edges. Hard, direct, on-camera flash lighting him and the nearest fans with sharp falloff into a darker background of blurred neon signage, streetlights, and scattered flashes from other phones in the crowd. Simulated sensor grain and slight motion blur on the densely packed, overlapping crowd figures, all rendered as part of the CG shot, not composited from a real photograph. Camera: selfie framing, 20mm ultra-wide lens, subject slightly off-center with natural arm-extended tilt. 9:16 vertical. Obviously computer-generated, not a photograph. No real league, team, studio, brand logos, event names, or readable signage anywhere in the output. Authentic body — no fabricated legs, no stump legs, no feet or shoes visible anywhere in frame.
+```
+
+**[iphone-selfie · gym]**
+```
+A CGI video-game character taking a selfie of himself mid-training — the entire frame, character and environment together, renders in the same real-time 3D game-engine style, nothing photoreal anywhere in the image. Zion, a muscular Black adaptive athlete born without legs, torso propped on one forearm on the gym floor, chalk dust hanging in the air, extending his phone toward the lens with his other hand at arm's length, a playful confident grin, gold chain, sweat sheen on his shoulders, chest and left-arm tattoos visible. His body ends at just past the belly button — no hips, no thighs, no legs, no stump legs, nothing below that point. Simulated wide-angle selfie-lens distortion, strongest at the frame edges. Hard, direct, on-camera flash lighting him with sharp falloff into a dim gym background of blurred power racks and rim-lit equipment. Simulated sensor grain and a touch of motion blur, all rendered as part of the CG shot, not composited from a real photograph. His shorts, trunks, or shirt hem drape loosely and naturally past the end of his torso — empty, unfilled fabric, not shaped like a leg underneath — matching his real reference photos, rather than his torso ending abruptly in bare exposed skin. Camera: selfie framing, 18mm ultra-wide lens, slight high tilt as if the phone is propped above him, off-center. 9:16 vertical. Obviously computer-generated, not a photograph. No real league, team, studio, or brand logos anywhere in the output. Authentic body — no fabricated legs, no stump legs, no feet or shoes visible anywhere in frame.
+```
+
+---
+
+_18 scenes (16 broadcast/cutscene + 2 iPhone-selfie) matching `prompts/zion-clark.md` 1:1,
+reformatted as single-paragraph prompts for Higgsfield. If a scene keeps coming out too
+photorealistic (this happened on the plainest gym shot), try a few different seeds before
+rewriting the prompt — that axis is seed-sensitive._

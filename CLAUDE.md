@@ -240,9 +240,34 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   confirm gym's photoreal issue resolves with the seed-variant approach, then finish the remaining
   Zion batch and have Ben delete the un-organized originals from the Drive folder once the
   organized copies are confirmed good.
+- **Added a new "iPhone Selfie" style — a camera/photography variant, NOT a return to the dropped
+  composited-into-a-real-photo look.** Ben's ask, with a worked example prompt (a real iPhone
+  selfie of an NBA 2K MyPlayer avatar mid-celebration in a real crowd). My first pass mis-scoped
+  this as a deliberate exception to the "full CGI render" locked decision — **Ben corrected that
+  immediately: he only meant to hand over the iPhone-camera wording/technique (selfie framing,
+  wide-angle lens distortion, hard on-camera flash, chaotic motion-blurred crowd), not the
+  composited-onto-a-real-photo look itself.** The style stays inside the locked decision: the
+  entire frame — character AND environment — still renders fully in the CGI game engine, same as
+  GTA VI/Cyberpunk/NBA 2K/WWE 2K; only the *camera language* changes to mimic a real selfie shot.
+  Ben's example also had real trademarks baked in (Knicks jersey, NBA Finals, "NBA 2K", "MyPlayer",
+  a real person's handle "@Ronnie") — genericized out per the standing brand-safety rule, same as
+  every other style. Built as a 5th style: `skills/iphone-selfie-style/SKILL.md` (Style DNA:
+  simulated wide-angle selfie-lens distortion, hard flash with sharp falloff hitting everything
+  near-camera identically, simulated sensor grain/motion blur — all rendered as part of the CG
+  shot, never composited from a real photo). Added 2 scenes per creator to all 4 prompt packs
+  (`prompts/zion-clark.md` v6, `prompts/zion-clark-higgsfield.md`, `prompts/kazumi.md` v8,
+  `prompts/kazumi-higgsfield.md`) — Zion's use 4 refs (both face angles + arm/chest tattoo + a
+  body/pose ref, grounded in his racing wheelchair or a forearm-propped floor pose to hold the
+  exact-anatomy rule), Kazumi's use 1 ref (face only — no body ref, same lesson as her GTA rework,
+  and the tight selfie crop keeps it modestly SFW by construction). No dedicated style-reference
+  screenshot exists for this look yet, so the "fully CGI, nothing photoreal" instruction is carried
+  entirely in prompt text — flagged as the detail most likely to drift if dropped. **Not yet
+  test-rendered** — validate with one scene per creator before folding into the main batch.
 
 ## Where things live
-- `skills/{gta6,cyberpunk-2077,nba2k,wwe2k}-style/` — style DNA + scene modifiers (9:16).
+- `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie}-style/` — style DNA + scene modifiers
+  (9:16). `iphone-selfie-style` is a camera/photography variant, not a different look-category —
+  still full CGI render, just shot like a real iPhone selfie.
 - `prompts/{zion-clark,kazumi}.md` — **Comfy Cloud / Nano Banana Pro** paste-ready prompts, full
   multi-image role-tagging (`REFERENCE IMAGE 1/2/3...`), full CGI render.
 - `prompts/{zion-clark,kazumi}-higgsfield.md` — **Higgsfield** paste-ready prompts, same scenes,
