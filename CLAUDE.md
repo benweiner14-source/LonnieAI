@@ -329,9 +329,41 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   **Fixed:** added "arm and sleeve/forearm filling a large part of the foreground, soft and
   slightly out of focus from being this close to the lens, naturally cropping the hand and phone
   out of frame" to `skills/iphone-selfie-style/SKILL.md` and all 8 scene prompts — gives the "no
-  visible phone" rule a physical/optical reason instead of a bare negation. **Not yet re-tested**
-  — rerun `[iphone-selfie · nightlife]` again to confirm this holds before trying the other 3
-  scenes.
+  visible phone" rule a physical/optical reason instead of a bare negation.
+- **Wording fix: "arm and sleeve" → "arm (sleeved or bare, depending on the outfit)".** Ben caught
+  that "sleeve" assumes every outfit has one — wrong for Zion's tanks and some of Kazumi's looks.
+  Fixed across the skill file and all 8 scene prompts.
+- **✅ iPhone Selfie CONFIRMED WORKING (Kazumi, rooftop-party nightlife scene).** Ben's retest on
+  the v5 wording landed a clean result: true first-person POV, no phone visible anywhere in frame
+  (just her bare arm + gold bangles filling the foreground, exactly the "arm blocks the phone via
+  proximity blur" technique), no circular vignette/fisheye crop, correct CGI-not-photoreal
+  identity, rooftop-party environment with string lights + skyline reading clearly in-engine. This
+  is the recipe to reuse going forward for this style — don't re-litigate the POV/vignette/phone
+  fixes above unless a *new* failure mode shows up. Still worth running the other 3 iPhone-Selfie
+  scenes (Zion ×2, Kazumi's `penthouse-party`) to confirm the fix generalizes before calling the
+  whole style locked.
+- **New content avenue opened: animating these CGI-character stills into video with Seedance 2.0**
+  (ByteDance's model, via Comfy Cloud's `ByteDance2ReferenceNode`), using Ben's own proven recipe
+  from a separate project (Project Chimera) — saved as `docs/seedance-comfy-handoff.md`. Two tests
+  currently handed off to Ben's local Claude Code session (this web session has no Comfy Cloud MCP
+  access, can't run these directly):
+  - **Broll motion test** — 3 already-rendered Comfy Cloud images (UUIDs `717356d8…`, `8628cfa2…`,
+    `2d3ba387…`), animated with natural walking/body motion + ambient sound, max 10s each, single
+    reference-image-per-generation pattern. Test plan sent as a file; not yet run/reported back.
+  - **Lip-sync test** — the confirmed-good Kazumi rooftop-selfie render above, animated as a
+    talking-head clip via `reference_audios.audio_1` + an ElevenLabs voiceover Ben is preparing.
+    Test plan sent as a file; **blocked on the ElevenLabs audio file**, not yet run.
+  - Both test plans carry forward the handoff doc's key gotchas: `slot_overrides`/
+    `input_overrides` silently no-op on this node (must hand-edit the template JSON instead), and
+    re-upload reference files fresh right before running (stale-upload risk after a few hours).
+- **GPT Image 2 retest handed off (separate from Seedance) — isolate-the-model test, not yet
+  run.** Ben asked whether GPT Image 2 could still be pushed past photoreal with better identity,
+  given how much the prompt language has matured since the 3 earlier failed attempts. Test plan:
+  run `[nba2k · gym]`'s exact current prompt + 5-image ref set (unmodified) through the GPT Image 2
+  partner node instead of Nano Banana Pro, at a couple of `input_fidelity` settings, to isolate the
+  model as the only variable. Expectation set going in: prior 3/3 failure rate is a real signal —
+  a repeat photoreal result should be logged as a final answer and not re-litigated further, a
+  genuine CGI+identity win would be worth one more scene before considering any workflow change.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie}-style/` — style DNA + scene modifiers
@@ -349,7 +381,9 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 - `comfyui/` — starter workflow JSON + beginner import guide.
 - `docs/` — `comfyui-workflow.md` (node plan), `comfyui-mcp-setup.md` (Comfy Cloud MCP),
   `comfyui-handoff.md` (self-contained brief), `forcing-the-cgi-look.md`,
-  `higgsfield-cgi-playbook.md`.
+  `higgsfield-cgi-playbook.md`, `seedance-comfy-handoff.md` (Ben's working notes on animating
+  stills into video via Comfy Cloud's `ByteDance2ReferenceNode` — settings, reference-image
+  patterns, lip-sync setup, gotchas).
 
 ## Working notes
 - Apify (Instagram scraping) available via API token Ben provides — session-only, never commit.
