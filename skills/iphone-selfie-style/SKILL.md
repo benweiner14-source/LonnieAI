@@ -24,6 +24,22 @@ selfie — close, wide-angle-distorted, flash-lit, chaotic.
 > *aesthetic only* — a generic celebratory crowd, generic city night scene — same rule as every
 > other style in this repo.
 
+> **⚠️ POV lesson (v2 fix — read before writing a new scene):** the first version of this style
+> tried to force first-person POV with meta/technical instructions ("the render's camera position
+> IS the phone's lens," "this is NOT a third-person shot") — it still rendered third-person: a
+> documentary-style photo of the character holding up a phone, full body, wide crowd, several feet
+> back. **Meta camera-position language and negations don't reliably steer composition.** What
+> actually works (confirmed by Ben's own working Higgsfield prompt, which used this exact
+> structure): **lead the prompt with the photographic genre itself** — "A real iPhone
+> front-facing selfie photo of [character], taken in [scene]" — as the very first clause, before
+> any rendering/CGI language. "Selfie photo" is such a strong, specific composition in the
+> model's training data that naming the genre up front does more work than any amount of explicit
+> camera-position instruction after the fact. Follow it with concrete, physical framing language
+> ("face large and close to the lens, wide-angle selfie distortion, one arm extended holding the
+> phone") rather than abstract instructions about where the camera "is." Don't add "not
+> third-person" negations — describe the correct shot positively and let the genre anchor do the
+> work.
+
 ---
 
 ## When to Use
@@ -62,22 +78,23 @@ shooting a selfie of themselves in a chaotic/high-energy moment, still fully CGI
   scattered secondary sources, out-of-focus and soft where the flash doesn't reach.
 
 ### Camera
-- **This must be a true first-person POV shot — the render's own camera position IS the phone's
-  front-facing lens, held at arm's length by the character themselves. There is no external
-  observer or second camera in this scene; do NOT render a third-person view of the character
-  holding up a phone.** This is the single most common failure mode for this style: the model
-  defaults to a documentary-style shot of someone taking a selfie (full body visible, wide view
-  of the whole crowd/scene from several feet back) instead of actually becoming the phone's lens.
-- Frame accordingly: the character's face and upper torso/shoulders fill most of the frame; their
-  extended arm and the top edge of the phone enter the frame in the foreground. **Nothing below
-  the waist is visible, and the background is only the narrow slice of the scene the phone's lens
-  would actually catch at arm's length** — not a wide establishing shot of the full environment
-  or a crowd shot spanning many feet in every direction.
+- **Lead the prompt with the genre, not a camera-position instruction:** "A real iPhone
+  front-facing selfie photo of [character], taken in [scene]." Say this before introducing any
+  CGI/rendering language. This is what actually locks first-person POV — see the lesson box
+  above. Meta instructions ("the camera IS the phone's lens") and negations ("NOT third-person")
+  are weaker than genre-anchoring and shouldn't be relied on alone.
+- Concrete, physical framing language, not abstract camera-position language: face large and
+  close to the lens, one arm extended holding the phone, wide-angle selfie distortion. This reads
+  the same as Ben's own proven wording — keep it that plain and physical.
 - Selfie framing by definition: close, arm's-length distance, subject slightly off-axis (not
-  perfectly centered — a real arm-extended shot has natural tilt/asymmetry).
+  perfectly centered — a real arm-extended shot has natural tilt/asymmetry). Nothing below the
+  character's torso should be described or implied.
+- The crowd/background should be described as physically close and cropped by the frame edges
+  ("packed tightly right up against the camera, bodies overlapping and partly cropped") rather
+  than as a wide establishing shot — this concrete imagery does more to keep the shot
+  close-in than an abstract "limited to the phone's field of view" instruction does.
 - Wide-angle lens distortion (roughly an 18–24mm-equivalent selfie lens): curved perspective,
-  stronger warp near the frame edges — this widens the field of view somewhat, but does not turn
-  it into a wide shot of the whole scene from a distance.
+  stronger warp near the frame edges.
 - Vertical **9:16** — this is a phone-native format already, so it should feel natural here.
 
 ### Color
@@ -91,7 +108,7 @@ shooting a selfie of themselves in a chaotic/high-energy moment, still fully CGI
 ## Base Prompt Template
 
 ```
-This image IS the photo captured by the character's own phone front-facing camera, held at arm's length in their own hand — the render's camera position IS the phone's lens itself. This is NOT a third-person shot of someone else photographing the character; there is no external observer or second camera anywhere in this scene. A CGI video-game character taking a selfie, rendered entirely in a real-time 3D game engine — the character AND the environment behind them both render in the same CGI style, nothing photoreal anywhere in frame. [SCENE / CROWD / ENVIRONMENT DESCRIPTION, described only in generic terms — no real teams, leagues, games, or events]. Framing is a true arm's-length selfie: the character's face and upper torso fill most of the frame; their extended arm and the top edge of the phone enter the frame in the foreground; nothing below the waist is visible. The background is only the narrow slice of the scene the phone's lens would actually catch at arm's length — NOT a wide shot of the full environment or a crowd spanning many feet in every direction. Simulated wide-angle selfie-lens distortion, strongest at the frame edges. Hard, direct, on-camera flash lighting the character with sharp falloff into the darker background — anything within the phone's actual field of view catches the same flash. Slightly off-center with natural arm's-length selfie tilt, expressive mid-moment reaction. Simulated sensor grain and slight motion blur on the visible background sliver, all rendered as part of the CG shot, not composited from a real photo. Clean CG geometry, subsurface-scattering skin, simplified rendered hair. 9:16 vertical. No real logos, brand names, or trademarks anywhere in frame.
+A real iPhone front-facing selfie photo of [CHARACTER], taken in [SCENE / CROWD / ENVIRONMENT DESCRIPTION, described only in generic terms — no real teams, leagues, games, or events]. [CHARACTER] is a CGI video-game character rendered in a real-time 3D game engine — smooth subsurface-scattering skin, a subtle polished sheen on the forehead and cheekbones, simplified rendered hair as a clean texture map — clearly a high-fidelity rendered character, not a real photoreal person. Face large and close to the lens with wide-angle selfie-lens distortion, [expression], one arm extended holding the phone. Face lit by harsh, direct, on-camera flash with sharp falloff into a darker background — the same flat hard flash lighting anyone/anything near the camera. Behind [him/her], a dense crowd packed tightly right up against the camera, bodies overlapping and partly cropped, faces turned toward the lens, smeared with motion blur — rendered in the same CGI game-engine style as the character, nothing photoreal anywhere in frame. Further back, [environment] dissolves into out-of-focus light streaks and glow, also fully CGI-rendered. Simulated low-light phone-camera artifacts: motion blur, sensor noise, lens haze, slight overexposure where the flash hits — all rendered as part of the CG shot, not composited from a real photo. Clean CG geometry throughout. 9:16 vertical. No real logos, brand names, or trademarks anywhere in frame.
 ```
 
 ---

@@ -274,8 +274,27 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   front-facing camera — the render's camera position IS the phone's lens itself, NOT a third-person
   shot" clause, plus a hard framing constraint (face/upper torso fill most of the frame, nothing
   below the waist, background limited to the narrow slice actually within the phone's field of
-  view at arm's length — not a wide shot of the whole scene/crowd). **Not yet re-tested** — rerun
-  `[iphone-selfie · nightlife]` to confirm the POV fix holds before trying the other 3 scenes.
+  view at arm's length — not a wide shot of the whole scene/crowd). **v1 fix didn't hold** — Ben
+  re-ran it and it was still third-person.
+- **iPhone Selfie POV fix v2 — replaced meta camera-position language with genre-anchoring.** The
+  v1 fix (explicit "the render's camera position IS the phone's lens... NOT a third-person shot"
+  instructions) still rendered third-person on retest. Root cause: meta/technical camera-position
+  instructions and negations don't reliably steer composition — the model still defaults to its
+  strongest association. Ben pointed at his own working Higgsfield prompt (the original Knicks/
+  MyPlayer example this style was built from) as a working reference: it never uses any camera-
+  position or negation language at all. It just **leads with the photographic genre itself** — "A
+  real iPhone front-facing selfie photo of [X], taken in [scene]" — as the very first clause,
+  before any CGI/rendering language, then uses plain physical framing ("face large and close to
+  the lens," "one arm extended holding the phone"). Naming the genre up front does more work than
+  any amount of explicit instruction after the fact, because "selfie photo" is such a strong,
+  specific composition in the model's training data. **Rewrote** `skills/iphone-selfie-style/
+  SKILL.md` (Camera section + Base Prompt Template) and all 8 scene prompts to lead with the genre
+  clause and drop the meta/negation language entirely; background crowd is now described with
+  concrete physical imagery ("packed tightly right up against the camera, bodies overlapping and
+  partly cropped") instead of an abstract "limited to the phone's field of view" instruction — kept
+  fully CGI throughout per Ben's correction that this is a camera-language style, not a return to
+  the dropped composited-into-a-real-photo look. **Not yet re-tested** — rerun `[iphone-selfie ·
+  nightlife]` to confirm this version actually holds before trying the other 3 scenes.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie}-style/` — style DNA + scene modifiers
