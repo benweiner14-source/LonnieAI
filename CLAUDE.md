@@ -315,8 +315,23 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   extended holding the phone" (which still implied a visible held object) with "one arm extended
   toward the camera, only the arm and hand visible — the phone itself is never shown in frame,
   since the camera taking this shot IS the phone's own lens," and hardened the "no phone" clause
-  to explicitly rule out even the back/edge. **Not yet re-tested** — rerun `[iphone-selfie ·
-  nightlife]` again to confirm this holds before trying the other 3 scenes.
+  to explicitly rule out even the back/edge.
+- **GPT Image 2 side-by-side comparison — same prompt, different result, confirms known
+  tradeoffs and adds one new lesson.** Ben ran the exact same prompt text on GPT Image 2 (not a
+  different/better prompt) and got noticeably better framing — the extended arm/sleeve filled
+  most of the foreground in a natural soft-focus blur, cleanly cropping the hand/phone out of
+  frame with no explicit instruction needed. But it confirmed the two known reasons this project
+  isn't on GPT Image 2: fully photoreal (zero CGI tell, same failure mode as all 3 earlier GPT-2
+  tests) and weaker facial fidelity (no FaceID/identity-adapter path on a closed model). **New
+  lesson: Nano Banana Pro needs more explicit/redundant instruction than GPT-2 to land the same
+  framing on identical text** — it's not more instruction-faithful, so constraints that GPT-2
+  infers correctly from sparse wording need to be spelled out more concretely for Nano Banana.
+  **Fixed:** added "arm and sleeve/forearm filling a large part of the foreground, soft and
+  slightly out of focus from being this close to the lens, naturally cropping the hand and phone
+  out of frame" to `skills/iphone-selfie-style/SKILL.md` and all 8 scene prompts — gives the "no
+  visible phone" rule a physical/optical reason instead of a bare negation. **Not yet re-tested**
+  — rerun `[iphone-selfie · nightlife]` again to confirm this holds before trying the other 3
+  scenes.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie}-style/` — style DNA + scene modifiers
