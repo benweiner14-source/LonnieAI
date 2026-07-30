@@ -84,7 +84,7 @@ shooting a selfie of themselves in a chaotic/high-energy moment, still fully CGI
   above. Meta instructions ("the camera IS the phone's lens") and negations ("NOT third-person")
   are weaker than genre-anchoring and shouldn't be relied on alone.
 - Concrete, physical framing language, not abstract camera-position language: face large and
-  close to the lens, one arm extended holding the phone, wide-angle selfie distortion. This reads
+  close to the lens, one arm extended toward the camera, wide-angle selfie distortion. This reads
   the same as Ben's own proven wording — keep it that plain and physical.
 - Selfie framing by definition: close, arm's-length distance, subject slightly off-axis (not
   perfectly centered — a real arm-extended shot has natural tilt/asymmetry). Nothing below the
@@ -98,11 +98,13 @@ shooting a selfie of themselves in a chaotic/high-energy moment, still fully CGI
   Real phone selfies are rectangular with only a subtle barrel/perspective stretch near the
   edges. Say so explicitly: no circular crop, no dark vignette corners, just the normal 9:16
   rectangular frame.
-- **Phone screen must not be visible.** A second failure mode: the model renders the held phone
-  showing its own screen with an image on it (a photo-within-a-photo / a second face), instead of
-  using the phone as the camera taking this shot. If the phone enters frame at all, only its
-  plain back or edge should show — never a lit screen, never a displayed photo, never a second
-  phone.
+- **The phone itself must NEVER be visible in the shot at all — not even its edge.** It IS the
+  camera taking this photo, so it can't also be an object in the frame. Two related failure modes
+  seen in testing: the model rendering the phone's back/edge as an object in the foreground, and
+  the model rendering the phone showing its own screen with an image on it (a photo-within-a-photo
+  / a second face). Both are wrong for the same reason. Only the character's extended arm and
+  hand should be visible reaching toward the camera — no phone body, no phone screen, no displayed
+  photo, no second phone, anywhere in frame.
 - Wide-angle lens distortion (roughly an 18–24mm-equivalent selfie lens): curved perspective,
   stronger warp near the frame edges — but still within a normal rectangular photo, not a fisheye
   crop (see above).
@@ -119,7 +121,7 @@ shooting a selfie of themselves in a chaotic/high-energy moment, still fully CGI
 ## Base Prompt Template
 
 ```
-A real iPhone front-facing selfie photo of [CHARACTER], taken in [SCENE / CROWD / ENVIRONMENT DESCRIPTION, described only in generic terms — no real teams, leagues, games, or events]. [CHARACTER] is a CGI video-game character rendered in a real-time 3D game engine — smooth subsurface-scattering skin, a subtle polished sheen on the forehead and cheekbones, simplified rendered hair as a clean texture map — clearly a high-fidelity rendered character, not a real photoreal person. Rectangular 9:16 photo — no circular vignette, no dark corners, no fisheye lens crop, just the normal subtle wide-angle perspective of a real phone selfie camera. If the phone enters the frame, only its plain back or edge is visible — never its screen, never a photo displayed on it, never a second phone anywhere in the shot. Face large and close to the lens with wide-angle selfie-lens distortion, [expression], one arm extended holding the phone. Face lit by harsh, direct, on-camera flash with sharp falloff into a darker background — the same flat hard flash lighting anyone/anything near the camera. Behind [him/her], a dense crowd packed tightly right up against the camera, bodies overlapping and partly cropped, faces turned toward the lens, smeared with motion blur — rendered in the same CGI game-engine style as the character, nothing photoreal anywhere in frame. Further back, [environment] dissolves into out-of-focus light streaks and glow, also fully CGI-rendered. Simulated low-light phone-camera artifacts: motion blur, sensor noise, lens haze, slight overexposure where the flash hits — all rendered as part of the CG shot, not composited from a real photo. Clean CG geometry throughout. 9:16 vertical. No real logos, brand names, or trademarks anywhere in frame.
+A real iPhone front-facing selfie photo of [CHARACTER], taken in [SCENE / CROWD / ENVIRONMENT DESCRIPTION, described only in generic terms — no real teams, leagues, games, or events]. [CHARACTER] is a CGI video-game character rendered in a real-time 3D game engine — smooth subsurface-scattering skin, a subtle polished sheen on the forehead and cheekbones, simplified rendered hair as a clean texture map — clearly a high-fidelity rendered character, not a real photoreal person. Rectangular 9:16 photo — no circular vignette, no dark corners, no fisheye lens crop, just the normal subtle wide-angle perspective of a real phone selfie camera. The phone itself must NEVER be visible anywhere in the shot — it IS the camera taking this photo. Only the extended arm and hand may enter the frame; no phone body, no phone screen, no displayed photo, no second phone. Face large and close to the lens with wide-angle selfie-lens distortion, [expression], one arm extended toward the camera, only the arm and hand visible. Face lit by harsh, direct, on-camera flash with sharp falloff into a darker background — the same flat hard flash lighting anyone/anything near the camera. Behind [him/her], a dense crowd packed tightly right up against the camera, bodies overlapping and partly cropped, faces turned toward the lens, smeared with motion blur — rendered in the same CGI game-engine style as the character, nothing photoreal anywhere in frame. Further back, [environment] dissolves into out-of-focus light streaks and glow, also fully CGI-rendered. Simulated low-light phone-camera artifacts: motion blur, sensor noise, lens haze, slight overexposure where the flash hits — all rendered as part of the CG shot, not composited from a real photo. Clean CG geometry throughout. 9:16 vertical. No real logos, brand names, or trademarks anywhere in frame.
 ```
 
 ---

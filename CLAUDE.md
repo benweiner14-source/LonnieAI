@@ -307,8 +307,16 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   `skills/iphone-selfie-style/SKILL.md` and all 8 scene prompts: added an explicit "rectangular
   9:16 photo — no circular vignette, no dark corners, no fisheye lens crop" clause, and "if the
   phone enters frame, only its plain back or edge shows — never its screen, never a photo
-  displayed on it, never a second phone." **Not yet re-tested** — rerun `[iphone-selfie ·
-  nightlife]` again to confirm both fixes hold before trying the other 3 scenes.
+  displayed on it, never a second phone."
+- **Ben's call: the phone should never be visible at all, full stop** — not even its plain
+  back/edge. It's a true POV shot; the phone IS the camera, so it can't also be an object in the
+  frame, the same way a real person's own eye doesn't appear in what they're looking at.
+  Tightened `skills/iphone-selfie-style/SKILL.md` and all 8 scene prompts again: replaced "one arm
+  extended holding the phone" (which still implied a visible held object) with "one arm extended
+  toward the camera, only the arm and hand visible — the phone itself is never shown in frame,
+  since the camera taking this shot IS the phone's own lens," and hardened the "no phone" clause
+  to explicitly rule out even the back/edge. **Not yet re-tested** — rerun `[iphone-selfie ·
+  nightlife]` again to confirm this holds before trying the other 3 scenes.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie}-style/` — style DNA + scene modifiers
