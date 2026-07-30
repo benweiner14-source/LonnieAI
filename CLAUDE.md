@@ -261,8 +261,21 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   exact-anatomy rule), Kazumi's use 1 ref (face only — no body ref, same lesson as her GTA rework,
   and the tight selfie crop keeps it modestly SFW by construction). No dedicated style-reference
   screenshot exists for this look yet, so the "fully CGI, nothing photoreal" instruction is carried
-  entirely in prompt text — flagged as the detail most likely to drift if dropped. **Not yet
-  test-rendered** — validate with one scene per creator before folding into the main batch.
+  entirely in prompt text — flagged as the detail most likely to drift if dropped.
+- **iPhone Selfie's first test render (Kazumi, `nightlife`) failed on POV, not style.** Ben's
+  output showed the CGI style and identity holding up fine, but the shot was framed as a
+  **third-person documentary photo of her taking a selfie** — full body, several feet back, the
+  whole crowd visible in a wide fisheye shot — instead of an actual first-person POV from the
+  phone's own front-facing lens. Root cause: the prompts said "taking a selfie" and "face close to
+  the lens" but never explicitly forbade an external observer's camera, so the model defaulted to
+  the far more common "someone photographing a person taking a selfie" association. **Fixed** in
+  `skills/iphone-selfie-style/SKILL.md` and all 8 scene prompts (both scenes × all 4 packs): every
+  prompt now opens with an explicit "this image IS the photo captured by their own phone's
+  front-facing camera — the render's camera position IS the phone's lens itself, NOT a third-person
+  shot" clause, plus a hard framing constraint (face/upper torso fill most of the frame, nothing
+  below the waist, background limited to the narrow slice actually within the phone's field of
+  view at arm's length — not a wide shot of the whole scene/crowd). **Not yet re-tested** — rerun
+  `[iphone-selfie · nightlife]` to confirm the POV fix holds before trying the other 3 scenes.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie}-style/` — style DNA + scene modifiers

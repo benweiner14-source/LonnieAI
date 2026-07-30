@@ -62,10 +62,22 @@ shooting a selfie of themselves in a chaotic/high-energy moment, still fully CGI
   scattered secondary sources, out-of-focus and soft where the flash doesn't reach.
 
 ### Camera
+- **This must be a true first-person POV shot — the render's own camera position IS the phone's
+  front-facing lens, held at arm's length by the character themselves. There is no external
+  observer or second camera in this scene; do NOT render a third-person view of the character
+  holding up a phone.** This is the single most common failure mode for this style: the model
+  defaults to a documentary-style shot of someone taking a selfie (full body visible, wide view
+  of the whole crowd/scene from several feet back) instead of actually becoming the phone's lens.
+- Frame accordingly: the character's face and upper torso/shoulders fill most of the frame; their
+  extended arm and the top edge of the phone enter the frame in the foreground. **Nothing below
+  the waist is visible, and the background is only the narrow slice of the scene the phone's lens
+  would actually catch at arm's length** — not a wide establishing shot of the full environment
+  or a crowd shot spanning many feet in every direction.
 - Selfie framing by definition: close, arm's-length distance, subject slightly off-axis (not
   perfectly centered — a real arm-extended shot has natural tilt/asymmetry).
 - Wide-angle lens distortion (roughly an 18–24mm-equivalent selfie lens): curved perspective,
-  stronger warp near the frame edges.
+  stronger warp near the frame edges — this widens the field of view somewhat, but does not turn
+  it into a wide shot of the whole scene from a distance.
 - Vertical **9:16** — this is a phone-native format already, so it should feel natural here.
 
 ### Color
@@ -79,7 +91,7 @@ shooting a selfie of themselves in a chaotic/high-energy moment, still fully CGI
 ## Base Prompt Template
 
 ```
-A CGI video-game character taking a selfie with an in-universe phone, rendered entirely in a real-time 3D game engine — the character AND the full environment around them both render in the same CGI style, nothing photoreal anywhere in frame. [SCENE / CROWD / ENVIRONMENT DESCRIPTION, described only in generic terms — no real teams, leagues, games, or events]. Simulated wide-angle selfie-lens distortion, strongest at the frame edges. Hard, direct, on-camera flash lighting the character with sharp falloff into a darker background — everyone and everything near the lens catches the same flash. Face close to the lens, slightly off-center with natural arm's-length selfie tilt, expressive mid-moment reaction. Simulated sensor grain and slight motion blur on fast-moving background elements, all rendered as part of the CG shot, not composited from a real photo. Clean CG geometry, subsurface-scattering skin, simplified rendered hair. 9:16 vertical. No real logos, brand names, or trademarks anywhere in frame.
+This image IS the photo captured by the character's own phone front-facing camera, held at arm's length in their own hand — the render's camera position IS the phone's lens itself. This is NOT a third-person shot of someone else photographing the character; there is no external observer or second camera anywhere in this scene. A CGI video-game character taking a selfie, rendered entirely in a real-time 3D game engine — the character AND the environment behind them both render in the same CGI style, nothing photoreal anywhere in frame. [SCENE / CROWD / ENVIRONMENT DESCRIPTION, described only in generic terms — no real teams, leagues, games, or events]. Framing is a true arm's-length selfie: the character's face and upper torso fill most of the frame; their extended arm and the top edge of the phone enter the frame in the foreground; nothing below the waist is visible. The background is only the narrow slice of the scene the phone's lens would actually catch at arm's length — NOT a wide shot of the full environment or a crowd spanning many feet in every direction. Simulated wide-angle selfie-lens distortion, strongest at the frame edges. Hard, direct, on-camera flash lighting the character with sharp falloff into the darker background — anything within the phone's actual field of view catches the same flash. Slightly off-center with natural arm's-length selfie tilt, expressive mid-moment reaction. Simulated sensor grain and slight motion blur on the visible background sliver, all rendered as part of the CG shot, not composited from a real photo. Clean CG geometry, subsurface-scattering skin, simplified rendered hair. 9:16 vertical. No real logos, brand names, or trademarks anywhere in frame.
 ```
 
 ---
