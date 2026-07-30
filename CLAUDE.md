@@ -293,8 +293,22 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   concrete physical imagery ("packed tightly right up against the camera, bodies overlapping and
   partly cropped") instead of an abstract "limited to the phone's field of view" instruction — kept
   fully CGI throughout per Ben's correction that this is a camera-language style, not a return to
-  the dropped composited-into-a-real-photo look. **Not yet re-tested** — rerun `[iphone-selfie ·
-  nightlife]` to confirm this version actually holds before trying the other 3 scenes.
+  the dropped composited-into-a-real-photo look.
+- **iPhone Selfie v2 test — POV genre-anchoring worked, two new artifacts found and fixed (v3).**
+  Ben's retest confirmed the genre-lead fix: one output nailed real first-person POV (closest yet
+  — face close, arm/hand in the foreground corner, background appropriately compressed). Two new
+  issues showed up on the way there: (1) **circular fisheye vignette** — "wide-angle lens
+  distortion" alone got misread as a literal fisheye action-cam look, complete with a dark
+  circular crop, instead of the subtle rectangular-photo edge stretch a real phone selfie has;
+  (2) **a visible second phone showing a photo on its screen** — one output showed her holding up
+  a phone whose screen displayed an image of her face (a photo-within-a-photo), instead of using
+  the phone as the camera taking the actual shot; this happened on an output that otherwise had
+  correct POV framing, just with the phone rendered as a prop with content on it. **Fixed** in
+  `skills/iphone-selfie-style/SKILL.md` and all 8 scene prompts: added an explicit "rectangular
+  9:16 photo — no circular vignette, no dark corners, no fisheye lens crop" clause, and "if the
+  phone enters frame, only its plain back or edge shows — never its screen, never a photo
+  displayed on it, never a second phone." **Not yet re-tested** — rerun `[iphone-selfie ·
+  nightlife]` again to confirm both fixes hold before trying the other 3 scenes.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie}-style/` — style DNA + scene modifiers
