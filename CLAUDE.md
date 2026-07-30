@@ -356,14 +356,16 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   - Both test plans carry forward the handoff doc's key gotchas: `slot_overrides`/
     `input_overrides` silently no-op on this node (must hand-edit the template JSON instead), and
     re-upload reference files fresh right before running (stale-upload risk after a few hours).
-- **GPT Image 2 retest handed off (separate from Seedance) — isolate-the-model test, not yet
-  run.** Ben asked whether GPT Image 2 could still be pushed past photoreal with better identity,
-  given how much the prompt language has matured since the 3 earlier failed attempts. Test plan:
-  run `[nba2k · gym]`'s exact current prompt + 5-image ref set (unmodified) through the GPT Image 2
-  partner node instead of Nano Banana Pro, at a couple of `input_fidelity` settings, to isolate the
-  model as the only variable. Expectation set going in: prior 3/3 failure rate is a real signal —
-  a repeat photoreal result should be logged as a final answer and not re-litigated further, a
-  genuine CGI+identity win would be worth one more scene before considering any workflow change.
+- **❌ GPT Image 2 retest FAILED — final answer, closing this thread.** The isolate-the-model test
+  (`[nba2k · gym]`'s exact current prompt + full 5-image ref set, unmodified, run through the GPT
+  Image 2 partner node instead of Nano Banana Pro) came back still too photoreal. This is the
+  **4th confirmed failure** to de-photoreal GPT Image 2 (Higgsfield img2img, Higgsfield Soul ID,
+  the earlier Comfy partner-node test, and now this one with the fully matured prompt language +
+  complete role-tagged ref set) — the mature prompt and full identity refs didn't move the needle.
+  Per the plan set going into this test: a closed model with no ControlNet/LoRA/FaceID path can't
+  be pushed off its photoreal prior by reference images and prompt text alone. **Conclusion: GPT
+  Image 2 is not a viable path for this project's CGI-render requirement, full stop — don't
+  retest it for this purpose again.** Nano Banana Pro remains the only proven identity+style path.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie}-style/` — style DNA + scene modifiers
