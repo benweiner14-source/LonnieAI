@@ -99,8 +99,24 @@ screenshots) — a strong signal they want the painted-illustration look, not an
   job. The **style role text must say "painted illustration," not "CGI game-engine render"** —
   reusing the wrong style-role block is the most likely mistake when forking a scene from another
   pack into this one.
-- No dedicated style-reference screenshot exists yet — carried by prompt text alone for now. If a
-  clean example of this painted key-art look turns up (without real game-title text baked into
-  it), add it as a style ref the same way the other packs do.
 - Same guardrail discipline as everywhere else: 3–4 seed variants per prompt, discard anything
   that leaks a real logo/title or drifts toward photoreal/Disney instead of painted key-art.
+
+### Style reference images
+
+`reference/` holds 5 official key-art stills, cropped by Ben to remove the studio wordmark/logo,
+used purely to anchor the rendering *technique* (never the specific character/pose — always
+role-tag "ignore the character/likeness in this reference, use ONLY for rendering technique"):
+
+- **`cinema_doppler.jpg`** — recommended primary. Clean single-character composition, clearest
+  example of the signature rim-light + halo-glow lighting move and the painted skin/hair/clothing
+  technique all in one frame. Carries readable fictional signage ("Cinema Doppler," "Tsunami") —
+  standard "do not reproduce readable text" instruction applies, same as every other style ref.
+- **`arrest_scene.jpg`** — clean, no logo or readable studio text at all. Two-character
+  composition, good for scenes needing that.
+- **`franklin_gun.jpg`** — clean. Good example of the isolated-hero-on-dark-background composition
+  variant (see Composition section above).
+- **`flapper_couple.jpg`** — clean of the studio logo, but has a partial fictional landmark sign
+  ("...EW OO D") visible in the background — same "ignore readable text" handling applies.
+- **`couple_car_LOGO_NOT_CROPPED.jpg`** — **⚠️ do not use as-is.** Still has a visible studio star
+  logo in the bottom-right corner; needs a tighter crop before it's usable as a style reference.
