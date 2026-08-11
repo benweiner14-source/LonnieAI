@@ -36,20 +36,31 @@ screenshots) — a strong signal they want the painted-illustration look, not an
 ### Medium
 - **Semi-realistic painted digital illustration** — NOT a 3D game-engine render, NOT a
   photograph. Think painted movie-poster/key-art, not an in-game cutscene screenshot.
-- Visible painterly brushwork and texture; simplified, confidently-rendered forms rather than
-  photoreal or CG-smooth detail.
-- Bold contour linework separating the figure from the background — a graphic, illustrated edge,
-  not a soft photographic falloff.
+- **A clear rendering-detail hierarchy from figure to background.** The hero character's skin and
+  face are the most refined element — smooth, semi-realistic painted/airbrushed shading, not
+  heavily-textured brushstrokes. The environment (buildings, vehicles, foliage) is noticeably
+  more simplified and flat-shaded by comparison — bold color-blocked shapes with less painterly
+  detail than the figure gets. Don't render the background at the same fidelity as the character.
+- **Hair rendered in chunky, defined locks/strands with painted highlight strokes** — not
+  individually-rendered fine CG hair strands, and not a flat solid shape either.
+- **Clothing has crisp, bold contour linework** defining fold shapes, filled with painted gradient
+  shading rather than fabric texture or photographic detail.
+- Bold contour linework separating the figure from the background generally — a graphic,
+  illustrated edge, not a soft photographic falloff.
 
 ### Lighting & Color
-- Dramatic directional lighting: deep, contrasty shadows and a strong rim/backlight, the way
-  poster art exaggerates light for impact.
-- Vibrant, saturated color grading — sunset oranges, hot magentas, cool teals — more graphic and
-  poster-like than the muted broadcast grading used in the 3D-render styles.
+- **Signature lighting move: a warm backlight/rim light from a dramatic dusk or sunset sky**
+  (orange-gold or purple-pink gradient) — glows the hair and shoulders from behind/above while the
+  figure's front, facing camera, often reads at slightly lower contrast. This rim-lit-against-a-
+  gradient-sky move is the single most identifiable trait of this look — lead with it.
+- **Color grading is vivid and punchy, not muted** — this is a real point of contrast against
+  this project's 3D-render styles, which explicitly use muted/desaturated broadcast grading. This
+  style should say the opposite: bold, saturated, poster-vivid color.
 
 ### Composition
-- Poster/key-art composition: strong visual hierarchy, a clear hero subject, confident dramatic
-  pose — built to read instantly at a glance, the way marketing key art is designed to.
+- Poster/key-art composition: strong visual hierarchy, a clear hero subject, a confident dynamic
+  pose — direct gaze or a knowing expression toward camera, marketing-poster energy rather than a
+  candid in-game moment.
 - Realistic human anatomical proportions rendered in the painted technique — **not**
   Disney/Pixar/animated-movie cute-and-rounded, and not photoreal either. This is its own third
   lane between those two failure modes.
@@ -63,7 +74,7 @@ screenshots) — a strong signal they want the painted-illustration look, not an
 ## Base Prompt Template
 
 ```
-[SCENE / CHARACTER DESCRIPTION]. Rendered as painted, stylized open-world crime-saga key art — a semi-realistic painted digital illustration, NOT a 3D game-engine render, NOT a photograph. Visible painterly brushwork and simplified confident forms, bold contour linework separating the figure from the background, dramatic directional lighting with deep contrasty shadows and a strong rim light, vibrant saturated color grading. Poster/key-art composition with strong visual hierarchy. Realistic human anatomical proportions in the painted technique — NOT a Disney/Pixar/DreamWorks animated-movie style, NOT cartoon-stylized or cute/rounded. No real game, studio, brand logos, or readable text/signage anywhere in the output. 9:16 vertical.
+[SCENE / CHARACTER DESCRIPTION]. Rendered as painted, stylized open-world crime-saga key art — a semi-realistic painted digital illustration, NOT a 3D game-engine render, NOT a photograph. The character's skin and face are rendered with smooth, semi-realistic painted/airbrushed shading — the most refined element in the image — while the surrounding environment is noticeably more simplified, flat-shaded, and graphic by comparison. Hair rendered in chunky defined locks with painted highlight strokes; clothing has crisp bold contour linework filled with painted gradient shading. Warm backlight/rim light from a dramatic dusk or sunset sky glows the hair and shoulders, with the figure's front reading at slightly lower contrast facing camera. Vivid, saturated, poster-punchy color grading — not muted or desaturated. Confident, dynamic hero pose with a direct or knowing gaze toward camera, poster/key-art composition with strong visual hierarchy. Realistic human anatomical proportions in the painted technique — NOT a Disney/Pixar/DreamWorks animated-movie style, NOT cartoon-stylized or cute/rounded. No real game, studio, brand logos, or readable text/signage anywhere in the output. 9:16 vertical.
 ```
 
 ---
