@@ -53,6 +53,9 @@ screenshots) — a strong signal they want the painted-illustration look, not an
   (orange-gold or purple-pink gradient) — glows the hair and shoulders from behind/above while the
   figure's front, facing camera, often reads at slightly lower contrast. This rim-lit-against-a-
   gradient-sky move is the single most identifiable trait of this look — lead with it.
+- **A soft glowing light disc (sun or an equivalent strong source) directly behind or near the
+  head** creates a radiant halo — a distinct atmospheric device on top of the rim-light, not the
+  same thing. Worth naming separately since it reads as a specific "tell" of this style.
 - **Color grading is vivid and punchy, not muted** — this is a real point of contrast against
   this project's 3D-render styles, which explicitly use muted/desaturated broadcast grading. This
   style should say the opposite: bold, saturated, poster-vivid color.
@@ -61,6 +64,16 @@ screenshots) — a strong signal they want the painted-illustration look, not an
 - Poster/key-art composition: strong visual hierarchy, a clear hero subject, a confident dynamic
   pose — direct gaze or a knowing expression toward camera, marketing-poster energy rather than a
   candid in-game moment.
+- **Confident "prop in hand" body language** — a deliberately posed item held at a specific angle
+  (bag, phone, drink, sunglasses — whatever fits the scene) reads as on-style; an empty, relaxed
+  hand reads as more generic. Give her something to hold/gesture with when the scene allows it.
+- **Eyewear, when present, gets a couple of sharp painted highlight strokes on flat-colored
+  lenses** rather than photoreal reflections — same painted-illustration logic as the rest of the
+  face.
+- **Optional alternate composition:** the hero figure isolated against a plain dark background,
+  with the environment shown as a separate framed "inset" behind/beside her, like a poster
+  layout — not the default, but a legitimate variant worth having in the back pocket for a
+  portrait-style scene.
 - Realistic human anatomical proportions rendered in the painted technique — **not**
   Disney/Pixar/animated-movie cute-and-rounded, and not photoreal either. This is its own third
   lane between those two failure modes.
