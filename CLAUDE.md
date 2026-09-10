@@ -412,8 +412,20 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   rendered.** Motion-control tool choice unresolved — Kling's availability in this project's Comfy
   Cloud catalog hasn't been checked (don't assume it's there, that assumption has burned this
   project before); Seedance's `reference_videos` input exists per the handoff doc but how exactly
-  it drives generation isn't confirmed. Motion reference clip not yet sourced. Full plan and
-  blocking sequence in `docs/photoreal-motion-transfer-pilot.md`.
+  it drives generation isn't confirmed. Full plan and blocking sequence in
+  `docs/photoreal-motion-transfer-pilot.md`.
+- **Researched a YouTube walkthrough (transcript only) of a similar AI-influencer pipeline —
+  surfaced the actual right tool: Higgsfield Genjutsu, not Kling or Seedance.** The video's
+  workflow: generate a consistent character reference set (same idea as our photoreal character
+  sheet), then use Higgsfield's **Genjutsu** motion-transfer feature to have that character
+  perform motion from a source clip. Since this project already has Higgsfield touchpoints, check
+  Genjutsu access there before chasing Kling (unconfirmed in the Comfy catalog) or Seedance's
+  `reference_videos` (behavior unconfirmed). Updated `docs/photoreal-motion-transfer-pilot.md` to
+  list Genjutsu as the primary candidate.
+- **Ben provided a motion reference clip** — saved to
+  `creators/kazumi/motion-refs/motion-test-01.mp4` (6.74s, 1080×1920, 30fps, a woman dancing).
+  Source/rights basis not specified; raised once, Ben's direction was to proceed without further
+  discussion of it — noted here for an accurate record, not revisiting unless something changes.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie,gta-loading-screen}-style/` — style DNA +

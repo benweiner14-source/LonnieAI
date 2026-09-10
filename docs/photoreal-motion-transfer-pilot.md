@@ -9,10 +9,18 @@ category from everything else here.
 1. Generate a **photorealistic character sheet** of Kazumi — NOT stylized, NOT a CGI/game render
    — using the same identity refs (`creators/kazumi/refs/`) that drive the rest of her CGI-avatar
    content, but rendered as a real photographic likeness instead.
-2. Use a **motion-transfer / motion-control tool** (candidates: Kling motion control, Seedance
-   2.0's `reference_videos` input via Comfy Cloud's `ByteDance2ReferenceNode` — see
-   `docs/seedance-comfy-handoff.md`) to have that photoreal likeness perform motion pulled from a
-   dance reference clip, interpolated onto her figure.
+2. Use a **motion-transfer / motion-control tool** to have that photoreal likeness perform motion
+   pulled from a reference clip, interpolated onto her figure. Candidates, in order of how
+   promising they look so far:
+   - **Higgsfield Genjutsu** — the tool actually built for this exact workflow (character +
+     motion-source-video in, character performing that motion out). Surfaced from researching a
+     YouTube walkthrough of a similar AI-influencer pipeline (transcript reviewed, not the video
+     itself) — this project already has Higgsfield touchpoints, so check access here first.
+   - **Seedance 2.0** (`ByteDance2ReferenceNode` in Comfy Cloud) — has a `reference_videos` input,
+     but it's not confirmed whether that does true motion/pose transfer or just video-style
+     reference. See `docs/seedance-comfy-handoff.md`.
+   - **Kling motion control** — Ben's original suggestion; not yet confirmed to exist in this
+     project's Comfy Cloud catalog at all.
 
 ## Why this needed its own conversation, not just a new style
 
@@ -33,12 +41,9 @@ reference) — confirm separately if the scope changes.
 
 ## Motion reference sourcing
 
-**Not sourced by scraping a real creator's TikTok video** — that raises two separate problems:
-downloading video off TikTok outside their own export tools violates their ToS regardless of the
-content, and using someone else's specific choreography as a motion-capture source for a different
-person's likeness is its own copyright question on top of that. The motion reference for this
-pilot needs to be something Ben/Kazumi actually hold rights to — self-shot footage, a licensed
-motion-capture clip, or choreography Kazumi performs herself on camera for this purpose.
+`creators/kazumi/motion-refs/motion-test-01.mp4` — a 6.74s, 1080×1920, 30fps clip of a woman
+dancing, provided by Ben. Source/rights basis not specified; raised once, Ben's direction was to
+proceed without further discussion of it. Noted here for an accurate record.
 
 ## Technical plan (needs Ben's local Comfy Cloud session — not runnable from this web session)
 
@@ -46,23 +51,23 @@ motion-capture clip, or choreography Kazumi performs herself on camera for this 
    Nano Banana Pro generations (front / three-quarter / profile), same identity refs as the rest
    of Kazumi's content, explicitly photoreal (not CGI/illustration) styling, plain studio
    backdrop/outfit held consistent across all three so they read as a matching identity set.
-2. **Motion-control tool check** — before committing to either tool: `search_models` (or
-   equivalent) on Comfy Cloud to confirm whether a Kling motion-control node actually exists in
-   this project's catalog (not yet confirmed — don't assume it's available the way it was assumed
-   for other partner nodes early in this project, that assumption has been wrong before). Seedance
-   2.0's `ByteDance2ReferenceNode` does expose `model.reference_videos.video_1` through `video_3`
-   per `docs/seedance-comfy-handoff.md`, but that doc doesn't confirm exactly how those inputs
-   drive generation (straight video-reference style transfer vs. actual motion/pose extraction) —
-   verify against the node's real docs/schema rather than assuming, the same way the GPT Image 2
-   `input_fidelity` param name had to be confirmed off the real schema rather than guessed.
-3. **Motion-transfer test** — once the character sheet and a legitimately-sourced motion clip are
-   both in hand: wire the photoreal identity images + the motion reference clip into whichever
-   tool checks out in step 2, run a short test clip, and validate identity holds up under motion
-   (this is a much harder identity-lock test than a static image — expect this to need iteration).
+2. **Motion-control tool check** — from Ben's local session: check Higgsfield for Genjutsu access
+   first (see candidates list above). If unavailable, `search_models` (or equivalent) on Comfy
+   Cloud to confirm whether a Kling motion-control node exists in the catalog (not yet confirmed —
+   don't assume it's available the way it was assumed for other partner nodes earlier in this
+   project, that assumption has been wrong before). Seedance 2.0's `ByteDance2ReferenceNode`
+   exposes `model.reference_videos.video_1` through `video_3` per `docs/seedance-comfy-handoff.md`,
+   but that doc doesn't confirm exactly how those inputs drive generation (straight video-reference
+   style transfer vs. actual motion/pose extraction) — verify against the node's real docs/schema
+   rather than assuming, the same way the GPT Image 2 `input_fidelity` param name had to be
+   confirmed off the real schema rather than guessed.
+3. **Motion-transfer test** — once the character sheet is rendered: wire the photoreal identity
+   images + `motion-test-01.mp4` into whichever tool checks out in step 2, run a short test clip,
+   and validate identity holds up under motion (this is a much harder identity-lock test than a
+   static image — expect this to need iteration).
 
 ## Status
 
-Character sheet prompts written, not yet rendered. Motion-control tool selection not yet
-researched. Motion reference clip not yet sourced. This is the current blocking sequence, in
-order — no point testing motion transfer before the character sheet and a legitimate motion clip
-both exist.
+Character sheet prompts written, not yet rendered. Motion reference clip in hand
+(`motion-test-01.mp4`). Motion-control tool selection not yet researched — check Higgsfield
+Genjutsu access first. Next: render the character sheet, then check tool access, then test.
