@@ -366,17 +366,73 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   be pushed off its photoreal prior by reference images and prompt text alone. **Conclusion: GPT
   Image 2 is not a viable path for this project's CGI-render requirement, full stop — don't
   retest it for this purpose again.** Nano Banana Pro remains the only proven identity+style path.
+- **Added a "GTA Loading-Screen Art" style — a genuinely different rendering MEDIUM, not just
+  another look.** Ben's ask, referencing the Civitai "GTA5 Artwork Diffusion" model as inspiration.
+  Every other style in this repo is a **3D real-time game-engine render** (the locked "full CGI
+  render" decision); this one is **painted 2D digital illustration** — the semi-realistic painted
+  key-art look used for official open-world-crime-saga loading screens/promotional art. Built as a
+  5th style, `skills/gta-loading-screen-style/SKILL.md`, framed explicitly as a deliberate new
+  style option (same pattern as iPhone Selfie) rather than a reversal of the CGI-render decision
+  for the other 4. Style DNA sharpened across two passes from Ben sharing real official key-art
+  images purely as visual reference for wording (not as generation inputs, so no logo-leakage risk
+  at that stage): a clear rendering-detail hierarchy (skin/face most refined, environment flatter/
+  more graphic), chunky painted hair locks, bold clothing contour linework, a signature warm
+  dusk/sunset (or neon, for interior scenes) rim-light + soft glow-halo lighting move, vivid punchy
+  color grading (a deliberate contrast against the other styles' muted broadcast grading),
+  confident "prop in hand" body language, painted eyewear highlight technique, and an optional
+  isolated-hero-on-dark-background composition variant. **Reference images:** Ben uploaded 5
+  official key-art stills (cropped to remove the studio wordmark) via a GitHub web-UI upload
+  directly to the branch — pulled in and organized into
+  `skills/gta-loading-screen-style/reference/`. 4 of 5 are clean of the studio logo
+  (`cinema_doppler.jpg` set as the recommended primary, plus `arrest_scene.jpg`,
+  `franklin_gun.jpg`, `flapper_couple.jpg`); 1 (`couple_car_LOGO_NOT_CROPPED.jpg`) still has a
+  visible studio star logo and is flagged not to use as-is. A `[gta-loading-screen · gaming-desk]`
+  test scene (Kazumi at a neon gaming setup, environment ref from an image Ben pasted inline —
+  not saved to the repo, he'll attach it himself locally) was drafted but **not yet run or added
+  to the permanent `prompts/kazumi.md` pack** — validate before batching, same as every style.
+- **New, separate pilot: photoreal character sheet + motion transfer for Kazumi — NOT part of the
+  CGI-avatar work, its own consent basis.** Ben's ask: generate a photorealistic (not stylized)
+  character sheet of Kazumi, then use a motion-transfer/motion-control tool (Kling motion control
+  or Seedance 2.0's `reference_videos` input) to have that photoreal likeness perform motion from
+  a dance reference clip. Flagged this as a meaningfully different product category before
+  building anything — every other pack in this repo produces a *stylized CGI avatar*, which is
+  the concept documented as approved in this project's locked decisions; a photoreal likeness
+  performing motion-transferred video is different synthetic media entirely (footage of her real
+  appearance doing something she didn't actually do), not automatically covered by that same
+  approval. **Ben confirmed directly: Kazumi is Lonnie's client and has signed off on this
+  specific pilot** — documented as the consent basis in `docs/photoreal-motion-transfer-pilot.md`.
+  Also flagged (and Ben didn't push back on): the motion reference clip can't be scraped from a
+  real creator's TikTok (ToS + choreography-copyright issues, same reasoning as declining to pull
+  audio off a YouTube link earlier in this project) — needs to be footage Ben/Kazumi actually hold
+  rights to. **Built so far:** `prompts/kazumi-photoreal-charactersheet.md` — 3 separate Nano
+  Banana Pro generations (front / three-quarter / profile), same identity refs as her CGI content,
+  explicitly photoreal styling (the opposite of every other prompt in this repo — "NOT a CGI/game
+  render, NOT stylized" instead of "obviously computer-generated, NOT photoreal"), plain matching
+  studio backdrop/outfit across all three so they read as one consistent identity set. **Not yet
+  rendered.** Motion-control tool choice unresolved — Kling's availability in this project's Comfy
+  Cloud catalog hasn't been checked (don't assume it's there, that assumption has burned this
+  project before); Seedance's `reference_videos` input exists per the handoff doc but how exactly
+  it drives generation isn't confirmed. Motion reference clip not yet sourced. Full plan and
+  blocking sequence in `docs/photoreal-motion-transfer-pilot.md`.
 
 ## Where things live
-- `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie}-style/` — style DNA + scene modifiers
-  (9:16). `iphone-selfie-style` is a camera/photography variant, not a different look-category —
-  still full CGI render, just shot like a real iPhone selfie.
+- `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie,gta-loading-screen}-style/` — style DNA +
+  scene modifiers (9:16, except `gta-loading-screen` which is a different rendering medium — see
+  its own header note). `iphone-selfie-style` is a camera/photography variant, not a different
+  look-category — still full CGI render, just shot like a real iPhone selfie.
+  `gta-loading-screen-style` IS a different look-category — painted 2D illustration, not a 3D
+  render — built as a deliberate additional style, not a reversal of the CGI-render decision for
+  the other 4. Its `reference/` folder holds 5 real key-art stills (logos cropped, 4 clean/1
+  flagged) as the style anchor.
 - `prompts/{zion-clark,kazumi}.md` — **Comfy Cloud / Nano Banana Pro** paste-ready prompts, full
   multi-image role-tagging (`REFERENCE IMAGE 1/2/3...`), full CGI render.
 - `prompts/{zion-clark,kazumi}-higgsfield.md` — **Higgsfield** paste-ready prompts, same scenes,
   no role-tagging — single flowing paragraph per scene (Higgsfield's img2img/Nano Banana flow
   doesn't reliably use more than one attached photo, so explicit multi-image role text there is
   dead weight). Same hard rules (anatomy, brand safety, anti-Disney) baked into each paragraph.
+- `prompts/kazumi-photoreal-charactersheet.md` — **a different pilot, not part of the main CGI
+  pipeline.** Photorealistic (NOT CGI/stylized) identity-reference generations for the
+  motion-transfer pilot — see `docs/photoreal-motion-transfer-pilot.md` for scope/consent basis.
 - `creators/<name>/{profile.md, refs/}` — brand + guardrails + reference stills;
   `creators/zion-clark/refs/soul-id/` = 20-image identity set.
 - `reference-material/2k-screenshots/` — NBA 2K CGI style frames + `textures/` crops.
