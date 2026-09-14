@@ -490,8 +490,45 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   modest oversized-sweats fit chosen specifically to avoid that — so this pack starts on the
   full 3-ref (face + body + style) recipe from scratch, instead of Kazumi's fallback 2-ref one.
   Reuses the existing `skills/gta6-style/reference/gtav_skyline_dusk.jpg` style ref (no new style
-  ref sourced for her yet). **Not yet test-rendered** — validate `[gta6 · nightlife]` first
-  before batching the rest, same process as every other pack in this repo.
+  ref sourced for her yet).
+- **`[gta6 · nightlife]` test-rendered — Nano Banana Pro confirmed, GPT Image family (2 and 2.5)
+  closed for this creator too.**
+  - **Nano Banana Pro, first pass (2 seeds, 3-ref face+body+style):** both landed strong
+    identity and correct CGI style (not photoreal). **Seed A had a real brand-safety leak:**
+    it rendered "THE RIVIERA" and "OCEAN DRIVE" as legible signage — Ocean Drive is a real,
+    famous Miami/South Beach street, never mentioned in our prompt text; the model pulled it
+    from its own Vice-City associations, same underlying mechanism as the earlier "Bayview
+    City" literal-signage issue. Seed B was clean (no real names). **Fixed:** added an explicit
+    "do not render real-world neighborhood/street/place names as legible signage — invented,
+    generic, or illegible text only" clause to the GTA style role in `prompts/selena.md` (all 7
+    scenes) and a matching note in `prompts/selena-higgsfield.md`.
+  - **Retest with the signage fix + 8 refs (3 standard + 5 additional identity photos of her,
+    testing whether more refs help): clean.** No real place names this time (one scene had
+    garbled non-word signage — not a real name, not a trademark leak, just imperfect text
+    rendering). Identity and style both held. **The extra 5 refs didn't clearly improve
+    anything over the original 3-ref recipe** — not worth the extra upload/wiring overhead
+    for the rest of the batch. **Recipe locked: Nano Banana Pro, 3-ref (face + body + style),
+    signage-fixed prompt.**
+  - **GPT Image 2.5 (Flare/Sunburst tiers) tested as a live comparison — closed, same as GPT
+    Image 2.** Discovered these tiers exist in Comfy Cloud's template catalog
+    (`api_openai_gpt_image_25_sunburst_*`) even though `partner_generate`'s quick-reference
+    registry doesn't list them yet — reachable via `run_template`/`submit_workflow` using the
+    `OpenAIGPTImageNodeV2` node (`model: gpt-image-2.5-sunburst`, up to 16 ref images via
+    `model.images.image_1..16`). First attempt (2 seeds, same wording as the working Nano
+    Banana prompt): **both hard-rejected by OpenAI's own safety filter**
+    (`safety_violations=[sexual]`) before rendering anything — traced to the body reference
+    image combined with the "regardless of this reference's original styling" wording, same
+    underlying issue as Kazumi's earlier GTA body-ref rejection. Reworded (softer body-role
+    instruction explicitly forbidding bare-skin styling, "elegant... modest, full coverage"
+    scene wording): **both seeds passed the filter this time, but came back fully
+    photoreal** — indistinguishable from a real photo (visible pores, film grain, realistic
+    depth of field), the same failure mode GPT Image 2 has now failed on 4 separate times.
+    **Conclusion: GPT Image 2.5 is closed for this project's CGI-render requirement too — the
+    entire GPT Image family (2 and 2.5) is a dead end here, don't retest either for this
+    purpose again.** Nano Banana Pro remains the only proven path, now confirmed for Selena
+    specifically as well as Zion and Kazumi.
+- **Next up:** batch the remaining 6 Selena GTA scenes (club-entrance, beach, luxury-car,
+  penthouse, casino, gaming-room) with the locked Nano Banana Pro 3-ref signage-fixed recipe.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie,gta-loading-screen}-style/` — style DNA +

@@ -15,7 +15,11 @@ tagged reference images.
 
 **Non-negotiable in every prompt:** strictly SFW / brand-safe (glam but clothed — no nudity or
 explicit posing), no real game/studio/brand logos or trademarks, 9:16 vertical, obviously
-CGI/in-engine — not a photograph, and not a Disney/Pixar/animated-movie look.
+CGI/in-engine — not a photograph, and not a Disney/Pixar/animated-movie look. **No real-world
+place names as legible signage** — the Nano Banana Pro test on `nightlife` rendered "Ocean
+Drive" (a real Miami street) as readable signage unprompted; if a scene starts showing real
+street/neighborhood names, add "no real-world street or neighborhood names as legible text,
+invented or illegible signage only" to that prompt.
 
 **Camera variety:** every scene ends with a specific angle + lens/focal-length + framing note
 (low/high/Dutch angles, 24mm wide through 35mm, off-center framing) instead of a generic
