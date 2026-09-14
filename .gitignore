@@ -18,6 +18,7 @@ out/
 .env.*
 !.env.example
 *.local
+.claude/settings.local.json
 # API tokens (Apify, Higgsfield, etc.) — never commit
 *.token
 secrets/
