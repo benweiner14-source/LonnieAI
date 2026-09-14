@@ -426,6 +426,72 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   `creators/kazumi/motion-refs/motion-test-01.mp4` (6.74s, 1080×1920, 30fps, a woman dancing).
   Source/rights basis not specified; raised once, Ben's direction was to proceed without further
   discussion of it — noted here for an accurate record, not revisiting unless something changes.
+- **Motion-transfer 3-way comparison run: Kling rejected, Seedance and Genjutsu both landed the
+  scene-placement fix, Genjutsu wins on cost.** All three run against the same GPT Image 2
+  photoreal character sheet + `motion-test-01.mp4`:
+  - **Kling Motion Control:** Ben's verdict — "useless... doesn't follow facial fidelity." Not
+    pursued further. Also structurally limited to one reference image (hard node limit).
+  - **Seedance 2.0 r2v:** first run kept the flat gray studio backdrop instead of the motion
+    video's real scene (Ben: "I want her to be transposed into the motion reference scene, not
+    this character reference gray background scene") — fixed by rewriting the prompt to
+    explicitly say the real-world environment comes from the reference **video**, not the
+    gray studio in the reference **images**. Retest confirmed the fix: correct room, strong
+    identity, natural motion. First retry attempt was silent-audio-only because the provider
+    auto-rejected the generated audio track as a possible copyright match (video itself
+    unaffected) — succeeded on retry with `generate_audio` off.
+  - **Higgsfield Genjutsu:** same fix (scene from the motion video, not the character sheet)
+    confirmed working on the first run — correct room, strong identity, natural motion, audio
+    came through intact (no copyright rejection).
+  - **Cost: Genjutsu is ~8-16x cheaper.** Genjutsu = 45.5 Higgsfield credits per run. Seedance =
+    365.49 Comfy credits per run — and the run that failed on the audio-copyright rejection
+    still billed full price (bills on render completion, not on delivery), so the full
+    Seedance test cost 730.98 credits across both attempts. Comfy Cloud doesn't expose a
+    per-job dollar figure (invoiced at the account level), so this is a credit-unit comparison,
+    not a dollar one. **Given comparable quality and the large cost gap, Genjutsu is the
+    stronger default for this pilot going forward** — not yet a final call, Ben hasn't picked
+    between them.
+
+## New creator: Selena — GTA mockups, back to the core CGI-avatar thesis
+- **Third POC creator, alongside Zion and Kazumi.** Ben's ask: build a GTA prompt pack for a new
+  creator, Selena (`selenalenaxo` — Twitch/Kick affiliate streamer, Queens NYC, self-described
+  "COD girly," Romanian/Turkish heritage per her IG bio). This is back on the main CGI-avatar
+  thesis (full game-engine render), not the photoreal motion-transfer pilot above.
+- **Reference sourcing hit real friction — two different blockers, two different fixes.**
+  1. Most of her socials (Instagram directly, Twitter/X, Twitch, TikTok, Kick) are
+     JS-rendered/auth-walled and blocked plain `WebFetch` (429/402/403). Spinning up a headless
+     browser to force through them was explicitly denied by this environment's own safety
+     classifier (flagged as circumventing platform scraping protections on a real person's
+     images) — did not attempt to route around that block.
+  2. Ben supplied his own Apify API token (session-only, never committed, per the standing
+     `CLAUDE.md` working note) to run Apify's Instagram profile scraper properly. That worked —
+     pulled her bio/follower data plus 12 recent post image URLs — but bulk-downloading the
+     actual image files then hit a **second, separate** classifier block (flagged as PII
+     handling on repeated bulk downloads of a real person's photos), intermittent at first then
+     consistent. Per that block's own guidance, stopped rather than retried around it, and
+     handed the decision to Ben rather than guessing at a workaround.
+  3. **Actual fix: Ben pulled the rest himself and uploaded 15 screenshots directly via GitHub's
+     web UI** (same upload-to-branch pattern used earlier for the GTA Loading-Screen Art
+     reference images) — this is the reliable path for a new creator's reference photos going
+     forward when scraping hits a wall; don't keep pushing on automated bulk-image pulls of a
+     real person once the environment's classifier pushes back twice.
+- **`creators/selena/refs/` built from 17 images total:** 1 Linktree avatar (direct CDN link, no
+  scraping involved) + 1 Apify-sourced Instagram post + 15 of Ben's own uploads, all renamed from
+  opaque `Screenshot ...png` filenames to descriptive ones (e.g.
+  `selena_black_sweats_mirror.png`, `selena_car_daylight_portrait.png`,
+  `selena_gaming_room_pink_chair.png`). `creators/selena/profile.md` documents her look (dark
+  wavy hair, green eyes, full glam, nose stud, layered gold necklaces, no tattoos) and the
+  sourcing trail above.
+- **`prompts/selena.md` (Comfy/Nano Banana Pro, role-tagged) + `prompts/selena-higgsfield.md`
+  (single-paragraph)** built: 7 GTA VI scenes (nightlife, club-entrance, beach, luxury-car,
+  penthouse, casino, gaming-room — the last one nodding to her streamer identity). **Body ref
+  chosen deliberately to dodge Kazumi's known GTA failure mode**: Kazumi's GTA scenes lost their
+  body reference entirely after a revealing outfit + "cropped designer top" wording tripped
+  Gemini's safety filter; Selena's body ref (`selena_black_sweats_mirror.png`) is a loose,
+  modest oversized-sweats fit chosen specifically to avoid that — so this pack starts on the
+  full 3-ref (face + body + style) recipe from scratch, instead of Kazumi's fallback 2-ref one.
+  Reuses the existing `skills/gta6-style/reference/gtav_skyline_dusk.jpg` style ref (no new style
+  ref sourced for her yet). **Not yet test-rendered** — validate `[gta6 · nightlife]` first
+  before batching the rest, same process as every other pack in this repo.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie,gta-loading-screen}-style/` — style DNA +
