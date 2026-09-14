@@ -46,14 +46,26 @@ Reference photos pulled via two paths, both session-only (no scraping credential
 ## Look: FULL CGI RENDER
 Same locked decision as the rest of this project — the entire frame (character *and*
 environment) renders in the game engine, not a CGI character composited onto a real photo.
-**Recipe (same technique as Zion/Kazumi, not yet test-confirmed for her):** Nano Banana Pro,
-multi-image role-tagging (face / body / style). Face refs:
-`selena_car_daylight_portrait.jpg` + `selena_mirror_butterfly_case.jpg`. Body ref:
-`selena_black_sweats_mirror.jpg` (chosen specifically because it's a modest, loose-fitting
-outfit — Kazumi's GTA body ref tripped Gemini's safety filter on a more revealing outfit, so
-this one was picked to avoid that failure mode from the start). Style ref: reuse
+**Recipe (same technique as Zion/Kazumi, validated via `[gta6 · nightlife]` + a 5-scene/2-seed
+batch):** Nano Banana Pro, multi-image role-tagging (face ×2 / body / style). Face refs:
+`selena_gaming_room_pink_chair.png` + `selena_skull_tank_vacation.png` — swapped in after the
+validation batch, replacing the original `selena_car_daylight_portrait.jpg` +
+`selena_mirror_butterfly_case.jpg` pair once Ben judged these two as stronger likeness refs.
+Body ref: `selena_black_sweats_mirror.jpg` (chosen specifically because it's a modest,
+loose-fitting outfit — Kazumi's GTA body ref tripped Gemini's safety filter on a more revealing
+outfit, so this one was picked to avoid that failure mode from the start). Style ref: reuse
 `skills/gta6-style/reference/gtav_skyline_dusk.jpg` (same style ref as Kazumi's GTA scenes).
-Full prompts in `prompts/selena.md`.
+**Validation findings:** identity strong/consistent, the real-place-name signage leak (see
+below) fixed and confirmed; found and fixed a new leak — real automaker logos/badges (Ford
+Mustang emblem, Audi rings) rendering unprompted on vehicles in `luxury-car`/`club-entrance` —
+now blocked by an explicit "invented/generic vehicle design" clause in the STYLE role. An
+8-additional-ref experiment (12 face/body refs total) showed no clear improvement over the
+standard recipe. Full prompts in `prompts/selena.md`.
+
+**Real-place-name signage leak (found + fixed):** the first Nano Banana Pro test rendered
+"Ocean Drive" (a real Miami street) as legible signage unprompted. Fixed with an explicit
+"no real-world street/neighborhood names as legible signage — invented, generic, or illegible
+only" clause in the STYLE role, confirmed clean on retest.
 
 ## Guardrails — SFW / brand-safe (same standard as Kazumi)
 - Glam but clothed. Nightlife/going-out fashion is fine; NO nudity, NO explicit or overtly

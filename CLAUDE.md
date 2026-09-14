@@ -527,8 +527,36 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
     entire GPT Image family (2 and 2.5) is a dead end here, don't retest either for this
     purpose again.** Nano Banana Pro remains the only proven path, now confirmed for Selena
     specifically as well as Zion and Kazumi.
-- **Next up:** batch the remaining 6 Selena GTA scenes (club-entrance, beach, luxury-car,
-  penthouse, casino, gaming-room) with the locked Nano Banana Pro 3-ref signage-fixed recipe.
+- **Clarified: GPT Image 2.5's photoreal output is not a failure for every use — Ben wants it
+  photoreal specifically, as a separate ask from the CGI-avatar requirement.** The "closed for
+  this project's CGI-render requirement" conclusion above stands (never use it to try to hit the
+  CGI-avatar look), but when Ben directly asks for a GPT-2.5 render, photoreal output is the
+  correct/wanted result, not a defect to fix or resubmit.
+- **5-scene / 2-seed comparison batch run: Nano Banana Pro vs. GPT Image 2.5 Sunburst, on
+  club-entrance, beach, luxury-car, penthouse, casino (20 jobs total, 18 succeeded).**
+  - **Nano Banana Pro (9/10 succeeded):** identity strong/consistent across every render; the
+    signage fix held (no more real place names, only invented or garbled signage). **Found a
+    new brand-safety leak, same underlying mechanism as the signage issue:** real automaker
+    logos/badges rendering unprompted on vehicles — a legible Audi rings badge on
+    `club-entrance` and a Ford Mustang running-horse grille emblem + real "Gulf" gas-station
+    signage on `luxury-car`. **Fixed:** added an explicit "invented/generic vehicle design, no
+    real automaker logos/badges/grille emblems" clause to the STYLE role in `prompts/selena.md`
+    (all 7 scenes) and a matching note in `prompts/selena-higgsfield.md` — **not yet re-tested**.
+    One outright failure: `beach` seedA — Gemini silently refused to generate an image.
+  - **GPT Image 2.5 Sunburst (9/10 succeeded):** delivered exactly the photoreal look Ben wanted
+    from it — zero CGI tell, clean identity, fully clothed/SFW, no logo issues spotted. One
+    safety-filter rejection (`beach` seedB) even with the reworked prompt — confirms the fix
+    reduces but doesn't eliminate the risk, scene/seed-dependent.
+- **Face refs swapped after this batch, per Ben's direct call** (he flagged
+  `selena_gaming_room_pink_chair.png` and `selena_skull_tank_vacation.png` as stronger likeness
+  refs than the original `selena_car_daylight_portrait.jpg`). Recipe is now **4-ref: face ×2 +
+  body + style** (same dual-face-ref pattern as Zion's pack) — updated in `prompts/selena.md`,
+  `prompts/selena-higgsfield.md`, and `creators/selena/profile.md`. **Not yet re-tested with the
+  new face refs.**
+- **Next up:** re-run `[gta6 · nightlife]` and `[gta6 · luxury-car]` (the scene with the
+  automaker-logo leak) with the new face refs + logo fix to confirm both hold, then batch the
+  remaining scenes (club-entrance, beach, penthouse, casino, gaming-room) with the confirmed
+  4-ref recipe.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie,gta-loading-screen}-style/` — style DNA +

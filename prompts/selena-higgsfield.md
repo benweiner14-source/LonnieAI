@@ -7,11 +7,14 @@ instead — same 7 scenes, same guardrails, just wired for a tool that actually 
 tagged reference images.
 
 **How to run in Higgsfield:**
-- **Attach one photo** — `creators/selena/refs/selena_car_daylight_portrait.jpg` for identity,
-  or `selena_black_sweats_mirror.jpg` if you want her figure/silhouette to drive the reference
-  instead.
+- **Attach one photo** — `creators/selena/refs/selena_gaming_room_pink_chair.png` or
+  `selena_skull_tank_vacation.png` for identity (swapped in after Ben judged these two as
+  stronger face refs than the original `selena_car_daylight_portrait.jpg` — Higgsfield only
+  reliably uses one attached image, so pick whichever of the two reads as the stronger likeness
+  for a given seed), or `selena_black_sweats_mirror.jpg` if you want her figure/silhouette to
+  drive the reference instead.
 - Paste the prompt text below unmodified. Generate a few seeds, keep the best, and check for any
-  real logo/text leakage before using.
+  real logo/text leakage before using — **including on vehicles** (see below).
 
 **Non-negotiable in every prompt:** strictly SFW / brand-safe (glam but clothed — no nudity or
 explicit posing), no real game/studio/brand logos or trademarks, 9:16 vertical, obviously
@@ -19,7 +22,11 @@ CGI/in-engine — not a photograph, and not a Disney/Pixar/animated-movie look. 
 place names as legible signage** — the Nano Banana Pro test on `nightlife` rendered "Ocean
 Drive" (a real Miami street) as readable signage unprompted; if a scene starts showing real
 street/neighborhood names, add "no real-world street or neighborhood names as legible text,
-invented or illegible signage only" to that prompt.
+invented or illegible signage only" to that prompt. **No real automaker logos on vehicles** —
+the Comfy/Nano Banana Pro validation batch rendered a real Ford Mustang grille badge and an Audi
+rings badge unprompted on `luxury-car`/`club-entrance`; if a car-heavy scene leaks a real
+automaker logo, add "invented/generic car design, no real automaker logos or badges" to that
+prompt.
 
 **Camera variety:** every scene ends with a specific angle + lens/focal-length + framing note
 (low/high/Dutch angles, 24mm wide through 35mm, off-center framing) instead of a generic
