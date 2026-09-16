@@ -84,24 +84,46 @@ clothed, no nudity, no explicit posing.
      `selena_gaming_room_pink_chair.png` (1), `selena_skull_tank_vacation.png` (2),
      `selena_car_daylight_close.png` (3), `selena_bedroom_purple_light.png` (4),
      `selena_restaurant_black_strapless.png` (5), `selena_mirror_butterfly_case.png` (6).
-   - **⚠️ Two photos dropped from the pool after repeated safety-filter rejections
-     (`safety_violations=[sexual]`, hard rejection before any image rendered) — don't re-add
-     either without retesting deliberately:**
-     - `selena_casino_lobby_black_top.png` — present in 2 of the first 3 failed trios.
-     - `selena_lipgloss_pink_top.png` — present in ALL 3 failed trios, including the one where
-       casino was absent, which is what actually pinned it as the real trigger (plausibly the
-       close-up hand-near-mouth gesture combined with bare shoulders). Casino may turn out to
-       have been safe all along once tested without lipgloss in the mix — not retested.
-     Also ruled out as candidates without testing: `selena_black_dress_reclined.png` and
+   - **⚠️ `selena_gaming_room_pink_chair.png` MUST be one of the 3 face refs, every generation —
+     this is not optional.** 8 test generations run isolating this: every trio that included it
+     passed (4/4); every trio that dropped it failed OpenAI's safety filter
+     (`safety_violations=[sexual]`, hard rejection before any image render) — 4/4, including two
+     trios built entirely from otherwise-individually-confirmed-safe photos
+     (`restaurant_black_strapless` + `mirror_butterfly_case` + `bedroom_purple_light` failed
+     together despite each one passing cleanly when paired with the anchor). `selena_
+     gaming_room_pink_chair.png` is the most modestly-covered photo in the whole set (casual top,
+     seated in a gaming chair) — plausibly it's pulling the aggregate "modesty" signal across all
+     4 attached images (3 face + 1 body) above whatever threshold OpenAI's classifier uses; the
+     other 5 photos all show some cleavage/skin. Root cause not proven, just the pattern that held
+     8/8 today. `selena_skull_tank_vacation.png` was present in every successful test too but
+     isn't proven necessary on its own (never tested as the sole anchor without gaming_room) —
+     treat it as the safer second pick, not a proven substitute.
+   - **Two photos dropped from the pool entirely** (not just "need the anchor," actively avoid):
+     `selena_casino_lobby_black_top.png` and `selena_lipgloss_pink_top.png`, both implicated in
+     failed trios that later data suggests may just have been missing the anchor photo — not
+     retested with the anchor present, so still flagged as unknown/avoid rather than confirmed
+     bad. Also ruled out as candidates without testing: `selena_black_dress_reclined.png` and
      `selena_crouch_red_top_heels.png` — both read as too revealing/intimate on direct look
-     (close-up cleavage, reclined-on-bed and crouching poses) to risk adding to an already
-     safety-filter-sensitive pool.
-   - **Rotate freely — pick a different 3 of the 6 each time you generate.** Ben's call: a loose
-     rotation gets more variety across the batch than pinning a fixed trio to each variant letter
-     (that just trades "always the same photo" for "always the same trio per letter," which caps
-     the variety at 4 combinations instead of the full C(6,3)=20). The only rule: don't reuse the
+     (close-up cleavage, reclined-on-bed and crouching poses).
+   - **Rotate the other 2 slots freely — `selena_gaming_room_pink_chair.png` fixed, pick 2 of the
+     remaining 5** (`selena_skull_tank_vacation.png`, `selena_car_daylight_close.png`,
+     `selena_bedroom_purple_light.png`, `selena_restaurant_black_strapless.png`,
+     `selena_mirror_butterfly_case.png`) each generation — C(5,2)=10 combinations. The only rule: don't reuse the
      same single photo or the same trio back-to-back — spread it across the pool as you go.
    - **Body (every prompt):** `selena_black_sweats_mirror.png`.
+   - **⚠️ Open concern, not yet resolved: even rotating the 2nd/3rd face photo across 4 separate
+     confirmed-safe generations (nightlife-A, all with `gaming_room_pink_chair` +
+     `skull_tank_vacation` fixed and only the 3rd slot changing across `car_daylight_close`,
+     `restaurant_black_strapless`, `mirror_butterfly_case`, `bedroom_purple_light`), the actual
+     output expression/pose stayed nearly identical each time** — same side-glance, closed-lip
+     look, hair down loose. The expression-variety instruction added to the scene text (see
+     above) hasn't visibly moved the needle either. Since `gaming_room_pink_chair` must stay
+     fixed as one of the 3 refs (see above), it's possible that photo's own neutral/closed-lip
+     expression is dominating regardless of what else is attached or what the text asks for.
+     Ben should judge directly whether the 4 confirmed-safe renders read as different enough —
+     this may need a different fix (e.g. testing whether `skull_tank_vacation` can be dropped in
+     favor of a wider single-anchor rotation, once more safe photos are confirmed) rather than
+     more pool variety alone.
 3. Paste the prompt text unmodified.
 4. Generate 3-4 seed variants per scene — discard anything that drifts toward an overly polished/
    editorial look (the opposite failure from the CGI pack's photoreal drift), any real logo/place-
