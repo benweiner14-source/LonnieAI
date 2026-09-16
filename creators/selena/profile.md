@@ -40,8 +40,12 @@ Reference photos pulled via two paths, both session-only (no scraping credential
 - **GTA VI** (`skills/gta6-style/`) — full 3D CGI game-engine render, Vice City neon /
   daytime coast / luxury-car aesthetic. This is the primary ask for this creator — see
   `prompts/selena.md`.
-- Other styles (Cyberpunk, NBA 2K/WWE 2K, iPhone Selfie, GTA Loading-Screen) not yet built for
-  her — add on request, following the same recipe as Zion/Kazumi.
+- **Photoreal / UGC candid** — a parallel pack, `prompts/selena-photoreal.md`, same 13 locations
+  × 4 variants but shot like her actual real Instagram content: candid, unposed, iPhone-camera
+  quality (POV selfies, mirror selfies, friend-taken candids) instead of the GTA pack's
+  posed/cinematic look. GPT Image 2.5 Sunburst, 2-ref (face + body). Drafted only, not rendered.
+- Other styles (Cyberpunk, NBA 2K/WWE 2K, iPhone Selfie [CGI variant], GTA Loading-Screen) not yet
+  built for her — add on request, following the same recipe as Zion/Kazumi.
 
 ## Look: FULL CGI RENDER
 Same locked decision as the rest of this project — the entire frame (character *and*

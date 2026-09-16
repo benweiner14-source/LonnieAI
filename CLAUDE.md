@@ -557,6 +557,29 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   automaker-logo leak) with the new face refs + logo fix to confirm both hold, then batch the
   remaining scenes (club-entrance, beach, penthouse, casino, gaming-room) with the confirmed
   4-ref recipe.
+- **Fixed a regression: `jet-ski-A` and `helicopter-A` had been accidentally dropped** from
+  `prompts/selena.md` when the 48 remaining variants were expanded into self-contained blocks
+  (excluded from that expansion on the mistaken assumption that already-validated scenes didn't
+  need re-inserting into the file, which instead deleted them). Restored both using their
+  confirmed-working text and the broadened watercraft/aircraft STYLE clause.
+- **Built the parallel photoreal pack Ben asked for — `prompts/selena-photoreal.md`, same 13
+  locations × 4 variants (52 scenes), GPT Image 2.5 Sunburst instead of Nano Banana Pro.** Ben's
+  direction: he wants this pack to read as **UGC/candid/authentic — like her actual Instagram —
+  not posed/stylized/professional** (that CGI-editorial quality is specifically what the Nano
+  Banana pack should keep, and specifically what this pack should NOT have). Built around 3
+  rotating candid sub-genres per location (picked per scene's plausibility): **POV selfie**
+  (genre-led "A real, candid iPhone front-facing selfie photo of..." + the phone-never-visible /
+  arm-blur technique from `skills/iphone-selfie-style/SKILL.md`, adapted from CGI to real-photo),
+  **mirror selfie** (a new sub-genre for this project — phone IS visible held in the reflection,
+  plain case, no screen content), and **candid, friend-taken** (third-person, caught mid-motion/
+  mid-expression, not posed). Recipe: **2-ref only (face + body, no style ref)** — GPT-2.5 already
+  defaults to photoreal, so there's nothing to fight toward unlike the CGI pack's Nano Banana
+  wrangling. Carries forward the two GPT-2.5 photoreal-quality fixes already validated on this
+  creator (gaze override to a natural candid angle instead of the reference photos' studio stare;
+  full relighting to the scene's actual light sources instead of the references' studio lighting)
+  plus the standing brand-safety clauses (no real place-name signage, no real vehicle/
+  watercraft/aircraft logos). **Drafted only, not rendered** — same "prompts built, not run" rule
+  Ben gave for the CGI expansion; validate 1-2 locations before batching if/when he asks to render.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie,gta-loading-screen}-style/` — style DNA +
@@ -576,6 +599,11 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 - `prompts/kazumi-photoreal-charactersheet.md` — **a different pilot, not part of the main CGI
   pipeline.** Photorealistic (NOT CGI/stylized) identity-reference generations for the
   motion-transfer pilot — see `docs/photoreal-motion-transfer-pilot.md` for scope/consent basis.
+- `prompts/selena.md` (Nano Banana Pro, CGI/stylized) + `prompts/selena-photoreal.md` (GPT Image
+  2.5 Sunburst, photoreal UGC/candid) — a matched pair covering the same 13 locations × 4 variants
+  each, one stylized/posed, one candid/authentic-feeling. Different recipe (4-ref vs. 2-ref, no
+  style ref on the photoreal side) and different guardrail emphasis (fighting toward CGI vs.
+  fighting toward candid-not-editorial), same brand-safety rules.
 - `creators/<name>/{profile.md, refs/}` — brand + guardrails + reference stills;
   `creators/zion-clark/refs/soul-id/` = 20-image identity set.
 - `reference-material/2k-screenshots/` — NBA 2K CGI style frames + `textures/` crops.
