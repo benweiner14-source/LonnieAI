@@ -498,8 +498,19 @@ REFERENCE IMAGE 4: use ONLY for the rendering STYLE — polished open-world crim
 Now render: a young woman with long wavy dark hair, casual glam, in cozy loungewear, sitting cross-legged on the floor with a controller (invented/generic design, no real brand markings), gaming desk glowing softly behind her — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: high overhead-leaning angle, 24mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
 ```
 
-### jet-ski — variants B/C/D
+### jet-ski — variants A/B/C/D
 ```
+[gta6 · jet-ski-A] — confirmed working (Ben: "yep looks good")
+REFERENCE IMAGE 1: use ONLY for facial identity and likeness — her exact face shape, eyes, brows, lips, and glam makeup style. Ignore the clothing, pose, and background in this image.
+
+REFERENCE IMAGE 2: use ONLY for facial identity and likeness, alongside Reference Image 1 — a second angle of the same face to reinforce her exact likeness. Ignore the clothing, pose, and background in this image.
+
+REFERENCE IMAGE 3: use ONLY for body proportions and figure — her slim, toned silhouette. Ignore the specific outfit, pose, and background in this image. Keep the final output fully clothed and SFW regardless of this reference's original styling.
+
+REFERENCE IMAGE 4: use ONLY for the rendering STYLE — polished open-world crime-saga CGI game-engine look: cinematic teal-and-orange grade, moderate and realistic dewy skin sheen — subtle highlights only, NOT heavy oily/sweaty specular, NOT flat or matte skin either, clean CG geometry with full 3D volumetric shading and lighting throughout — NOT flat 2D cel-shaded or toon-shaded rendering, exaggerated cinematic lighting. This is a stylized open-world action game render, obviously computer-generated and in-engine — NOT a real photograph, NOT a real-world location. NOT a Disney/Pixar/DreamWorks animated movie style — NOT cartoon-stylized, NOT storybook or toy-like, NOT cute/rounded/exaggerated proportions. Realistic human anatomical proportions. Do not render any real-world neighborhood, street, or place names as legible signage or text anywhere in the output — any signage must be invented, generic, or illegible only. Any vehicle, watercraft, or aircraft in the scene must have an invented/generic design — no real brand logos, badges, or model-identifying details (e.g. no Yamaha, Sea-Doo, Ford, Audi, Bell, Robinson, or other real vehicle-brand markings). Ignore and do NOT reproduce any logos, brand names, readable signage/text, or watermarks visible in this reference — style/rendering-technique only, nothing else from this image.
+
+Now render: a young woman with long wavy dark hair, glam makeup, gold hoop earrings, layered necklaces, in a fitted athletic one-piece swimsuit with full coverage under an open zip-up rash guard, riding a jet ski (invented/generic design) across turquoise open water, spray kicking up behind her, a distant marina and pastel skyline visible on the horizon — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: low-angle tracking shot from just above the waterline, 24mm wide lens, motion-blurred spray in the foreground, subject off-center to the right. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
 [gta6 · jet-ski-B]
 REFERENCE IMAGE 1: use ONLY for facial identity and likeness — her exact face shape, eyes, brows, lips, and glam makeup style. Ignore the clothing, pose, and background in this image.
 
@@ -581,8 +592,19 @@ REFERENCE IMAGE 4: use ONLY for the rendering STYLE — polished open-world crim
 Now render: a young woman with long wavy dark hair, full glam, layered necklaces, standing at a marina railing at blue-hour dusk, string lights strung overhead, boats gently lit behind her — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: medium telephoto, 50mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
 ```
 
-### helicopter — variants B/C/D
+### helicopter — variants A/B/C/D
 ```
+[gta6 · helicopter-A] — confirmed working (Ben: "yep looks good")
+REFERENCE IMAGE 1: use ONLY for facial identity and likeness — her exact face shape, eyes, brows, lips, and glam makeup style. Ignore the clothing, pose, and background in this image.
+
+REFERENCE IMAGE 2: use ONLY for facial identity and likeness, alongside Reference Image 1 — a second angle of the same face to reinforce her exact likeness. Ignore the clothing, pose, and background in this image.
+
+REFERENCE IMAGE 3: use ONLY for body proportions and figure — her slim, toned silhouette. Ignore the specific outfit, pose, and background in this image. Keep the final output fully clothed and SFW regardless of this reference's original styling.
+
+REFERENCE IMAGE 4: use ONLY for the rendering STYLE — polished open-world crime-saga CGI game-engine look: cinematic teal-and-orange grade, moderate and realistic dewy skin sheen — subtle highlights only, NOT heavy oily/sweaty specular, NOT flat or matte skin either, clean CG geometry with full 3D volumetric shading and lighting throughout — NOT flat 2D cel-shaded or toon-shaded rendering, exaggerated cinematic lighting. This is a stylized open-world action game render, obviously computer-generated and in-engine — NOT a real photograph, NOT a real-world location. NOT a Disney/Pixar/DreamWorks animated movie style — NOT cartoon-stylized, NOT storybook or toy-like, NOT cute/rounded/exaggerated proportions. Realistic human anatomical proportions. Do not render any real-world neighborhood, street, or place names as legible signage or text anywhere in the output — any signage must be invented, generic, or illegible only. Any vehicle, watercraft, or aircraft in the scene must have an invented/generic design — no real brand logos, badges, or model-identifying details (e.g. no Ford, Audi, Yamaha, Sea-Doo, Bell, Robinson, or other real vehicle-brand markings). Ignore and do NOT reproduce any logos, brand names, readable signage/text, or watermarks visible in this reference — style/rendering-technique only, nothing else from this image.
+
+Now render: a young woman with long wavy dark hair, full glam makeup, gold hoops and layered necklaces, in a fitted going-out fit, stepping off a sleek private helicopter (invented/generic design) onto a rooftop helipad at dusk, her hair caught in the rotor wash, a sprawling glowing city skyline spread out below and behind her — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: low three-quarter angle looking slightly up past the helicopter's skid toward her, 28mm wide lens, dramatic rim lighting from the skyline glow. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
 [gta6 · helicopter-B]
 REFERENCE IMAGE 1: use ONLY for facial identity and likeness — her exact face shape, eyes, brows, lips, and glam makeup style. Ignore the clothing, pose, and background in this image.
 
