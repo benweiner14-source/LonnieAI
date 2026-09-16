@@ -42,10 +42,13 @@ overrides her gaze (natural candid angle, not the reference photos' studio stare
 relights her skin/hair/face to the scene's actual light sources instead of the reference photos'
 original studio lighting.
 
-**⚠️ Status: drafted only, NOT rendered.** Per Ben's standing instruction on the CGI pack ("i just
-want the prompts built"), this pack is text-only until he asks for a validation batch — same
-process as the CGI pack: run 1-2 locations first, confirm identity/candid-read/no-logo-leak
-before batching the rest.
+**✅ Status: `[gta6-photoreal · nightlife-A]` (mirror selfie) and `-B` (POV selfie) validated —
+Ben: "yep solid."** Both nailed the candid/UGC read: warm bathroom-mirror vanity lighting with a
+plain visible phone case on the mirror shot, true first-person POV with the phone correctly never
+visible on the selfie shot, no real logo/signage leaks, identity consistent and strong on both,
+zero editorial/posed polish. This confirms the 2-ref (face + body, no style ref) recipe and both
+the mirror-selfie and POV-selfie sub-genres. Remaining 50 scenes drafted, not yet rendered —
+validate a couple more locations before batching the rest.
 
 **Same brand-safety rules as every other pack:** no real game/studio/brand logos or trademarks,
 no real-world street/neighborhood names as legible signage (the CGI pack's "Ocean Drive" leak),
