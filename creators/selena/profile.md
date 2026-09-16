@@ -53,9 +53,9 @@ environment) renders in the game engine, not a CGI character composited onto a r
 **Recipe (same technique as Zion/Kazumi, validated via `[gta6 · nightlife]` + a 5-scene/2-seed
 batch):** Nano Banana Pro, multi-image role-tagging (face ×2 / body / style). Face refs:
 `selena_gaming_room_pink_chair.png` + `selena_skull_tank_vacation.png` — swapped in after the
-validation batch, replacing the original `selena_car_daylight_portrait.jpg` +
-`selena_mirror_butterfly_case.jpg` pair once Ben judged these two as stronger likeness refs.
-Body ref: `selena_black_sweats_mirror.jpg` (chosen specifically because it's a modest,
+validation batch, replacing the original `selena_car_daylight_portrait.png` +
+`selena_mirror_butterfly_case.png` pair once Ben judged these two as stronger likeness refs.
+Body ref: `selena_black_sweats_mirror.png` (chosen specifically because it's a modest,
 loose-fitting outfit — Kazumi's GTA body ref tripped Gemini's safety filter on a more revealing
 outfit, so this one was picked to avoid that failure mode from the start). Style ref: reuse
 `skills/gta6-style/reference/gtav_skyline_dusk.jpg` (same style ref as Kazumi's GTA scenes).

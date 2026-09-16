@@ -44,13 +44,19 @@ overrides her gaze (natural candid angle, not the reference photos' studio stare
 relights her skin/hair/face to the scene's actual light sources instead of the reference photos'
 original studio lighting.
 
-**✅ Status: `[gta6-photoreal · nightlife-A]` (mirror selfie) and `-B` (POV selfie) validated —
-Ben: "yep solid."** Both nailed the candid/UGC read: warm bathroom-mirror vanity lighting with a
-plain visible phone case on the mirror shot, true first-person POV with the phone correctly never
-visible on the selfie shot, no real logo/signage leaks, identity consistent and strong on both,
-zero editorial/posed polish. This confirms the 2-ref (face + body, no style ref) recipe and both
-the mirror-selfie and POV-selfie sub-genres. Remaining 50 scenes drafted, not yet rendered —
-validate a couple more locations before batching the rest.
+**✅ Status: 4 scenes validated, all sub-genres confirmed working.**
+`[gta6-photoreal · nightlife-A]` (mirror selfie) and `-B` (POV selfie) — Ben: "yep solid." Both
+nailed the candid/UGC read: warm bathroom-mirror vanity lighting with a plain visible phone case
+on the mirror shot, true first-person POV with the phone correctly never visible on the selfie
+shot, no real logo/signage leaks, identity consistent and strong on both, zero editorial/posed
+polish. Also spot-checked `beach-A` (POV, daylight) and `gaming-room-B` (candid, friend-taken) —
+both landed the same authentic read (windswept natural daylight; a genuine mid-laugh streamer
+reaction shot), confirming the recipe generalizes across all three sub-genres and across both
+indoor/outdoor lighting. **⚠️ All 4 validated renders were done at the old 9:16 ratio, before Ben
+asked for the switch to 4:5 (see "How to run" below) — the crop change itself hasn't been
+re-confirmed visually yet.** Remaining scenes drafted, not yet rendered — worth a quick 4:5 sanity
+check on one scene before batching the rest, since a crop change can shift framing/composition
+even with identical prompt text.
 
 **Same brand-safety rules as every other pack:** no real game/studio/brand logos or trademarks,
 no real-world street/neighborhood names as legible signage (the CGI pack's "Ocean Drive" leak),
@@ -66,7 +72,7 @@ clothed, no nudity, no explicit posing.
    wiring. **2 refs only: face, body** — same face refs as the CGI pack
    (`selena_gaming_room_pink_chair.png` + `selena_skull_tank_vacation.png`, pick whichever reads
    stronger for a given scene/seed — GPT-2.5's single-face-slot pattern from earlier validation
-   work used one face ref, not two) and the same body ref (`selena_black_sweats_mirror.jpg`).
+   work used one face ref, not two) and the same body ref (`selena_black_sweats_mirror.png`).
 3. Paste the prompt text unmodified.
 4. Generate 3-4 seed variants per scene — discard anything that drifts toward an overly polished/
    editorial look (the opposite failure from the CGI pack's photoreal drift), any real logo/place-

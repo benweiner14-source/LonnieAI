@@ -12,7 +12,7 @@ role block below). Face refs were swapped after this validation (see "How to run
 **Body ref chosen to avoid Kazumi's GTA safety-filter failure.** Kazumi's GTA scenes lost their
 body reference entirely after a revealing outfit combined with "cropped designer top" in the
 prompt text tripped Gemini's safety filter on 3/4 seeds. Selena's chosen body ref
-(`selena_black_sweats_mirror.jpg`) is a loose, modest oversized-sweats fit specifically to avoid
+(`selena_black_sweats_mirror.png`) is a loose, modest oversized-sweats fit specifically to avoid
 that failure mode — so this pack starts with the full **3-ref (face + body + style)** recipe
 Kazumi's GTA scenes never got to keep. If it also trips the filter, drop the body ref the same
 way Kazumi's pack did.
@@ -45,9 +45,9 @@ carry incidental readable text — the style role instructs the model to ignore 
 **Reference files used throughout** (all in `creators/selena/refs/` unless noted):
 - **Face (identity, every prompt, both used together):** `selena_gaming_room_pink_chair.png` +
   `selena_skull_tank_vacation.png` — swapped in from the original single face ref
-  (`selena_car_daylight_portrait.jpg`) after Ben judged these two as stronger likeness refs
+  (`selena_car_daylight_portrait.png`) after Ben judged these two as stronger likeness refs
   following the `[gta6 · nightlife]` + 5-scene validation batch.
-- **Body/figure (every prompt):** `selena_black_sweats_mirror.jpg`
+- **Body/figure (every prompt):** `selena_black_sweats_mirror.png`
 - **Style — GTA VI scenes:** `skills/gta6-style/reference/gtav_skyline_dusk.jpg`
 
 **Reusable role blocks:**
