@@ -79,14 +79,21 @@ clothed, no nudity, no explicit posing.
    size `Custom` → `1536x1920` (**4:5**, a real Instagram feed-post crop), `quality: "high"`.
 2. Attach reference images in order — REFERENCE IMAGE 1/2/3/4 numbering must match
    `image_1`/`image_2`/`image_3`/`image_4` wiring. **4 refs: face ×3, body.**
-   - **Face pool (pick 3 of these 6 per generation, and vary which three across scenes/batches —
-     never reuse the same single photo or the same trio every time, that's what caused the
-     same-face/same-expression bug):** `selena_gaming_room_pink_chair.png`,
-     `selena_skull_tank_vacation.png`, `selena_car_daylight_close.png`,
-     `selena_casino_lobby_black_top.png`, `selena_lipgloss_pink_top.png`,
-     `selena_bedroom_purple_light.png` — six different photos with genuinely different angles and
-     expressions (playful/looking away, direct smile, focused/neutral, looking-up-and-laughing),
-     so no matter which 3 get picked, none of them will simply be copy-pasted as *the* expression.
+   - **Face pool — 6 photos, genuinely different angles/expressions** (playful/looking away,
+     direct smile, focused/neutral, looking-up-and-laughing): `selena_gaming_room_pink_chair.png`
+     (1), `selena_skull_tank_vacation.png` (2), `selena_car_daylight_close.png` (3),
+     `selena_casino_lobby_black_top.png` (4), `selena_lipgloss_pink_top.png` (5),
+     `selena_bedroom_purple_light.png` (6).
+   - **Fixed trio-per-variant-letter assignment — not a "pick any 3" judgment call.** Every scene
+     ending in `-A` uses the same trio, every `-B` uses a different trio, and so on, across all 13
+     locations. Each of the 6 photos appears in exactly 2 of the 4 trios, so identity is spread
+     evenly across the whole pool instead of concentrated on one or two "usual" photos:
+     | Variant | Face trio (REFERENCE IMAGE 1 / 2 / 3) |
+     |---|---|
+     | `-A` | 1 gaming_room_pink_chair · 2 skull_tank_vacation · 3 car_daylight_close |
+     | `-B` | 4 casino_lobby_black_top · 5 lipgloss_pink_top · 6 bedroom_purple_light |
+     | `-C` | 1 gaming_room_pink_chair · 4 casino_lobby_black_top · 5 lipgloss_pink_top |
+     | `-D` | 2 skull_tank_vacation · 3 car_daylight_close · 6 bedroom_purple_light |
    - **Body (every prompt):** `selena_black_sweats_mirror.png`.
 3. Paste the prompt text unmodified.
 4. Generate 3-4 seed variants per scene — discard anything that drifts toward an overly polished/
