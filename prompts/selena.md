@@ -160,11 +160,179 @@ Now render: a young woman with long wavy dark hair, casual glam makeup, in a coz
 
 ---
 
+## Variants & new locations (working toward ~50 total)
+
+**Status: drafted, NOT yet rendered or validated.** Ben's ask: build toward a ~50-scene pack by
+reusing the 7 confirmed locations above (nightlife, club-entrance, beach, luxury-car, penthouse,
+casino, gaming-room) as a base, adding 4 new Florida-lifestyle locations (jet-ski, marina,
+helicopter, poolside-cabana) plus 2 more (golf-course, fishing-charter) — 13 locations total —
+then giving each location ~4 variants (camera angle/lens, pose, outfit). 13 × 4 = 52.
+
+**These come from real-world Florida lifestyle imagery (jet skis, marinas, golf, fishing,
+helicopters) — deliberately NOT sourced from any GTA VI trailer or other copyrighted game
+footage**, per the standing brand-safety rule and to avoid any risk of reproducing someone else's
+copyrighted material.
+
+**How to run a variant below:** prepend the exact REFERENCE IMAGE 1–4 block from the "Reusable
+role blocks" section near the top of this file (or copy it from any scene above) before pasting
+the "Now render" text — the reference-image role assignments are identical for every scene in
+this pack, only the rendered scene text changes. This also means: if the STYLE role block ever
+needs another fix (like the automaker-logo clause), it only needs updating in ONE place (the
+reusable block) rather than in every one of the 50+ scene entries.
+
+**Broadened vehicle clause:** the 4 new water/air locations introduce jet skis, boats, and a
+helicopter — extend the STYLE role's vehicle clause to cover them: "Any vehicle, watercraft, or
+aircraft in the scene must have an invented/generic design — no real brand logos, badges, or
+model-identifying details (e.g. no Ford, Audi, Yamaha, Sea-Doo, Bell, Robinson, or other real
+vehicle-brand markings)." Use this broadened wording for all scenes below; the original 7 scenes
+above still say "automaker" only since they only ever show cars — fine to leave as-is.
+
+**Validate before batching**, same process as every style in this repo — at minimum run one
+variant each of `jet-ski` and `helicopter` first (newest territory: watercraft/aircraft logos,
+untested camera angles like the low-angle-past-the-skid shot) before trusting the rest.
+
+### nightlife — variants B/C/D
+```
+[gta6 · nightlife-B] Now render: a young woman with long wavy dark brunette hair, green eyes, full glam makeup, gold jewelry, in an off-shoulder red going-out dress, walking down the middle of a rain-slicked neon street at night, glancing back over her shoulder, art-deco hotel signage glowing behind her — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: telephoto compression, 85mm lens, subject centered but background heavily compressed and blurred. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · nightlife-C] Now render: a young woman with long wavy dark hair, full glam makeup, gold hoops, in a high-slit black dress, seated on the hood of a parked sports car (invented/generic design) on a neon-lit street, one leg crossed over the other — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: low wide-angle from street level, 20mm lens, exaggerated foreground-to-background perspective. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · nightlife-D] Now render: a young woman with long wavy dark hair, full glam makeup, layered necklaces, in a fitted metallic mini dress, standing in a neon-lit doorway silhouetted from behind by a bar's glowing entrance — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: medium telephoto, 50mm lens, dramatic rim lighting, subject off-center. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+```
+
+### club-entrance — variants B/C/D
+```
+[gta6 · club-entrance-B] Now render: a young woman with long wavy dark hair, full glam, gold hoops, in a sequined mini dress, posing against a velvet rope under a neon marquee as if for photographers, hand on hip — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: close medium shot, 35mm lens, hard flash-lit look with sharp falloff. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · club-entrance-C] Now render: a young woman with long wavy dark hair, full glam, layered necklaces, in a fringe party dress, mid-laugh, an out-of-focus friend blurred beside her at lower render detail, valet supercars (invented/generic design) at the curb — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: high candid angle, 24mm lens, dynamic off-center framing. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · club-entrance-D] Now render: a young woman with long wavy dark hair, full glam, gold jewelry, in a satin slip dress, checking her phone under a glowing marquee, neon reflections on the wet sidewalk — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: eye-level wide shot, 28mm lens, subject off-center to the right. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+```
+
+### beach — variants B/C/D
+```
+[gta6 · beach-B] Now render: a young woman with long wavy dark hair, full glam makeup, a wide sunhat, sitting on a raised lifeguard-stand-style perch overlooking turquoise water, oversized sunglasses — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: wide low-angle from the sand, 24mm lens, dramatic sky filling the upper frame. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · beach-C] Now render: a young woman with long wavy dark hair, glam makeup, gold hoops, in a flowing white maxi dress, walking barefoot along the shoreline where wet sand meets surf — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: telephoto compression from a distance, 85mm lens, subject small in frame, ocean and sky compressed behind her. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · beach-D] Now render: a young woman with long wavy dark hair, full glam, layered necklaces, in a retro-print sundress, leaning on a beach-cruiser bicycle (invented/generic design, no real brand markings) on the boardwalk — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: eye-level medium shot, 35mm lens, subject slightly off-center. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+```
+
+### luxury-car — variants B/C/D
+```
+[gta6 · luxury-car-B] Now render: a young woman with long wavy dark hair, full glam, sunglasses, seated in the driver's seat of a glossy convertible (invented/generic design) with one arm resting on the open window frame, palm-lined street behind — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: low three-quarter angle from the front bumper, 24mm lens, dramatic foreshortening. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · luxury-car-C] Now render: a young woman with long wavy dark hair, full glam makeup, gold jewelry, in a fitted jumpsuit, standing beside a parked matte-black sports car (invented/generic design) at a scenic coastal overlook with a bridge/causeway in the background at dusk — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: wide establishing shot, 20mm lens, subject and car both small against the expansive skyline. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · luxury-car-D] Now render: a young woman with long wavy dark hair, full glam, gold hoops, loading a designer bag into the open trunk of a glossy sports car (invented/generic design), glancing back playfully over her shoulder — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: medium telephoto, 50mm lens, subject off-center. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+```
+
+### penthouse — variants B/C/D
+```
+[gta6 · penthouse-B] Now render: a young woman with long wavy dark hair, full glam, gold jewelry, in a silk robe, leaning on a rooftop balcony railing overlooking a glowing skyline at dusk — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: medium close shot, 50mm lens, soft rim light from the skyline. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · penthouse-C] Now render: a young woman with long wavy dark hair, full glam, in patterned resortwear, seated on an outdoor daybed at sunset, floor-to-ceiling glass and city lights visible behind her — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: high angle from just inside the room looking out, 24mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · penthouse-D] Now render: a young woman with long wavy dark hair, full glam, gold hoops, in a fitted evening dress, standing at a floor-to-ceiling window from inside a penthouse with the city skyline reflected in the glass — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: symmetrical wide shot, 28mm lens, subject centered against the reflected skyline. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+```
+
+### casino — variants B/C/D
+```
+[gta6 · casino-B] Now render: a young woman with long wavy dark hair, full glam, gold jewelry, in a sequined gown, leaning against a marble pillar near rows of glowing slot machines rendered at low detail in the background — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: low-angle glam shot, 35mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · casino-C] Now render: a young woman with long wavy dark hair, full glam, layered necklaces, in an elegant jumpsuit, seated in a private high-stakes lounge booth, warm gold ambient light — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: eye-level medium shot, 50mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · casino-D] Now render: a young woman with long wavy dark hair, full glam, gold hoops, in a dramatic ballgown, walking up a grand marble staircase under a glowing chandelier — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: wide low-angle from the base of the staircase, 24mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+```
+
+### gaming-room — variants B/C/D
+```
+[gta6 · gaming-room-B] Now render: a young woman with long wavy dark hair, casual glam, a headset resting around her neck, reacting mid-laugh at her streaming desk — monitors show only soft abstract glow, no readable text or logos — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: close three-quarter angle, 50mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · gaming-room-C] Now render: a young woman with long wavy dark hair, casual glam, in an oversized hoodie, standing and stretching beside her gaming desk, pink/purple LED strip lighting along the walls — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: eye-level wide shot, 28mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · gaming-room-D] Now render: a young woman with long wavy dark hair, casual glam, in cozy loungewear, sitting cross-legged on the floor with a controller (invented/generic design, no real brand markings), gaming desk glowing softly behind her — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: high overhead-leaning angle, 24mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+```
+
+### jet-ski — variant A (drafted above) + B/C/D
+```
+[gta6 · jet-ski-A] Now render: a young woman with long wavy dark hair, glam makeup, gold hoop earrings, layered necklaces, in a fitted athletic one-piece swimsuit with full coverage under an open zip-up rash guard, riding a jet ski (invented/generic design) across turquoise open water, spray kicking up behind her, a distant marina and pastel skyline visible on the horizon — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: low-angle tracking shot from just above the waterline, 24mm wide lens, motion-blurred spray in the foreground, subject off-center to the right. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · jet-ski-B] Now render: a young woman with long wavy dark hair, glam makeup, in the same full-coverage athletic swimsuit, idling on a jet ski near a wooden dock, one leg draped over the side, sunglasses pushed up on her head — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: eye-level medium shot, 35mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · jet-ski-C] Now render: a young woman with long wavy dark hair, glam makeup, in a full-coverage athletic swimsuit, mid-turn on a jet ski kicking up a wide spray arc, open water and coastline behind her — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: dynamic wide-angle from a chase-boat perspective, 20mm lens, motion blur on the spray. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · jet-ski-D] Now render: a young woman with long wavy dark hair, glam makeup, in a swim cover-up over a full-coverage swimsuit, walking away from a parked jet ski on the shoreline toward the beach, looking back over her shoulder — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: wide establishing shot, 24mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+```
+
+### marina — variant A (drafted above) + B/C/D
+```
+[gta6 · marina-A] Now render: a young woman with long wavy dark hair, full glam makeup, gold jewelry, in a flowing sundress, walking along a wooden marina boardwalk lined with docked yachts and sailboats (invented/generic designs), golden-hour light glinting off the water, palm trees swaying, a pastel skyline in the distance — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: high-angle three-quarter shot from an elevated dock walkway, 35mm lens, subject small in frame with rows of boats filling the background. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · marina-B] Now render: a young woman with long wavy dark hair, glam makeup, in a casual sundress, seated on a dock piling with her legs dangling above the water, boats moored behind her — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: low eye-level shot, 35mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · marina-C] Now render: a young woman with long wavy dark hair, full glam, gold hoops, in elegant resortwear, stepping onto a yacht's boarding ramp (invented/generic design), marina and skyline behind her — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: three-quarter angle, 28mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · marina-D] Now render: a young woman with long wavy dark hair, full glam, layered necklaces, standing at a marina railing at blue-hour dusk, string lights strung overhead, boats gently lit behind her — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: medium telephoto, 50mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+```
+
+### helicopter — variant A (drafted above) + B/C/D
+```
+[gta6 · helicopter-A] Now render: a young woman with long wavy dark hair, full glam makeup, gold hoops and layered necklaces, in a fitted going-out fit, stepping off a sleek private helicopter (invented/generic design) onto a rooftop helipad at dusk, her hair caught in the rotor wash, a sprawling glowing city skyline spread out below and behind her — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: low three-quarter angle looking slightly up past the helicopter's skid toward her, 28mm wide lens, dramatic rim lighting from the skyline glow. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · helicopter-B] Now render: a young woman with long wavy dark hair, full glam, seated inside a helicopter cabin (invented/generic design, no visible instrument branding) looking out the window, a glowing city skyline visible far below — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: medium close shot, 35mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · helicopter-C] Now render: a young woman with long wavy dark hair, full glam, gold jewelry, standing beside a parked helicopter (invented/generic design) on a rooftop tarmac, hair windswept, dusk skyline behind her — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: wide low-angle, 24mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · helicopter-D] Now render: a young woman with long wavy dark hair, full glam, walking away from a parked helicopter toward a rooftop lounge area, dusk skyline glowing behind her — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: telephoto compression, 85mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+```
+
+### poolside-cabana — variant A (drafted above) + B/C/D
+```
+[gta6 · poolside-cabana-A] Now render: a young woman with long wavy dark hair, glam makeup, gold jewelry, in a stylish swim cover-up over a full-coverage one-piece swimsuit, lounging at a poolside cabana under bright midday sun, rattan furniture, tropical drinks on a side table, palm trees and a resort building in the background — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: eye-level medium shot, 50mm lens, warm bright daylight grading (a deliberate contrast to the pack's usual neon-night look), subject off-center to the left. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · poolside-cabana-B] Now render: a young woman with long wavy dark hair, glam makeup, in a wide sunhat and full-coverage swim cover-up, standing at the pool's edge about to dip a foot in, bright midday light — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: wide bright daylight shot, 28mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · poolside-cabana-C] Now render: a young woman with long wavy dark hair, glam makeup, in a full-coverage swim cover-up, reading on a lounge chair under a cabana umbrella, relaxed pose — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: eye-level medium shot, 50mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · poolside-cabana-D] Now render: a young woman with long wavy dark hair, glam makeup, gold hoops, in a full-coverage swim cover-up, walking along the pool deck with a towel draped over one shoulder, bright midday sun — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: high-angle bright shot, 24mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+```
+
+### golf-course — new location, variants A/B/C/D
+```
+[gta6 · golf-course-A] Now render: a young woman with long wavy dark hair, glam makeup, gold jewelry, in a polished golf-casual outfit (fitted polo and pleated skirt), teeing off on a manicured fairway, palm trees lining the course, a clubhouse visible in the distance, soft morning light — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: wide establishing shot, 24mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · golf-course-B] Now render: a young woman with long wavy dark hair, glam makeup, in a casual-chic outfit, riding in a golf cart (invented/generic design) along a tree-lined cart path — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: eye-level medium shot, 35mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · golf-course-C] Now render: a young woman with long wavy dark hair, full glam, gold hoops, in an elegant resort-casual dress, standing on a clubhouse veranda overlooking the green, midday light — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: high angle, 28mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · golf-course-D] Now render: a young woman with long wavy dark hair, glam makeup, in a golf visor and casual sport outfit, walking across a small bridge over a water hazard on the course — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: telephoto compression, 85mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+```
+
+### fishing-charter — new location, variants A/B/C/D
+```
+[gta6 · fishing-charter-A] Now render: a young woman with long wavy dark hair, glam makeup, gold jewelry, in a sporty boating outfit, standing at the helm of a charter fishing boat (invented/generic design, rod holders visible), open ocean at sunset — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: low three-quarter angle, 24mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · fishing-charter-B] Now render: a young woman with long wavy dark hair, glam makeup, in a sporty boating outfit, reeling in a fishing line at the boat's stern, focused expression, open water behind her — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: wide-angle action shot, 20mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · fishing-charter-C] Now render: a young woman with long wavy dark hair, glam makeup, gold hoops, in a casual boating outfit and sunglasses, relaxing on the boat's bow, open ocean and sky behind her — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: eye-level medium shot, 35mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+
+[gta6 · fishing-charter-D] Now render: a young woman with long wavy dark hair, full glam, layered necklaces, standing on deck as the charter boat docks at a pier at golden hour, an out-of-focus crew member at lower render detail in the background — the entire frame rendered in the CGI style described above, obviously computer-generated, in-engine, NOT a real photograph. Camera: telephoto compression, 85mm lens. No real game, studio, or brand logos or trademarks anywhere in the output. 9:16 vertical. Fully clothed, SFW.
+```
+
+---
+
 ## Next up
-Recipe is locked (4-ref: face ×2 + body + style) with the automaker-logo fix applied but **not
-yet re-tested with the new face refs or the logo fix** — re-run at least `[gta6 · nightlife]`
-and `[gta6 · luxury-car]` (the scene that had the Mustang/Gulf leak) to confirm both before
-trusting the rest of the pack. Body ref hasn't tripped a safety filter for her the way Kazumi's
-did — if it ever does, drop it and fall back to the 3-ref (face ×2 + style) recipe. Once
-re-confirmed, consider porting Cyberpunk / NBA-adjacent / iPhone Selfie styles for her the same
-way they were built for Zion and Kazumi.
+**Recipe locked (4-ref: face ×2 + body + style)** with the automaker-logo fix applied, plus the
+broadened watercraft/aircraft version for the new locations — **none of it re-tested with the new
+face refs yet, and the new locations/variants above are entirely un-rendered.** Priority order:
+1. Re-run `[gta6 · nightlife]` and `[gta6 · luxury-car]` (base A variants) to confirm the new
+   face refs + logo fix hold — these had the Mustang/Chevron leaks on the last batch.
+2. Validate one `jet-ski` and one `helicopter` variant — newest territory (watercraft/aircraft
+   logo wording, untested camera angles).
+3. Once both check out, batch the remaining ~48 variants, same 2-seed validate-then-batch
+   process as the rest of this repo.
+Body ref hasn't tripped a safety filter for her the way Kazumi's did — if it ever does, drop it
+and fall back to the 3-ref (face ×2 + style) recipe. Once the full 52-scene pack is confirmed,
+consider porting Cyberpunk / NBA-adjacent / iPhone Selfie styles for her the same way they were
+built for Zion and Kazumi.
