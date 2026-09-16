@@ -84,16 +84,11 @@ clothed, no nudity, no explicit posing.
      (1), `selena_skull_tank_vacation.png` (2), `selena_car_daylight_close.png` (3),
      `selena_casino_lobby_black_top.png` (4), `selena_lipgloss_pink_top.png` (5),
      `selena_bedroom_purple_light.png` (6).
-   - **Fixed trio-per-variant-letter assignment — not a "pick any 3" judgment call.** Every scene
-     ending in `-A` uses the same trio, every `-B` uses a different trio, and so on, across all 13
-     locations. Each of the 6 photos appears in exactly 2 of the 4 trios, so identity is spread
-     evenly across the whole pool instead of concentrated on one or two "usual" photos:
-     | Variant | Face trio (REFERENCE IMAGE 1 / 2 / 3) |
-     |---|---|
-     | `-A` | 1 gaming_room_pink_chair · 2 skull_tank_vacation · 3 car_daylight_close |
-     | `-B` | 4 casino_lobby_black_top · 5 lipgloss_pink_top · 6 bedroom_purple_light |
-     | `-C` | 1 gaming_room_pink_chair · 4 casino_lobby_black_top · 5 lipgloss_pink_top |
-     | `-D` | 2 skull_tank_vacation · 3 car_daylight_close · 6 bedroom_purple_light |
+   - **Rotate freely — pick a different 3 of the 6 each time you generate.** Ben's call: a loose
+     rotation gets more variety across the batch than pinning a fixed trio to each variant letter
+     (that just trades "always the same photo" for "always the same trio per letter," which caps
+     the variety at 4 combinations instead of the full C(6,3)=20). The only rule: don't reuse the
+     same single photo or the same trio back-to-back — spread it across the pool as you go.
    - **Body (every prompt):** `selena_black_sweats_mirror.png`.
 3. Paste the prompt text unmodified.
 4. Generate 3-4 seed variants per scene — discard anything that drifts toward an overly polished/
