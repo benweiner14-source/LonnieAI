@@ -79,15 +79,24 @@ clothed, no nudity, no explicit posing.
    size `Custom` → `1536x1920` (**4:5**, a real Instagram feed-post crop), `quality: "high"`.
 2. Attach reference images in order — REFERENCE IMAGE 1/2/3/4 numbering must match
    `image_1`/`image_2`/`image_3`/`image_4` wiring. **4 refs: face ×3, body.**
-   - **Face pool — 6 photos, genuinely different angles/expressions** (playful/looking away,
-     direct smile, focused/neutral, looking-up-and-laughing): `selena_gaming_room_pink_chair.png`
-     (1), `selena_skull_tank_vacation.png` (2), `selena_car_daylight_close.png` (3),
-     `selena_casino_lobby_black_top.png` (4), `selena_lipgloss_pink_top.png` (5),
-     `selena_bedroom_purple_light.png` (6).
-   - **Rotate freely — pick a different 3 of the 6 each time you generate.** Ben's call: a loose
+   - **Face pool — 7 photos, genuinely different angles/expressions** (playful/looking away,
+     direct smile, focused/neutral, looking-up-and-laughing, warm restaurant smile, playful
+     mirror smirk): `selena_gaming_room_pink_chair.png` (1), `selena_skull_tank_vacation.png`
+     (2), `selena_car_daylight_close.png` (3), `selena_lipgloss_pink_top.png` (4),
+     `selena_bedroom_purple_light.png` (5), `selena_restaurant_black_strapless.png` (6),
+     `selena_mirror_butterfly_case.png` (7).
+   - **⚠️ `selena_casino_lobby_black_top.png` dropped from the pool — tripped OpenAI's safety
+     filter twice (`safety_violations=[sexual]`, hard rejection before any image rendered) in
+     back-to-back tests, the only common element between the two failed trios. Root cause not
+     fully isolated (didn't want to keep burning credits testing blind) — don't re-add it without
+     retesting deliberately.** Also ruled out as candidates without testing:
+     `selena_black_dress_reclined.png` and `selena_crouch_red_top_heels.png` — both read as too
+     revealing/intimate on direct look (close-up cleavage, reclined-on-bed and crouching poses) to
+     risk adding to an already safety-filter-sensitive pool.
+   - **Rotate freely — pick a different 3 of the 7 each time you generate.** Ben's call: a loose
      rotation gets more variety across the batch than pinning a fixed trio to each variant letter
      (that just trades "always the same photo" for "always the same trio per letter," which caps
-     the variety at 4 combinations instead of the full C(6,3)=20). The only rule: don't reuse the
+     the variety at 4 combinations instead of the full C(7,3)=35). The only rule: don't reuse the
      same single photo or the same trio back-to-back — spread it across the pool as you go.
    - **Body (every prompt):** `selena_black_sweats_mirror.png`.
 3. Paste the prompt text unmodified.
