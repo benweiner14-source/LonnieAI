@@ -56,16 +56,16 @@ overrides her gaze (natural candid angle, not the reference photos' studio stare
 relights her skin/hair/face to the scene's actual light sources instead of the reference photos'
 original studio lighting.
 
-**⚠️ Status: 4 scenes previously validated, but under the OLD 1-face-ref recipe — needs a fresh
-check under the new 3-face-ref recipe before trusting it again.** `[gta6-photoreal ·
-nightlife-A]` (mirror selfie) and `-B` (POV selfie) — Ben: "yep solid" — plus `beach-A` (POV,
-daylight) and `gaming-room-B` (candid, friend-taken) all confirmed the candid/UGC read, identity,
-and brand-safety on the *scene/style* side. But all 4 were generated with only ONE face photo
-attached (`selena_gaming_room_pink_chair.png`), which is exactly what caused the same-face/
-same-expression bug Ben caught — so those renders are proof the writing style works, not proof
-the identity recipe is fixed. They also predate the switch to 4:5 (see "How to run" below).
-**Re-validate at least one scene with the new 3-face-ref + 4:5 combination before batching
-anything.**
+**✅ Status: recipe confirmed and batched — 16 of 52 scenes rendered and sent to Ben, 1 known gap.**
+Under the current 3-face-ref (gaming_room_pink_chair anchor + 2 rotating) + 4:5 recipe: `nightlife`
+A/B/C/D, `club-entrance` A/B/C/D, `beach` A/B/D, `luxury-car` A/B/C/D all rendered clean —
+strong/consistent identity, genuine expression variety scene-to-scene (laughing, smirking,
+neutral, direct gaze — no more repeated same-face/same-expression look), no brand-safety leaks
+spotted. **`beach-C` failed OpenAI's safety filter** (trio: `restaurant_black_strapless` +
+`mirror_butterfly_case`, likely combined with the "swim cover-up over swimsuit" scene wording) —
+not yet retried with a different trio. Remaining 35 scenes (`penthouse` through `fishing-charter`)
+still drafted-only, not rendered — **stopped batching after this round per Ben's request; pick
+back up with the next 5 (`penthouse-A` onward) when ready.**
 
 **Same brand-safety rules as every other pack:** no real game/studio/brand logos or trademarks,
 no real-world street/neighborhood names as legible signage (the CGI pack's "Ocean Drive" leak),
