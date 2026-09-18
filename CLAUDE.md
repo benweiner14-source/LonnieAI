@@ -580,6 +580,59 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   plus the standing brand-safety clauses (no real place-name signage, no real vehicle/
   watercraft/aircraft logos). **Drafted only, not rendered** — same "prompts built, not run" rule
   Ben gave for the CGI expansion; validate 1-2 locations before batching if/when he asks to render.
+- **New content avenue: Kazumi "penthouse party" 30-second vignette (multi-shot, Seedance 2.0
+  img2video) — Ben's ask, shot-by-shot validation.** Not a prompt-pack scene, a standalone
+  vignette: 7 shots moving through an upscale Miami Beach penthouse cocktail party (guests
+  mingling, sophisticated ambient energy, explicitly NOT a rager), one consistent wardrobe
+  throughout (blush-pink silk robe + camisole), **her hair deliberately black for this vignette
+  only** (a one-off override from her canonical blonde balayage, via explicit "ignore the blonde
+  hair in this reference" wording on the face-ref role — not a profile change). Output 9:16, 720p.
+  **Chaining technique discovered mid-shoot and now the standing method for this vignette:** each
+  new shot's still chains off the ACTUAL PREVIOUS SHOT'S RENDERED OUTPUT (not the original face/
+  style refs) as the master anchor for identity/outfit/CGI-style continuity — this fixed visible
+  style drift between shots. Two failure modes found and fixed while dialing this in: (1) chaining
+  also over-anchored composition/pose/background, producing near-duplicate shots and one physics
+  error (her feet rendering on the pool's water surface instead of the deck) — fixed by explicitly
+  telling the model to ignore composition/pose/background from the chained reference and describing
+  a genuinely different sub-location each shot; (2) a real place name ("MIAMI") rendered as legible
+  neon signage in one background — same literal-signage mechanism as the earlier Bayview
+  City/Ocean Drive leaks — fixed with an explicit no-real-place-name-signage clause, now standard
+  in every shot's prompt going forward for this vignette.
+  - **Shot 1 (Establishing)** — wide shot at the pool's edge, party mingling behind her. Confirmed
+    and animated (slow push-in, ambient party sound). Locked as the vignette's anchor frame.
+  - **Shot 2 (Walking hero)** — went through 3 iterations before landing: v1 (fresh refs, not
+    chained) had good motion but style drifted slightly photoreal; v2 (chained off Shot 1) fixed
+    style but broke physics (walking on water) and repeated Shot 1's exact composition; v3 fixed
+    both (off-center framing, different sub-location — fire pit lounge) but leaked the real
+    "MIAMI" signage; v4 fixed the signage. Confirmed and animated (low tracking shot retreating as
+    she approaches, fire/party ambient sound).
+  - **Shot 3 (originally planned as balcony turn/reveal) — descoped by Ben mid-shoot in favor of a
+    mingling/interaction shot** ("her interacting and mingling with people at the party" instead of
+    a solo turn-to-camera beat). The balcony version had gotten as far as a seed with visible face
+    drift (caught by Ben, fixed by re-anchoring hard on the face ref for a second pass) before the
+    scene concept itself was dropped — no loss, just superseded. New Shot 3: she's mid-conversation
+    with two other guests at a bar-counter area, holding a champagne flute, genuine
+    smiling/gesturing — confirmed working on Nano Banana Pro on the first chained attempt.
+  - **GPT Image 2.5 Sunburst retested specifically for this vignette's CGI look, at Ben's request
+    (he wanted to confirm whether 2.5 specifically — not just GPT Image 2 — could hit it, since
+    2.5 is newer).** Same Shot 3 mingling scene, 3 escalating attempts: (1) plain prompt → fully
+    photoreal, consistent with every prior GPT Image test on this project; (2) maximally aggressive
+    CGI-forcing wording ("VIDEO GAME SCREENSHOT, NOT A PHOTOGRAPH", repeated CGI/in-engine language)
+    → shifted noticeably toward smoother/waxier "next-gen game-engine" (Unreal/MetaHuman-style)
+    shading, a real but partial move, still far from the stylized GTA/2K cutscene look the rest of
+    the project uses, and identity fidelity dropped; (3) same aggressive wording + explicit
+    identity-lock instructions and reordered refs (face ref first) → identity improved somewhat but
+    hair partially reverted to blonde streaks, and Ben's direct judgment on this pass was that it
+    still verged on photoreal. **Conclusion: reconfirms the standing "GPT Image family closed for
+    this project's CGI-render requirement" finding — holds for 2.5 specifically, not just GPT Image
+    2, even with best-effort aggressive prompt-forcing and identity-lock wording. Do not retest
+    GPT Image (2 or 2.5) for the CGI-render look again**; Nano Banana Pro remains the only proven
+    path. GPT-2.5 is still the right tool when photoreal output is explicitly wanted (Selena's UGC
+    pack, Kazumi's character-sheet pilot) — this finding is about the CGI-render use case only.
+  - **Next up:** animate Shot 3's still with Seedance, then continue the shot-by-shot vignette
+    (originally-planned Shots 4-7: beauty close-up, jewelry detail, lounging, closing — subject to
+    the same kind of on-the-fly rescoping Ben did to Shot 3) through to a full ~30s set of clips for
+    Ben to edit together himself.
 
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie,gta-loading-screen}-style/` — style DNA +
