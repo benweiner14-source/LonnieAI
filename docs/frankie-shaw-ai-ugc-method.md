@@ -31,15 +31,26 @@ into a full GPT prompt-engine (~54k characters) built on Fable 5.
   viral audio in CapCut.
 - **Honest caveat he repeats constantly:** "quick Seedance clips don't print money" — realism
   comes from deep prompting/direction/storytelling, the tool is not the moat by itself.
+- **"It's not a product problem, you have a storytelling problem."** His diagnosis for ads that
+  don't convert: most people just flash the product on screen and hope, which isn't marketing.
+  Know who you're actually talking to, how they encounter the content, and what they get out of
+  it — before touching a single generation prompt.
 - **Consumer psychology is the deeper layer (V5.2):** subconscious buying behavior, attention
   manipulation, TOF psychology, conversion triggers — tailored per archetype (5 motivation
   buckets: avoid pain, gain confidence, status/envy, love & belonging, convenience/peace).
 
 ## Selling structure
 - Curiosity → narrative → product. Product comes last, never first.
-- No hard sell. The "self-found" close = "look into it," never "shop now."
+- No hard sell. The **"self-found" method** = "look into it," never "shop now" — no bold
+  click-through CTA at all; the viewer follows through purely out of their own curiosity, not
+  because they were pushed.
 - Before/after is dead (ad platforms reject it) — show progression/momentum instead.
 - No bold or medical claims — persuade with story, not claims.
+- **The "curious ad"** — his explicit name for the softest-sell format: discuss the product
+  benefit in an organic setting (a hike, a street interview) without pitching it directly. The
+  content doesn't read as an ad at all; people get curious about what's being talked about and
+  follow the link themselves. This is the mechanism underneath the whole curiosity-first
+  structure above, given as its own repeatable, nameable format rather than just a principle.
 
 **Transformational-product formula (5 beats):**
 1. Relatable scenario (put their life on screen)
@@ -100,7 +111,9 @@ bio/link — never "shop now."
 
 Layer **micro-expressions** throughout — watery eyes, micro-hesitations, subtle confidence
 cues — on top of the direction stack. This, more than any single line of dialogue, is what beats
-the uncanny valley.
+the uncanny valley. (His own illustrative example: a lead-gen clip of someone holding a
+settlement check, eyes down at first, then a genuine watery-eyed reaction on seeing the amount —
+that reaction sells the realism far more than the dialogue does.)
 
 ## 5 motivation buckets — hit at least one per clip
 Avoid pain · Gain confidence · Status/envy · Love & belonging · Convenience & peace. Pick the one
@@ -116,6 +129,13 @@ hit one of these reads as generic even if the realism is otherwise perfect.
 | **Men <30** | Pinocchio paradox ("what if it works"), bold claims OK, can mention girls/attraction, lifestyle/luxury flex, nonchalant energy |
 | **Lead gen (CPL/CPC/CPA)** | Heavy emotion, relatable (not luxury) actors, urgency from a "friend," proof (the check, the bill) |
 | **EU / other markets** | Reuse winning US scripts in native language; factual/rational; region-accurate environments; high detail, no glitches |
+
+**EU-market note:** he frames Europe as comparatively unsaturated with AI UGC right now — the
+same win-in-the-US script/archetype pairing translated into the local language can work there
+largely because of the lower competition, not because it's guaranteed to transfer 1:1. His own
+honest example: one direct EU duplicate he showed "wasn't super strong" and he said he wouldn't
+put budget behind it as-is — treat a translated duplicate as a test to validate, same as any
+other new concept, not an automatic win.
 
 ## Realism markers he holds constant
 - **Captions:** white bold centered sans, 1–3 words at a time (TikTok auto-caption). Green for
@@ -186,10 +206,28 @@ authenticity → cinematic quality.
   different access point/tier, not a contradiction; check which applies before assuming a setting
   carries over.
 - **Volume workflow:** ~16 base clips (~25 minutes to generate) → 50+ variants by speed-mapping
-  clips to a viral audio's drop points in CapCut, plus flash effects for energy.
+  clips to a viral audio's drop points in CapCut, plus flash effects for energy. Production note:
+  he edits with the audio normalized for comfortable preview, then exports louder for the actual
+  TikTok/Instagram publish — and the speed-matched flash-cut effect is doing real work, not just
+  decoration; toggling it off in a side-by-side made the same edit read noticeably flatter/less
+  energetic. Worth a quick A/B check on an early edit before assuming the effect is optional.
 - **Character congruency across a multi-clip story:** keep the same character/character-sheet
   consistent through a sequence, e.g. store-compliment → in-car follow-up → unboxing — treat a
   multi-beat ad as one continuous character, not independent clips.
+- **Prototyping technique: validate a concept with a fully fabricated product before final brand
+  assets exist.** He demonstrated the whole 5-beat/curiosity framework using a product that
+  doesn't actually exist (a generated label/bottle, invented on the spot) specifically to prove
+  the skill is the storytelling and direction, not any particular product's real assets. Useful
+  and directly applicable here: a Rocka Moss concept can be pressure-tested end-to-end with a
+  placeholder bottle before real label references are sourced, to validate the *script and
+  format* independent of asset readiness.
+- **Practical note on AI-content platform disclosure, not a recommendation either way:** he notes
+  his ads "bypass" automated AI-content checks but that marking content as AI-generated (where a
+  platform's disclosure toggle exists) doesn't seem to hurt click-through in his experience —
+  viewers don't appear to change behavior over the label. Meta/TikTok's actual AI-disclosure
+  policies change and should be checked at production time regardless; this is an observation
+  about audience behavior, not a substitute for following whatever the platform's current ad
+  policy actually requires.
 
 ## Worked example: clog unboxing (a real prompt that worked — study this format)
 
@@ -250,3 +288,27 @@ study) · `references/franky_tweets_digest.md` · `references/franky_videos.md` 
 environment-first] — plus a pending ChatGPT-thread source, blocked by org policy at the time) ·
 `references/transcripts/*` (Ben's own source files, not mirrored into this repo — this doc is the
 consolidated summary).
+
+### Direct video review (Sept 2026)
+Ben pasted transcripts directly for the underlying videos so they could be checked against the
+summary above rather than taken only secondhand through the style bible. **Raw transcripts aren't
+saved into this repo** (they're someone else's copyrighted spoken content, not something to check
+into a codebase) — the additions throughout this doc are the paraphrased, new-beyond-the-summary
+findings only; everything that just confirmed what was already written above isn't called out
+again.
+
+- **`FANWZjSbpdY` — "V3 AI Micro Course" breakdown.** Reviewed. Confirmed the 5-beat formula,
+  curiosity→narrative→product order, and the ~16-clip/25-min/50-variant volume math essentially
+  verbatim. New: the "storytelling problem, not a product problem" framing, the "curious ad" as
+  an explicitly named format, the fabricated-product prototyping technique, and the CapCut
+  normalize-then-boost / flash-effect production note — all folded in above.
+- **`JCfun9lc2uY` — consumer archetyping deep dive.** Reviewed. Confirmed the full archetype table
+  essentially verbatim (women 50+/<30, men 50+/<30, lead-gen, EU). New: the EU-market
+  unsaturated-opportunity framing with its honest non-guaranteed-transfer caveat, the concrete
+  micro-expressions example (the settlement-check reaction), and the AI-disclosure practical
+  observation — all folded in above.
+- **`vjAjDVOYLU4`** — not yet reviewed directly (pending).
+- **`1qZ42S_Z3bE`** — a 4th video outside the original 3-transcript source set for the style
+  bible; not yet reviewed (pending). YouTube fetch tools (`2k-yt-transcript` skill, both the
+  primary API and the yt-dlp fallback) are currently blocked for this environment's IP
+  (rate-limit/bot-check) — Ben is pasting transcripts manually as a workaround.

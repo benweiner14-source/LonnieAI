@@ -713,6 +713,26 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   `clients/ai-ugc-agency/README.md`. Also added a real worked Seedance prompt (a shoe-unboxing
   ad) as a concrete pattern to imitate — same "lock the product with multiple angle references"
   instinct as this repo's own multi-image role-tagging technique, independently arrived at.
+- **Ben asked to go straight to source video transcripts for more learnings (not just the
+  condensed style bible) before diving into Rocka Moss production.** The `2k-yt-transcript` skill
+  is currently blocked in this environment for all 4 video URLs he sent — both the primary
+  `youtube-transcript-api` path and the `yt-dlp` fallback are hitting a datacenter-IP block
+  (429s, then "sign in to confirm you're not a bot" on yt-dlp itself). Didn't try to route around
+  it with cookies/proxies — that starts to look like evading YouTube's bot detection rather than
+  using a public API, same posture this project already took on the earlier Selena
+  scraping-block decision. **Ben is pasting transcripts manually instead** (his own session's
+  "Show transcript" workaround). **Reviewed 2 of 4 so far** (`FANWZjSbpdY`, `JCfun9lc2uY`) —
+  genuinely new material folded into `docs/frankie-shaw-ai-ugc-method.md` (not just
+  confirmation): the "storytelling problem, not a product problem" framing, the "curious ad" as
+  an explicitly named soft-sell format, a fabricated-product prototyping technique (pressure-test
+  a script/format with a placeholder product before real brand assets exist — directly useful for
+  Rocka Moss), a CapCut production note (normalize for preview, export louder; the flash-cut
+  effect is load-bearing, not decorative), the EU-market unsaturated-opportunity framing with its
+  own honest non-guaranteed-transfer caveat, and a practical (not a recommendation) note on
+  AI-content platform disclosure not clearly hurting CTR in his experience. **Not saving raw
+  transcripts into the repo** — they're someone else's copyrighted spoken content; the doc's new
+  "Direct video review" subsection under Sources tracks what's been reviewed and what's still
+  pending (`vjAjDVOYLU4`, `1qZ42S_Z3bE`) without storing the transcript text itself.
 
 ## Parked context: Ben's separate AI UGC agency (Premier Sea Moss) — not active, Rocka Moss is the focus
 - Ben shared a working session doc from a **third, separate project**: his own general AI-UGC ad
