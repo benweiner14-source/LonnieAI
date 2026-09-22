@@ -634,6 +634,46 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
     the same kind of on-the-fly rescoping Ben did to Shot 3) through to a full ~30s set of clips for
     Ben to edit together himself.
 
+## New section: Christian Brown & Rocka Moss — separate client, shared AI-content playbook
+- **A different engagement from the Lonnie Anthony Consulting CGI-avatar POC** — Ben acting as an
+  independent brand/growth consultant to Christian Brown (pro basketball player, Kuwait) and
+  Rocka Moss (sea moss wellness brand he co-owns), not Lonnie's agency. Added to this repo because
+  one piece of it — Rocka Moss's need for AI-generated product photography and "real-looking"
+  testimonial/lifestyle video ads, explicitly flagged in the brief as a gap with no existing
+  playbook — is exactly the kind of AI image/video generation work this repo has spent months
+  testing and hardening, just aimed at a different (photoreal, not CGI-stylized) output.
+- **Two workstreams, per the brief:** Bucket 1 is pure brand-deal business development for
+  Christian (Meta Ad Library prospecting, outreach, deal structuring) — no AI generation involved,
+  out of scope for this repo. Bucket 2 is Rocka Moss growth marketing (Meta paid social + AI video
+  ads + influencer seeding + reporting) — the AI video/photo piece is where this repo's work
+  plugs in.
+- **Built `clients/rocka-moss/`:** `PROJECT_BRIEF.md` (the full brief, saved verbatim for any
+  agent coming in cold), `README.md` (orientation + scope boundary), and `ai-ugc-playbook.md` —
+  the actual deliverable, mapping this repo's proven techniques onto Rocka Moss's two content
+  needs. Key mappings: **product photography** → the multi-image role-tagging technique
+  (`docs/multi-image-role-tagging.md`), applied to a bottle/label instead of a face, plus the
+  standing brand-safety rule run in reverse (protect the real Rocka Moss label from being
+  reinterpreted, while keeping everything else generic so no *other* real logo leaks in, same
+  mechanism as the automaker-badge leak on Selena's pack). **Testimonial/lifestyle UGC video** →
+  directly reuses Selena's photoreal UGC pack recipe (`prompts/selena-photoreal.md`: GPT Image 2.5
+  Sunburst, not Nano Banana Pro — no CGI-fighting needed here since 2.5 already defaults
+  photoreal; the three candid sub-genres — POV selfie, mirror selfie, candid friend-taken; the
+  genre-anchoring POV lesson from `skills/iphone-selfie-style/SKILL.md`; the confirmed fixes for
+  copied-expression and studio-lighting bugs), animated via Seedance 2.0 / Higgsfield Genjutsu
+  (`docs/seedance-comfy-handoff.md`) — including `reference_audios.audio_1` as the direct answer to
+  the brief's "how to use ElevenLabs for voiceover... stitch it into a video" ask, and the
+  chain-off-the-previous-rendered-shot technique from Kazumi's penthouse-party vignette for
+  multi-shot ads.
+- **Not yet run against real Rocka Moss references — mapping only, not validated.** No Rocka Moss
+  bottle/label reference photos sourced into the repo yet, no access to Shopify/Meta Business
+  Manager confirmed, nothing generated for this client. Flagged an open consent question in
+  `clients/rocka-moss/README.md`: if Christian Brown himself appears as an AI-generated subject in
+  Rocka Moss ad creative, that needs its own explicit confirmation from him — the brief's
+  Instagram-outreach permission (Bucket 1) doesn't automatically cover AI-likeness generation, same
+  distinction already drawn for Kazumi's photoreal motion-transfer pilot.
+- **Next up:** source real Rocka Moss bottle/label + testimonial-subject reference photos, validate
+  one product shot and one POV-selfie testimonial still before batching either direction.
+
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie,gta-loading-screen}-style/` — style DNA +
   scene modifiers (9:16, except `gta-loading-screen` which is a different rendering medium — see
@@ -666,6 +706,10 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   `higgsfield-cgi-playbook.md`, `seedance-comfy-handoff.md` (Ben's working notes on animating
   stills into video via Comfy Cloud's `ByteDance2ReferenceNode` — settings, reference-image
   patterns, lip-sync setup, gotchas).
+- `clients/rocka-moss/` — **a separate client engagement** (Christian Brown / Rocka Moss), not
+  part of the Lonnie Anthony CGI-avatar POC. `PROJECT_BRIEF.md` (full context), `README.md`
+  (scope/status), `ai-ugc-playbook.md` (this repo's CGI/photoreal generation lessons mapped onto
+  Rocka Moss's product-photography and testimonial-video needs — see "New section" above).
 
 ## Working notes
 - Apify (Instagram scraping) available via API token Ben provides — session-only, never commit.

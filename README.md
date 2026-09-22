@@ -28,6 +28,9 @@ skills/                     # style skills (one per game look), modeled on the 2
 creators/                   # per-creator brand profile + reference stills (refs/)
 prompts/                    # paste-ready prompt packs: kazumi.md, zion-clark.md
 reference-material/         # the original 2K_Cutscene_Style_Skill.md (baseline)
+clients/                    # separate client engagements that reuse this repo's AI-content
+                             #   learnings but aren't part of the Lonnie Anthony CGI-avatar POC
+                             #   (e.g. rocka-moss/ — Christian Brown & Rocka Moss)
 ```
 
 ## How to use a prompt pack
