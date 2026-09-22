@@ -43,8 +43,11 @@ own — CAC and ROAS do; don't report CTR as a pass/fail metric, use it to diagn
 Sea moss is a daily-use consumable — if Rocka Moss has any reorder-rate or subscription data,
 **that changes the acceptable CAC ceiling substantially.** A first-order CAC above the $17–21
 single-order breakeven can still be profitable if LTV over 2–3 orders clears it — common in DTC
-wellness. **Ask Rocka Moss for repeat-purchase data before treating the $17–21 ceiling as a hard
-line** — it may be too conservative if reorder rate is healthy.
+wellness. **This is the first thing to pull once Shopify collaborator access is granted**
+(`PROJECT_BRIEF.md`'s access-needed checklist) — customer order history will show actual
+repeat-purchase rate directly, no need to ask Rocka Moss to compile it manually. Don't treat the
+$17–21 ceiling as a hard line until that number is in hand — it may be too conservative if
+reorder rate is healthy.
 
 ## How to track this once live
 `docs/tay-ai-ugc-dropship-method.md`'s AI-assisted daily reporting pattern (Claude connected to
