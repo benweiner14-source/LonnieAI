@@ -749,6 +749,27 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   whatever path is available (fetch tools remain blocked in this environment). Kept the same
   discipline throughout: no raw transcript text saved into the repo, only paraphrased new-beyond-
   what's-already-documented findings.
+- **Ben brought a second creator's material — "Tay," a Shopify/dropshipping-focused channel —
+  covering different ground than Frankie Shaw's creative philosophy.** Built a new,
+  complementary doc, `docs/tay-ai-ugc-dropship-method.md` (same no-raw-transcript-storage
+  discipline as the Frankie Shaw doc). Two videos: (1) a technique for reverse-engineering a
+  competitor's already-proven static image ad into a video ad — source a similar/cheaper product,
+  swap it into the competitor's proven composition via a Claude→Gemini→Canva→Kling AI tool chain,
+  flagged with an explicit caution given this repo's own posture (lean on structure/composition,
+  not a close copy of someone else's actual creative — this repo's own Meta-Ad-Library
+  methodology already sources comparisons the safe way, via public screenshots); plus a simple
+  CBO/broad-targeting/$50-a-day Meta ad-launch structure and concrete Omnisend retention-flow
+  types (cart recovery, post-purchase cross-sell, high-value-customer segments) — real tactical
+  detail the brief's generic mentions didn't have. (2) An AI agent (Manus) running an entire
+  pipeline autonomously from one product link — deep multi-source research, TikTok viral-hook
+  scraping, script drafting, a 3-view UGC character generation, and Kling 3.0's multi-shot video
+  mode (a genuinely different capability from this repo's current Seedance/Genjutsu single-
+  reference-set pattern) — flagged as worth evaluating, not adopting yet, and specifically called
+  out one pattern (the agent taking over a live browser session to get past an access block) as
+  the same shape of workaround this project has previously declined elsewhere, worth the same
+  checkpoint-before-adopting caution even though the immediate use case (researching a public
+  product listing) is lower-risk than the earlier real-person-scraping case it echoes. Added a
+  short cross-reference to this new doc in `clients/rocka-moss/ai-ugc-playbook.md`'s Section 0.
 
 ## Parked context: Ben's separate AI UGC agency (Premier Sea Moss) — not active, Rocka Moss is the focus
 - Ben shared a working session doc from a **third, separate project**: his own general AI-UGC ad
@@ -796,7 +817,11 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   patterns, lip-sync setup, gotchas), `frankie-shaw-ai-ugc-method.md` (creative-philosophy
   reference for UGC-style ads — concept/structure/performance direction, not a rendering
   technique; apply before scripting any UGC ad, currently referenced by
-  `clients/rocka-moss/ai-ugc-playbook.md`).
+  `clients/rocka-moss/ai-ugc-playbook.md`), `tay-ai-ugc-dropship-method.md` (a second, more
+  tactical reference from a different creator — competitor-ad reverse-engineering, a
+  Claude→Gemini→Kling production tool chain, a simple CBO Meta ad-launch structure, Omnisend
+  retention-flow types, and notes on an AI-agent-driven end-to-end pipeline; complements rather
+  than replaces the Frankie Shaw doc).
 - `clients/rocka-moss/` — **a separate client engagement** (Christian Brown / Rocka Moss), not
   part of the Lonnie Anthony CGI-avatar POC. **Ben's current focus.** `PROJECT_BRIEF.md` (full
   context), `README.md` (scope/status), `ai-ugc-playbook.md` (this repo's CGI/photoreal

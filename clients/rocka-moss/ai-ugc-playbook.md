@@ -20,7 +20,15 @@ other pack in this repo.
 
 `docs/frankie-shaw-ai-ugc-method.md` is the philosophy layer: not "how to render a shot" but
 "what should the shot even be, and why." Read it in full before drafting Rocka Moss scripts — the
-short version, applied to Rocka Moss specifically:
+short version, applied to Rocka Moss specifically. `docs/tay-ai-ugc-dropship-method.md` is a
+second, complementary reference — less philosophy, more production workflow and post-launch
+tactics: a technique for sourcing a concept by reverse-engineering a competitor's already-proven
+ad (with real caveats about how closely to lean on someone else's execution — read that doc's own
+caution before using it), a simple CBO/broad-targeting Meta ad-launch structure, and concrete
+Omnisend retention-flow types. Skim it too before the first real batch, even though the two
+sources don't always agree on tactics (e.g. its ad-account structure is simpler than the
+`coreyhaines31/marketingskills` approach named in `PROJECT_BRIEF.md`) — worth having both in
+mind rather than picking one blind.
 
 - **Realism is the whole product.** The gut check for every concept: *"if it looks planned, it
   failed; if it looks accidentally captured, it passed."* A Rocka Moss ad that reads as a
