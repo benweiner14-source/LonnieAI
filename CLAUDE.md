@@ -674,6 +674,18 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 - **Next up:** source real Rocka Moss bottle/label + testimonial-subject reference photos, validate
   one product shot and one POV-selfie testimonial still before batching either direction.
 
+## Parked context: Ben's separate AI UGC agency (Premier Sea Moss) — not active, Rocka Moss is the focus
+- Ben shared a working session doc from a **third, separate project**: his own general AI-UGC ad
+  production service pitched to DTC brands broadly, with Premier Sea Moss (premierseamoss.com —
+  **a different company from Rocka Moss**, despite both being sea-moss brands) as the first warm
+  lead/spec-ad target. Saved to `clients/ai-ugc-agency/` (`session-reference.md` verbatim +
+  `README.md` cross-referencing it against this repo's own Seedance/UGC findings) purely as
+  context, per Ben's explicit direction: **"I'm not really interested in pursuing the new
+  clients' stuff right now. I'm just focusing on the rocka seamoss. But I thought it was just
+  important context to have."** Nothing here is active work — don't pick up its next-steps list
+  (Frankie Shaw transcripts, character-image face-block test, spec-ad generation) unless Ben
+  asks. Current focus stays Rocka Moss.
+
 ## Where things live
 - `skills/{gta6,cyberpunk-2077,nba2k,wwe2k,iphone-selfie,gta-loading-screen}-style/` — style DNA +
   scene modifiers (9:16, except `gta-loading-screen` which is a different rendering medium — see
@@ -707,9 +719,13 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   stills into video via Comfy Cloud's `ByteDance2ReferenceNode` — settings, reference-image
   patterns, lip-sync setup, gotchas).
 - `clients/rocka-moss/` — **a separate client engagement** (Christian Brown / Rocka Moss), not
-  part of the Lonnie Anthony CGI-avatar POC. `PROJECT_BRIEF.md` (full context), `README.md`
-  (scope/status), `ai-ugc-playbook.md` (this repo's CGI/photoreal generation lessons mapped onto
-  Rocka Moss's product-photography and testimonial-video needs — see "New section" above).
+  part of the Lonnie Anthony CGI-avatar POC. **Ben's current focus.** `PROJECT_BRIEF.md` (full
+  context), `README.md` (scope/status), `ai-ugc-playbook.md` (this repo's CGI/photoreal
+  generation lessons mapped onto Rocka Moss's product-photography and testimonial-video needs —
+  see "New section" above).
+- `clients/ai-ugc-agency/` — **parked context, not active work** (see "Parked context" section
+  above). Ben's own separate AI-UGC agency pitch, Premier Sea Moss as the target lead — a
+  different company from Rocka Moss. `session-reference.md` + `README.md`.
 
 ## Working notes
 - Apify (Instagram scraping) available via API token Ben provides — session-only, never commit.
