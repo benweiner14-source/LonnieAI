@@ -223,6 +223,18 @@ gym — without naming the city in the prompt text itself).
   repurposing once it comes in.
 - **Ad copy, campaign structure, Meta account setup/audit** — covered by the `/ads *` and
   `ads`/`cro` skills named in the brief, outside this repo's scope (image/video generation only).
+  `docs/tay-ai-ugc-dropship-method.md` (Video 3) has a genuinely useful, concrete option for the
+  brief's monthly-reporting ask specifically: connecting Claude to Facebook Ads/Shopify/a
+  profit-tracking app for plain-English daily performance reads — worth considering once Rocka
+  Moss's ad account and pixel exist, even though full ad-account setup itself stays out of this
+  doc's scope.
+- **⚠️ Fabricated customer reviews are explicitly NOT something to bring over from
+  `docs/tay-ai-ugc-dropship-method.md` (Video 6) without Ben's separate, explicit sign-off.**
+  That doc's product-page workflow includes generating fake "realistic" reviews to fill an empty
+  section — fine for a from-scratch dropship test store with no real customers yet, a materially
+  different situation from Rocka Moss, which already has real customers and real reviews
+  (`PROJECT_BRIEF.md`). If a Rocka Moss page redesign needs reviews, use real ones or leave the
+  section empty until real ones exist — don't default to generating them.
 - **Whether Christian Brown himself can be the AI-generated subject of Rocka Moss ad creative** —
   flagged as an open consent question in `README.md`, not resolved here. **Now a real two-path
   decision, not just a permissions checkbox** — see `docs/frankie-shaw-ai-ugc-method.md`'s

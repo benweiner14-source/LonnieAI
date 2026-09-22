@@ -770,6 +770,30 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   checkpoint-before-adopting caution even though the immediate use case (researching a public
   product listing) is lower-risk than the earlier real-person-scraping case it echoes. Added a
   short cross-reference to this new doc in `clients/rocka-moss/ai-ugc-playbook.md`'s Section 0.
+- **Ben sent 4 more Tay videos (6 total now).** Substantially expanded
+  `docs/tay-ai-ugc-dropship-method.md`. Highlights: (1) a granular, step-by-step Meta ad-account
+  setup (CBO/$25-50 day/single-country/broad-targeting, a 3-format ad-copy technique, an
+  "iterate within the same ad set via quick-duplicate" pattern, an explicit "don't 2x budget
+  right after first sales" caution) — concrete enough to actually use when Rocka Moss's campaign
+  launches; (2) an AI-assisted daily reporting pattern (Claude connected to Facebook
+  Ads/Shopify/a profit app via MCP connectors, or a CSV-upload fallback) that maps directly onto
+  the brief's "monthly reporting, plain numbers, no jargon" ask — flagged in
+  `clients/rocka-moss/ai-ugc-playbook.md`; (3) **independent confirmation, from a second
+  unrelated creator/platform, of the Seedance real-face-upload restriction** already documented
+  from Frankie Shaw's material — cross-referenced into `docs/frankie-shaw-ai-ugc-method.md`
+  directly, strengthening confidence it's a real platform behavior; (4) concrete Seedance
+  production constraints (≤3 scenes per generation for quality, match scene duration to dialogue
+  length) and a couple of tool capabilities worth evaluating later (an "enhance all" prompt-
+  auto-expansion feature, an "extend" continuation mode flagged buggy by its own creator); (5) a
+  product-page/landing-page generation workflow (Claude Design, modeled after a reference page —
+  same reproduction caution as the ad-reverse-engineering technique — plus a genuinely new
+  ad-to-landing-page message-consistency technique); and (6) **a real, standalone caution: that
+  workflow fabricates fake customer reviews to fill an empty section, which is NOT something to
+  carry over to Rocka Moss without Ben's explicit sign-off** — Rocka Moss has real customers and
+  real reviews already, and fabricated testimonials are a meaningfully different risk category
+  (deceptive social proof) than anything else flagged in this repo so far. Explicitly called out
+  in `clients/rocka-moss/ai-ugc-playbook.md`. Same discipline throughout: no raw transcript text
+  saved into the repo.
 
 ## Parked context: Ben's separate AI UGC agency (Premier Sea Moss) — not active, Rocka Moss is the focus
 - Ben shared a working session doc from a **third, separate project**: his own general AI-UGC ad

@@ -209,7 +209,11 @@ authenticity → cinematic quality.
   and needs a workaround — the whole method is built around **synthetic, AI-generated "people"**
   from the start (see `clients/ai-ugc-agency/session-reference.md`'s GPT Image 2 character-
   reference step), specifically because a real face wouldn't clear the platform's upload
-  restriction. **When a character recurs across multiple clips, lock them with a character sheet**
+  restriction. **Independently confirmed from a second, unrelated source:**
+  `docs/tay-ai-ugc-dropship-method.md` (Video 4) flags the same restriction on a different
+  Seedance 2.0 access point (via a platform called TopView) — two unrelated creators landing on
+  the same platform behavior is a strong signal this is real and current, not a one-off account
+  quirk. **When a character recurs across multiple clips, lock them with a character sheet**
   (one clean reference generation, reused as the anchor for every shot) for congruency — the same
   purpose as this repo's own `prompts/kazumi-photoreal-charactersheet.md` technique, just applied
   to a fictional identity instead of a real creator's.
