@@ -24,7 +24,17 @@ general-purpose service.
 In progress on Ben's side, blocked on two research inputs, nothing rendered yet: the prompts and
 script are based on general UGC ad structure + Premier Sea Moss's own brand research — not yet
 grounded in "Frankie Shaw's" specific frameworks, which the source doc names as the intended
-foundation (3 YouTube videos + an X/Twitter profile that couldn't be pulled at the time). Full
+foundation (3 YouTube videos + an X/Twitter profile that couldn't be pulled at the time).
+
+**Update:** Ben has since provided the Frankie Shaw method itself (as a consolidated summary,
+not the original 3 video transcripts or the X profile) — saved to
+`docs/frankie-shaw-ai-ugc-method.md` since it's generically useful across this repo, not specific
+to this parked project. It was applied to `clients/rocka-moss/ai-ugc-playbook.md` (Ben's active
+focus), not to anything in this folder — this project stays parked either way. If it picks back
+up, that doc removes most (not all — original video/tweet detail still missing) of blocker #1
+below.
+
+Full
 detail, including the source doc's own next-steps list, is in `session-reference.md`.
 
 One thing worth flagging for whenever this picks back up: this repo now has a tool for the

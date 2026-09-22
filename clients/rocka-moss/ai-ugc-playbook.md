@@ -16,6 +16,60 @@ other pack in this repo.
 
 ---
 
+## 0. Creative concept & direction — apply this before writing any script or prompt
+
+`docs/frankie-shaw-ai-ugc-method.md` is the philosophy layer: not "how to render a shot" but
+"what should the shot even be, and why." Read it in full before drafting Rocka Moss scripts — the
+short version, applied to Rocka Moss specifically:
+
+- **Realism is the whole product.** The gut check for every concept: *"if it looks planned, it
+  failed; if it looks accidentally captured, it passed."* A Rocka Moss ad that reads as a
+  produced commercial has already lost, regardless of how good the render is.
+- **Structure every concept environment → tonality → script, in that order** — not script-first.
+  Decide *where* this is happening and *what energy the person has* before writing a word of
+  dialogue.
+- **Selling structure: curiosity → narrative → product, product last, close soft.** "Look into
+  it" / "I'll leave it linked" beats "shop now." **No before/after, no bold or medical claims** —
+  this matters concretely for sea moss: avoid any wording that reads as a medical/health claim
+  (cures, treats, replaces medication) — stick to personal experience/story framing ("my energy
+  felt steadier," not "this fixes your iron deficiency"), both because it's the stronger creative
+  approach *and* because platforms reject exactly this kind of claim.
+- **5-beat transformational formula, mapped to Rocka Moss:**
+  1. Relatable scenario — the tired-mornings-and-too-many-supplements moment, before any product.
+  2. Character building — a normal person's routine, no product yet.
+  3. Progress, not before/after — "energy's been steadier the last few weeks."
+  4. Introduce the product — now it clicks why.
+  5. Grand reveal / soft close — hold the jar, "look into it," not a hard CTA.
+- **Formats worth building concepts around for Rocka Moss** (from the ranked taxonomy in
+  `docs/frankie-shaw-ai-ugc-method.md`): **founder/origin story** is a strong, obvious fit —
+  Christian's own "why we built this" narrative (subject to the consent question flagged below);
+  **in-car confessional** and **street interview** both suit a "just tried this, here's what
+  happened" testimonial; **mirror selfie** and **home/lifestyle** suit the mixing-a-smoothie /
+  morning-routine shots; **fitness/physique** is a natural fit given the brand's athlete
+  co-founder and wellness positioning. Skip **engagement-bait product placement** and
+  **podcast/keynote authority** formats for now — they're higher-production and better suited
+  once there's a working creative library to iterate from, not the first validation round.
+- **Archetype targeting:** Rocka Moss's expansion cities (Atlanta, Charlotte, Chicago) and Black
+  wellness positioning point mostly at the **Women <30** and general wellness-motivated
+  archetypes in the reference doc's table — story/scenario-driven, raw and relatable rather than
+  luxury or bold-claim-driven, avoid-pain/gain-confidence motivation. Not the Men <30
+  "Pinocchio-paradox, bold claims OK" archetype — that mismatch would undercut the brand's actual
+  tone.
+- **Realism markers to carry into every generation prompt**, on top of the technical recipe
+  below: leave skin imperfections in rather than smoothing (this repo's own prompts already say
+  "no AI artifacts" in places — don't let that drift into "smooth/flawless skin," which is the
+  opposite of what sells here), practical lighting sources only (window, kitchen lamp — not
+  studio), product held loosely / sitting in frame rather than presented to camera, one-handed
+  handheld camera shake rather than gimbal-smooth motion, and performance that speaks mid-thought
+  / pauses / breaks eye contact rather than reading like a rehearsed ad line.
+- **This independently confirms a technique this repo already locked in:** the "front camera IS
+  the camera, never switch mid-shot" POV law matches exactly what
+  `skills/iphone-selfie-style/SKILL.md` arrived at the hard way (two failed fixes before
+  genre-anchoring worked) — two unrelated sources landing on the same rule is a good sign to keep
+  leaning on it here.
+
+---
+
 ## The two content needs, and which engine fits each
 
 Rocka Moss needs two different *kinds* of AI imagery, and this repo already learned (the hard
@@ -166,12 +220,14 @@ gym — without naming the city in the prompt text itself).
 
 ## Next steps before running anything for real
 
-1. Source 2-3 clean reference photos of the actual current Rocka Moss bottle/label.
-2. Source face reference photos for whichever real person (Christian, a customer, a paid
+1. Draft 2-3 concrete concepts using the Section 0 framework above (pick a format, a scenario, a
+   5-beat outline) before writing any generation prompt — concept first, prompt second.
+2. Source 2-3 clean reference photos of the actual current Rocka Moss bottle/label.
+3. Source face reference photos for whichever real person (Christian, a customer, a paid
    testimonial subject) will appear in the UGC content — confirm consent for AI-generated
    likeness use specifically, separate from any brand-deal-outreach permission already in place.
-3. Validate one Studio product shot and one POV-selfie testimonial still before batching either
+4. Validate one Studio product shot and one POV-selfie testimonial still before batching either
    direction — same discipline as every prompt pack in this repo.
-4. Confirm ElevenLabs voice is ready before attempting a lip-synced Seedance clip — that step is
+5. Confirm ElevenLabs voice is ready before attempting a lip-synced Seedance clip — that step is
    blocked on having the actual audio file, same gating issue this repo already hit on Kazumi's
    lip-sync test (`CLAUDE.md`).

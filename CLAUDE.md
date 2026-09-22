@@ -673,6 +673,27 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   distinction already drawn for Kazumi's photoreal motion-transfer pilot.
 - **Next up:** source real Rocka Moss bottle/label + testimonial-subject reference photos, validate
   one product shot and one POV-selfie testimonial still before batching either direction.
+- **Added the creative-philosophy layer this playbook was missing: Frankie Shaw's (@frankyecom)
+  AI UGC method, saved to `docs/frankie-shaw-ai-ugc-method.md`.** Ben's framing: context to use
+  "when we craft the ideas and concepts before actually going into production" — this is concept/
+  direction guidance (realism-as-the-product, environment-before-script, curiosity-before-product
+  selling structure, the 5-beat transformational formula, a ranked format taxonomy, consumer
+  archetypes, and V4 "realism law" POV/handheld/performance/audio rules), not a generation
+  technique — sits alongside, not instead of, the existing how-to-render docs. **Applied directly
+  to `clients/rocka-moss/ai-ugc-playbook.md`** as a new "Section 0" concept-direction layer ahead
+  of the technical recipe: mapped Rocka Moss to founder/origin-story, in-car-confessional,
+  street-interview, mirror-selfie/home-lifestyle, and fitness/physique formats specifically (and
+  flagged podcast/keynote/engagement-bait formats as too high-production for a first validation
+  round); flagged the no-bold/no-medical-claims rule as concretely relevant to sea moss
+  marketing; mapped Rocka Moss's target audience to the Women <30 / general-wellness archetype,
+  not the bold-claims-OK Men <30 one. **Independent confirmation, not new info:** the method's
+  "front camera IS the camera" POV law matches exactly what this repo's own
+  `skills/iphone-selfie-style/SKILL.md` arrived at the hard way (two failed fixes before
+  genre-anchoring worked) — worth noting as validation, not treating as a new technique to layer
+  on top.
+- **Also unblocks part of the parked `clients/ai-ugc-agency/` context** (see below) — its
+  session notes were explicitly waiting on "Frankie Shaw transcripts" to ground its own prompts.
+  That folder stays parked/inactive per Ben's direction either way, but noted there for accuracy.
 
 ## Parked context: Ben's separate AI UGC agency (Premier Sea Moss) — not active, Rocka Moss is the focus
 - Ben shared a working session doc from a **third, separate project**: his own general AI-UGC ad
@@ -717,7 +738,10 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   `comfyui-handoff.md` (self-contained brief), `forcing-the-cgi-look.md`,
   `higgsfield-cgi-playbook.md`, `seedance-comfy-handoff.md` (Ben's working notes on animating
   stills into video via Comfy Cloud's `ByteDance2ReferenceNode` — settings, reference-image
-  patterns, lip-sync setup, gotchas).
+  patterns, lip-sync setup, gotchas), `frankie-shaw-ai-ugc-method.md` (creative-philosophy
+  reference for UGC-style ads — concept/structure/performance direction, not a rendering
+  technique; apply before scripting any UGC ad, currently referenced by
+  `clients/rocka-moss/ai-ugc-playbook.md`).
 - `clients/rocka-moss/` — **a separate client engagement** (Christian Brown / Rocka Moss), not
   part of the Lonnie Anthony CGI-avatar POC. **Ben's current focus.** `PROJECT_BRIEF.md` (full
   context), `README.md` (scope/status), `ai-ugc-playbook.md` (this repo's CGI/photoreal
