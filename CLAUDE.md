@@ -794,6 +794,19 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   (deceptive social proof) than anything else flagged in this repo so far. Explicitly called out
   in `clients/rocka-moss/ai-ugc-playbook.md`. Same discipline throughout: no raw transcript text
   saved into the repo.
+- **Ben asked directly whether there's a good grasp on Rocka Moss KPI targets (CTR, CAC).**
+  Answered honestly rather than overclaiming: CAC/ROAS targets are solidly derivable straight
+  from `PROJECT_BRIEF.md`'s own unit economics (breakeven ~$17–21 CAC / ~1.7–2.0x ROAS at 50–60%
+  margin on a $34.99 bottle; a healthier target ~$9–11 CAC / ~3.5x+ ROAS, which isn't an outside
+  number — it's what the brief's own "$3K spend → $10K+ incremental revenue" scaling scenario
+  already implies). CTR is explicitly flagged as NOT grounded the same way — Rocka Moss has run
+  zero paid ads, so any CTR figure is a generic benchmark (~1–2%+ healthy, <~0.8% flags a
+  creative/hook problem per the Frankie Shaw hook material), not a validated target. Surfaced the
+  single biggest variable that could move all of this: repeat-purchase/LTV data (sea moss is a
+  daily-use consumable) isn't in the brief — if Rocka Moss reorders well, the $17–21 breakeven
+  ceiling may be too conservative. Saved as `clients/rocka-moss/kpi-targets.md`, cross-referenced
+  from `README.md`, and points at `docs/tay-ai-ugc-dropship-method.md`'s AI-assisted reporting
+  pattern for tracking these live once the campaign launches.
 
 ## Parked context: Ben's separate AI UGC agency (Premier Sea Moss) — not active, Rocka Moss is the focus
 - Ben shared a working session doc from a **third, separate project**: his own general AI-UGC ad

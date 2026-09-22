@@ -19,6 +19,9 @@ see `ai-ugc-playbook.md`.
   genre-anchoring/POV lessons, multi-shot video chaining, brand-safety guardrails) onto what
   Rocka Moss specifically needs: product photography and testimonial/lifestyle video ads,
   produced without a shoot.
+- **`kpi-targets.md`** — CAC/ROAS targets derived from the brief's own unit economics (grounded),
+  plus a CTR sanity-check range (not grounded — no Rocka Moss ad history exists yet) and the
+  repeat-purchase/LTV question that could move the whole CAC ceiling.
 
 ## The two buckets (from the brief)
 
