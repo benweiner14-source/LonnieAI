@@ -61,16 +61,18 @@ one is worth testing rather than assuming:
 - **Lip-sync approach matches.** `reference_audios.audio_1` for talking-head lip-sync, confirmed
   working in this repo's own testing (Kazumi's rooftop-selfie lip-sync test) — same mechanism
   this doc's shot prompts rely on for voice-driven UGC delivery.
-- **⚠️ "Seedance blocks realistic human faces in uploaded reference images" — worth testing
-  against this project's own access point before assuming it applies, not blindly trusting it as
-  a hard constraint.** This repo's Comfy Cloud `ByteDance2ReferenceNode` has *not* hit this
-  restriction — it successfully used a real photoreal identity reference in Kazumi's
-  motion-transfer pilot (`docs/photoreal-motion-transfer-pilot.md`) with no face-block issue
-  reported. That doc's only confirmed restriction was the **NBA-specific** real-jersey/real-player
-  block, not a general real-face block. Two explanations are both plausible: (a) this doc's
-  source used a different, more restrictive Seedance access point (a consumer-facing app, not the
-  Comfy Cloud partner node), or (b) it's model-wide and this project's own tests simply haven't
-  triggered it yet. Don't assume either way if this picks back up.
+- **✅ Resolved (was flagged as untested): "Seedance blocks realistic human faces in uploaded
+  reference images."** `docs/frankie-shaw-ai-ugc-method.md`'s "Production realities" section
+  clarifies this is **by design, not a platform bug this method works around case-by-case** — the
+  whole Frankie Shaw method builds **synthetic, AI-generated "people"** from the start (the GPT
+  Image 2 character-reference step in `session-reference.md`) specifically because a real face
+  wouldn't clear this restriction. It's a different creative choice from this repo's own Comfy
+  Cloud `ByteDance2ReferenceNode` path, which has *not* hit this restriction — it successfully
+  carried a real photoreal identity through in Kazumi's motion-transfer pilot
+  (`docs/photoreal-motion-transfer-pilot.md`). If this project picks back up: decide on purpose
+  whether Premier Sea Moss's testimonial character should be synthetic (Frankie Shaw's proven
+  method, no real-person consent question) or a real person via this repo's own Comfy Cloud path
+  — don't default to either without deciding.
 - **Product-reference technique matches the Rocka Moss playbook's product-photography lesson.**
   Shot 3's `@Image2` (a real product label/jar photo, separately tagged from the character
   reference) is the same "protect the one real trademark you want reproduced faithfully by

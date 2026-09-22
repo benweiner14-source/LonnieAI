@@ -46,3 +46,12 @@ see `ai-ugc-playbook.md`.
   pilot (`docs/photoreal-motion-transfer-pilot.md`) applies here — confirm explicitly with
   Christian before generating any AI likeness content of him, don't assume the brand-deal
   outreach permission covers it.
+  - **This is now a genuine two-path decision, not just a permissions checkbox** — see
+    `docs/frankie-shaw-ai-ugc-method.md`'s "Production realities" section: the proven AI-UGC
+    method this repo just added builds **synthetic, non-real testimonial characters** by design
+    (a GPT Image 2-generated identity, not any real person's likeness), which sidesteps this
+    consent question entirely at the cost of losing the "the co-founder said this himself"
+    authenticity. Decide on purpose whether Rocka Moss testimonial content should feature a
+    synthetic character (no consent question, matches the proven method) or Christian's real
+    likeness via this repo's own already-working path (stronger authenticity, needs his explicit
+    sign-off) — don't default to either.

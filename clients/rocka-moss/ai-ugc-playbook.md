@@ -216,16 +216,25 @@ gym — without naming the city in the prompt text itself).
 - **Ad copy, campaign structure, Meta account setup/audit** — covered by the `/ads *` and
   `ads`/`cro` skills named in the brief, outside this repo's scope (image/video generation only).
 - **Whether Christian Brown himself can be the AI-generated subject of Rocka Moss ad creative** —
-  flagged as an open consent question in `README.md`, not resolved here.
+  flagged as an open consent question in `README.md`, not resolved here. **Now a real two-path
+  decision, not just a permissions checkbox** — see `docs/frankie-shaw-ai-ugc-method.md`'s
+  "Production realities" section: a synthetic, non-real testimonial character (the proven AI-UGC
+  method's own default) sidesteps this question entirely; Christian's real likeness needs his
+  explicit sign-off first. Pick one on purpose before drafting the first real script.
 
 ## Next steps before running anything for real
 
 1. Draft 2-3 concrete concepts using the Section 0 framework above (pick a format, a scenario, a
-   5-beat outline) before writing any generation prompt — concept first, prompt second.
+   5-beat outline) before writing any generation prompt — concept first, prompt second. Decide at
+   this stage whether the testimonial subject is a synthetic character or Christian's real
+   likeness (see "What's not covered here" above) — it changes what reference photos are needed
+   next.
 2. Source 2-3 clean reference photos of the actual current Rocka Moss bottle/label.
-3. Source face reference photos for whichever real person (Christian, a customer, a paid
-   testimonial subject) will appear in the UGC content — confirm consent for AI-generated
-   likeness use specifically, separate from any brand-deal-outreach permission already in place.
+3. Source face reference photos for whichever subject was chosen in step 1 — confirm consent for
+   AI-generated likeness use specifically if it's Christian (or any other real person), separate
+   from any brand-deal-outreach permission already in place. If it's a synthetic character,
+   generate and lock one via GPT Image 2.5 (regenerate 2-3 times, same approach as
+   `clients/ai-ugc-agency/session-reference.md`'s character-reference step) instead.
 4. Validate one Studio product shot and one POV-selfie testimonial still before batching either
    direction — same discipline as every prompt pack in this repo.
 5. Confirm ElevenLabs voice is ready before attempting a lip-synced Seedance clip — that step is

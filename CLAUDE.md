@@ -694,6 +694,25 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 - **Also unblocks part of the parked `clients/ai-ugc-agency/` context** (see below) — its
   session notes were explicitly waiting on "Frankie Shaw transcripts" to ground its own prompts.
   That folder stays parked/inactive per Ben's direction either way, but noted there for accuracy.
+- **Enriched `docs/frankie-shaw-ai-ugc-method.md` with a second source doc (Ben's "AI UGC Style
+  Bible," itself distilled from 3 Frankie Shaw video transcripts).** Mostly overlapping detail
+  confirming the first pass, plus real new content: the direction-stack/motivation-buckets
+  detail, expanded V4 realism-law specifics (zoom imperfection, artifact-prevention list), a
+  V5.1/V5.2 funnel note, and — most consequential — a **Production Realities** section that
+  resolves an open ambiguity from the parked ai-ugc-agency notes: **Seedance's real-face block on
+  uploaded references isn't a case-by-case restriction to route around, it's why the whole
+  Frankie Shaw method builds synthetic/fictional AI characters from the start** (via a locked GPT
+  Image 2 character reference), never a real person's likeness. This surfaced a genuine
+  strategic fork that didn't exist before: Rocka Moss testimonial content can either use a
+  synthetic character (Frankie Shaw's proven method, sidesteps the Christian-consent question
+  entirely) or Christian's real likeness via this repo's own already-working Comfy Cloud Seedance
+  path (stronger authenticity, needs his explicit sign-off — the path hasn't hit a real-face
+  restriction in this repo's own testing, per Kazumi's motion-transfer pilot). Flagged this
+  explicitly in `clients/rocka-moss/README.md`, `ai-ugc-playbook.md` (both the open-question list
+  and the "Next steps" concept-drafting step now call for deciding this up front), and
+  `clients/ai-ugc-agency/README.md`. Also added a real worked Seedance prompt (a shoe-unboxing
+  ad) as a concrete pattern to imitate — same "lock the product with multiple angle references"
+  instinct as this repo's own multi-image role-tagging technique, independently arrived at.
 
 ## Parked context: Ben's separate AI UGC agency (Premier Sea Moss) — not active, Rocka Moss is the focus
 - Ben shared a working session doc from a **third, separate project**: his own general AI-UGC ad

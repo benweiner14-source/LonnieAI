@@ -90,15 +90,32 @@ into a full GPT prompt-engine (~54k characters) built on Fable 5.
 **Close, always soft:** "look into it," "just look into it," or curiosity that sends them to the
 bio/link — never "shop now."
 
+## Direction stack, in detail (build in this order)
+1. **Environment** — carries more meaning than the script. Core formats to draw from: street
+   interview, in-car selfie, luxury condo/loft, podcast, outdoor/hiking (see the ranked format
+   taxonomy below for the fuller list).
+2. **Tonality / cadence** — crying, excited, nonchalant, calm-confident. Match to the archetype
+   being targeted, not to what sounds most "ad-like."
+3. **Script** — last, not first. Keep it raw, how people actually talk.
+
+Layer **micro-expressions** throughout — watery eyes, micro-hesitations, subtle confidence
+cues — on top of the direction stack. This, more than any single line of dialogue, is what beats
+the uncanny valley.
+
+## 5 motivation buckets — hit at least one per clip
+Avoid pain · Gain confidence · Status/envy · Love & belonging · Convenience & peace. Pick the one
+(or two) the concept is actually selling before writing the script — a clip that doesn't clearly
+hit one of these reads as generic even if the realism is otherwise perfect.
+
 ## Consumer archetypes
 | Archetype | What works |
 |---|---|
 | **Women 50+** | Respect experience, function over hype, natural over vanity, passive, avoid bold claims, "self-found" |
-| **Women <30** | Blends into feed, story/scenario sells, inexpensive mass-appeal products, raw relatable emotion |
-| **Men 50+** | Hate being sold — "defense is the best offense," "not sponsored," "look into it," blue-collar, never flashy |
-| **Men <30** | Pinocchio paradox ("what if it works"), bold claims OK, lifestyle/luxury flex, nonchalant energy |
+| **Women <30** | Blends into feed, story/scenario sells, inexpensive mass-appeal products, raw relatable emotion, good-looking but not intimidating |
+| **Men 50+** | Hate being sold — "defense is the best offense," "not sponsored," "look into it," blue-collar (Under Armour, not luxury), never flashy |
+| **Men <30** | Pinocchio paradox ("what if it works"), bold claims OK, can mention girls/attraction, lifestyle/luxury flex, nonchalant energy |
 | **Lead gen (CPL/CPC/CPA)** | Heavy emotion, relatable (not luxury) actors, urgency from a "friend," proof (the check, the bill) |
-| **EU / other markets** | Reuse winning US scripts in native language; factual/rational; region-accurate environments |
+| **EU / other markets** | Reuse winning US scripts in native language; factual/rational; region-accurate environments; high detail, no glitches |
 
 ## Realism markers he holds constant
 - **Captions:** white bold centered sans, 1–3 words at a time (TikTok auto-caption). Green for
@@ -116,22 +133,91 @@ Priority hierarchy: POV correctness → human realism → natural behavior → e
 authenticity → cinematic quality.
 - **POV laws:** the person holding the phone *is* the camera. Rear camera = interviewer holds
   phone, subject on-screen. Front camera = self-confessional/mirror only. Never switch mid-shot.
-- **Handheld reality:** one-handed grip, small shakes, thumb adjustments. Forbid gimbal
-  smoothness or floating moves.
-- **Performance:** speak mid-thought, pause, self-correct, break eye contact. No
-  hype/influencer cadence.
-- **Audio:** smartphone-mic sound, room tone, environmental bleed. Forbid studio clarity.
-  Default = no music.
-- **Lighting:** believable sources only (windows, fixtures, lamps, screens).
-- **Anti-influencer filter:** subject is not trying to make content — observation, not sales
-  energy.
-- **Success test:** viewer believes nobody planned or optimized this.
+- **Handheld reality:** one-handed grip, small shakes, thumb adjustments, wrist fatigue,
+  elbow/surface bracing. Forbid gimbal smoothness or floating moves. Zooms start slightly late,
+  overshoot, and settle imperfectly — a perfect zoom reads as staged.
+- **Performance:** speak mid-thought, pause, self-correct, search for words, break eye contact.
+  Understatement + casual confidence. No hype/influencer/motivational cadence.
+- **Audio:** smartphone-mic sound, room tone, environmental bleed (HVAC, traffic, carts, paper).
+  Forbid studio clarity/sweetening. Default = no music (add only if the concept specifically
+  needs it, and only where noted below).
+- **Lighting:** believable sources only (windows, fixtures, lamps, signage, screens). No
+  unexplained cinematic light; exposure shifts only from a real in-scene cause.
+- **Anti-influencer filter:** subject is not trying to make content — observation/conversation/
+  documentation, not a thumbnail face or sales energy.
+- **Artifact prevention:** realistic hands/finger spacing; only large high-contrast text if any
+  appears; screens stay secondary, not the focus; stable eyes/blinking/lip-sync (especially past
+  the 12s mark, where drift is most likely); preserve object geometry/scale throughout the clip.
+- **Success test:** viewer believes nobody planned, rehearsed, or optimized this — "it feels like
+  something that accidentally ended up online." Test every clip against: *"would someone comment
+  'why does this feel so real?'"*
 
 > **This matches and reinforces a lesson this repo already learned the hard way, independently:**
 > the front-camera-IS-the-camera POV law above is exactly the fix
 > `skills/iphone-selfie-style/SKILL.md` arrived at after two failed attempts (meta camera-position
 > instructions don't work; genre-anchoring does) — two separate sources landing on the same rule
 > is a good sign it's real, not a one-off quirk of one model.
+
+## Production realities
+
+- **⚠️ Seedance blocks real human faces in uploaded reference images — by design, this method
+  never uses real people at all.** This resolves the ambiguity flagged in
+  `clients/ai-ugc-agency/README.md`: it isn't that a real person's photo sometimes gets rejected
+  and needs a workaround — the whole method is built around **synthetic, AI-generated "people"**
+  from the start (see `clients/ai-ugc-agency/session-reference.md`'s GPT Image 2 character-
+  reference step), specifically because a real face wouldn't clear the platform's upload
+  restriction. **When a character recurs across multiple clips, lock them with a character sheet**
+  (one clean reference generation, reused as the anchor for every shot) for congruency — the same
+  purpose as this repo's own `prompts/kazumi-photoreal-charactersheet.md` technique, just applied
+  to a fictional identity instead of a real creator's.
+  - **This is a real strategic fork for any content in this repo featuring an actual real person**
+    (e.g. Christian Brown in Rocka Moss content, flagged as an open consent question in
+    `clients/rocka-moss/README.md`) — two different paths exist and shouldn't be conflated:
+    (1) build a synthetic, non-Christian testimonial character the Frankie Shaw way, which sidesteps
+    the consent question entirely but loses the specific "co-founder said this himself" authenticity;
+    or (2) use this repo's own Comfy Cloud `ByteDance2ReferenceNode` path, which has **not** hit a
+    real-face restriction — it successfully carried a real photoreal identity through in Kazumi's
+    motion-transfer pilot (`docs/photoreal-motion-transfer-pilot.md`). Don't assume either path
+    without deciding on purpose; the two produce different content with different consent
+    requirements.
+- **Output specs (this method's access point):** 4–15s clips, up to 720p, upscaled in post for
+  polish. Different from this repo's own confirmed Seedance settings
+  (`docs/seedance-comfy-handoff.md`: 1080p default, 4K works but needs re-encoding) — likely a
+  different access point/tier, not a contradiction; check which applies before assuming a setting
+  carries over.
+- **Volume workflow:** ~16 base clips (~25 minutes to generate) → 50+ variants by speed-mapping
+  clips to a viral audio's drop points in CapCut, plus flash effects for energy.
+- **Character congruency across a multi-clip story:** keep the same character/character-sheet
+  consistent through a sequence, e.g. store-compliment → in-car follow-up → unboxing — treat a
+  multi-beat ad as one continuous character, not independent clips.
+
+## Worked example: clog unboxing (a real prompt that worked — study this format)
+
+A user-supplied Seedance prompt for a shoe-unboxing UGC ad, kept here as a concrete pattern to
+imitate rather than just the abstract rules above:
+
+> Vertical UGC unboxing, handheld/shaky, "shot like a real creator." Product locked via
+> `@img1`/`@img2` (identical: grey EVA clog, holes, white toe cap) + `@img3` for the embossed
+> sole. Setting = lived-in apartment, soft window light. **Shot 1:** skeptical half-smile + spoken
+> line "okay, full honesty — I saw these in the box and thought, absolutely not. give me ten
+> seconds." **Cut to close-up:** thumb-presses foam, flexes sole, flips to show emboss.
+> **Shot 3:** slips on bare feet, toes wiggle, brows up. **Final:** low-angle two bouncy steps +
+> "yeah, okay — I get it now." Camera = handheld follow, one fast tilt to feet, slight push-in.
+> Style = natural phone look, real skin, no studio polish. Audio = ambient room tone,
+> tissue/box crinkle, two clear conversational lines, light lo-fi music fading in ONLY under the
+> final walking shot.
+
+**Takeaways, generalizable to any product:**
+- Lock the product with multiple `@img` references pointing at different angles/details of the
+  *same* physical object (here: overall shape ×2 + a sole-texture close-up) — the same "protect
+  the one real thing you want faithfully reproduced" instinct as this repo's own multi-image
+  role-tagging technique (`docs/multi-image-role-tagging.md`), independently arrived at.
+  Directly reusable for a Rocka Moss bottle: lock it with 2-3 `@img`-style references (label
+  straight-on + a cap/texture close-up), the same as this example's shoe.
+- Two short conversational lines, max — not a full ad-copy paragraph performed aloud.
+  Skeptic-→-won-over is the whole arc; resist writing more dialogue than that.
+- Music, if used at all, is reserved for the very final beat only — everything before it stays on
+  ambient room tone/ diegetic sound, per the "default = no music" rule above.
 
 ## Why AI beats human UGC (his pitch)
 Full control of tone/emotion/pacing/micro-expressions on command · no waiting weeks on a
@@ -144,11 +230,23 @@ split-testing of hooks/angles/characters · indistinguishable realism at a fract
 - **V5.1** — realism engine, post-Sora.
 - **V5.2** — consumer psychology + speed + infinite length, built on Fable 5, packaged as a
   reusable GPT prompt engine.
+- **The funnel this all feeds (V5.1/V5.2 framing):** realism → farm comments at scale →
+  automated DM flows → offers. TOF (top-of-funnel) psychology and attention retention, tuned per
+  archetype — the ad's job in this model isn't always a direct sale, it's sometimes to generate
+  mass engagement that a separate DM/offer flow converts downstream. Worth knowing as context for
+  *why* the engagement-bait and podcast formats rank where they do in the taxonomy above, even
+  though this repo's own Rocka Moss/agency work isn't currently building that downstream
+  DM-automation half.
 - Repeated honest caveat: "quick Seedance clips don't print money" — realism comes from deep
   prompting + direction + storytelling, not the tool alone.
 
 ## Sources
 `references/frankie-shaw-method.md` · `references/franky_concepts-observed.md` (43-video frame
 study) · `references/franky_tweets_digest.md` · `references/franky_videos.md` ·
-`references/ai-ugc-style-bible.md` · `references/transcripts/*` (Ben's own source files, not
-mirrored into this repo — this doc is the consolidated summary).
+`references/ai-ugc-style-bible.md` (itself distilled from 3 transcripts —
+`references/transcripts/FANWZjSbpdY.txt` [V3 storytelling formula + curiosity/CPL ads],
+`references/transcripts/JCfun9lc2uY.txt` [consumer archetyping deep dive],
+`references/transcripts/vjAjDVOYLU4.txt` [realism thesis + 5 motivation buckets +
+environment-first] — plus a pending ChatGPT-thread source, blocked by org policy at the time) ·
+`references/transcripts/*` (Ben's own source files, not mirrored into this repo — this doc is the
+consolidated summary).
