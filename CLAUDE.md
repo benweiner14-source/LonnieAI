@@ -733,6 +733,22 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   transcripts into the repo** — they're someone else's copyrighted spoken content; the doc's new
   "Direct video review" subsection under Sources tracks what's been reviewed and what's still
   pending (`vjAjDVOYLU4`, `1qZ42S_Z3bE`) without storing the transcript text itself.
+- **Ben sent a 3-file transcript archive covering the remaining videos.** Two files
+  (`FANWZjSbpdY`, `JCfun9lc2uY`) matched the pasted transcripts already reviewed almost exactly —
+  no new material there. The third, `vjAjDVOYLU4` (realism thesis + 5 motivation buckets +
+  environment-first), was genuinely new and added real content to
+  `docs/frankie-shaw-ai-ugc-method.md`: "content converts on psychological response, not polish"
+  as an explicit philosophy line, a relatable-not-intimidating casting principle generalized
+  across archetypes (not just Women <30), a causal (not just sequential) framing of
+  environment-drives-tonality in the direction stack, a new "brush-with-fame" hook (an unnamed
+  high-status stranger implies endorsement — paired with an explicit brand-safety caveat that the
+  technique works specifically by *not* naming or depicting a real identifiable person, consistent
+  with this repo's own standing rule), and a note that he calls his structured prompting approach
+  "JSON prompting" (name only, no actual template surfaced in this material). **`1qZ42S_Z3bE`
+  remains the only outstanding video** — not part of this archive, still needs a transcript by
+  whatever path is available (fetch tools remain blocked in this environment). Kept the same
+  discipline throughout: no raw transcript text saved into the repo, only paraphrased new-beyond-
+  what's-already-documented findings.
 
 ## Parked context: Ben's separate AI UGC agency (Premier Sea Moss) — not active, Rocka Moss is the focus
 - Ben shared a working session doc from a **third, separate project**: his own general AI-UGC ad

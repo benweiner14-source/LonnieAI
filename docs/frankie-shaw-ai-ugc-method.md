@@ -38,6 +38,16 @@ into a full GPT prompt-engine (~54k characters) built on Fable 5.
 - **Consumer psychology is the deeper layer (V5.2):** subconscious buying behavior, attention
   manipulation, TOF psychology, conversion triggers — tailored per archetype (5 motivation
   buckets: avoid pain, gain confidence, status/envy, love & belonging, convenience/peace).
+- **Content doesn't convert because it looks good — it converts because it triggers the right
+  psychological response.** His explicit framing: a technically polished clip that misses the
+  archetype's actual psychology underperforms a rougher one that hits it. Realism and technique
+  are necessary, not sufficient — the archetype/motivation-bucket targeting is what does the
+  actual converting.
+- **Casting principle, general across archetypes, not just the Women <30 row below:
+  relatable-but-not-intimidating beats aspirational-and-distant.** Older men don't want to be
+  sold to by someone who looks like a model any more than younger women want to buy from someone
+  "too good-looking" — in both cases the goal is someone within believable reach of the viewer's
+  own life, not a level of polish that reads as out-of-range.
 
 ## Selling structure
 - Curiosity → narrative → product. Product comes last, never first.
@@ -97,14 +107,27 @@ into a full GPT prompt-engine (~54k characters) built on Fable 5.
 | The gatekeep | "this $30 perfume — stop gatekeeping. I'm gatekeeping." |
 | Proof-in-hand (lead gen) | "every lawyer told me I didn't have a case, now I'm holding $97,000…" |
 | The tally/game (engagement bait) | "which server does the most in bottle service? 🤔" |
+| Brush-with-fame | an unnamed high-status stranger (an implied A-lister in an elevator, never identified by name) compliments the product in passing |
 
 **Close, always soft:** "look into it," "just look into it," or curiosity that sends them to the
 bio/link — never "shop now."
 
+**Brand-safety note on the brush-with-fame hook specifically:** the technique works by implying
+elevated status, never by naming or depicting an identifiable real person — his own example
+stays deliberately vague ("someone very famous," no name, no likeness shown). Follow that
+exactly if this format gets used here: an unnamed, unshown "someone recognizable" is the
+technique; naming or depicting an actual real celebrity would be a different (and much riskier)
+thing entirely, consistent with this repo's own standing rule against real, identifiable people
+appearing in generated content without their own consent.
+
 ## Direction stack, in detail (build in this order)
-1. **Environment** — carries more meaning than the script. Core formats to draw from: street
-   interview, in-car selfie, luxury condo/loft, podcast, outdoor/hiking (see the ranked format
-   taxonomy below for the fuller list).
+1. **Environment** — carries more meaning than the script, and it's causal, not just decorative:
+   the environment determines the cadence and tonality of the rest of the ad, not the other way
+   around. A street-interview environment and a woman alone in her car produce entirely different
+   scripts even selling the same product to the same archetype — decide the environment first and
+   let it dictate the tonality/script that follow, not the reverse. Core formats to draw from:
+   street interview, in-car selfie, luxury condo/loft, podcast, outdoor/hiking (see the ranked
+   format taxonomy below for the fuller list).
 2. **Tonality / cadence** — crying, excited, nonchalant, calm-confident. Match to the archetype
    being targeted, not to what sounds most "ad-like."
 3. **Script** — last, not first. Keep it raw, how people actually talk.
@@ -262,6 +285,16 @@ Full control of tone/emotion/pacing/micro-expressions on command · no waiting w
 creator · consistent persona output · Meta "Andromeda" rewards fresh creative volume · rapid
 split-testing of hooks/angles/characters · indistinguishable realism at a fraction of cost.
 
+**On prompting structure:** he draws an explicit line between "popping an actor into a generic
+AI UGC supplier + an ElevenLabs script" and what he actually does — structured, specific
+prompting (he calls it "JSON prompting") that directs environment, cadence, tone, and
+micro-expressions deliberately rather than leaving them to the model's defaults. He doesn't
+publish the actual template/schema in this material, so there's nothing to copy here, but the
+underlying instinct — direct every one of those axes explicitly rather than trusting a vague
+prompt to infer them — is the same discipline this repo's own generation docs already push
+(`docs/multi-image-role-tagging.md`, `skills/iphone-selfie-style/SKILL.md`'s genre-anchoring
+lesson): explicit, structured direction beats a short prompt every time.
+
 ## Version history
 - **V3** — storytelling layer (5-beat formula, archetypes).
 - **V4** — Sora-2-era "accidental realism" + strict POV laws (principles still govern).
@@ -307,8 +340,18 @@ again.
   unsaturated-opportunity framing with its honest non-guaranteed-transfer caveat, the concrete
   micro-expressions example (the settlement-check reaction), and the AI-disclosure practical
   observation — all folded in above.
-- **`vjAjDVOYLU4`** — not yet reviewed directly (pending).
+- **`vjAjDVOYLU4` — realism thesis + 5 motivation buckets + environment-first.** Reviewed
+  (received as a file, part of a 3-file transcript archive alongside re-sent copies of the two
+  videos above — those two matched the earlier pasted versions almost exactly, nothing further
+  to add from them). Confirmed the realism-over-polish thesis, the 5 motivation buckets, and the
+  environment-first direction-stack principle essentially verbatim. New: the "content converts on
+  psychological response, not polish" framing, the relatable-not-intimidating casting principle
+  generalized across archetypes (not just the Women <30 row), the causal (not just sequential)
+  relationship between environment and the rest of the direction stack, the "brush-with-fame"
+  hook (with its own brand-safety caveat), and the "JSON prompting" structured-direction naming —
+  all folded in above.
 - **`1qZ42S_Z3bE`** — a 4th video outside the original 3-transcript source set for the style
-  bible; not yet reviewed (pending). YouTube fetch tools (`2k-yt-transcript` skill, both the
-  primary API and the yt-dlp fallback) are currently blocked for this environment's IP
-  (rate-limit/bot-check) — Ben is pasting transcripts manually as a workaround.
+  bible; still not yet reviewed (pending — not included in the 3-file archive Ben sent). YouTube
+  fetch tools (`2k-yt-transcript` skill, both the primary API and the yt-dlp fallback) are
+  currently blocked for this environment's IP (rate-limit/bot-check) — Ben has been pasting/
+  sending transcripts manually as a workaround for the other three.
