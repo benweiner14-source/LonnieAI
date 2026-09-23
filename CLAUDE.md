@@ -967,3 +967,37 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   pass confirmed it as a genuine, reproducible finding.
 - Saved as `clients/rocka-moss/seo-audit.md`, cross-referenced from `README.md`, and folded the
   concrete fix list into `access-checklist.md`'s existing SEO/metadata section.
+
+## Executed 6 of the SEO fixes directly via the Shopify MCP (2026-09-23, same session)
+- **Ben asked whether any of the audit fixes could be driven directly rather than handed off as
+  copy-paste instructions.** Checked each fix against the actual GraphQL schema rather than
+  guessing: `productUpdate` mutation covers SEO title/description, vendor, productType, and tags;
+  `fileUpdate` covers image alt text on existing media directly (no need to remove/re-upload);
+  built-in `add-to-collection`/`update-collection` tools cover the last two. Only the missing-H1
+  fix is genuinely blocked — it's a theme/Liquid change, and the Shopify MCP explicitly refuses
+  writes to the live/published theme as a safety rail (allowed only on an unpublished theme copy).
+- **Before executing, Ben asked for a "Day 0" baseline snapshot** so progress can be shown over
+  time. Built `clients/rocka-moss/progress-log.md` — a dated, append-only changelog (distinct
+  from `kpi-targets.md`/`seo-audit.md`/`access-checklist.md`, which get edited in place) — with
+  the exact "before" state of everything about to change: live-confirmed title/meta description
+  text for all 4 products (not just Strawberry Shortcake from the original audit), vendor values,
+  blank alt text, missing collection membership, the stray meta-charset artifact.
+- **Executed all 6 drivable fixes live**, verified each against a fresh page fetch after writing
+  (not just trusting a successful mutation response): custom SEO title/description for all 4
+  products, alt text on all 7 images, `vendor` corrected to "Rocka Moss" on 3 products,
+  Pineapple Breeze added to the collection, the stray artifact removed, `productType`/`tags` set
+  on all 4 products.
+- **Ben asked mid-task to make sure the copy-editing/seo-audit skills' "avoid AI writing"
+  reference was actually being used.** Ran all 8 product-facing strings (4 titles, 4
+  descriptions) through a check against that reference's flagged list (em dashes, overused
+  verbs/adjectives like "leverage"/"seamless"/"robust", filler words like "simply"/"truly", AI-tell
+  phrases) — confirmed clean, all already written in plain, direct language with no hits. Good
+  sign the copy was written right the first time, not that the check was skippable.
+- **Caught and fixed a real mistake during execution, not after the fact:** the first attempt at
+  cleaning up the collection description passed the replacement text HTML-escaped
+  (`&lt;p&gt;...&lt;/p&gt;`) instead of as raw HTML, which would have made literal `<p>` tags show
+  up as visible text on the live page — a worse problem than the stray artifact being fixed.
+  Caught it by checking the mutation's own response (which echoed back the escaped text) before
+  moving on, corrected immediately with proper raw HTML, verified live. Documented in
+  `progress-log.md` for an accurate record, since Ben explicitly wants this log usable for
+  external progress reporting.

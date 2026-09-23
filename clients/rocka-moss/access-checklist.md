@@ -44,16 +44,22 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
   whether retention infra (see `docs/tay-ai-ugc-dropship-method.md`'s Omnisend flow types) is a
   green-field build or something to extend.
 
-## SEO/metadata fixes — from the 2026-09-23 audit, see `seo-audit.md` for full detail
-- [ ] Write custom SEO title + meta description for all 4 products (Priority 1, Admin-only)
-- [ ] Add alt text to every product image (Priority 1, Admin-only)
-- [ ] Fix `vendor` field to "Rocka Moss" on Strawberry Shortcake, Mango Magic, Apple Pie
-  (currently "My Store" — leaks into product schema)
-- [ ] Add Pineapple Breeze to "Explore The Rocka Moss Collection"
-- [ ] Clean up stray `<meta charset="utf-8">` artifact in the collection description
-- [ ] Investigate missing `<h1>` tags site-wide (needs theme/Liquid access — can't fix via
-  Admin API)
-- [ ] Set `productType` + `tags` on all 4 products (Priority 3, lower urgency)
+## SEO/metadata fixes — from the 2026-09-23 audit, see `seo-audit.md` for full detail, `progress-log.md` for the executed changes
+- [x] **Write custom SEO title + meta description for all 4 products** — done 2026-09-23, driven
+  directly via the Shopify MCP (`productUpdate`), confirmed live.
+- [x] **Add alt text to every product image** — done 2026-09-23, all 7 images, confirmed live.
+- [x] **Fix `vendor` field to "Rocka Moss"** on Strawberry Shortcake, Mango Magic, Apple Pie —
+  done 2026-09-23, confirmed live.
+- [x] **Add Pineapple Breeze to "Explore The Rocka Moss Collection"** — done 2026-09-23, collection
+  now holds all 4 products, confirmed live.
+- [x] **Clean up stray `<meta charset="utf-8">` artifact in the collection description** — done
+  2026-09-23, confirmed live (see `progress-log.md` — a mistake mid-fix was caught and corrected
+  in the same step).
+- [x] **Set `productType` + `tags` on all 4 products** — done 2026-09-23, confirmed live.
+- [ ] **Investigate missing `<h1>` tags site-wide** — still open. Needs theme/Liquid access; the
+  Shopify MCP explicitly blocks writes to the live/published theme as a safety rail, so this one
+  genuinely can't be driven the same way as the rest. Options: Ben edits the theme directly in
+  Shopify Admin, or a fix gets staged on an unpublished theme copy for review before publishing.
 
 ## Non-Shopify — still open from `PROJECT_BRIEF.md`'s access checklist
 - [ ] Does Rocka Moss have a Meta Business Manager at all? (the brief's own "first check")
