@@ -807,6 +807,30 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   ceiling may be too conservative. Saved as `clients/rocka-moss/kpi-targets.md`, cross-referenced
   from `README.md`, and points at `docs/tay-ai-ugc-dropship-method.md`'s AI-assisted reporting
   pattern for tracking these live once the campaign launches.
+- **Ben got Shopify admin access and pulled 3 real reports (Returning Customers, Customer Cohort
+  Analysis, Net Sales Over Time) — found a real discrepancy that needs Christian's direct
+  answer before finalizing any spend plan.** No Shopify MCP/connector exists in this session
+  (checked via `ListConnectors` — full list has no Shopify entry); this was Ben's own admin
+  login, data pulled manually and pasted as CSVs. **🚩 Actual net sales (Jan-Sep 2026, averaging
+  ~$934/month, declining -63.5% from the Feb 2026 peak to the last full month) are roughly
+  1/15th of `PROJECT_BRIEF.md`'s claimed "~$14K/month" — and June/July 2026 net sales were
+  already far below $14K at the time the brief called that figure "current" (brief dated July
+  2026), so "revenue declined since the brief" doesn't fully explain the gap.** Flagged directly
+  rather than quietly worked around — the brief's own "$3K spend → $10K+ incremental revenue"
+  scaling scenario (which the original CAC/ROAS targets were anchored to) assumes the $14K base;
+  against ~$900/month actual, that scenario asks for 10x+ growth, not incremental. Possible
+  explanations noted (a real but Shopify-invisible channel, e.g. the brief's own "product moves
+  locally" line; an unverified claim; or it was simply wrong) — **not resolved, needs Christian's
+  direct answer.** Separately, **real good news**: 63 returning customers / 198 total new
+  customers in the trailing-12-month window ≈ **32% repeat-purchase rate** (solid for DTC
+  wellness), averaging 2.86 orders per returner, and **real average order value among repeat
+  customers is $46.96** — notably higher than the brief's flat $34.99 single-bottle assumption,
+  which revises the breakeven CAC ceiling upward to ~$23–28/order (from the earlier $17-21
+  estimate). Rewrote `clients/rocka-moss/kpi-targets.md` with all of this, marked the previous
+  $9-11 CAC target as invalid until the revenue baseline is reconciled, and added a direct
+  "ask Christian" next step. **Only aggregate numbers were saved — no customer names/emails
+  went into the repo**, consistent with this project's standing PII-handling caution (same
+  posture as the earlier Selena reference-photo scraping decisions).
 
 ## Parked context: Ben's separate AI UGC agency (Premier Sea Moss) — not active, Rocka Moss is the focus
 - Ben shared a working session doc from a **third, separate project**: his own general AI-UGC ad
