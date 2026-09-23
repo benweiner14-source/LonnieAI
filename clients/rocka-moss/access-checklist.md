@@ -103,13 +103,22 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
 - [ ] Rocka Moss Instagram login/co-manager access (nice-to-have)
 - [ ] Any existing creative assets Rocka Moss already has (nice-to-have)
 
-## Creative/content — unblocked once refs exist
-- [ ] Source 2-3 clean reference photos of the actual current bottle/label (all 4 flavors, if
-  creative will differentiate between them — Strawberry Shortcake first, per the sales data)
+## Creative/content — refs now exist, validate before batching
+- [x] **Source reference photos of the actual bottle/label** — done 2026-09-23. Ben shared a
+  Google Drive folder ("Photography and Media") with real Rocka Moss brand photography; 5 real
+  photos saved to `refs/` (Strawberry, Mango ×2 lighting variants, Apple Pie, plus a founder
+  photo). Pineapple Breeze still needs a real-photo ref (only a 3D render exists for it in Drive,
+  not yet pulled). See `refs/README.md` for full inventory, including a flagged discrepancy: the
+  Drive folder's brand renders show **11 flavors, only 4 of which are live on Shopify today** —
+  worth asking Christian about before any creative decisions.
 - [ ] Decide: synthetic testimonial character vs. Christian's real likeness (open consent
-  question, flagged in `README.md` — needs his explicit sign-off if real)
+  question, flagged in `README.md` — needs his explicit sign-off if real). **Now has a real,
+  usable reference photo on hand either way** (`refs/rockamoss_founder_applepie_steps.jpg`) —
+  having the photo doesn't itself resolve the consent question, it just means testing can start
+  the moment sign-off exists.
 - [ ] Validate one product shot + one POV-selfie testimonial before batching (per
-  `ai-ugc-playbook.md`'s standing validate-before-batch discipline)
+  `ai-ugc-playbook.md`'s standing validate-before-batch discipline) — unblocked now that real
+  refs exist, not yet run.
 
 ## Parked — not now, don't start on this without Ben's go-ahead
 - [ ] **Full rebrand: logo, visual identity, and website/theme redesign.** Ben's own call

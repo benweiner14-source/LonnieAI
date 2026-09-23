@@ -1078,3 +1078,53 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   implies *some* automated flow exists, worth confirming directly in Admin → Settings → Apps.
 - Updated `access-checklist.md` (all 4 items now resolved or clearly scoped) and `kpi-targets.md`
   (discount findings folded into the AOV/margin discussion, Next Steps checked off).
+
+## Real Rocka Moss reference photos now exist in the repo (2026-09-23)
+- **Ben asked "can you access this?" with a Google Drive folder link** ("Photography and Media,"
+  owned by `rocka.moss0824@gmail.com`, folder ID `1fcSx7xcZ3jhA_m7_gbbqdB3exbyjDlC_`, shared just
+  that day). Confirmed access via the Google Drive MCP connector and browsed it — the reference-
+  photo source the checklist had been waiting on.
+- **Found real product photography** (loose top-level files: Strawberry, Mango ×2, Apple Pie —
+  real photos, not renders) and a **"Promo Photoshoots" folder with real, unbranded photos of a
+  man holding product jars** (presumed Christian Brown, the co-founder) — exactly the testimonial-
+  subject reference the "Decide synthetic vs. real Christian" open question needed. Also found
+  **"Brand Campaign Visuals"**: 22 clean white-background 3D-rendered bottle mockups across **11
+  flavors** (Strawberry, Mango, Apple, Pineapple, Peach, Mixed, Mixed-Blueberry, Soursop, Coconut,
+  Blueberry, Passion Fruit) — **only 4 of which are live on Shopify today.** Flagged to Ben as
+  worth asking Christian about (discontinued? seasonal? coming back?) since it changes what "the
+  product line" means for creative and copy.
+- **Flagged a likely misplaced folder, did not touch it:** `B Roll/` (owned by the photo studio,
+  `officialeternalstudios@gmail.com`) contains several-GB ZIP archives named "Cross Family &
+  Gravesite," "Family Pics," "Questionnaire," "Workout" — reads like an unrelated client's
+  personal/family content, not Rocka Moss brand material. Never opened or downloaded; flagged for
+  Ben to raise with the studio in case of a folder mix-up.
+- **Technical constraint hit and worked around:** the Google Drive MCP's `download_file_content`
+  tool returns full file content as inline base64 text — for the 10-17MB real photos, that would
+  have flooded the conversation with tens of MB of unusable text for no benefit (can't visually
+  inspect a base64 blob anyway). Rather than attempt that, asked Ben to re-send the useful subset
+  directly, which landed as chat attachments **the session could read as actual images** (Read
+  tool renders them) even though they weren't independently downloadable as clean files via the
+  Drive tool. **First attempt to locate GitHub-web-UI-uploaded files failed** — checked both repo
+  branches, all open PRs, and local git status, found nothing; the ask/answer mismatch was Ben
+  uploading via chat attachment instead of GitHub, which is a valid alternate path this session
+  can actually consume directly (found the files in the session's own scratchpad image directory).
+- **Saved 5 real photos to the new `clients/rocka-moss/refs/` folder**, first of its kind for this
+  client (previously only had `PROJECT_BRIEF.md`-level docs, no actual media):
+  `rockamoss_strawberry_jar_bench.jpg`, `rockamoss_mango_jar_daylight.jpg`,
+  `rockamoss_mango_jar_goldenhour.jpg`, `rockamoss_applepie_jar_mural.webp`,
+  `rockamoss_founder_applepie_steps.jpg`. Full provenance/inventory in `refs/README.md`, including
+  what was deliberately *not* pulled (Wellness Day event photos, the 22 flavor-render mockups,
+  extra Founder Shot variants) and why. Ben also sent 4 white-background 32oz studio renders
+  (Mango/Pineapple/Strawberry/Apple Pie) directly in chat — these arrived as inline content with
+  no backing file this session could access on disk, but they're confirmed identical to files
+  already cataloged in the Drive folder (`refs/README.md` records their Drive fileIds for
+  re-pulling later if needed), so nothing was lost by not saving a separate local copy.
+- **Consent note carried forward, not resolved:** having the founder's real photo on hand doesn't
+  itself answer the standing "synthetic testimonial character vs. Christian's real likeness"
+  question from `README.md` — storing his own existing marketing photos as reference material is
+  a different, lower-risk act than generating new AI content of his likeness, which still needs
+  his own explicit sign-off before any generation happens. Noted explicitly in `refs/README.md`
+  and `access-checklist.md` so this doesn't get conflated later.
+- Updated `README.md` (new refs entry, Status section) and `access-checklist.md` (Creative/content
+  section — reference-photo sourcing now done, testimonial consent and validate-before-batch
+  still open) to reflect all of this.

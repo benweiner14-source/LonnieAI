@@ -29,8 +29,11 @@ see `ai-ugc-playbook.md`.
 - **`seo-audit.md`** — real SEO/metadata audit run 2026-09-23 against live Shopify data (not a
   guess): no custom SEO title/description on any product, zero image alt text store-wide, a
   "My Store" placeholder leaking into product schema, a product missing from the only collection,
-  and no `<h1>` tag anywhere on the site. Most of it is a same-day Admin fix, one item needs
-  theme/Liquid access.
+  and no `<h1>` tag anywhere on the site. All 7 findings now fixed and confirmed live.
+- **`refs/`** — real Rocka Moss reference photos (product shots + a founder photo), sourced
+  2026-09-23. See `refs/README.md` for the full inventory and a couple of flagged open items
+  (a flavor-count mismatch vs. the live Shopify catalog, and a founder-likeness consent question
+  still separate from just having the photo on hand).
 
 ## The two buckets (from the brief)
 
@@ -48,9 +51,11 @@ see `ai-ugc-playbook.md`.
   `access-checklist.md`'s "Parked" section.
 - Brief received and filed (2026-09-22). **Shopify admin access confirmed 2026-09-23**, with a
   live Shopify MCP connector now available in this session (see `access-checklist.md` and
-  `kpi-targets.md` for what's been pulled). Meta Business Manager/Pixel access still not
-  confirmed. No Rocka Moss product reference photos sourced into this repo yet, no generations
-  run for this client.
+  `kpi-targets.md` for what's been pulled). A Meta/Facebook Pixel was found already installed
+  (found via page source, not Business Suite — see `access-checklist.md`), but full Business
+  Suite/ad-account access is still not confirmed. **Real Rocka Moss reference photos now exist
+  in `refs/`** (sourced 2026-09-23 from a Drive folder Ben shared, see `refs/README.md`) — no
+  generations run for this client yet, but product-shot/testimonial validation is now unblocked.
 - `ai-ugc-playbook.md` is a **mapping document** — it translates lessons already proven on
   Zion/Kazumi/Selena onto Rocka Moss's needs. It hasn't been validated against real Rocka Moss
   product/brand references yet. Treat every recipe in it as a starting point to test, not a
