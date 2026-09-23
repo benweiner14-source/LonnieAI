@@ -1036,6 +1036,19 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   exactly one block per page (homepage hero text block; product title block on product pages) —
   leaving everything else H2-H6 to avoid multiple H1s. Flagged the one real risk: a future
   Shopify theme-store update to "Savor" could overwrite this custom snippet edit.
-- **Not yet done** — Ben said he'd do this one himself in Admin; this is instructions only, no
-  live change made. Per the copyright-caution discipline already standing in this repo, kept the
-  quoted Liquid to the minimal few lines needed to explain the fix, not the full file.
+- **✅ Fixed and confirmed live (2026-09-23), Ben executed both edits himself.** Ben pasted the
+  full `snippets/text.liquid` file into chat himself (his own theme, his call to share it — kept
+  to the established discipline of not proactively saving/reproducing large verbatim theme code
+  in the repo either way). After the first fix (the `element`-assignment logic above) went live,
+  the homepage hero got a real `<h1>` but the **product title block still didn't** — a second,
+  separate bug in the same file: the product title renders through a `fallback_text` code path
+  with its own hardcoded `<div>`, untouched by the first fix. Second small edit (same pattern —
+  swap the hardcoded `<div>`/`</div>` for `<{{ element }}>`/`</{{ element }}>` in that branch)
+  fixed it. **Confirmed live via raw HTML fetch after Ben published:** homepage has exactly one
+  real `<h1>` (hero headline, rest `<h2>`); Strawberry Shortcake product page has exactly one
+  real `<h1>` (product title). Noted a visual side effect (product title rendered larger, moving
+  from its old H2-styled size to real H1 sizing) as expected theme behavior, not a bug — left
+  as-is, tunable later via global Typography settings if needed. This closes out the last open
+  item from the 2026-09-23 SEO audit — all 7 findings now live. Full detail in
+  `clients/rocka-moss/progress-log.md`'s new Day 0 entry; `seo-audit.md` and
+  `access-checklist.md` both updated to reflect the fix as done.

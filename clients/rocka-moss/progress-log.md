@@ -92,3 +92,41 @@ the missing `<h1>` tag issue from the baseline audit. Still open.
 against the `seo-audit`/`copy-editing` skills' AI-writing-detection reference (em dashes,
 overused verbs/adjectives, filler words, AI-tell phrases) before use — confirmed clean, no
 em dashes or flagged patterns in any of the 8 product-facing strings written today.
+
+---
+
+## Day 0 — 2026-09-23: The last fix, `<h1>` tags, done by Ben directly in Shopify Admin
+
+The one fix that couldn't be driven via the MCP (live-theme-write safety rail) — Ben executed
+this one himself, with instructions/root-cause investigation from this session, and it's now
+confirmed live along with everything else on Day 0's list.
+
+**Root cause turned out to be two separate bugs** in the theme's shared `snippets/text.liquid`,
+found one at a time as each fix was tested live:
+1. The snippet's element-selection logic only ever rendered a `div` or `rte-formatter` tag,
+   regardless of the block's "Preset" setting (which offers `h1`-`h6` options) — so switching
+   the Preset dropdown to "H1" in Shopify Admin, the obvious fix, only changed font size, not the
+   actual HTML tag. Confirmed by reading the live theme's Liquid source directly.
+2. After fixing that and publishing, the homepage hero picked up a real `<h1>` — but the product
+   title block still didn't, because it renders through a separate `fallback_text` code path in
+   the same file with its own hardcoded `<div>`, untouched by the first fix.
+
+**Process:** Ben duplicated the "Savor" theme, made both small Liquid edits directly in Edit
+code, set the "Preset" setting to H1 on the homepage hero block and the product title block
+(everything else left H2-H6, so each page still has exactly one H1), previewed, and published.
+
+**Confirmed live via raw HTML fetch after publishing:**
+- Homepage: exactly one real `<h1>` tag (the hero headline "BUILT ON MINERALS. POWERED BY THE
+  SEA."), rest of the headings are `<h2>`.
+- Strawberry Shortcake product page: exactly one real `<h1>` tag (the product title) — previously
+  a styled `<div class="... h1">`, confirmed via the same raw-HTML method used in the original
+  audit.
+
+**Side effect, expected not a bug:** the product title rendered visually larger after moving
+from its old H2-styled size to real H1 — the theme's H1 typography preset is bigger by design.
+Left as-is; adjustable later via the theme's global Typography settings if it ever looks too big,
+without touching the tag fix.
+
+**This closes out every item from the original 2026-09-23 SEO audit** — all 7 findings (6 driven
+via the Shopify MCP earlier the same day, this H1 fix done by Ben directly) are now live and
+confirmed.

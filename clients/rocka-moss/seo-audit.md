@@ -32,9 +32,9 @@ per finding.
 5. Minor: the collection's `descriptionHtml` has a stray `<meta charset="utf-8">` tag pasted
    directly into the visible text — cosmetic cleanup, likely from a copy-paste.
 
-## Priority 2 — needs theme/Liquid access
+## Priority 2 — needs theme/Liquid access — ✅ FIXED 2026-09-23, confirmed live
 
-6. **No `<h1>` tag anywhere on the site.** Confirmed by pulling raw HTML from both the homepage
+6. **No `<h1>` tag anywhere on the site — fixed, see resolution below.** Confirmed by pulling raw HTML from both the homepage
    and a product page (`rockamoss.com/`, `rockamoss.com/products/rocka-moss-gel-strawberry-
    shortcake`) and searching for heading tags directly — both return 0 `<h1>` matches (homepage
    does have `<h2>`/`<h3>`, so headings work generally, just not at the H1 level). Real on-page
@@ -48,10 +48,16 @@ per finding.
      `div` or `rte-formatter` tag, never the real heading element the preset name implies. The
      `h1`-`h6` values only add a CSS class for font sizing. **This means picking "H1" from the
      Preset dropdown in Shopify Admin does not add a real `<h1>` tag** — it's a genuine theme-code
-     bug, not a misconfigured setting. Fixing it for real needs a small Liquid code edit to that
-     shared snippet (on a duplicated theme, then publish), not just a settings change. Ben is
-     handling this fix manually — see `CLAUDE.md`'s "H1 investigation" entry for the exact
-     instructions given.
+     bug, not a misconfigured setting.
+   - **Second bug found after the first fix went live:** the homepage hero got a real `<h1>`, but
+     the product title block didn't — it renders through a separate `fallback_text` code path in
+     the same snippet that had its own hardcoded `<div>`, independent of the element-selection fix.
+     Needed a second small edit to the same file.
+   - **Resolution: both fixed and confirmed live 2026-09-23.** Ben duplicated the theme, made both
+     Liquid edits directly, set the "Preset" to H1 on the homepage hero block and the product
+     title block, and published. Verified via raw HTML fetch: homepage has exactly one real
+     `<h1>` (hero headline, rest `<h2>`); Strawberry Shortcake product page has exactly one real
+     `<h1>` (product title). Full trail in `CLAUDE.md`'s "H1 investigation" entry.
 
 ## What's already working — confirmed clean, don't touch
 

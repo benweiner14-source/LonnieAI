@@ -56,14 +56,17 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
   2026-09-23, confirmed live (see `progress-log.md` — a mistake mid-fix was caught and corrected
   in the same step).
 - [x] **Set `productType` + `tags` on all 4 products** — done 2026-09-23, confirmed live.
-- [ ] **Investigate missing `<h1>` tags site-wide** — still open, Ben's fixing this one manually.
-  Root cause confirmed 2026-09-23 by reading the live theme's Liquid source directly: it's not a
-  settings misconfiguration, it's a real theme-code bug — the shared `snippets/text.liquid` a
-  "Preset" dropdown (`h1`-`h6` options) never actually emits a real heading tag, only a styled
-  `<div>`, no matter what's selected. Picking "H1" in Admin alone won't fix it; needs a small
-  Liquid code edit on a duplicated theme, then publish. Full instructions given to Ben in-session,
-  logged in `CLAUDE.md`'s "H1 investigation" entry. Can't be driven via the Shopify MCP either way
-  — it explicitly blocks writes to the live/published theme as a safety rail.
+- [x] **Missing `<h1>` tags — fixed and confirmed live (2026-09-23), Ben executed manually.**
+  Root cause was a real theme-code bug in the shared `snippets/text.liquid` (two separate bugs,
+  found one at a time): (1) the element-selection logic only ever assigned `div`/`rte-formatter`
+  regardless of the `h1`-`h6` "Preset" setting; (2) even after fixing that, the product title
+  block still rendered as a `div` because it renders through a separate `fallback_text` code path
+  that had its own hardcoded `<div>`, unrelated to the `element` variable. Ben duplicated the
+  theme, made both small Liquid edits directly in Edit code, set the Preset to H1 on the homepage
+  hero block and the product title block, and published. **Confirmed live via raw HTML fetch**:
+  homepage has exactly one real `<h1>` (hero headline, rest `<h2>`), Strawberry Shortcake product
+  page has exactly one real `<h1>` (product title, was previously a styled `<div>`). Full
+  investigation trail in `CLAUDE.md`'s "H1 investigation" entry.
 
 ## Non-Shopify — still open from `PROJECT_BRIEF.md`'s access checklist
 - [ ] Does Rocka Moss have a Meta Business Manager at all? (the brief's own "first check")
