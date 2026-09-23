@@ -1153,3 +1153,32 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 - **This validates the recipe, not the whole style set** — only 1 of 5 product-photography styles
   (Studio) and 1 of 4 flavors tested. Worth running 1-2 more combinations before calling the
   direction locked, same standing discipline as every CGI-avatar pack in this repo.
+
+## Fixed a real leak Ben caught: embossed "MASON" text copied from the reference photo
+- **Ben looked closely at the first test render and caught something the initial review missed:**
+  the jar's glass came out with "MASON" embossed into it — a real detail, not a hallucination.
+  Checked the actual reference photo used (`refs/rockamoss_strawberry_jar_bench.jpg`) and
+  confirmed "MASON" is genuinely embossed into the real jar's glass, just above the label — a
+  generic canning-jar detail (not part of Rocka Moss's own brand identity) that the model
+  faithfully reproduced from the source pixels. Same underlying mechanism as this repo's
+  automaker-badge and real-signage leaks elsewhere: something genuinely present in a reference
+  image that shouldn't make it into the output. Confirmed with Ben the jars themselves haven't
+  changed — a prompt fix, not a stale-reference problem.
+- **First fix attempt (a bare negation) only partially worked** — "the glass itself is plain, no
+  embossed text" reduced the embossing but it was still faintly legible on close zoom. Confirms,
+  in a new context, this repo's standing lesson from the iPhone Selfie POV fixes: negation
+  instructions reliably lose to a strong visual signal already baked into a reference image's
+  actual pixels.
+- **Second fix attempt worked, confirmed via a zoomed-crop comparison of all 3 versions:** led
+  with a positive physical description ("a completely smooth, plain glass body... clear unmarked
+  glass") instead of a bare negation, and explicitly told the model the reference photo's glass
+  differs from this jar's real glass ("this particular jar's glass is smooth and unmarked, unlike
+  the reference photo's glass which happens to have embossed wording on it — do not copy that
+  embossed wording"). Fully clean on inspection — completely smooth neck at any zoom level, front
+  label still accurate. **This exact structure (positive description + explicit "reference photo
+  differs from the real thing" framing) is now the standing fix, folded into
+  `ai-ugc-playbook.md`'s product-photography section** for every future prompt using a real jar
+  reference photo.
+- Saved all 3 versions to `clients/rocka-moss/test-renders/` for the record
+  (`strawberry_studio_v1.png`, `_v2_noemboss_partial.png`, `_v2_smoothglass.png` — the last one
+  is the version to reuse), updated `test-renders/README.md` and `access-checklist.md` to match.

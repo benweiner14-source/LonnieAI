@@ -116,11 +116,14 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
   usable reference photo on hand either way** (`refs/rockamoss_founder_applepie_steps.jpg`) —
   having the photo doesn't itself resolve the consent question, it just means testing can start
   the moment sign-off exists.
-- [x] **Validate one product shot** — done 2026-09-23, strong pass. GPT Image 2.5 Sunburst via
-  Comfy Cloud, Strawberry Shortcake, Studio style — see `test-renders/README.md` for the full
-  recipe and result (front label reproduced accurately, one minor flaw on illegible small-text
-  side panel copy). Recipe validated; the other 4 styles/3 flavors/testimonial recipe not yet
-  tested.
+- [x] **Validate one product shot** — done 2026-09-23, confirmed clean after 2 fix iterations.
+  GPT Image 2.5 Sunburst via Comfy Cloud, Strawberry Shortcake, Studio style — see
+  `test-renders/README.md` for the full recipe and result. Front label reproduced accurately
+  throughout; a real jar-embossing leak ("MASON," caught by Ben) needed a reworded fix (a bare
+  negation only partially worked, a positive-description version fixed it fully) — now folded
+  into the standing recipe in `ai-ugc-playbook.md`. Small-text side-panel legibility remains an
+  open, lower-priority flaw. Recipe validated; the other 4 styles/3 flavors/testimonial recipe
+  not yet tested.
 - [ ] Validate one POV-selfie testimonial before batching that direction (per
   `ai-ugc-playbook.md`'s standing validate-before-batch discipline) — still needs Christian's
   consent decision (synthetic vs. real likeness) resolved first.

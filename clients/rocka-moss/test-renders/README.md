@@ -4,34 +4,39 @@ AI-generated test outputs for this client, kept separate from `refs/` (real, une
 photography) so the two are never confused. Nothing here is a final creative asset — these are
 validation tests per `ai-ugc-playbook.md`'s standing "validate before batching" discipline.
 
-## `strawberry_studio_v1.png` — 2026-09-23
+## Strawberry Shortcake, Studio style — 2026-09-23, 3 iterations, now confirmed clean
 
-First product-photography validation test for this client. **Result: strong pass, one minor
-flaw.**
+First product-photography validation test for this client, run via Comfy Cloud's
+`partner_generate` (GPT Image 2.5 Sunburst, `openai/images-generations`), single reference image
+(`refs/rockamoss_strawberry_jar_bench.jpg`, role `image`), no CGI/stylization language — per
+`ai-ugc-playbook.md`'s product-photography recipe.
 
-- **Recipe:** GPT Image 2.5 Sunburst (`openai/images-generations`, `params.model:
-  "gpt-image-2.5-sunburst"`) via Comfy Cloud `partner_generate`, single reference image
-  (`refs/rockamoss_strawberry_jar_bench.jpg`, role `image`), no CGI/stylization language in the
-  prompt — per `ai-ugc-playbook.md`'s product-photography recipe (photoreal engine, fight toward
-  nothing, just don't add game-engine/style-reference language).
-- **Prompt approach:** role-tagged the reference image as the single source of truth for
-  bottle/cap/label — explicit "do not alter the label text, logo, color bands, or artwork"
-  instruction — then described a clean Studio-style scene (seamless white-to-gray gradient
-  background, soft diffused lighting, straight-on angle) entirely in text, with an explicit
-  "no other bottles/props/logos" clause per the playbook's brand-safety-in-reverse guidance.
-- **What worked:** front label reproduced with strong fidelity — logo, "SEA MOSS Wildcrafted"
-  wordmark, "FUEL YOUR GLOW FROM THE SEA BELOW" teal bar, "STRAWBERRY" pink flavor tag, "RICH IN
-  92+ ESSENTIAL MINERALS," net weight, gold twist lid, mason-jar shape, pink/red gel product
-  color — all match the reference. Clean, plain studio background with a soft shadow/reflection,
-  no unwanted props or extra logos, reads as a real photograph (not a render or illustration).
-- **Flaw found:** the side-panel text (ingredients/caution copy, smaller and denser than the
-  front label) rendered as garbled, illegible scribbles — a known limitation of GPT-Image-family
-  models on small/dense text, not something this prompt caused. Doesn't affect the front label,
-  which is what a Studio product shot foregrounds anyway, but worth knowing: any future crop or
-  angle that puts the side panel in sharp, legible focus will likely need either a second
-  reference image specifically of that panel, or cropping the final output to hide it.
-- **Not yet tested:** the other 4 styles (Floating, Ingredient, In Use, Lifestyle), the other 3
-  flavors, or the testimonial/POV-selfie recipe. This single test validates the *recipe*
-  (GPT-2.5 Sunburst + single clean reference + no style language) — worth running 1-2 more before
-  calling the whole product-photography direction locked, same standing discipline as every other
-  pack in this repo.
+- **`strawberry_studio_v1.png`** — first pass. **Strong result overall**: front label reproduced
+  with real fidelity (logo, wordmark, teal tagline bar, flavor tag, mineral claim, net weight,
+  gold lid, mason-jar shape, gel color all match), clean plain studio background, no unwanted
+  props/logos, reads as a real photograph. **Flaw found (Ben caught it):** the glass itself came
+  out with "MASON" embossed into it, faithfully copied from the reference photo — a generic
+  canning-jar detail Ben confirmed shouldn't appear in generated product photography (the real
+  jars still have it, but it's not something to carry into marketing images). Also, separately,
+  the side-panel ingredients/caution text rendered as illegible scribbles — a known GPT-Image
+  limitation on small/dense text.
+- **`strawberry_studio_v2_noemboss_partial.png`** — first fix attempt, a bare negation ("the
+  glass itself is plain — no embossed text, lettering, or brand marks on the jar body"). **Only
+  partially worked** — the embossing was fainter but still legible on close zoom. Confirms this
+  repo's standing lesson (from the iPhone Selfie POV fixes) that negation instructions reliably
+  lose to a strong visual signal already present in a reference image's actual pixels.
+- **`strawberry_studio_v2_smoothglass.png`** — second fix attempt, reworded to lead with a
+  positive physical description and explicitly flag the reference photo's embossing as something
+  NOT to carry over (see the exact wording in `ai-ugc-playbook.md`'s product-photography
+  section). **Confirmed clean** — completely smooth glass neck, no embossing at any zoom level,
+  front label still accurate. **This is the version/recipe to reuse going forward.**
+
+**Recipe now locked for this specific issue** (folded into `ai-ugc-playbook.md`): every future
+product-photography prompt using a real jar reference photo needs the "smooth glass, explicitly
+told to ignore the reference's embossing" wording, not the simpler negation version.
+
+**Not yet tested:** the other 4 styles (Floating, Ingredient, In Use, Lifestyle), the other 3
+flavors, the side-panel-text legibility issue, or the testimonial/POV-selfie recipe. This single
+scene validates the *recipe* (GPT-2.5 Sunburst + single clean reference + no style language +
+smooth-glass wording) — worth running 1-2 more before calling the whole product-photography
+direction locked, same standing discipline as every other pack in this repo.

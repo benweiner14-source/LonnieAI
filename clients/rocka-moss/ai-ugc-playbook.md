@@ -122,6 +122,30 @@ bottle instead of a face:
   photos of the actual current Rocka Moss bottle/label (front label legible, no glare) — the
   same "get a real reference photo before trying to prompt around its absence" lesson that came
   up repeatedly sourcing Zion's tattoo refs and Selena's face refs.
+- **Exclude embossed glass text explicitly — confirmed real jar reference photos have "MASON"
+  embossed into the glass itself** (a generic canning-jar detail, not part of Rocka Moss's own
+  brand), and the first test render (2026-09-23, `test-renders/strawberry_studio_v1.png`)
+  faithfully reproduced it from the reference photo — accurate reproduction of an unwanted
+  detail, not a hallucination. Same underlying mechanism as the automaker-badge/real-signage
+  leaks elsewhere in this repo: something genuinely present in a reference source that shouldn't
+  make it into the output. Confirmed the jars themselves haven't changed (Ben, 2026-09-23) — this
+  is a prompt fix, not a stale-reference problem.
+  - **A bare negation didn't fully work.** "The glass itself is plain — no embossed text,
+    lettering, or brand marks on the jar body" reduced the embossing but didn't remove it
+    (`test-renders/strawberry_studio_v2_noemboss_partial.png` — still faintly legible on close
+    zoom) — another instance of this repo's standing lesson that negations lose to a strong
+    visual signal already present in a reference image's actual pixels (same pattern as the
+    iPhone Selfie POV fixes).
+  - **Fix that worked: lead with a positive physical description, and explicitly tell the model
+    the reference photo's glass differs from this jar's glass.** *"...a completely smooth, plain
+    glass body — clear unmarked glass, no raised lettering... This particular jar's glass is
+    smooth and unmarked, unlike the reference photo's glass which happens to have embossed
+    wording on it — do not copy that embossed wording, render the glass area below the neck as
+    plain and smooth instead."* Confirmed clean on `test-renders/strawberry_studio_v2_smoothglass.png`
+    (2026-09-23) — completely smooth neck, label still accurate. **Use this exact structure (lead
+    with the positive physical description, then explicitly flag the reference photo's
+    embossing as something NOT to carry over) on every product-photography prompt going
+    forward**, not the simpler bare-negation version.
 
 ---
 
