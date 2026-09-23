@@ -31,18 +31,47 @@ Shopify MCP connector exist for this session.
 All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
 
 ## Shopify — still worth pulling
-- [ ] **Active discount codes/terms** — so ad creative doesn't contradict a live offer, and so
-  CAC math uses real average selling price, not list price.
-- [ ] **Subscribe-and-save/reorder option status** — the 32% repeat rate is happening organically;
-  confirm whether a subscription mechanism exists, since turning one on (if not) could be a
-  high-leverage, non-ad-spend lever worth raising with Christian on its own.
-- [ ] **Cost-per-item / COGS entered on products**, if any — would give a precise margin number
-  instead of the brief's 50-60% estimate, tightening the CAC-ceiling math.
-- [ ] **Meta Pixel / Conversions API install status** — not visible from Shopify sales/session
-  data alone; check Settings → Customer events or installed sales channels/apps directly.
-- [ ] **Email/SMS tool connection status** (Omnisend, Klaviyo, Shopify Email, or none) — tells us
-  whether retention infra (see `docs/tay-ai-ugc-dropship-method.md`'s Omnisend flow types) is a
-  green-field build or something to extend.
+- [x] **Active discount codes/terms** — pulled live via GraphQL (2026-09-23): **16 active codes**.
+  Two look like general-purpose site codes (`ROCKA10` 15% off since Oct 2025, `ROCKA15` $15 off
+  flat since Mar 2026); one looks like a welcome/flow-triggered code with an actual expiry
+  (`IG-EMAIL-1R9EMRC9`, 15% off, expires 2026-09-28 — implies *some* email/IG-triggered automation
+  already exists, worth confirming what sends it); one is a flat local-pickup/in-person code
+  (`LOCAL`, $6.50 off); and **8 look like individual ambassador/seeding codes** — each a short
+  name fragment at 20% off (`RMSWEAT`, `RMDEZ`, `RMTIM`, `RMAVIBABY`, `RMRWU`, `RMTOYA`, `RMJAS`,
+  `RMBRI`), all created between Feb-Apr 2026. **This means informal influencer/ambassador seeding
+  is likely already happening** — worth asking Christian who these codes belong to and whether
+  there's tracking on their performance, since the brief's Bucket 2 already names "influencer
+  seeding" as a workstream and this may be a head start rather than a clean slate. Also found
+  `RMAP` at **100% off** (free) — worth confirming its purpose (internal/testing/gifting) since an
+  unrestricted 100%-off code is worth knowing about either way.
+- [x] **Subscribe-and-save/reorder option status** — confirmed via GraphQL (`sellingPlanGroups`):
+  **zero selling plan groups exist — no subscription mechanism at all today.** The 32%
+  repeat-purchase rate is happening entirely organically, with no subscribe-and-save nudge. Real
+  confirmation this is a genuine open lever, not already covered — worth raising with Christian on
+  its own, separate from the ad-spend plan (Shopify's native Subscriptions feature or an app like
+  Recharge/Skio would be the build).
+- [x] **Cost-per-item / COGS entered on products** — confirmed via GraphQL
+  (`InventoryItem.unitCost`): **`null` on every variant, all 4 products.** No COGS data exists in
+  Shopify at all — margin has to stay the brief's 50-60% estimate until Christian/Ben supplies
+  real per-unit cost numbers directly; this isn't pullable from Shopify itself.
+- [ ] **Meta Pixel / Conversions API install status** — **partially answered without Business
+  Suite access.** Checked the live product page's own JS (Shopify's web pixel manager config,
+  visible in page source): **a Facebook Pixel is already installed** — pixel ID `682325200982123`,
+  connected via Shopify's own Facebook & Instagram sales channel app (client-side/browser pixel
+  only, confirmed firing standard events like `Viewed Product`). Whether **server-side Conversions
+  API** is also on can't be told from the page source alone — needs Business Suite or the
+  Shopify Admin's Facebook & Instagram app settings to confirm. Worth searching for this exact
+  pixel ID once Business Suite access exists, rather than creating a new one from scratch — it may
+  already have historical event data. Also found a **second, unidentified marketing pixel**
+  installed (config code `D65JE4JC77U8VIJAA8H0`, app client ID `4383523`) — worth checking under
+  Shopify Admin → Settings → Customer events to identify (TikTok/Pinterest/Google are common
+  guesses, not confirmed).
+- [ ] **Email/SMS tool connection status** — checked the live homepage and product page source
+  for common tool footprints (Klaviyo, Omnisend, Attentive, Postscript, Mailchimp) — **no evidence
+  found in the client-side page source**, but this isn't conclusive (some tools only load
+  on-trigger, e.g. exit-intent, or run server-side/via Shopify Flow with no client script). The
+  `IG-EMAIL-1R9EMRC9` discount code above implies *some* automated flow exists. Needs a direct
+  check in Shopify Admin → Settings → Apps to confirm either way.
 
 ## SEO/metadata fixes — from the 2026-09-23 audit, see `seo-audit.md` for full detail, `progress-log.md` for the executed changes
 - [x] **Write custom SEO title + meta description for all 4 products** — done 2026-09-23, driven

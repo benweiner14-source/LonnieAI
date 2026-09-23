@@ -1052,3 +1052,29 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   item from the 2026-09-23 SEO audit — all 7 findings now live. Full detail in
   `clients/rocka-moss/progress-log.md`'s new Day 0 entry; `seo-audit.md` and
   `access-checklist.md` both updated to reflect the fix as done.
+
+## Pulled the rest of the Shopify checklist items (2026-09-23) — none needed Meta Business Suite
+- **Ben asked what else could move forward while still blocked on Meta Business Suite access.**
+  Checked the already-fetched product page's own client-side JS first (Shopify's web pixel
+  manager config) and found **a Facebook Pixel is already installed** — pixel ID
+  `682325200982123`, via Shopify's own Facebook & Instagram sales channel app, confirmed firing
+  standard events. Server-side Conversions API status still needs Business Suite to confirm, but
+  this means whoever set the store up already has some Meta connection — worth searching for this
+  exact pixel ID once access exists instead of starting fresh. Also found a second, unidentified
+  marketing pixel (`D65JE4JC77U8VIJAA8H0`) — flagged for Ben/Christian to check in Admin.
+- **Pulled the remaining 3 "still worth pulling" checklist items directly via GraphQL** (all
+  Shopify-native, no Meta needed): **16 active discount codes** — mostly 20% off, including what
+  look like **8 individual ambassador/seeding codes** already in informal circulation (short name
+  fragments like `RMSWEAT`, `RMDEZ`, `RMTIM` etc., created Feb-Apr 2026) — real signal that
+  informal influencer seeding may already be happening ahead of the brief's Bucket 2 "influencer
+  seeding" workstream, worth asking Christian who these belong to. Also found `RMAP` at 100% off,
+  worth confirming its purpose. **Zero selling plan groups exist** — confirmed no
+  subscribe-and-save mechanism at all, the 32% repeat rate is fully organic; a real, confirmed
+  open lever. **No COGS/unit cost entered anywhere** in Shopify (`null` on every variant) —
+  margin math has to stay the brief's 50-60% estimate until Christian supplies real numbers.
+  Checked the live page source for common email/SMS tool footprints (Klaviyo, Omnisend,
+  Attentive, Postscript, Mailchimp) — found none, but flagged as inconclusive since some tools
+  don't leave a client-side trace; a live discount code (`IG-EMAIL-1R9EMRC9`, time-limited)
+  implies *some* automated flow exists, worth confirming directly in Admin → Settings → Apps.
+- Updated `access-checklist.md` (all 4 items now resolved or clearly scoped) and `kpi-targets.md`
+  (discount findings folded into the AOV/margin discussion, Next Steps checked off).

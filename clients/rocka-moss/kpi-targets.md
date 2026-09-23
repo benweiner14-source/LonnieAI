@@ -139,8 +139,11 @@ sells **4 flavors**, not a single SKU (last 90 days):
 **Strawberry Shortcake is the clear leader** on both orders and revenue — the obvious first
 flavor to feature in ad creative and product photography. Gross vs. net sales differ per flavor
 (e.g. Strawberry: $787.80 gross → $671 net), confirming **discount codes are already in active
-use** — worth pulling the actual codes/terms before writing ad copy so creative doesn't
-contradict a live offer, and so CAC math uses real average selling price, not list price.
+use** — confirmed and pulled in full (see `access-checklist.md`): 16 active codes, mostly 20% off,
+including what look like 8 individual ambassador/seeding codes already in circulation. **Ad copy
+going forward should account for these** — a "no discount" full-price framing would contradict
+what's already live; worth deciding with Christian whether to formalize/replace the informal
+codes once a real influencer program starts, or keep them running alongside it.
 
 ## CTR — still not grounded, unchanged
 No Rocka Moss *ad* history exists (separate from the store data above, which is organic/existing
@@ -155,12 +158,19 @@ Facebook Ads/Shopify/a profit-tracking app, or a CSV-upload fallback) is a direc
 actual CAC/ROAS against these targets without manual dashboard-reading.
 
 ## Next steps
-- Pull active discount codes/terms (confirms real average selling price vs. list price).
-- Confirm whether a subscribe-and-save/reorder option exists — the 32% repeat rate is happening
-  *without* one as far as this data shows; turning one on could be a high-leverage,
-  non-ad-spend lever worth flagging to Christian regardless of the ad campaign.
-- Confirm Meta Pixel/CAPI install status (not visible from Shopify data alone) — per
-  `PROJECT_BRIEF.md`'s access checklist, this has to exist before any ad spend is measurable.
+- ~~Pull active discount codes/terms~~ — done 2026-09-23, see `access-checklist.md`: 16 active
+  codes, ~8 of them look like individual ambassador/seeding codes already in circulation.
+- ~~Confirm whether a subscribe-and-save/reorder option exists~~ — done 2026-09-23: confirmed
+  **zero selling plan groups exist**, the 32% repeat rate is fully organic today. Real, confirmed
+  open lever worth flagging to Christian on its own.
+- ~~Confirm cost-per-item/COGS~~ — done 2026-09-23: confirmed **no COGS entered in Shopify at
+  all**, margin stays the brief's 50-60% estimate until Christian supplies real numbers directly.
+- **Meta Pixel/CAPI install status — partially confirmed 2026-09-23 without Business Suite
+  access**, via the live page's own pixel-manager config: a Facebook Pixel **is** already
+  installed (ID `682325200982123`, via Shopify's Facebook & Instagram sales channel), client-side
+  events confirmed firing. Server-side Conversions API status still needs Business Suite or the
+  Shopify app's own settings to confirm. Worth searching for this exact pixel ID once Business
+  Suite access exists rather than starting fresh.
 - The $14K-vs-actual discrepancy is no longer blocking work (see "Decision" above) but is still
   worth asking Christian about eventually, since it may point at a real revenue channel this
   data doesn't see.
