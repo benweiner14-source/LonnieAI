@@ -116,9 +116,14 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
   usable reference photo on hand either way** (`refs/rockamoss_founder_applepie_steps.jpg`) —
   having the photo doesn't itself resolve the consent question, it just means testing can start
   the moment sign-off exists.
-- [ ] Validate one product shot + one POV-selfie testimonial before batching (per
-  `ai-ugc-playbook.md`'s standing validate-before-batch discipline) — unblocked now that real
-  refs exist, not yet run.
+- [x] **Validate one product shot** — done 2026-09-23, strong pass. GPT Image 2.5 Sunburst via
+  Comfy Cloud, Strawberry Shortcake, Studio style — see `test-renders/README.md` for the full
+  recipe and result (front label reproduced accurately, one minor flaw on illegible small-text
+  side panel copy). Recipe validated; the other 4 styles/3 flavors/testimonial recipe not yet
+  tested.
+- [ ] Validate one POV-selfie testimonial before batching that direction (per
+  `ai-ugc-playbook.md`'s standing validate-before-batch discipline) — still needs Christian's
+  consent decision (synthetic vs. real likeness) resolved first.
 
 ## Parked — not now, don't start on this without Ben's go-ahead
 - [ ] **Full rebrand: logo, visual identity, and website/theme redesign.** Ben's own call

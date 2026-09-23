@@ -1128,3 +1128,28 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 - Updated `README.md` (new refs entry, Status section) and `access-checklist.md` (Creative/content
   section — reference-photo sourcing now done, testimonial consent and validate-before-batch
   still open) to reflect all of this.
+
+## First Rocka Moss test render — product-photo recipe confirmed working (2026-09-23)
+- **Ben confirmed ("Yes, go ahead... using comfy")** to run the validate-before-batch product-shot
+  test the playbook had been waiting on. Ran it directly via Comfy Cloud's `partner_generate`
+  (this session does have Comfy Cloud MCP access, unlike earlier notes about the CGI-avatar
+  Zion/Kazumi/Selena work needing Ben's local session) — uploaded
+  `refs/rockamoss_strawberry_jar_bench.jpg` and generated via `openai/images-generations`
+  (`gpt-image-2.5-sunburst`), a single role-tagged reference image plus a text-only Studio-style
+  scene description, per `ai-ugc-playbook.md`'s product-photography recipe (photoreal engine, no
+  CGI-forcing language).
+- **Strong pass.** The front label reproduced with real fidelity — logo, wordmark, teal tagline
+  bar, "STRAWBERRY" flavor tag, mineral claim, net weight, gold lid, mason-jar shape, gel color —
+  on a clean plain studio background with a soft shadow, reading as a real photo. **One flaw
+  found:** the side-panel ingredients/caution text rendered as illegible scribbles — a known
+  GPT-Image-family limitation on small/dense text, doesn't affect the front label a Studio shot
+  foregrounds anyway, but flagged for later (a second reference image of just that panel, or
+  cropping it out of frame, would likely fix it if a future shot needs it legible).
+- **Saved to `clients/rocka-moss/test-renders/`** (new folder, kept separate from `refs/` so real
+  source photos and AI test outputs never get confused) — `strawberry_studio_v1.png` +
+  `README.md` documenting the exact recipe/prompt approach and result. Sent to Ben directly as a
+  file. Updated `access-checklist.md` (product-shot validation now done; POV-selfie testimonial
+  still blocked on the synthetic-vs-real-Christian consent decision, unchanged).
+- **This validates the recipe, not the whole style set** — only 1 of 5 product-photography styles
+  (Studio) and 1 of 4 flavors tested. Worth running 1-2 more combinations before calling the
+  direction locked, same standing discipline as every CGI-avatar pack in this repo.
