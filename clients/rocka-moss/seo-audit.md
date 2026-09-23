@@ -38,9 +38,20 @@ per finding.
    and a product page (`rockamoss.com/`, `rockamoss.com/products/rocka-moss-gel-strawberry-
    shortcake`) and searching for heading tags directly — both return 0 `<h1>` matches (homepage
    does have `<h2>`/`<h3>`, so headings work generally, just not at the H1 level). Real on-page
-   SEO miss — Google weights the H1 for topical relevance. Most likely a theme section setting
-   (Online Store 2.0 themes often expose a heading-level dropdown per section, misconfigured
-   here) — can't fix via the Admin API, needs theme editor access.
+   SEO miss — Google weights the H1 for topical relevance. Can't fix via the Admin API, needs
+   theme code access.
+   - **Root cause confirmed 2026-09-23 by reading the live "Savor" theme's actual Liquid source**
+     (read-only theme-file access — the Shopify MCP can read theme files even though it blocks
+     writes to the live/published theme). `blocks/product-title.liquid` and `blocks/text.liquid`
+     both render through a shared `snippets/text.liquid`, which exposes a "Preset" dropdown
+     (`type_preset`) with `h1`-`h6` options — but its element-selection logic only ever emits a
+     `div` or `rte-formatter` tag, never the real heading element the preset name implies. The
+     `h1`-`h6` values only add a CSS class for font sizing. **This means picking "H1" from the
+     Preset dropdown in Shopify Admin does not add a real `<h1>` tag** — it's a genuine theme-code
+     bug, not a misconfigured setting. Fixing it for real needs a small Liquid code edit to that
+     shared snippet (on a duplicated theme, then publish), not just a settings change. Ben is
+     handling this fix manually — see `CLAUDE.md`'s "H1 investigation" entry for the exact
+     instructions given.
 
 ## What's already working — confirmed clean, don't touch
 

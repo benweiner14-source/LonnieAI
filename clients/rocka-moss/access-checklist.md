@@ -56,10 +56,14 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
   2026-09-23, confirmed live (see `progress-log.md` — a mistake mid-fix was caught and corrected
   in the same step).
 - [x] **Set `productType` + `tags` on all 4 products** — done 2026-09-23, confirmed live.
-- [ ] **Investigate missing `<h1>` tags site-wide** — still open. Needs theme/Liquid access; the
-  Shopify MCP explicitly blocks writes to the live/published theme as a safety rail, so this one
-  genuinely can't be driven the same way as the rest. Options: Ben edits the theme directly in
-  Shopify Admin, or a fix gets staged on an unpublished theme copy for review before publishing.
+- [ ] **Investigate missing `<h1>` tags site-wide** — still open, Ben's fixing this one manually.
+  Root cause confirmed 2026-09-23 by reading the live theme's Liquid source directly: it's not a
+  settings misconfiguration, it's a real theme-code bug — the shared `snippets/text.liquid` a
+  "Preset" dropdown (`h1`-`h6` options) never actually emits a real heading tag, only a styled
+  `<div>`, no matter what's selected. Picking "H1" in Admin alone won't fix it; needs a small
+  Liquid code edit on a duplicated theme, then publish. Full instructions given to Ben in-session,
+  logged in `CLAUDE.md`'s "H1 investigation" entry. Can't be driven via the Shopify MCP either way
+  — it explicitly blocks writes to the live/published theme as a safety rail.
 
 ## Non-Shopify — still open from `PROJECT_BRIEF.md`'s access checklist
 - [ ] Does Rocka Moss have a Meta Business Manager at all? (the brief's own "first check")

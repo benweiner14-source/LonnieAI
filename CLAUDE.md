@@ -1013,3 +1013,29 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   read, though today's SEO/metadata fixes are a narrower scope (page data) and don't address
   this. `PROJECT_BRIEF.md`'s Phase 6 landing-page-quality mention is the closest existing
   precedent, broadened here to include logo/brand identity too.
+
+## H1 investigation — root cause found, Ben fixing manually
+- **Ben's ask:** "I'll fix the H1 manually. Let me know how to do it" (2026-09-23), after the SEO
+  audit flagged zero `<h1>` tags site-wide as blocked by the Shopify MCP's live-theme-write safety
+  rail. Investigated the live "Savor" theme's Liquid source directly (read-only theme-file access
+  via GraphQL — the MCP can read theme files even though it can't write to the live/published one)
+  to give precise, evidence-based instructions instead of generic Shopify advice.
+- **Real root cause, more specific than "needs theme access":** `blocks/product-title.liquid` and
+  `blocks/text.liquid` both delegate rendering to a shared `snippets/text.liquid` via a
+  `type_preset` block setting (UI label "Preset," under each block's Typography section) whose
+  options include `h1`-`h6`. But the snippet's actual element-selection logic only ever assigns
+  `div` or `rte-formatter` to the rendered tag — the `h1`-`h6` preset values only add a CSS class
+  for font sizing, never change the real HTML element. Confirmed this matches the live HTML found
+  in the original audit (`<div class="text-block ... h2"><p>...</p></div>` — a styled `<div>`, not
+  a real heading). **Meaning: switching the "Preset" dropdown to H1 in Shopify Admin — the fix
+  Ben likely expected — does nothing to add a real `<h1>` tag, it only changes font size.** This
+  is a genuine theme-code bug/limitation, not a misconfigured setting.
+- **Instructions given to Ben:** duplicate the theme first (don't edit live), use Edit code to add
+  an `elsif` branch to `snippets/text.liquid`'s element-assignment logic so `h1`-`h6` presets
+  actually set `element` to that tag, then go into the block settings and set the Preset to H1 on
+  exactly one block per page (homepage hero text block; product title block on product pages) —
+  leaving everything else H2-H6 to avoid multiple H1s. Flagged the one real risk: a future
+  Shopify theme-store update to "Savor" could overwrite this custom snippet edit.
+- **Not yet done** — Ben said he'd do this one himself in Admin; this is instructions only, no
+  live change made. Per the copyright-caution discipline already standing in this repo, kept the
+  quoted Liquid to the minimal few lines needed to explain the fix, not the full file.
