@@ -831,6 +831,28 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   "ask Christian" next step. **Only aggregate numbers were saved — no customer names/emails
   went into the repo**, consistent with this project's standing PII-handling caution (same
   posture as the earlier Selena reference-photo scraping decisions).
+- **Ben said to stop waiting on Christian and move forward on the real Shopify baseline — then a
+  live Shopify MCP connector came online mid-session.** Rewrote `kpi-targets.md`'s framing: the
+  $14K discrepancy is no longer a blocker (kept for the record, not chased further), and
+  corrected a reasoning error from the previous pass — the brief's "$9-11 CAC / 3.5x ROAS"
+  target is actually **valid as a per-unit economics target regardless of store size** (it's just
+  a cost-benefit ratio), what was actually unrealistic was the **implied volume** (285-350
+  orders/month against a store whose best month on record did ~34 real orders). Added a
+  "Realistic Month 1 volume" target instead, benchmarked against the store's own historical
+  acquisition range (15-44 new customers/month at its Oct 2025-Mar 2026 peak, now down to 4-8).
+  **Confirmed live Shopify MCP access** (`get-shop-info`: store is Rocka Moss, rockamoss.com,
+  base "Shopify" plan) and pulled real data directly via `run-analytics-query` (ShopifyQL): 285
+  sessions/30d (thin, consistent with zero paid spend); a 90-day referrer breakdown showing
+  Instagram as the clear #2 channel (8 orders/$456) meaningfully outperforming Facebook (1
+  order/$79); and — genuinely new information not anywhere in `PROJECT_BRIEF.md` — **Rocka Moss
+  actually sells 4 flavors** (Strawberry Shortcake, Mango Magic, Pineapple Breeze, Apple Pie),
+  with Strawberry Shortcake the clear leader on both orders and revenue (worth featuring first in
+  creative). Confirmed active discounting is already happening (gross ≠ net sales per flavor).
+  Built `clients/rocka-moss/access-checklist.md` tracking what's done vs. still open (discount
+  codes/terms, subscribe-and-save status, COGS-per-item, Meta Pixel/CAPI install status, email/SMS
+  tool status, existing reviews) alongside the brief's still-outstanding non-Shopify access items
+  (Meta Business Manager existence, Business Suite partner access, IG login, creative assets).
+  Live MCP queries replace manual CSV pulls going forward for most Shopify data needs.
 
 ## Parked context: Ben's separate AI UGC agency (Premier Sea Moss) — not active, Rocka Moss is the focus
 - Ben shared a working session doc from a **third, separate project**: his own general AI-UGC ad

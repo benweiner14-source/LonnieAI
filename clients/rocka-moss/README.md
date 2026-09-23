@@ -19,9 +19,13 @@ see `ai-ugc-playbook.md`.
   genre-anchoring/POV lessons, multi-shot video chaining, brand-safety guardrails) onto what
   Rocka Moss specifically needs: product photography and testimonial/lifestyle video ads,
   produced without a shoot.
-- **`kpi-targets.md`** — CAC/ROAS targets derived from the brief's own unit economics (grounded),
-  plus a CTR sanity-check range (not grounded — no Rocka Moss ad history exists yet) and the
-  repeat-purchase/LTV question that could move the whole CAC ceiling.
+- **`kpi-targets.md`** — CAC/ROAS targets, now grounded in **real Shopify data** (a live MCP
+  connector came online 2026-09-23) rather than the brief's unverified $14K/month figure, which
+  turned out not to match actual store revenue (~$934/mo average, declining) — see the doc for
+  the full reconciliation and the decision to move forward on real numbers regardless. Also has
+  the CTR sanity-check range (still not grounded — no Rocka Moss *ad* history exists yet).
+- **`access-checklist.md`** — what's been pulled/confirmed from Shopify vs. still open, plus the
+  non-Shopify access items still outstanding from `PROJECT_BRIEF.md`'s checklist.
 
 ## The two buckets (from the brief)
 
@@ -34,9 +38,11 @@ see `ai-ugc-playbook.md`.
 
 ## Status
 
-- Brief received and filed (2026-09-22). Engagement not yet activated — access to Rocka Moss's
-  Shopify/Meta Business Manager not yet confirmed, no Rocka Moss product reference photos sourced
-  into this repo yet, no generations run for this client.
+- Brief received and filed (2026-09-22). **Shopify admin access confirmed 2026-09-23**, with a
+  live Shopify MCP connector now available in this session (see `access-checklist.md` and
+  `kpi-targets.md` for what's been pulled). Meta Business Manager/Pixel access still not
+  confirmed. No Rocka Moss product reference photos sourced into this repo yet, no generations
+  run for this client.
 - `ai-ugc-playbook.md` is a **mapping document** — it translates lessons already proven on
   Zion/Kazumi/Selena onto Rocka Moss's needs. It hasn't been validated against real Rocka Moss
   product/brand references yet. Treat every recipe in it as a starting point to test, not a

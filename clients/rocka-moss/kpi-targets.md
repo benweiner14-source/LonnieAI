@@ -1,11 +1,18 @@
 # Rocka Moss — KPI Targets
 
-**Updated 2026-09-23 with real Shopify data** (Ben pulled 3 reports after getting store admin
-access: Returning Customers 2025-09-23–2026-09-22, Customer Cohort Analysis 2025-09-01–2026-08-31,
-Net Sales Over Time 2026-01-01–2026-09-23). **Only aggregate numbers are recorded here — no
-customer names/emails saved into this repo.**
+**Updated 2026-09-23 with real Shopify data.** Started from 3 manually-pulled reports (Returning
+Customers 2025-09-23–2026-09-22, Customer Cohort Analysis 2025-09-01–2026-08-31, Net Sales Over
+Time 2026-01-01–2026-09-23), then a **live Shopify MCP connector came online mid-session** — see
+"Live Shopify MCP data" below for what that added. **Only aggregate numbers are recorded here —
+no customer names/emails saved into this repo.**
 
-## 🚩 Unresolved: actual store revenue doesn't match `PROJECT_BRIEF.md`
+## Decision (2026-09-23, Ben's call): work from the real Shopify baseline, not the brief's $14K figure
+
+Not waiting on a reconciliation with Christian to move forward — planning against what the store's
+own data actually shows from here on. Kept the discrepancy below for the record, since it still
+matters for interpreting some of the numbers, but it's no longer a blocker.
+
+### For the record: actual store revenue doesn't match `PROJECT_BRIEF.md`
 
 The brief states Rocka Moss does **~$14K/month, ~400 bottles/month currently**. Actual Shopify net
 sales tell a very different story:
@@ -28,19 +35,21 @@ sales tell a very different story:
   June ($829) and July ($649) net sales in this data were already far below that, so "revenue
   declined since the brief was written" doesn't fully explain the gap either.
 
-**Plausible explanations, not conclusions — this needs a direct answer from Christian/Rocka
-Moss before any spend commitment is finalized:**
+**Plausible explanations, never resolved, not being chased further right now:**
 - The brief mentions "product moves locally" — real in-person/wholesale/other-channel revenue
   that never touches this Shopify store could make $14K real even if this data doesn't show it.
 - The $14K figure may have been Christian's own unverified claim, never checked against the
   store before now.
 - It may simply have been wrong or aspirational.
 
-**Why this matters for everything below:** the brief's whole "$3K ad spend → $10K+ incremental
-revenue" scaling scenario — which the original CAC/ROAS targets in this doc were anchored to —
-assumes a $14K/month base. Against a store actually doing ~$900/month, that scenario asks for
-10x+ growth, not incremental growth. **Don't plan Month 1 spend or targets against the brief's
-$14K number until this is reconciled.**
+**What this actually changes, now that we're planning off real numbers:** the brief's "$3K ad
+spend → $10K+ incremental revenue" scenario set a cost-benefit bar ($6K total cost → $10K+ return)
+that's mathematically fine on its own — but **the volume it implies (285–350 orders in a month)
+is wildly unrealistic against a store whose best month on record did ~46 orders** (Feb 2026, at
+$46.96 AOV ≈ 34 orders, actually — even the peak month doesn't get close). The **CAC/ROAS targets
+below still hold as per-unit economics** — hitting a $23–28 CAC or better is good on any single
+order, regardless of store size — but **the volume/revenue-in-a-month ambition needs to be reset
+against actual scale**, not the brief's $10K figure. See "Realistic Month 1 volume" below.
 
 ## Repeat-purchase data — the genuinely good news
 
@@ -70,22 +79,68 @@ at 50–60% margin:
   known to run higher than a single bottle)
 - ROAS floor: **~1.7x–2.0x** (unchanged — this ratio depends only on margin %, not AOV)
 
-**Target line — previously anchored to the brief's "$3K spend → $10K+ incremental revenue"
-scenario. That scenario itself is now in question** (see the revenue-discrepancy flag above) —
-**don't treat the old $9–11 CAC / ~3.5x ROAS target as valid until the $14K baseline is
-reconciled.** Once Christian confirms whether $14K/month is real (and where, if not this store),
-rebuild this target against whatever the actual revenue base turns out to be — the same "what
-ad spend justifies the retainer" math still applies, just against a different starting number.
+**Aspirational per-order target, still valid on its own terms** (the brief's "$3K spend → $10K+
+incremental revenue" scenario is really just a cost-benefit bar — spend $X, want a healthy
+multiple back — and that logic doesn't depend on store size):
+- CAC target: **~$9–11/order**
+- ROAS target: **~3.5x+**
+Hitting this on any given order/campaign is a good outcome at any scale. What's *not* realistic
+anymore is expecting **$10K+ in a single month** — see below.
 
-**Month 1 test-budget bar, largely unaffected by the revenue question:** CAC meaningfully under
-the (now ~$23–28) breakeven ceiling, trending down week over week — same "prove the system"
-framing as before, and arguably a lower-stakes bar now that it's being measured against a smaller
-store, not a $14K/month one.
+**Realistic Month 1 volume, reset against actual scale:** the store's best month on record (Feb
+2026) did ~34 orders at the real $46.96 AOV. Recent months (Jun–Aug) are running 13–18 orders/mo.
+A meaningful Month 1 win at $500–1,000 ad spend looks like **materially growing order count
+relative to that — e.g., pushing new-customer acquisition back toward the Oct 2025–Mar 2026
+range (15–44/month) it was already hitting organically before it slid to 4–8/month** — not
+matching or exceeding a $10K/month revenue bar that the store has never actually hit.
+
+**Month 1 test-budget bar:** CAC meaningfully under the ~$23–28 breakeven ceiling, order volume
+trending up week over week toward the acquisition levels above — same "prove the system" framing
+as before, now scaled to what this store's actual size can plausibly do in a month.
 
 **The 32% repeat-purchase rate is real support for accepting a first-order CAC above the
 $23–28 single-order breakeven**, if LTV over a customer's 2.86-order average clears it —
 worth running the actual LTV math once ad spend starts and real CAC numbers exist to compare
 against real customer value.
+
+## Live Shopify MCP data (pulled directly, 2026-09-23)
+
+A Shopify MCP connector came online mid-session (confirmed via `get-shop-info`: store is
+**Rocka Moss, rockamoss.com, base "Shopify" plan tier**, not Plus/Advanced — worth knowing since
+some analytics/reporting depth is plan-gated). Pulled live via `run-analytics-query` (ShopifyQL):
+
+**Traffic (last 30 days): 285 sessions, ~8 completed-checkout sessions** — thin, but consistent
+with zero paid spend to date. Most days show 0% session-to-purchase conversion with occasional
+1-per-day completions; not enough daily volume yet to read a stable conversion-rate trend.
+
+**Referrer breakdown (last 90 days, 46 orders, ~$2,254 total sales):**
+| Source | Orders | Sales |
+|---|---|---|
+| Direct/unattributed | 31 | $1,372 |
+| Instagram | 8 | $456 |
+| Google (organic search) | 3 | $168 |
+| Shopify network / Shop app | 3 combined | $180 |
+| Facebook | 1 | $79 |
+
+**Instagram is the clear #2 channel and meaningfully outperforms Facebook** (8 orders vs. 1) —
+worth weighting creative/testing toward IG placements first, and matches the brief's own
+Instagram-centric framing of the brand. Majority of orders are direct/unattributed, consistent
+with an engaged existing audience (repeat customers, word of mouth) rather than discovery traffic.
+
+**Product catalog — genuinely new information, not in `PROJECT_BRIEF.md` at all.** Rocka Moss
+sells **4 flavors**, not a single SKU (last 90 days):
+| Flavor | Orders | Gross sales |
+|---|---|---|
+| Strawberry Shortcake | 20 | $787.80 |
+| Mango Magic | 14 | $635.84 |
+| Pineapple Breeze | 11 | $352.39 |
+| Apple Pie | 7 | $244.93 |
+
+**Strawberry Shortcake is the clear leader** on both orders and revenue — the obvious first
+flavor to feature in ad creative and product photography. Gross vs. net sales differ per flavor
+(e.g. Strawberry: $787.80 gross → $671 net), confirming **discount codes are already in active
+use** — worth pulling the actual codes/terms before writing ad copy so creative doesn't
+contradict a live offer, and so CAC math uses real average selling price, not list price.
 
 ## CTR — still not grounded, unchanged
 No Rocka Moss *ad* history exists (separate from the store data above, which is organic/existing
@@ -99,15 +154,20 @@ determine profitability on its own — CAC and ROAS do.
 Facebook Ads/Shopify/a profit-tracking app, or a CSV-upload fallback) is a direct way to check
 actual CAC/ROAS against these targets without manual dashboard-reading.
 
-## Next step
-**Ask Christian directly whether the $14K/month figure is real, and if so, where it comes from**
-(a channel outside this Shopify store, or a number that was never actually verified). Everything
-above the "Repeat-purchase data" section depends on getting a real answer to this before
-committing to a specific ad-spend target.
+## Next steps
+- Pull active discount codes/terms (confirms real average selling price vs. list price).
+- Confirm whether a subscribe-and-save/reorder option exists — the 32% repeat rate is happening
+  *without* one as far as this data shows; turning one on could be a high-leverage,
+  non-ad-spend lever worth flagging to Christian regardless of the ad campaign.
+- Confirm Meta Pixel/CAPI install status (not visible from Shopify data alone) — per
+  `PROJECT_BRIEF.md`'s access checklist, this has to exist before any ad spend is measurable.
+- The $14K-vs-actual discrepancy is no longer blocking work (see "Decision" above) but is still
+  worth asking Christian about eventually, since it may point at a real revenue channel this
+  data doesn't see.
 
 ## Sources
-Three Shopify Analytics reports (Returning Customers, Customer Cohort Analysis, Net Sales Over
-Time), pulled by Ben on 2026-09-23 after getting store admin access — aggregate figures only,
-individual customer records not retained in this repo. `PROJECT_BRIEF.md`'s stated unit economics
-(price, margin) for the original breakeven math, now flagged as needing reconciliation on the
-revenue-baseline side.
+Three Shopify Analytics reports pulled manually before the connector came online (Returning
+Customers, Customer Cohort Analysis, Net Sales Over Time) — aggregate figures only, individual
+customer records not retained in this repo. Live Shopify MCP queries (`get-shop-info`,
+`run-analytics-query`) pulled directly in this session once connected. `PROJECT_BRIEF.md`'s
+stated unit economics (price, margin) for the original breakeven math.
