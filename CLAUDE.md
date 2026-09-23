@@ -914,6 +914,32 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   above). Ben's own separate AI-UGC agency pitch, Premier Sea Moss as the target lead — a
   different company from Rocka Moss. `session-reference.md` + `README.md`.
 
+## Skills: installed 21 marketing skills from `coreyhaines31/marketingskills`
+- **Ben asked what a getting-started to-do list would look like now that Shopify access exists,
+  and separately whether any GitHub skills would make this a smarter paid-social/SEO/paid-search
+  worker.** Proposed a phased plan (Pixel/CAPI confirmation + Shopify SEO/metadata + conversion-
+  readiness in parallel first, since Pixel/CAPI is a harder blocker than SEO polish; creative
+  production second; launch third) and pointed out the brief already names 4 skill repos never
+  installed. Ben then linked `coreyhaines31/marketingskills` directly and asked which skills in
+  it were worth pulling, then said to install everything judged helpful.
+- **Cloned the repo, read all 49 skills' frontmatter, and installed a curated 21-skill subset**
+  into `.claude/skills/` (MIT licensed — kept `THIRD_PARTY_LICENSE_marketingskills.txt` per the
+  license's own terms; `.claude/skills/README.md` documents the full installed/excluded list and
+  why). Installed: `ads`, `ad-creative`, `cro`, `seo-audit`, `schema`, `analytics`,
+  `influencer-marketing`, `emails`, `sms`, `social`, `attribution`, `ab-testing`, `copywriting`,
+  `copy-editing`, `competitor-profiling`, `marketing-psychology`, `offers`, `popups`, `video`,
+  `image`, `ai-seo` — all map directly to Rocka Moss's actual situation (Meta ads, UGC/ad
+  creative, Shopify SEO/CRO, the Pixel/tracking checklist item, Omnisend-style retention,
+  Instagram being the real #2 channel, the discounting already happening, the 32% repeat rate).
+  **Deliberately excluded ~28 SaaS/B2B-shaped skills** (onboarding, signup, paywalls, cold-email,
+  prospecting, revops, sales-enablement, events, community-marketing, directory-submissions,
+  programmatic-seo, launch, free-tools, lead-magnets, co-marketing, public-relations, aso, the
+  SaaS-tier `pricing` skill — its own doc says single-product brands should use `offers`
+  instead — plus the meta-planning skills `marketing-plan`/`marketing-ideas`/`marketing-council`/
+  `marketing-loops`) that don't fit a single-brand DTC Shopify store — full reasoning in the
+  README, and they're one copy-paste away if scope ever changes. `referrals` flagged as worth
+  reconsidering later given the real 32% repeat-purchase rate, just not urgent now.
+
 ## Working notes
 - Apify (Instagram scraping) available via API token Ben provides — session-only, never commit.
 - Higgsfield CLI/API exists (Soul ID, GPT Image 2) but img2img limits pushed us to ComfyUI.
