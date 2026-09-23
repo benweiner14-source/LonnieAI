@@ -1001,3 +1001,15 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   moving on, corrected immediately with proper raw HTML, verified live. Documented in
   `progress-log.md` for an accurate record, since Ben explicitly wants this log usable for
   external progress reporting.
+
+## Parked (not active): full rebrand — logo, visual identity, website/theme redesign
+- **Ben's own call, 2026-09-23:** "probably interested in changing the branding, logo, and
+  website if we need to, considering it's all kind of basic and some of it's not great."
+  Explicitly parked — no research, concepts, or design work started, and none should be without
+  his go-ahead. Noted in `clients/rocka-moss/access-checklist.md` (new "Parked" section) and
+  `README.md`'s Status, with the relevant context already on hand if/when it activates: the SEO
+  audit's own findings (single generic collection, minimal nav, the now-fixed "My Store"
+  placeholder leak, no content beyond 4 product pages + homepage) line up with Ben's "basic"
+  read, though today's SEO/metadata fixes are a narrower scope (page data) and don't address
+  this. `PROJECT_BRIEF.md`'s Phase 6 landing-page-quality mention is the closest existing
+  precedent, broadened here to include logo/brand identity too.

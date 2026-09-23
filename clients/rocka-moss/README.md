@@ -43,6 +43,9 @@ see `ai-ugc-playbook.md`.
 
 ## Status
 
+- **Parked, not active: a full rebrand (logo, visual identity, website/theme redesign)** — Ben's
+  own call, noted 2026-09-23. Don't start research or concepts on this without his go-ahead; see
+  `access-checklist.md`'s "Parked" section.
 - Brief received and filed (2026-09-22). **Shopify admin access confirmed 2026-09-23**, with a
   live Shopify MCP connector now available in this session (see `access-checklist.md` and
   `kpi-targets.md` for what's been pulled). Meta Business Manager/Pixel access still not

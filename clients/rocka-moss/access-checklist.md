@@ -75,6 +75,23 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
 - [ ] Validate one product shot + one POV-selfie testimonial before batching (per
   `ai-ugc-playbook.md`'s standing validate-before-batch discipline)
 
+## Parked — not now, don't start on this without Ben's go-ahead
+- [ ] **Full rebrand: logo, visual identity, and website/theme redesign.** Ben's own call
+  (2026-09-23): "probably interested in changing the branding, logo, and website if we need to,
+  considering it's all kind of basic and some of it's not great." Explicitly parked — **do not
+  start competitor/brand research, logo concepts, or theme redesign work on this** unless Ben
+  asks. Noted here so it doesn't get lost, and because the `seo-audit.md` findings are relevant
+  context if/when this activates: single generic collection, minimal nav (Home/Shop/Contact/
+  FAQ/About Us), a leftover "My Store" placeholder that had leaked into product data (now fixed),
+  and no site content beyond the 4 product pages + homepage — consistent with Ben's "basic"
+  read, though the SEO/metadata fixes already done are a different, narrower scope (page data,
+  not visual identity) and don't resolve this. `PROJECT_BRIEF.md`'s Phase 6 (`/ads landing`
+  skill — landing page quality assessment) already gestured at "Shopify theme refresh... could
+  lift conversion rate" as a possibility; this is that idea, broadened to logo/brand identity
+  too. When it activates: the `cro`, `copywriting`, and `image` skills (already installed) plus
+  possibly a design-focused tool not yet in this repo's stack would be the relevant starting
+  points — not scoped further than that until Ben says go.
+
 ## How to keep pulling Shopify data going forward
 Live queries now work directly in this session via the Shopify MCP tools (`run-analytics-query`
 for ShopifyQL, `search_products`, `list-orders`, `list-customers`, `get-shop-info`, etc.) — no
