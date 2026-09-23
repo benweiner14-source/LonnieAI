@@ -944,3 +944,26 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 - Apify (Instagram scraping) available via API token Ben provides — session-only, never commit.
 - Higgsfield CLI/API exists (Soul ID, GPT Image 2) but img2img limits pushed us to ComfyUI.
 - Commit + push to `claude/repo-setup-biy7uf` after changes. Keep refs/tokens out of git.
+
+## Ran a real SEO/metadata audit on Rocka Moss's Shopify store (2026-09-23)
+- **Used the newly-installed `seo-audit` skill + live Shopify Admin GraphQL API + raw HTML pulls
+  from rockamoss.com** — not guesses, every finding sourced. Real findings, most a same-day
+  Admin fix: **all 4 products have `seo.title`/`seo.description` set to `null`**, so Shopify
+  falls back to auto-truncated meta descriptions that literally cut off mid-sentence in the live
+  render (confirmed on Strawberry Shortcake); **zero image alt text store-wide** on every product
+  image; **`vendor` field says "My Store"** (Shopify's default placeholder) on 3 of 4 products,
+  which leaks directly into the product's own JSON-LD schema (`"brand": {"name": "My Store"}`,
+  confirmed live); **Pineapple Breeze is missing from the store's only collection**; and **zero
+  `<h1>` tags anywhere on the site** (homepage and product pages both confirmed via raw HTML —
+  this one needs theme/Liquid access, can't fix via the Admin API). Confirmed clean: robots.txt,
+  sitemap.xml, canonicals, HTTPS, viewport, and baseline `ProductGroup` JSON-LD schema
+  (price/availability per variant already present). Also confirmed no reviews exist yet on the
+  product page checked, consistent with the standing don't-fabricate-reviews caution.
+- **Method note, matches the skill's own guidance:** used raw `curl`+regex HTML parsing instead
+  of relying solely on `WebFetch`'s summarized output, since the skill's own docs flag that
+  `web_fetch`-style tools can silently miss JS-rendered or oddly-formatted elements — this is
+  what caught the missing-H1 finding, which an LLM-summarized fetch had initially reported as
+  "not shown in the provided content" (a false negative, not a real absence) before the raw-HTML
+  pass confirmed it as a genuine, reproducible finding.
+- Saved as `clients/rocka-moss/seo-audit.md`, cross-referenced from `README.md`, and folded the
+  concrete fix list into `access-checklist.md`'s existing SEO/metadata section.

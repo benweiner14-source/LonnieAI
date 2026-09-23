@@ -26,6 +26,11 @@ see `ai-ugc-playbook.md`.
   the CTR sanity-check range (still not grounded — no Rocka Moss *ad* history exists yet).
 - **`access-checklist.md`** — what's been pulled/confirmed from Shopify vs. still open, plus the
   non-Shopify access items still outstanding from `PROJECT_BRIEF.md`'s checklist.
+- **`seo-audit.md`** — real SEO/metadata audit run 2026-09-23 against live Shopify data (not a
+  guess): no custom SEO title/description on any product, zero image alt text store-wide, a
+  "My Store" placeholder leaking into product schema, a product missing from the only collection,
+  and no `<h1>` tag anywhere on the site. Most of it is a same-day Admin fix, one item needs
+  theme/Liquid access.
 
 ## The two buckets (from the brief)
 

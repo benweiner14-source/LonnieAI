@@ -17,8 +17,18 @@ Shopify MCP connector exist for this session.
 - [x] Product/flavor sales split (90d) → 4 flavors exist (Strawberry Shortcake, Mango Magic,
   Pineapple Breeze, Apple Pie); Strawberry Shortcake leads on both orders and revenue
 - [x] Confirmed active discounting (gross ≠ net sales per flavor) — codes/terms not yet pulled
+- [x] **Full SEO/metadata audit run (2026-09-23)** — see `seo-audit.md`. Found: no custom SEO
+  title/description on any product (Shopify auto-fallback truncates mid-sentence), zero image
+  alt text store-wide, `vendor` field says "My Store" on 3/4 products (leaks into product
+  schema), Pineapple Breeze missing from the only collection, and no `<h1>` tag anywhere on the
+  site (theme-level, needs Liquid/theme access to fix). Confirmed clean: robots.txt, sitemap.xml,
+  canonicals, HTTPS, viewport, and baseline `ProductGroup` JSON-LD schema.
+- [x] **Existing product-page reviews confirmed: none visible** (checked directly on the
+  Strawberry Shortcake product page as part of the SEO audit) — no `aggregateRating`/`review` in
+  the page's own schema either. Consistent with the standing caution in `ai-ugc-playbook.md`
+  against fabricating reviews — when they do get added, use real ones.
 
-All of the above is in `kpi-targets.md` with full detail.
+All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
 
 ## Shopify — still worth pulling
 - [ ] **Active discount codes/terms** — so ad creative doesn't contradict a live offer, and so
@@ -33,8 +43,17 @@ All of the above is in `kpi-targets.md` with full detail.
 - [ ] **Email/SMS tool connection status** (Omnisend, Klaviyo, Shopify Email, or none) — tells us
   whether retention infra (see `docs/tay-ai-ugc-dropship-method.md`'s Omnisend flow types) is a
   green-field build or something to extend.
-- [ ] **Existing product-page reviews, if any** — relevant to the standing caution in
-  `ai-ugc-playbook.md` against fabricating reviews; if real ones exist, use them.
+
+## SEO/metadata fixes — from the 2026-09-23 audit, see `seo-audit.md` for full detail
+- [ ] Write custom SEO title + meta description for all 4 products (Priority 1, Admin-only)
+- [ ] Add alt text to every product image (Priority 1, Admin-only)
+- [ ] Fix `vendor` field to "Rocka Moss" on Strawberry Shortcake, Mango Magic, Apple Pie
+  (currently "My Store" — leaks into product schema)
+- [ ] Add Pineapple Breeze to "Explore The Rocka Moss Collection"
+- [ ] Clean up stray `<meta charset="utf-8">` artifact in the collection description
+- [ ] Investigate missing `<h1>` tags site-wide (needs theme/Liquid access — can't fix via
+  Admin API)
+- [ ] Set `productType` + `tags` on all 4 products (Priority 3, lower urgency)
 
 ## Non-Shopify — still open from `PROJECT_BRIEF.md`'s access checklist
 - [ ] Does Rocka Moss have a Meta Business Manager at all? (the brief's own "first check")
