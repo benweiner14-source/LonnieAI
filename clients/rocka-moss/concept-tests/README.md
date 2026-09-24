@@ -40,9 +40,34 @@ to shot. **This empirically confirms, on this exact character/product combinatio
 project-wide finding that GPT Image 2.5 is the right engine for Rocka Moss's photoreal UGC work**
 — not just carried over by assumption from the earlier Selena-pack decision.
 
+## v2 — Ben's real feedback, 2 fixes (2026-09-24)
+
+Ben confirmed Nano Banana Pro is out. Two more findings on the GPT-2.5 version specifically:
+
+1. **The bedroom setting didn't make narrative sense** — holding the product in a bedroom doesn't
+   resonate; sea moss prep/consumption belongs in a kitchen. Fixed by editing the locked
+   `character-sheet/rm-char-01_three-quarter.png` (already set in her actual kitchen, matching
+   seed B's own establishing shot) instead of the bedroom mirror shot — dropped the "mirror
+   selfie" device entirely rather than trying to force a mirror into a kitchen that likely
+   wouldn't realistically have a full-length one.
+2. **The GPT-2.5 still read a little uncanny-valley / visibly AI-generated, needed more authentic
+   UGC iPhone feel.** Pulled concrete language from `docs/frankie-shaw-ai-ugc-method.md`'s V4
+   Realism Laws (still-photo-appropriate subset: believable practical light only, no
+   cinematic/studio polish, real skin texture/blemishes not airbrushed, ordinary/slightly-worn
+   surfaces, anti-"digital render" language) rather than a vague "make it look more real" ask.
+
+**`concept1_product-intro_v2_kitchen-realism.png`** — kitchen setting confirmed correct (same
+kitchen as the locked character reference). Label came out cleaner as a side benefit — the
+"ROCKA MOSS" logo and "Wildcrafted" (correctly spelled this time) are both legible, better than
+either v1 attempt. Realism read is improved (more natural lighting asymmetry) but **not yet
+confirmed as fully clearing the "does this look AI" bar — sent to Ben for a direct judgment call**,
+same standing discipline as every recipe in this repo (nothing confirmed until Ben's eyes are on
+it). If it's still not authentic enough, the next lever to pull is a genuinely imperfect crop/
+framing (off-center, slightly cut off) rather than more lighting/skin-texture language, since
+`docs/tay-ai-ugc-dropship-method.md` and this project's own iPhone-selfie work both point at
+framing/POV as the strongest authenticity signal, stronger than texture-level prompt tweaks alone.
+
 ## Next step
 
-Continue with GPT Image 2.5 Sunburst as Concept 1's still. The label-text gap is a known,
-lower-priority flaw (matches this project's very first product-shot test) — worth a second
-attempt with a closer, more legible product angle if the label ever needs to be readable in a
-given shot, not urgent for this wide mirror-selfie framing.
+Waiting on Ben's read of v2 before calling Concept 1's still locked. The label-text gap from v1 is
+now mostly resolved as a side effect of this fix, not something that needs separate chasing.

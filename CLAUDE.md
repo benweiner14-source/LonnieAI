@@ -1643,3 +1643,27 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   by carrying the assumption forward from Selena's pack.
 - **Saved both to `clients/rocka-moss/concept-tests/`** with a README documenting the technique,
   both results, and the read/recommendation. Updated `README.md`'s Status section.
+
+## Ben's real feedback on the GPT-2.5 result — kitchen setting + authenticity, 2 concrete fixes (2026-09-24)
+- **Ben confirmed Nano Banana Pro is out, then gave two specific critiques of the GPT-2.5 version:**
+  "this concept doesn't really make sense, holding it in a bedroom" (should anchor in the kitchen
+  instead, since sea moss is prepared/consumed there, not a bedroom) and "the GPT one just feels
+  like a little like in the uncanny Valley... needs more of the UGC iPhone authentic feel."
+- **Kitchen fix:** switched the edit base from the bedroom mirror shot to
+  `character-sheet/rm-char-01_three-quarter.png` (already set in her actual kitchen, matching
+  seed B's own establishing shot) — dropped the mirror-selfie device entirely rather than forcing
+  a mirror into a kitchen that likely wouldn't realistically have a full-length one.
+- **Realism fix, not guessed at:** pulled concrete language from
+  `docs/frankie-shaw-ai-ugc-method.md`'s V4 Realism Laws (the still-photo-appropriate subset:
+  believable practical light only, no cinematic/studio polish, real skin texture/blemishes not
+  airbrushed, ordinary/slightly-worn surfaces, explicit anti-"digital render" wording) instead of
+  a vague "make it more real" instruction.
+- **Result:** kitchen setting correct, and the label rendered noticeably cleaner as a side
+  benefit — "ROCKA MOSS" logo and correctly-spelled "Wildcrafted" both legible, better than either
+  v1 attempt. **Did not self-certify the realism fix as fully solved** — sent it to Ben for a
+  direct judgment call, same standing discipline as everything else in this repo, and flagged in
+  the doc that if it's still not authentic enough, the next lever is genuinely imperfect framing/
+  crop (off-center, slightly cut off) rather than more texture-level prompt language, per this
+  project's own standing finding that POV/framing is the strongest authenticity signal.
+- Saved to `concept-tests/concept1_product-intro_v2_kitchen-realism.png`, updated that folder's
+  README with the full before/after reasoning.
