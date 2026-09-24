@@ -1522,3 +1522,8 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   step 2 updated to reference the new profile).
 - **Next up:** draft 1-2 concrete AI UGC character/ad concepts grounded in this profile, before
   generating and locking an actual character sheet.
+- **Ben confirmed the flagged demographic hypothesis directly: "yeah it def leans black women."**
+  No longer hedged — updated `target-demo.md` and `ai-ugc-playbook.md`'s Section 0 archetype-
+  targeting note to state the casting direction plainly (a Black woman, Southeast-coded setting,
+  Women <30/general-wellness archetype) instead of flagging it as unconfirmed. Moving straight to
+  drafting concrete character/ad concepts next.

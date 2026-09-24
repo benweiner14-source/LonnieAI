@@ -62,7 +62,11 @@ mind rather than picking one blind.
   archetypes in the reference doc's table — story/scenario-driven, raw and relatable rather than
   luxury or bold-claim-driven, avoid-pain/gain-confidence motivation. Not the Men <30
   "Pinocchio-paradox, bold claims OK" archetype — that mismatch would undercut the brand's actual
-  tone.
+  tone. **Confirmed by real data, not just brand positioning, 2026-09-24:** `target-demo.md`'s
+  Shopify customer-geography pull independently confirms the real customer base is concentrated in
+  Columbia, SC and Charlotte, NC (with Atlanta secondary) — and Ben directly confirmed the
+  customer base "def leans black women." Casting for the AI UGC character sheet: a Black woman,
+  Southeast-coded setting, Women <30/general-wellness archetype as above.
 - **Realism markers to carry into every generation prompt**, on top of the technical recipe
   below: leave skin imperfections in rather than smoothing (this repo's own prompts already say
   "no AI artifacts" in places — don't let that drift into "smooth/flawless skin," which is the

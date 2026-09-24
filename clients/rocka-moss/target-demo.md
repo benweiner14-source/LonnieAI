@@ -59,21 +59,20 @@ locations before reading them as real audience geography** — this wasn't previ
 - **Instagram meaningfully outperforms Facebook as a referral channel** (8 orders vs. 1 in the
   original 90-day pull) — reinforces IG as the primary platform to design UGC creative for.
 
-## Soft signal, flagged carefully: likely skews toward Black women customers
+## ✅ Confirmed 2026-09-24: skews Black women
 
-Scanning first names across the same 50-customer sample pulled for the geography analysis (not
-saved to this repo — aggregate observation only), the customer base reads as **majority female**
-and includes a real concentration of names commonly associated with Black American communities.
-**This is explicitly a soft, inferred signal — not confirmed demographic data.** Shopify doesn't
-capture age, gender, or ethnicity directly, and inferring identity from first names alone is
-unreliable and shouldn't be treated as fact. It's worth noting for one reason: it's **directionally
-consistent with independent evidence already gathered elsewhere in this project** —
-`competitor-research.md` flagged Black Girl Vitamins and Culture Connection 360 (both
-Black-owned/Black-audience-focused wellness and body-care brands) as strong positioning/tonal
-references for Rocka Moss, and Culture Connection 360 specifically has real Chicago and Atlanta
-locations that came up again in the geography analysis above via Canton, GA. Two independent
-observations pointing the same direction is worth taking seriously as a hypothesis — **not**
-worth locking in without Ben or Christian's direct confirmation.
+Flagged as a soft, inferred signal (from first-name patterns only) — Ben confirmed directly:
+**"yeah it def leans black women."** No longer a hypothesis to hedge on; this is the casting
+direction for the AI UGC character sheet(s), consistent with the independent corroborating
+evidence already noted below (Black Girl Vitamins/Culture Connection 360 as positioning
+references in `competitor-research.md`).
+
+Original inference, kept for the record: scanning first names across the same 50-customer sample
+pulled for the geography analysis (not saved to this repo — aggregate observation only), the
+customer base read as majority female with a real concentration of names commonly associated with
+Black American communities. Shopify itself doesn't capture age/gender/ethnicity directly, so this
+was always going to need Ben or Christian's direct confirmation rather than being locked from
+inference alone — that confirmation now exists.
 
 ## What this means for the AI UGC character sheet(s)
 
@@ -84,10 +83,10 @@ worth locking in without Ben or Christian's direct confirmation.
 2. **Casting should be relatable, not aspirational-model** — per the same doc's
    relatable-not-intimidating casting principle, already mapped to Rocka Moss in
    `ai-ugc-playbook.md`'s Section 0.
-3. **The likely-Black-women skew above is a hypothesis to confirm with Ben/Christian before
-   locking a specific character's look** — if confirmed, casting should reflect that; if not
-   confirmed or if Christian wants broader appeal, a neutral/varied casting approach is the safer
-   default. Don't guess past what the data actually supports.
+3. **Casting: a Black woman, confirmed by Ben (2026-09-24)** — no longer hedged. Age range not yet
+   specified; `ai-ugc-playbook.md`'s existing archetype mapping (Women <30, general-wellness
+   motivation, not the bold-claims-OK Men <30 archetype) is the working default until told
+   otherwise.
 4. **Feature Strawberry Shortcake first** in whatever concept gets built, consistent with the real
    sales data above.
 
