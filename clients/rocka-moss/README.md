@@ -74,19 +74,15 @@ see `ai-ugc-playbook.md`.
   product/brand references yet. Treat every recipe in it as a starting point to test, not a
   locked recipe, the same discipline this repo uses everywhere else (see `CLAUDE.md`'s running
   log — nothing here gets called "confirmed" until Ben's eyes are on an actual output).
-- **Open item carried over from the brief:** if Christian Brown himself appears as an AI-generated
-  or AI-assisted subject in any Rocka Moss ad creative (not just real photos of him), that's a
-  narrower consent question than "Ben has permission to post on his Instagram" (Bucket 1's
-  permission). The same distinction this repo already drew for Kazumi's photoreal motion-transfer
-  pilot (`docs/photoreal-motion-transfer-pilot.md`) applies here — confirm explicitly with
-  Christian before generating any AI likeness content of him, don't assume the brand-deal
-  outreach permission covers it.
-  - **This is now a genuine two-path decision, not just a permissions checkbox** — see
-    `docs/frankie-shaw-ai-ugc-method.md`'s "Production realities" section: the proven AI-UGC
-    method this repo just added builds **synthetic, non-real testimonial characters** by design
-    (a GPT Image 2-generated identity, not any real person's likeness), which sidesteps this
-    consent question entirely at the cost of losing the "the co-founder said this himself"
-    authenticity. Decide on purpose whether Rocka Moss testimonial content should feature a
-    synthetic character (no consent question, matches the proven method) or Christian's real
-    likeness via this repo's own already-working path (stronger authenticity, needs his explicit
-    sign-off) — don't default to either.
+- **✅ Resolved 2026-09-24 (Ben's decision): synthetic AI UGC characters, NOT Christian's real
+  likeness.** The open consent question above is closed — Rocka Moss's testimonial/UGC video
+  content will use AI-generated character sheets built from Rocka Moss's actual Shopify customer/
+  target-demo data, not any real person's identity. This is exactly the proven Frankie Shaw AI-UGC
+  method already documented (`docs/frankie-shaw-ai-ugc-method.md`'s "Production realities"
+  section) — a locked character reference (built here via this repo's existing photoreal
+  character-sheet recipe, proven on Kazumi's pilot and Selena's photoreal pack), not a photoreal
+  likeness of Christian. **Ben's stated pipeline:** target-demo data (from Shopify) → AI UGC
+  character sheet(s) → apply the UGC ad philosophy/format "tent poles" from
+  `docs/frankie-shaw-ai-ugc-method.md` and `docs/tay-ai-ugc-dropship-method.md` → draft concrete ad
+  concepts → generate via Seedance 2.0 (`docs/seedance-comfy-handoff.md`). No consent question
+  remains for this path — it never touches Christian's or anyone real's likeness.

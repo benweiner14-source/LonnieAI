@@ -248,11 +248,11 @@ install both installable ones on 2026-09-24:
   not yet pulled). See `refs/README.md` for full inventory, including a flagged discrepancy: the
   Drive folder's brand renders show **11 flavors, only 4 of which are live on Shopify today** —
   worth asking Christian about before any creative decisions.
-- [ ] Decide: synthetic testimonial character vs. Christian's real likeness (open consent
-  question, flagged in `README.md` — needs his explicit sign-off if real). **Now has a real,
-  usable reference photo on hand either way** (`refs/rockamoss_founder_applepie_steps.jpg`) —
-  having the photo doesn't itself resolve the consent question, it just means testing can start
-  the moment sign-off exists.
+- [x] **Decide: synthetic testimonial character vs. Christian's real likeness — resolved
+  2026-09-24.** Ben's call: **synthetic AI UGC characters, not Christian's likeness.** Pipeline:
+  Shopify target-demo data → AI UGC character sheet(s) → Frankie Shaw/Tay UGC-format tent poles →
+  ad concepts → Seedance. No consent question remains for this path. See `README.md`'s Status
+  section for the full pipeline description.
 - [x] **Validate one product shot** — done 2026-09-23, confirmed clean after 2 fix iterations.
   GPT Image 2.5 Sunburst via Comfy Cloud, Strawberry Shortcake, Studio style — see
   `test-renders/README.md` for the full recipe and result. Front label reproduced accurately
@@ -261,9 +261,9 @@ install both installable ones on 2026-09-24:
   into the standing recipe in `ai-ugc-playbook.md`. Small-text side-panel legibility remains an
   open, lower-priority flaw. Recipe validated; the other 4 styles/3 flavors/testimonial recipe
   not yet tested.
-- [ ] Validate one POV-selfie testimonial before batching that direction (per
-  `ai-ugc-playbook.md`'s standing validate-before-batch discipline) — still needs Christian's
-  consent decision (synthetic vs. real likeness) resolved first.
+- [ ] Validate one AI UGC character-sheet + testimonial concept before batching that direction
+  (per `ai-ugc-playbook.md`'s standing validate-before-batch discipline) — now unblocked, next
+  step is pulling real Shopify target-demo signal to inform the character sheet(s).
 
 ## Parked — not now, don't start on this without Ben's go-ahead
 - [ ] **Full rebrand: logo, visual identity, and website/theme redesign.** Ben's own call

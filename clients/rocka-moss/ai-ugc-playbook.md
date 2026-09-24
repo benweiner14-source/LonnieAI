@@ -273,28 +273,25 @@ gym — without naming the city in the prompt text itself).
   different situation from Rocka Moss, which already has real customers and real reviews
   (`PROJECT_BRIEF.md`). If a Rocka Moss page redesign needs reviews, use real ones or leave the
   section empty until real ones exist — don't default to generating them.
-- **Whether Christian Brown himself can be the AI-generated subject of Rocka Moss ad creative** —
-  flagged as an open consent question in `README.md`, not resolved here. **Now a real two-path
-  decision, not just a permissions checkbox** — see `docs/frankie-shaw-ai-ugc-method.md`'s
-  "Production realities" section: a synthetic, non-real testimonial character (the proven AI-UGC
-  method's own default) sidesteps this question entirely; Christian's real likeness needs his
-  explicit sign-off first. Pick one on purpose before drafting the first real script.
+- **✅ Resolved 2026-09-24: synthetic AI UGC character(s), not Christian's real likeness.** Ben's
+  call — the testimonial/UGC video subject will be an AI-generated character built from Rocka
+  Moss's actual Shopify target-demo data, using the proven Frankie Shaw AI-UGC method's own
+  default approach (`docs/frankie-shaw-ai-ugc-method.md`'s "Production realities" section). This
+  closes the open consent question in `README.md` — no real person's likeness is involved.
 
 ## Next steps before running anything for real
 
-1. Draft 2-3 concrete concepts using the Section 0 framework above (pick a format, a scenario, a
-   5-beat outline) before writing any generation prompt — concept first, prompt second. Decide at
-   this stage whether the testimonial subject is a synthetic character or Christian's real
-   likeness (see "What's not covered here" above) — it changes what reference photos are needed
-   next.
-2. Source 2-3 clean reference photos of the actual current Rocka Moss bottle/label.
-3. Source face reference photos for whichever subject was chosen in step 1 — confirm consent for
-   AI-generated likeness use specifically if it's Christian (or any other real person), separate
-   from any brand-deal-outreach permission already in place. If it's a synthetic character,
-   generate and lock one via GPT Image 2.5 (regenerate 2-3 times, same approach as
-   `clients/ai-ugc-agency/session-reference.md`'s character-reference step) instead.
-4. Validate one Studio product shot and one POV-selfie testimonial still before batching either
-   direction — same discipline as every prompt pack in this repo.
-5. Confirm ElevenLabs voice is ready before attempting a lip-synced Seedance clip — that step is
+1. **Pull real Shopify target-demo signal** (customer locations, repeat-purchase segments, flavor
+   preferences — whatever Shopify actually exposes) to ground the character sheet(s) in real data
+   rather than a guessed persona.
+2. Draft 2-3 concrete concepts using the Section 0 framework above (pick a format, a scenario, a
+   5-beat outline) before writing any generation prompt — concept first, prompt second.
+3. Source 2-3 clean reference photos of the actual current Rocka Moss bottle/label.
+4. Generate and lock a synthetic AI UGC character sheet via GPT Image 2.5 (regenerate 2-3 times,
+   same approach as `clients/ai-ugc-agency/session-reference.md`'s character-reference step),
+   grounded in the target-demo profile from step 1 — no real person's face reference needed.
+5. Validate one Studio product shot and one AI-UGC-character testimonial still before batching
+   either direction — same discipline as every prompt pack in this repo.
+6. Confirm ElevenLabs voice is ready before attempting a lip-synced Seedance clip — that step is
    blocked on having the actual audio file, same gating issue this repo already hit on Kazumi's
    lip-sync test (`CLAUDE.md`).

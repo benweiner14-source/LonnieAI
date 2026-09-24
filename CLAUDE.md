@@ -1449,3 +1449,25 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   planned as a fresh start per Ben's call — both true at once, don't conflate them. Updated
   `access-checklist.md` and `kpi-targets.md` (both the correction section and Next Steps) to
   reflect both resolutions.
+
+## Resolved the synthetic-vs-real-likeness open question: synthetic AI UGC characters, locked pipeline (2026-09-24)
+- **Ben's decision, stated directly:** "We're not going to use Christian's likeness. We're going
+  to build AI UGC character sheets based on their target demos from their data in Shopify. Then
+  we're going to use the UGC ad and paid ad philosophy, tent poles, and then eventually make
+  concepts and then feed it into Seedance." This is the consent question flagged since the
+  `clients/rocka-moss/` section was first built — now closed, no more two-path ambiguity.
+- **Closes an open question that's been carried in `README.md`, `access-checklist.md`, and
+  `ai-ugc-playbook.md` since 2026-09-22/23.** Updated all three: `README.md`'s Status section now
+  states the resolved pipeline directly (Shopify target-demo data → AI UGC character sheet(s) →
+  Frankie Shaw/Tay UGC-format tent poles → concepts → Seedance); `access-checklist.md`'s decision
+  item and the POV-selfie-testimonial item both marked resolved/updated; `ai-ugc-playbook.md`'s
+  "What's not covered here" section and "Next steps" renumbered/rewritten to drop the Christian-
+  likeness branch entirely and lead with pulling real Shopify demo data first, since the character
+  sheet should be grounded in Rocka Moss's actual customer data, not a guessed persona.
+- **This is exactly the Frankie Shaw AI-UGC method's own proven default** (`docs/frankie-shaw-ai-
+  ugc-method.md`'s "Production realities" section — synthetic characters were never a workaround
+  for a Seedance restriction, they're the method's actual design) — Ben's direction aligns fully
+  with what's already documented, not a new technique to build from scratch.
+- **Next concrete step, not yet started:** pull real Shopify customer/target-demo signal (the
+  Shopify MCP's `list-customers`/`run-analytics-query` tools are already connected in this
+  session) to ground the character sheet(s) in actual data before generating anything.
