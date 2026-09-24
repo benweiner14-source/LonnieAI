@@ -101,7 +101,21 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
 - [ ] Does Rocka Moss have a Meta Business Manager at all? (the brief's own "first check")
 - [ ] Meta Business Suite partner access (Page, Instagram, Ad Account, Pixel — "Manage" level)
 - [ ] Rocka Moss Instagram login/co-manager access (nice-to-have)
-- [ ] Any existing creative assets Rocka Moss already has (nice-to-have)
+- [x] **Any existing creative assets Rocka Moss already has** — done 2026-09-24 (was stale/still
+  showing open even though this was already fulfilled 2026-09-23): the Google Drive "Photography
+  and Media" folder Ben shared *is* Rocka Moss's existing creative assets — real product photos,
+  founder photos, and 22 brand-render mockups, see `refs/README.md`.
+
+## Open question from the brief, never tracked: the other Rocka Moss co-founder
+- [ ] **Who is the other Rocka Moss co-founder, and are they in the loop?** Flagged 2026-09-24 —
+  this was in `PROJECT_BRIEF.md`'s "Open Questions" section the whole time
+  ("Christian has part ownership. There's at least one other partner... The marketing decision
+  likely involves them. Ben needs to get in the room with both before committing to the full
+  engagement") but never made it into this working checklist. This isn't just a Bucket-1/personal
+  detail — it directly gates committing to the full Bucket 2 engagement per the brief's own
+  wording, and the `/ads math` skill's PPC reporting is explicitly meant to support "the
+  conversation with the Rocka Moss co-founders" (plural) about what the ad spend is generating.
+  Not something this repo can resolve — Ben's to confirm directly with Christian.
 
 ## Competitor research (Meta Ad Library) — flagged as a real gap, 2026-09-24
 - [ ] **Pull every sea moss / Black-wellness competitor ad running right now.** This was missed —
@@ -123,6 +137,33 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
        Instagram scraping; Apify has actors built for Meta Ad Library specifically. A fresh token
        would let this get pulled directly instead of manual screenshotting.
   - **Not yet started either way** — Ben's call on which path.
+
+## Skills the brief names that were never installed — flagged as a real gap, 2026-09-24
+Only `coreyhaines31/marketingskills` (21 skills, see `.claude/skills/README.md`) ever got
+installed. Three other skill repos `PROJECT_BRIEF.md`'s "Skills Stack" section names by name were
+never pulled in — this had been mentioned once in passing in `CLAUDE.md`'s skill-install log but
+never turned into an actual to-do or acted on:
+- [ ] **`AgriciDaniel/claude-ads`** — the brief's biggest single gap. An 8-command suite this repo
+  has none of: `/ads dna` (brand-profile.json from rockamoss.com — "everything else reads from
+  this file," meant to run first), `/ads photoshoot` (5-style product photography — Studio,
+  Floating, Ingredient, In Use, Lifestyle; this repo's own `ai-ugc-playbook.md` recipe covers the
+  same ground independently, but not via this tool), `/ads create` / `/ads generate` (campaign
+  brief → ad image assets), `/ads meta` (50-check Meta account audit, run once Pixel/CAPI live),
+  `/ads math` (CPA/ROAS/breakeven calculator — `kpi-targets.md` has done this math by hand
+  instead), `/ads budget` (budget/bid review, relevant once past the test month), `/ads landing`
+  (landing-page quality assessment against rockamoss.com — distinct from the parked full-rebrand
+  item below; this is a narrower CRO-style check the brief says to run "before spending ad budget
+  sending traffic there").
+- [ ] **`tenfoldmarc/meta-ads-generator-skill`** — one-prompt product-URL-in, 4 finished Meta ad
+  creatives out; scrapes 30-50 real customer reviews + 5-10 competitor ads before generating
+  anything (ties directly into the competitor-research gap above).
+- [ ] **`hyperfx-ai/marketing-skills`** (`meta-ads-library`) — the automated Apify-based Ad
+  Library scraper named in the competitor-research section above; requires Hyper MCP setup at
+  app.hyperfx.ai/mcp, not configured in this session.
+- **Not installed without asking first** — cloning third-party skill repos expands this repo's
+  tool surface and license footprint (same consideration as the `coreyhaines31` install, which
+  Ben explicitly greenlit). Ben's call whether to pull in `AgriciDaniel/claude-ads` and/or
+  `tenfoldmarc/meta-ads-generator-skill` the same way.
 
 ## Creative/content — refs now exist, validate before batching
 - [x] **Source reference photos of the actual bottle/label** — done 2026-09-23. Ben shared a

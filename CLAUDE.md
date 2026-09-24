@@ -1198,3 +1198,30 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
     upload pattern as every other image-sourcing block in this project) or Apify (reusing the
     session-only token pattern already established) if he wants it automated. Not yet started
     either way — his call which path.
+
+## Ben asked for a full audit: what else from PROJECT_BRIEF.md never made it onto the checklist
+- **Re-read the entire brief line by line and cross-referenced every actionable item against
+  `access-checklist.md`.** Found two more real gaps plus one stale line, beyond the Ad Library
+  item already caught:
+  1. **Three of the brief's four named skill repos were never installed** — only
+     `coreyhaines31/marketingskills` got pulled in. `AgriciDaniel/claude-ads` (an 8-command suite:
+     `/ads dna`, `/ads photoshoot`, `/ads create`, `/ads generate`, `/ads meta`, `/ads math`,
+     `/ads budget`, `/ads landing`), `tenfoldmarc/meta-ads-generator-skill`, and
+     `hyperfx-ai/marketing-skills` were all named in the brief's "Skills Stack" section but never
+     installed or tracked as missing. This had been mentioned once in passing in an earlier
+     skill-install log entry ("pointed out the brief already names 4 skill repos never
+     installed") but never turned into an actual checklist item or acted on.
+  2. **The "other Rocka Moss co-founder" open question was never tracked anywhere** outside the
+     raw brief text — it's in the brief's own "Open Questions" section and explicitly gates
+     "committing to the full engagement" per the brief's wording, not just a Bucket-1 detail.
+  3. **Stale checklist line found:** "existing creative assets Rocka Moss already has" was still
+     showing as an open item even though the Google Drive photo folder (pulled 2026-09-23)
+     already fulfilled it — checked off and corrected.
+  - Confirmed several other brief items are correctly untracked, not missed: the financial-advisor
+    referral lane, the black-truck business, agency-exclusivity check, and Christian's IG follower
+    geography split are all Bucket 1 (personal brand deals), which `README.md` already scopes out
+    of this repo's concern.
+- Updated `access-checklist.md` with a new "Skills never installed" section and the co-founder
+  open question, and fixed the stale creative-assets line. **Did not install the two new
+  third-party skill repos without asking** — same consideration as the `coreyhaines31` install,
+  which Ben explicitly greenlit; this is his call to make the same way.
