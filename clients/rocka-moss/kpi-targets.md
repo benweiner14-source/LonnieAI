@@ -94,20 +94,20 @@ page-source scraping 2026-09-23) has real, working end-to-end purchase attributi
 hypothetical events, Meta credited 10 real conversions to it. That's a stronger pixel-health
 signal than anything a Business Suite settings screen alone would show.
 
-**Open questions for Ben/Christian, not guessed at:**
-- Why did all 4 campaigns go inactive — ran out of a manual budget, deliberately paused, or
-  something else? (The CSV's "Reporting starts" 2025-08-19 is the report's query window, not
-  necessarily when campaigns actually launched — the real delivery dates need checking in Ads
-  Manager directly.)
-- What is the custom conversion event behind TestOFF's 97 results (Events Manager → Custom
-  Conversions, event ID `24231000873195869`)? At $0.46/result it's almost certainly a cheap
-  top-funnel event (ViewContent/AddToCart/Lead), not a purchase — useful context, not a comparable
-  CAC.
-- What was different between Official-Campaign-2 and Rocka-Campaign-2026 (creative, targeting,
-  objective)? The 4x CPA gap is a real signal worth understanding before any new campaign design.
+**Ben's call (2026-09-24): not chasing the "why" behind these old campaigns — treating this as a
+fresh start.** Three real open questions came out of this table (why the campaigns went inactive,
+what TestOFF's custom conversion event was, why CPA varied 4x between the two purchase campaigns)
+but Ben decided not to pursue them. The data above stays on record as real historical reference —
+useful context that the account and pixel aren't brand new and that a $31.72-$129.31 CPA range is
+achievable in this category — but it's not being reverse-engineered or built on top of. New
+campaign planning starts fresh rather than picking up Official-Campaign-2 or Rocka-Campaign-2026
+where they left off.
 
-**This account is NOT a cold-start account** — correcting the framing for any future `ads-meta`
-skill audit, which explicitly treats real delivery/spend history differently from a fresh account.
+**Technically not a cold-start account** (real spend/conversion history exists, which matters if
+an `ads-meta` skill audit or Meta's own algorithm ever references account history) — but
+**strategically being planned as a fresh start** per Ben's direction above. Both things are true
+at once: don't assume zero history exists, but also don't treat the old campaigns as a foundation
+to build the next one on.
 
 ## Revised CAC / ROAS targets
 
@@ -224,9 +224,12 @@ actual CAC/ROAS against these targets without manual dashboard-reading.
   Pixel + server-side CAPI (both connected and proven via real historical purchases), and domain
   verification (`rockamoss.com` verified) are all confirmed in good shape — see
   `access-checklist.md` for the full walkthrough. Nothing left blocking a new campaign launch from
-  the infrastructure side. What remains is Christian-facing: why the 4 historical campaigns went
-  inactive, what TestOFF's custom conversion event was, and why CPA varied 4x between the two
-  purchase campaigns (see the correction section above).
+  the infrastructure side.
+- ~~Why the 4 historical campaigns went inactive, what TestOFF's custom conversion event was, why
+  CPA varied 4x~~ — **not being pursued, per Ben's direction (2026-09-24): treating the ad account
+  as a fresh start rather than investigating the old campaigns.** See the correction section above.
+- ~~Who is the other Rocka Moss co-founder~~ — **resolved 2026-09-24: JaVon.** See
+  `access-checklist.md`.
 
 ## Sources
 Three Shopify Analytics reports pulled manually before the connector came online (Returning

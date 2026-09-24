@@ -101,16 +101,19 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
 - [x] **Does Rocka Moss have a Meta Business Manager, and does it own the Page/Ad Account/Pixel?**
   **Confirmed 2026-09-24 — yes, cleanly.** Facebook Page (ID `674650849075325`) is owned directly
   by the "Rocka Moss" business portfolio, not a personal account. 4 people have access; Ben has
-  full access, and a second person with full access — **"Darius Boyd"** — may be the "other Rocka
-  Moss co-founder" flagged as an open question in the brief's Open Questions section (see below,
-  not yet confirmed which).
+  full access, and a second person with full access — "Darius Boyd" — turned out **not** to be the
+  co-founder (Ben confirmed 2026-09-24: **JaVon is the co-founder**) — see the dedicated section
+  below, now resolved.
 - [x] **Does a Meta Ad Account already exist?** **Confirmed 2026-09-24 — yes: `RockaMossBTL`**
-  (ID `721440597562823`), owned directly by Rocka Moss. **Real prior campaign history exists —
-  this account is NOT cold-start.** 4 campaigns (all now inactive) ran ~$463.48 total spend with
-  10 real purchases attributed via the pixel — full breakdown and open questions (why campaigns
-  stopped, what the custom-conversion event was, why CPA varied 4x between the two purchase
-  campaigns) in `kpi-targets.md`'s new correction section. **Billing confirmed healthy**: MasterCard
-  on file, $0 balance owed, Meta-set daily spending limit $106.83 — not blocked on payment setup.
+  (ID `721440597562823`), owned directly by Rocka Moss. Real prior campaign history exists (4
+  campaigns, all now inactive, ~$463.48 total spend, 10 real purchases attributed via the pixel —
+  full breakdown in `kpi-targets.md`'s correction section). **Per Ben's direction (2026-09-24),
+  the open questions about that old campaign history (why they stopped, the custom-conversion
+  event, the CPA gap) are NOT being chased — treating the ad account as a fresh start rather than
+  picking up where the old campaigns left off.** The history stays on record for reference, but
+  isn't a blocker or something to reverse-engineer before launching new campaigns. **Billing
+  confirmed healthy**: MasterCard on file, $0 balance owed, Meta-set daily spending limit $106.83
+  — not blocked on payment setup.
 - [x] **Pixel + Conversions API status — fully confirmed 2026-09-24, better than expected.**
   Business Settings → Data Sources → Datasets & pixels: **"Rocka Moss's pixel"** (ID
   `682325200982123`) shows "Dataset is receiving events... from Conversions API and Meta Pixel" —
@@ -132,17 +135,15 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
   needed.)
 
 **All 5 original Business Suite check items are now resolved — Business Manager, Ad Account,
-Instagram, Pixel/CAPI, and domain verification are all confirmed clean.** What's left open isn't
-a setup gap, it's the 3 real questions from the campaign history (why they stopped, the custom
-conversion event, the CPA gap) plus the Darius Boyd co-founder question — see above.
+Instagram, Pixel/CAPI, and domain verification are all confirmed clean, infrastructure is not
+blocking anything.** The old-campaign questions are deliberately not being pursued (see above,
+starting-fresh decision) and the co-founder question is resolved (JaVon, below) — nothing left
+open on this list.
 - [x] **Rocka Moss Instagram — connected and confirmed 2026-09-24.** `@rockamoss` (ID
   `1784168160984053`), owned directly by the Rocka Moss business, not a personal account — same
   clean ownership pattern as the Facebook Page. Ben has full access. 4 people total have access,
   including a second full-access identity labeled "IG Rocka Moss" (likely the account's own
   native login/admin, not a separate person — not yet confirmed).
-- [ ] **Who is "Darius Boyd"?** Found 2026-09-24 with full access to the Rocka Moss Facebook Page
-  — may directly answer the brief's still-open "who is the other Rocka Moss co-founder" question
-  (see the dedicated section below). Not yet confirmed either way.
 - [ ] **Confirm the `IG-EMAIL-1R9EMRC9` discount code's source** — the Shopify-side discount pull
   (2026-09-23) found this code implies *some* automated email/IG flow already exists; Business
   Suite's Instagram/Messenger automation settings (or Shopify Admin → Settings → Apps, still
@@ -161,20 +162,15 @@ conversion event, the CPA gap) plus the Darius Boyd co-founder question — see 
   and Media" folder Ben shared *is* Rocka Moss's existing creative assets — real product photos,
   founder photos, and 22 brand-render mockups, see `refs/README.md`.
 
-## Open question from the brief, never tracked: the other Rocka Moss co-founder
-- [ ] **Who is the other Rocka Moss co-founder, and are they in the loop?** Flagged 2026-09-24 —
-  this was in `PROJECT_BRIEF.md`'s "Open Questions" section the whole time
-  ("Christian has part ownership. There's at least one other partner... The marketing decision
-  likely involves them. Ben needs to get in the room with both before committing to the full
-  engagement") but never made it into this working checklist. This isn't just a Bucket-1/personal
-  detail — it directly gates committing to the full Bucket 2 engagement per the brief's own
-  wording, and the `/ads math` skill's PPC reporting is explicitly meant to support "the
-  conversation with the Rocka Moss co-founders" (plural) about what the ad spend is generating.
-  Not something this repo can resolve — Ben's to confirm directly with Christian.
-  - **Possible lead, not yet confirmed:** the Meta Business Suite Page-access check (2026-09-24)
-    found a "Darius Boyd" with full access to the Rocka Moss Facebook Page alongside Ben — worth
-    checking whether this is the co-founder the brief refers to, rather than treating this as
-    fully separate/unresolved.
+## Resolved: the other Rocka Moss co-founder is JaVon
+- [x] **Who is the other Rocka Moss co-founder?** Flagged 2026-09-24 as an untracked open item
+  from `PROJECT_BRIEF.md`'s "Open Questions" section ("Christian has part ownership. There's at
+  least one other partner... Ben needs to get in the room with both before committing to the full
+  engagement"). **Ben confirmed directly (2026-09-24): the co-founder is JaVon.** "Darius Boyd,"
+  found with full access to the Rocka Moss Facebook Page during the Business Suite walkthrough,
+  was a wrong guess — not the co-founder. Not yet confirmed whether JaVon has his own
+  Business Suite/Shopify access set up, or whether he's been looped into this engagement yet — not
+  pursued further unless Ben raises it.
 
 ## Competitor research (Meta Ad Library) — done 2026-09-24, widened same day
 - [x] **Pull every sea moss / Black-wellness competitor ad running right now.** Closes step 1 of

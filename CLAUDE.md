@@ -1436,3 +1436,16 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   campaigns, and whether Darius Boyd is the brief's "other co-founder." Updated
   `access-checklist.md`, `kpi-targets.md`, and `README.md`'s Status section to reflect the
   walkthrough is complete.
+- **Ben closed out the two open threads directly: "JaVon is the co founder. don't worry about the
+  other 3 questions. we are treating it like we are starting from scratch."** Corrected the wrong
+  lead — "Darius Boyd" (found with Page access) is NOT the co-founder, **JaVon is**. Updated the
+  co-founder section in `access-checklist.md` from open to resolved. For the 3 historical-campaign
+  questions (why they went inactive, TestOFF's custom conversion event, the 4x CPA gap): marked
+  explicitly as **not being pursued**, not just deferred — Ben's direction is to treat the ad
+  account as a fresh start rather than investigate or build on the old campaigns. Kept the real
+  historical data (spend, CAC range, pixel health) on record as useful reference in
+  `kpi-targets.md`'s correction section, but reframed it: technically not a cold-start account
+  (real history exists, matters for Meta's own algorithm/any future audit), but strategically
+  planned as a fresh start per Ben's call — both true at once, don't conflate them. Updated
+  `access-checklist.md` and `kpi-targets.md` (both the correction section and Next Steps) to
+  reflect both resolutions.
