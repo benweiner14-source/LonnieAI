@@ -1291,3 +1291,56 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 - Saved as `clients/rocka-moss/competitor-research.md`, cross-referenced from `README.md`, closed
   out in `access-checklist.md` (step 1 of the brief's 6-step pitch, done) — feeds directly into
   the psychology-pillar-map technique just added to `ai-ugc-playbook.md`.
+
+## Widened the Meta Ad Library pull, per Ben's "widen the search a little bit and run again" (2026-09-24)
+- **Re-ran the same Apify actor with 8 keyword searches instead of 3** (`sea moss`, `sea moss gel`,
+  `wildcrafted sea moss`, `irish sea moss`, `sea moss bladderwrack burdock`, `raw sea moss`,
+  `black wellness`, `black owned supplement`) — $0.116 for 155 ads pulled, 71 unique after dedup
+  across ~38 distinct brands (up from 14 unique / 3 brands in the first pass). Combined cost across
+  both passes: ~$0.17.
+- **Found 2 more real direct sea-moss competitors the narrow pass missed entirely — headline
+  finding revised from 1 to 3 confirmed direct competitors:**
+  - **Infinite Age** (infiniteage.com) — sells "Sea Moss Advanced" (Sea Moss + Bladderwrack +
+    Burdock Root, matching one of the widened search terms directly). Runs a genuinely different
+    playbook than True Sea Moss: **subscription-first pricing as the hook itself** ("$44 bottle,
+    $19 today... locked in for life, every month") — real, live proof a competitor is already
+    selling subscribe-and-save in this exact category, directly relevant since this project's own
+    `access-checklist.md`/`kpi-targets.md` already flagged Rocka Moss has **zero** selling-plan
+    infrastructure as an open lever. Also runs a **heritage/ancestral-loss storytelling hook**
+    ("Somewhere between Africa and the pharmacy waiting room, we lost something that was keeping
+    us alive... 98% of us are born healthy...") and a doctor/nurse-testimonial angle ("Doctor said
+    no more meds after THIS"). Caution: leans on implied medical-outcome claims more directly than
+    True Sea Moss — study the subscription mechanic and storytelling structure, not the claims
+    language.
+  - **Aztlan Herbal Remedies** (aztlanherbalremedies.com) — sells "Wildcrafted Irish [Sea] Moss"
+    directly, framed as a colon-detox/cleanse product, 234 days running. Confirms sea-moss
+    competitors span a spectrum from superfood-smoothie (True Sea Moss) to wellness-subscription
+    (Infinite Age) to herbal-cleanse (Aztlan) positioning — Rocka Moss's flavored-jar format sits
+    closest to True Sea Moss's end of that spectrum.
+- **New cross-brand ad-format pattern, not sea-moss-specific but worth capturing:** a "personal
+  confessional" hook recurs across several unrelated wellness brands in the widened pull (Alevia,
+  American Health Support Community, Rosabella, Roots of Wellness) — long first-person narratives
+  about someone else (a spouse, neighbor, sibling) open the ad with zero product mention, building
+  a relatable crisis before the reveal. Distinct from both True Sea Moss's benefit-list and
+  Infinite Age's heritage-narrative — added to `competitor-research.md` as a third angle type,
+  independent confirmation of the "curious ad"/storytelling-before-product-first principle already
+  documented from Frankie Shaw's material.
+- **⚠️ Flagged one real bad-actor example, explicitly as a caution not a technique to study:** an
+  ad for naturalrems.com's sea moss gummies runs through a fabricated "Dr. Alina Marlowe - ENT
+  Specialist" persona page, using an invented medical timeline ("you have three to five years
+  before the same hidden overgrowth could spread") to sell the product. A harder version of the
+  standing no-medical-claims caution — not just aggressive language, a fake-doctor character
+  making a fabricated prognosis. Documented for the record, explicitly marked "don't emulate."
+- **Black Girl Vitamins reconfirms the whitelisting tactic** already found on True Sea Moss (ads
+  run through personal-seeming pages, not just the brand's own) and adds a real demographic/
+  positioning reference for Rocka Moss's own target audience: named medical advisor, explicit
+  "formulated for Black women's specific health needs" messaging, a community/equity angle
+  (healthcare-career scholarships) instead of generic wellness copy. 491 days running — proven,
+  not experimental.
+- **Updated `competitor-research.md`'s ranked table, honest-limitation section, and method section**
+  to reflect both passes; updated `access-checklist.md`'s competitor-research entry and
+  `README.md`'s file description to match. Full raw dataset preserved in the Apify run
+  (`runId: KbwE7fH9wPTzzUEdW`, `datasetId: xOnBIF2hLwHn77xkc`) if a deeper cut of the other ~35
+  adjacent brands not written up is wanted later — didn't write up all 71 ads individually, only
+  the direct competitors plus the brands with real strategic relevance (whitelisting pattern,
+  demographic/tonal fit, or a distinct format worth studying).

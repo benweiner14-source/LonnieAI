@@ -34,11 +34,13 @@ see `ai-ugc-playbook.md`.
   2026-09-23. See `refs/README.md` for the full inventory and a couple of flagged open items
   (a flavor-count mismatch vs. the live Shopify catalog, and a founder-likeness consent question
   still separate from just having the photo on hand).
-- **`competitor-research.md`** — real Meta Ad Library pull (2026-09-24, via Apify): closes step 1
-  of the brief's 6-step pitch. One proven direct sea-moss competitor found (True Sea Moss, running
-  the same ad through 6 different Pages) plus 2 adjacent wellness/Black-owned-brand references —
-  full breakdown, winning-pattern analysis, and a documented honest limitation on how wide the net
-  actually was.
+- **`competitor-research.md`** — real Meta Ad Library pull (2026-09-24, via Apify, run in 2
+  passes — a narrow 3-term pass then a widened 8-term pass per Ben's "widen the search a little
+  bit" ask): closes step 1 of the brief's 6-step pitch. **3 confirmed direct sea-moss competitors**
+  (True Sea Moss — 6-Page whitelisting pattern; Infinite Age — subscription-first + heritage-
+  storytelling hook; Aztlan Herbal Remedies) plus several adjacent wellness/Black-owned-brand
+  references, including a cross-brand "personal confessional" hook pattern worth reusing and one
+  fabricated-doctor-persona ad flagged as a caution, not a technique to copy.
 
 ## The two buckets (from the brief)
 

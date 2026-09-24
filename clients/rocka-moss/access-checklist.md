@@ -117,32 +117,46 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
   conversation with the Rocka Moss co-founders" (plural) about what the ad spend is generating.
   Not something this repo can resolve — Ben's to confirm directly with Christian.
 
-## Competitor research (Meta Ad Library) — done 2026-09-24
+## Competitor research (Meta Ad Library) — done 2026-09-24, widened same day
 - [x] **Pull every sea moss / Black-wellness competitor ad running right now.** Closes step 1 of
   the brief's 6-step pitch. Direct fetch was blocked (403, JS wall) same as prior scraping blocks
   — Ben provided an Apify token (already present in this session's environment), ran
-  `curious_coder/facebook-ads-library-scraper` (Apify's most-used Ad Library actor) against
-  "sea moss," "sea moss gel," "black wellness," active US ads — ~$0.05 total cost, 60 ads pulled,
-  14 unique after dedup. **Full findings, ranked by days-running (a real performance proxy), in
-  `competitor-research.md`.**
-  - **Headline finding:** only one real direct sea-moss competitor surfaced (**True Sea Moss**,
-    trueseamoss.com) — but a strong, proven one: the same core ad running through **6 different
-    Facebook Pages** (a whitelisting/multi-page amplification tactic), longest variant active
-    232 days. Winning pattern: offer-led headline ("50% off + free gift," not a health claim),
-    emoji-bulleted benefit list, plain ingredient-transparency line, usage instructions in the ad
-    copy itself, plain `SHOP_NOW` CTA, a Spanish-language variant. **Flagged a real caution:** its
-    benefit list leans into borderline-medical claims ("lower blood pressure") — study the
-    structure, not the claims language, consistent with this project's standing no-medical-claims
+  `curious_coder/facebook-ads-library-scraper` (Apify's most-used Ad Library actor) in 2 passes:
+  a narrow 3-term pass (~$0.05, 14 unique ads), then a widened 8-term pass per Ben's "widen the
+  search a little bit and run again" ($0.116, 71 unique ads across ~38 brands). Combined ~$0.17.
+  **Full findings, ranked by days-running (a real performance proxy), in `competitor-research.md`.**
+  - **Headline finding (strengthened by the widened pass):** **3 confirmed direct sea-moss
+    competitors**, not just 1 — **True Sea Moss** (trueseamoss.com, the same ad whitelisted
+    through 6 different Facebook Pages, longest variant 232 days, benefit-list structure),
+    **Infinite Age** (infiniteage.com, "Sea Moss Advanced" — Sea Moss + Bladderwrack + Burdock —
+    a **subscription-first** offer ("locked in for life, every month") plus a heritage/
+    storytelling hook, a real head start on the subscribe-and-save lever this checklist already
+    flags Rocka Moss is missing), and **Aztlan Herbal Remedies** (aztlanherbalremedies.com,
+    "Wildcrafted Irish [Sea] Moss," 234 days, a colon-detox/cleanse framing). **Flagged a real
+    caution on all three:** their copy leans into borderline-to-fabricated medical claims
+    (Infinite Age: "no more meds"; one naturalrems.com ad used a fake "ENT Specialist" persona
+    with an invented health timeline) — study the structure (offer/subscription mechanics,
+    storytelling hooks), never the claims language, per this project's standing no-medical-claims
     rule for Rocka Moss.
-  - Two adjacent (non-sea-moss) references also surfaced: **MuscleMax Nutrition**'s "stop taking
-    10 different supplements — just take these 2" consolidation-pain hook (178-520 days running),
-    and **Culture Connection 360**, a Black-owned body-care brand with real Chicago + Atlanta
-    locations (2 of Rocka Moss's 3 target cities) and the longest-running ads in the pull
-    (616-1389 days) — a strong tonal/voice reference even though the product differs.
-  - **Honest limitation, documented in the file:** this found deep data on one real sea-moss
-    competitor plus 2 adjacent references, not "10-15 distinct brands" — a narrower net than the
-    brief's phrasing implies. More keyword variants or specific competitor brand names (once
-    known) would widen it if wanted.
+  - **New cross-brand pattern found in the widened pass:** a "personal confessional" hook —
+    several unrelated wellness brands (Alevia, American Health Support Community, Rosabella,
+    Roots of Wellness) open ads with a first-person story about someone else, no product
+    mentioned until well into the copy. Worth keeping as a third ad-angle type in the
+    psychology-pillar-map toolkit alongside True Sea Moss's benefit-list and Infinite Age's
+    heritage-narrative approaches — independent confirmation of Frankie Shaw's "curious ad" /
+    storytelling-before-product-first principle already in `ai-ugc-playbook.md`.
+  - Adjacent (non-sea-moss) references: **MuscleMax Nutrition**'s "stop taking 10 different
+    supplements — just take these 2" consolidation-pain hook (178-520 days), **Culture Connection
+    360** (Black-owned, real Chicago + Atlanta locations — 2 of Rocka Moss's 3 target cities,
+    616-1389 days), and **Black Girl Vitamins** (491 days, same whitelisting tactic as True Sea
+    Moss, plus a strong demographic-positioning reference: named medical advisor, community/equity
+    angle) — all strong tonal/voice references even though the product category differs.
+  - **Honest limitation, updated in the file:** the widened pass closed most of the gap — 3
+    confirmed direct competitors instead of 1, ~38 brands surveyed instead of 3. What remains true:
+    sea moss itself still appears to be a genuinely under-advertised niche on Meta relative to
+    general wellness supplements — 3 direct competitors is a real, not just under-searched, number.
+    Re-running the same widened search periodically (ads start/stop constantly) is the way to keep
+    this current, not further keyword-widening within the category.
   - No scraped video/image files stored in the repo — every entry links to its real, public Meta
     Ad Library permalink instead, same reproduction-caution posture used elsewhere in this
     project.
