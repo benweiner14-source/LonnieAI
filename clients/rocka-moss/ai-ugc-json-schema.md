@@ -1,4 +1,4 @@
-# Rocka Moss AI UGC — JSON Prompting Schema (2026-09-24)
+# Rocka Moss AI UGC — JSON Prompting Schema (2026-09-24, v2)
 
 Ben referenced his own structured prompting approach (named, not detailed, in
 `docs/frankie-shaw-ai-ugc-method.md`'s Sources as "JSON prompting") and asked whether it was worth
@@ -14,11 +14,44 @@ for the two-image label-fix technique). The value is having one canonical, versi
 concept/shot that encodes everything this project has already learned the hard way, so the next
 iteration edits a field instead of re-writing prose.
 
+## v2 update — real worked example found and folded in (2026-09-24)
+
+Ben linked a tweet (`x.com/noneugc/status/2102447818786930793`, pulled via Apify's
+`apidojo/tweet-scraper` — same session-only token pattern already used for Instagram/Ad-Library
+research elsewhere in this project, since plain `WebFetch` can't reach X per this project's own
+standing finding). It's a real, much more granular JSON-prompting example for GPT Image 2.5 — a
+"reference reconstruction with product replacement" prompt (swap one product into an otherwise
+identical reference photo). **Not saved verbatim into this repo** — it's someone else's specific
+creative example (a different brand's whitening-strips ad), same reproduction-caution discipline
+already applied to the Frankie Shaw/Tay YouTube material and the ad-reverse-engineering caution in
+`docs/tay-ai-ugc-dropship-method.md`. Folded the *structure* into our own schema below instead.
+
+**Four real upgrades this example had that v1 of this schema didn't**, now added:
+
+1. **`negative_prompt`** — an explicit array of things to actively exclude (wrong product,
+   anatomy errors, CGI/3D-render/illustration, heavy beauty filter, studio photography, visible
+   UI/status-bar/screenshot chrome). v1 only had a `brand_safety` list, which covers logos/place
+   names/claims but not quality/anatomy/style negatives — a real gap, since this project has hit
+   exactly these failure modes before (warped hands on the SDXL/LoRA pipeline test, "digital
+   render" look on Concept 1 v1/v2) without ever writing them down as a reusable checklist.
+2. **`reference_fidelity.preserve_exactly` / `change_only`** — an explicit diff structure. This
+   maps almost exactly onto our own two-pass label-fix technique (Concept 1 v3→v4: keep the scene
+   identical, change only the label) — now a structured field instead of ad hoc prose each time.
+3. **A richer `canvas` object** (orientation, aspect_ratio, crop, subject_alignment,
+   camera_position, camera_height) replacing v1's flat `framing` string — more precise handoff to
+   whoever (or whichever future session) executes the shot.
+4. **`final_generation_instruction`** — a flattened prose paragraph at the very end that restates
+   the structured fields as one coherent instruction. Real lesson: even a fully "JSON-prompted"
+   example still ends in a compiled natural-language paragraph — the JSON is organized notes, not
+   a literal replacement for the instruction actually sent to the model. Kept as a required
+   closing field below, not dropped in favor of pure structure.
+
 ## Schema
 
 ```json
 {
   "concept_id": "string — matches the heading in ai-ugc-concepts.md, e.g. concept1-morning-ritual",
+  "prompt_type": "candid_ugc_still | reference_reconstruction_with_product_replacement | character_sheet_edit",
   "character": {
     "ref_id": "RM-Char-01",
     "locked_images": {
@@ -38,7 +71,17 @@ iteration edits a field instead of re-writing prose.
     "format": "mirror-selfie | propped-phone-counter | in-car-confessional | candid-friend-taken",
     "camera_device": "how the phone is physically implied — e.g. 'propped standing against a container on the kitchen counter, used as a makeshift stand/tripod' — must be a concrete physical device, never a bare 'not third-person' negation (negations don't reliably steer composition, proven on the iPhone Selfie POV fixes)",
     "setting_description": "visual description only — NEVER a literal place name (Columbia/Charlotte/etc.) in prompt text; place names render as literal on-screen signage, proven repeatedly on Zion/Kazumi/Selena and again on Kazumi's penthouse-party vignette ('MIAMI' leak)",
-    "framing": "wide/off-center vs. close — a propped phone sits further back than a held one; note explicitly to avoid defaulting to a tight posed portrait crop"
+    "canvas": {
+      "orientation": "portrait",
+      "aspect_ratio": "9:16",
+      "crop": "e.g. 'from slightly above the head to the lower torso' — precise, not just 'close' or 'wide'",
+      "subject_alignment": "e.g. 'slightly off-center' — off-center by default, per the standing camera-variety lesson from the CGI-avatar packs",
+      "camera_position_and_height": "e.g. 'held at arm's length, approximately eye level' or 'propped at counter height, slightly below eye level'"
+    }
+  },
+  "reference_fidelity": {
+    "preserve_exactly": ["array — everything that must NOT change from the base/chained reference image: pose, expression, hair, outfit, room, lighting, crop, etc."],
+    "change_only": ["array — the one or two things this specific pass is allowed to change, e.g. 'the product in her hand'"]
   },
   "realism_constraints": [
     "believable practical light only (window/room light), no studio/ring-light polish",
@@ -46,6 +89,15 @@ iteration edits a field instead of re-writing prose.
     "ordinary/slightly-worn real-world surfaces, not styled/staged",
     "explicit anti-'digital render'/anti-AI-generated-look wording",
     "mid-motion or not-looking-at-camera body language, not a held pose — a posed portrait is the most common failure mode without this"
+  ],
+  "negative_prompt": [
+    "wrong/generic product",
+    "extra fingers, fused fingers, warped hand",
+    "CGI, 3D render, illustration, anime (unless the concept explicitly wants the CGI-avatar look, in which case invert this)",
+    "heavy beauty filter, studio photography, plastic skin",
+    "visible phone, phone screen, second phone in frame",
+    "watermark, visible UI, status bar, screenshot chrome",
+    "real place-name signage, real third-party logos"
   ],
   "beats": [
     {"beat": "relatable_scenario", "action": "string, no product visible yet"},
@@ -65,6 +117,7 @@ iteration edits a field instead of re-writing prose.
     "generation_path": "single-image edit via partner_generate (medias role=image, base=locked character image) — use ONLY when no second product-label reference is needed in the same call; OR two-image submit_workflow via OpenAIGPTImageNodeV2 (image_1=scene base, image_2=product ref) when both an already-working scene AND an accurate label are needed in one pass — see concept-tests/README.md v4 for why this second path exists",
     "seed_variants": "generate 2-3, pick on identity/realism/label-accuracy, not first-result"
   },
+  "final_generation_instruction": "one compiled prose paragraph restating the fields above as the actual instruction text sent alongside the reference image(s) — the JSON is planning structure, this is what the model actually reads",
   "status": "draft | rendered | ben-reviewed | locked"
 }
 ```
@@ -79,6 +132,15 @@ iteration edits a field instead of re-writing prose.
   Concept 1 was this field going from *absent* → *meta negation ("not third-person")* → *a real,
   named physical device (propped-phone-on-counter)* before it worked. Any new concept/shot should
   fill this field first, concretely, before writing anything else.
+- `reference_fidelity` (new in v2) formalizes what Concept 1's v3→v4 pass already did ad hoc:
+  keep everything about a working scene fixed, touch only the one broken thing (the label). Fill
+  this in explicitly on any edit-of-an-existing-render pass, not just the label-fix case — it's
+  the general pattern for "the scene works, fix one detail without disturbing it."
+- `negative_prompt` (new in v2) is deliberately separate from `brand_safety` — brand safety covers
+  real-world leakage (logos, place names, claims), negative_prompt covers rendering-quality/anatomy
+  failures this project has hit before but never written down as a standing checklist (warped
+  hands on the SDXL/LoRA pipeline test; "digital render" look on Concept 1 v1/v2; the visible
+  phone/second-phone bugs from the iPhone Selfie style's v1-v3 fixes).
 - `product.requires_two_image_label_pass` exists because `partner_generate`'s simplified interface
   only accepts one `image` role for GPT Image 2.5 edits — a second product-reference image needs
   the hand-built `submit_workflow` + `OpenAIGPTImageNodeV2` route (confirmed via `get_node`), not
@@ -87,12 +149,17 @@ iteration edits a field instead of re-writing prose.
   `docs/frankie-shaw-ai-ugc-method.md`'s V4 Realism Laws — kept as a flat checklist here so it's
   easy to confirm nothing got dropped between iterations (v2's uncanny-valley regression happened
   partly from not having this as an explicit checked list).
+- `final_generation_instruction` (new in v2) is the field that actually gets sent to the model —
+  every other field exists to make writing this one paragraph disciplined and complete, not to
+  replace it. Don't skip straight from the structured fields to a tool call without writing this
+  out first; that's exactly the "re-derived prose each round" problem this schema exists to fix.
 
 ## Concept 1 — "Morning Ritual" as JSON
 
 ```json
 {
   "concept_id": "concept1-morning-ritual",
+  "prompt_type": "candid_ugc_still",
   "character": {
     "ref_id": "RM-Char-01",
     "locked_images": {
@@ -112,7 +179,17 @@ iteration edits a field instead of re-writing prose.
     "format": "propped-phone-counter",
     "camera_device": "phone propped standing against a container on the kitchen counter, used as a makeshift stand/tripod — phone itself never visible in frame, it IS the camera taking this shot",
     "setting_description": "a modest, lived-in apartment kitchen, morning window light only, real everyday clutter (dishes in the sink, a coffee maker, a knife block) — no studio staging",
-    "framing": "wide/off-center, further back than a held selfie (a propped phone sits at a distance) — she is caught mid-motion reaching toward the jar, not already holding it up posed"
+    "canvas": {
+      "orientation": "portrait",
+      "aspect_ratio": "9:16",
+      "crop": "wide enough to show most of the kitchen counter and her upper body — wider than a held-selfie crop",
+      "subject_alignment": "off-center, reaching toward the jar rather than centered facing camera",
+      "camera_position_and_height": "propped at counter height, slightly below eye level, further back than an arm's-length selfie"
+    }
+  },
+  "reference_fidelity": {
+    "preserve_exactly": ["the kitchen scene, pose, camera angle, and off-center framing confirmed in v3 (concept-tests/concept1_product-intro_v3_propped-phone.png)"],
+    "change_only": ["the jar's label — replace the illegible/hallucinated v3 label with the accurate one from rockamoss_strawberry_jar_bench.jpg"]
   },
   "realism_constraints": [
     "believable practical morning window light only, no studio/ring-light polish",
@@ -120,6 +197,14 @@ iteration edits a field instead of re-writing prose.
     "ordinary lived-in kitchen surfaces, not styled",
     "explicit anti-digital-render / anti-AI-look wording",
     "mid-motion, not looking at camera, no posed smile"
+  ],
+  "negative_prompt": [
+    "posed professional portrait",
+    "visible phone or phone screen in frame",
+    "illegible or hallucinated product label text",
+    "embossed jar glass",
+    "studio lighting",
+    "real place-name signage"
   ],
   "beats": [
     {"beat": "relatable_scenario", "action": "rushed weekday morning, coffee already going, hair not done yet, no product visible"},
@@ -139,6 +224,7 @@ iteration edits a field instead of re-writing prose.
     "generation_path": "two-pass: (1) partner_generate single-image edit off rm-char-01_full-body-mirror.png or _three-quarter.png for the propped-phone kitchen scene, (2) submit_workflow OpenAIGPTImageNodeV2 two-image pass (image_1=pass-1 output, image_2=rockamoss_strawberry_jar_bench.jpg) to fix the label",
     "seed_variants": "2-3"
   },
+  "final_generation_instruction": "Recreate the confirmed v3 kitchen scene exactly — same off-center framing, same mid-motion reach toward the jar, same morning window light, same lived-in counter clutter, same face/hair/skin matching RM-Char-01's locked reference. Change only the jar's label: replace the illegible text with an accurate reproduction of the Rocka Moss Strawberry Shortcake label from the second reference image (logo, wordmark, teal tagline bar, flavor tag, mineral claim, net weight, gold lid), on a completely smooth unmarked glass jar — do not copy the second reference photo's own embossed glass wording or background. No visible phone anywhere in frame. No real place-name signage.",
   "status": "rendered — v4 sent to Ben for final judgment, not yet locked"
 }
 ```
@@ -148,6 +234,7 @@ iteration edits a field instead of re-writing prose.
 ```json
 {
   "concept_id": "concept2-in-car-confessional",
+  "prompt_type": "candid_ugc_still",
   "character": {
     "ref_id": "RM-Char-01",
     "locked_images": {
@@ -167,7 +254,17 @@ iteration edits a field instead of re-writing prose.
     "format": "in-car-confessional",
     "camera_device": "phone propped on the dashboard or held loosely at arm's length — not a third-person shot of her; if held, arm/hand fills part of the foreground per the iPhone-selfie proximity-blur technique to keep the phone itself out of frame",
     "setting_description": "parked car, engine off, natural daylight through the windshield/window — no visible street signage or place names through the windows",
-    "framing": "casual, slightly off-angle dashboard-propped or handheld framing — not a centered composed portrait"
+    "canvas": {
+      "orientation": "portrait",
+      "aspect_ratio": "9:16",
+      "crop": "casual dashboard-propped or handheld framing, not a centered composed portrait",
+      "subject_alignment": "slightly off-angle, consistent with a propped or handheld phone rather than a tripod",
+      "camera_position_and_height": "dashboard height if propped, or arm's length if held — either way, roughly eye level from the driver's seat"
+    }
+  },
+  "reference_fidelity": {
+    "preserve_exactly": ["RM-Char-01's face/hair/skin from the locked reference"],
+    "change_only": ["setting (car interior instead of kitchen), outfit/context appropriate to being out for an errand"]
   },
   "realism_constraints": [
     "believable practical daylight only, no studio polish",
@@ -175,6 +272,14 @@ iteration edits a field instead of re-writing prose.
     "ordinary car interior, not staged/detailed",
     "explicit anti-digital-render / anti-AI-look wording",
     "unscripted 'telling a friend something' body language and pacing, not an ad-read pose"
+  ],
+  "negative_prompt": [
+    "posed professional portrait",
+    "visible phone or phone screen in frame",
+    "illegible or hallucinated product label text",
+    "embossed jar glass",
+    "studio lighting",
+    "real street signage or place names visible through windows"
   ],
   "beats": [
     {"beat": "relatable_scenario", "action": "sitting in a parked car about to head into work/an errand, phone propped on the dash or held loosely"},
@@ -194,6 +299,7 @@ iteration edits a field instead of re-writing prose.
     "generation_path": "same two-pass technique as Concept 1 once validated: single-image edit for scene/pose/realism, then submit_workflow two-image pass to lock the label",
     "seed_variants": "2-3"
   },
+  "final_generation_instruction": "A real, candid iPhone photo of RM-Char-01 sitting in a parked car, engine off, natural daylight through the window, phone propped on the dashboard or held at arm's length with her arm/hand naturally blocking the phone itself from view. Casual, unscripted body language — not posed, not looking directly composed for camera. Match her face/hair/skin exactly to the locked reference. Ordinary car interior, no staging. Once the scene is confirmed, a second pass replaces only the product label with an accurate reproduction from the Rocka Moss Strawberry Shortcake reference image, on a smooth unmarked jar. No visible phone. No real street signage or place names.",
   "status": "draft — not yet generated, waiting on Concept 1's v4 to be confirmed first"
 }
 ```
@@ -204,4 +310,6 @@ Nothing generates differently because this schema exists — it's a planning/han
 new technique. Use it going forward: when Ben's feedback changes a field (a camera device, a
 realism constraint, a beat), edit the JSON here first, then translate that diff into the actual
 tool call — cheaper to review and version than re-deriving prose each round, as happened across
-`concept-tests/README.md`'s v1-v4.
+`concept-tests/README.md`'s v1-v4. The `reference_fidelity` and `negative_prompt` fields added in
+v2 are worth applying retroactively the next time either concept iterates, even though v1's fields
+already covered the substance informally.
