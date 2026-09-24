@@ -1255,3 +1255,39 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 - Updated `.claude/skills/README.md` (full install/exclude reasoning for both repos) and
   `clients/rocka-moss/access-checklist.md` (2 of 3 skill gaps now closed, the third's blocker
   explained).
+
+## Ran the real Meta Ad Library competitor pull via Apify (2026-09-24)
+- **Ben said "apify it."** Found the Apify token already present in this session's environment
+  (no need to ask him to re-paste it). Searched Apify's actor store, picked
+  `curious_coder/facebook-ads-library-scraper` (by far the most-used/trusted option: 19.5M runs,
+  42K users, 4.77★/110 reviews), fetched its real input schema via the API (didn't guess field
+  names), ran it against 3 keyword searches (`sea moss`, `sea moss gel`, `black wellness`, active
+  US ads) — ~$0.05 total, 60 ads pulled, 14 unique after dedup.
+- **Real finding, not a guess:** only one direct sea-moss competitor surfaced in the data —
+  **True Sea Moss** (trueseamoss.com) — but a strong, clearly proven one: the exact same core ad
+  is running through **6 different Facebook Pages** styled as independent creator/influencer
+  accounts, not just the brand's own page — a real whitelisting/multi-page amplification tactic,
+  directly relevant to Rocka Moss's own planned influencer-seeding workstream. Longest-running
+  variant: 232 days (a real performance signal — bad ads get killed fast on Meta). Broke down its
+  winning pattern (offer-led headline, emoji-bulleted benefit list, plain ingredient-transparency
+  line, usage instructions inside the copy, plain `SHOP_NOW` CTA, a Spanish variant) and flagged a
+  real caution: its claims lean medical ("lower blood pressure") in a way this project's own
+  standing no-medical-claims rule for Rocka Moss says not to copy — study the structure, not the
+  claims language.
+- **Two adjacent, non-sea-moss references also surfaced and worth keeping:** MuscleMax
+  Nutrition's "stop taking 10 different supplements — just take these 2" consolidation-pain hook
+  (178-520 days running), and Culture Connection 360, a Black-owned body-care brand with real
+  physical locations in Chicago **and** Atlanta — 2 of Rocka Moss's 3 actual expansion cities —
+  and the longest-running ads in the entire pull (616-1389 days), a genuine tonal/voice reference
+  even though the product category differs.
+- **Didn't store any scraped video/image files in the repo** — same reproduction-caution posture
+  already standing in this project (theme code, YouTube transcripts, the ad-reverse-engineering
+  caution) — every competitor ad is cited by its real, public Meta Ad Library permalink instead,
+  so the actual creative can be viewed directly without copying it in.
+- **Flagged an honest limitation rather than overstating coverage:** this found deep, real data on
+  one direct sea-moss competitor plus 2 adjacent references — not "10-15 distinct winning brands"
+  the brief's phrasing implies. A narrower net than hoped; more keyword variants or specific
+  competitor brand names (once known) would widen it.
+- Saved as `clients/rocka-moss/competitor-research.md`, cross-referenced from `README.md`, closed
+  out in `access-checklist.md` (step 1 of the brief's 6-step pitch, done) — feeds directly into
+  the psychology-pillar-map technique just added to `ai-ugc-playbook.md`.

@@ -117,26 +117,35 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
   conversation with the Rocka Moss co-founders" (plural) about what the ad spend is generating.
   Not something this repo can resolve — Ben's to confirm directly with Christian.
 
-## Competitor research (Meta Ad Library) — flagged as a real gap, 2026-09-24
-- [ ] **Pull every sea moss / Black-wellness competitor ad running right now.** This was missed —
-  it's literally **step 1 of the 6-step pitch** in `PROJECT_BRIEF.md`'s "Key Messaging" section
-  ("Pull every sea moss competitor ad running right now on Instagram/Facebook — see what's
-  working before spending a dollar") and its own dedicated Phase 3 ("Competitor Research"), but
-  never made it onto this working checklist until Ben caught the gap directly. Needs to happen
-  before writing any ad copy or building the creative reference folder the brief's Phase 2 ad
-  tool calls for.
-  - **Tried a direct pull (2026-09-24): blocked.** `facebook.com/ads/library` returns a 403 to
-    plain fetching — same JS-rendering/auth-wall pattern this project has hit repeatedly on
-    Instagram/Twitter/TikTok/Kick during Selena's reference-photo sourcing. Not pushed further
-    (same standing posture as those earlier blocks).
-  - **Two ways forward, per the brief's own two paths:**
-    1. **Manual (reliable, no new access needed):** Ben searches Meta Ad Library himself
-       ("sea moss," "black wellness," known competitor brand names), screenshots 10-15 winning
-       ads, uploads them the same way as the GTA Loading-Screen key art / Selena's refs.
-    2. **Apify, if automation is wanted:** Ben has supplied a session-only Apify token before for
-       Instagram scraping; Apify has actors built for Meta Ad Library specifically. A fresh token
-       would let this get pulled directly instead of manual screenshotting.
-  - **Not yet started either way** — Ben's call on which path.
+## Competitor research (Meta Ad Library) — done 2026-09-24
+- [x] **Pull every sea moss / Black-wellness competitor ad running right now.** Closes step 1 of
+  the brief's 6-step pitch. Direct fetch was blocked (403, JS wall) same as prior scraping blocks
+  — Ben provided an Apify token (already present in this session's environment), ran
+  `curious_coder/facebook-ads-library-scraper` (Apify's most-used Ad Library actor) against
+  "sea moss," "sea moss gel," "black wellness," active US ads — ~$0.05 total cost, 60 ads pulled,
+  14 unique after dedup. **Full findings, ranked by days-running (a real performance proxy), in
+  `competitor-research.md`.**
+  - **Headline finding:** only one real direct sea-moss competitor surfaced (**True Sea Moss**,
+    trueseamoss.com) — but a strong, proven one: the same core ad running through **6 different
+    Facebook Pages** (a whitelisting/multi-page amplification tactic), longest variant active
+    232 days. Winning pattern: offer-led headline ("50% off + free gift," not a health claim),
+    emoji-bulleted benefit list, plain ingredient-transparency line, usage instructions in the ad
+    copy itself, plain `SHOP_NOW` CTA, a Spanish-language variant. **Flagged a real caution:** its
+    benefit list leans into borderline-medical claims ("lower blood pressure") — study the
+    structure, not the claims language, consistent with this project's standing no-medical-claims
+    rule for Rocka Moss.
+  - Two adjacent (non-sea-moss) references also surfaced: **MuscleMax Nutrition**'s "stop taking
+    10 different supplements — just take these 2" consolidation-pain hook (178-520 days running),
+    and **Culture Connection 360**, a Black-owned body-care brand with real Chicago + Atlanta
+    locations (2 of Rocka Moss's 3 target cities) and the longest-running ads in the pull
+    (616-1389 days) — a strong tonal/voice reference even though the product differs.
+  - **Honest limitation, documented in the file:** this found deep data on one real sea-moss
+    competitor plus 2 adjacent references, not "10-15 distinct brands" — a narrower net than the
+    brief's phrasing implies. More keyword variants or specific competitor brand names (once
+    known) would widen it if wanted.
+  - No scraped video/image files stored in the repo — every entry links to its real, public Meta
+    Ad Library permalink instead, same reproduction-caution posture used elsewhere in this
+    project.
 
 ## Skills the brief names — 2 of 3 gaps closed 2026-09-24
 Only `coreyhaines31/marketingskills` (21 skills) had been installed as of 2026-09-23. Three other
