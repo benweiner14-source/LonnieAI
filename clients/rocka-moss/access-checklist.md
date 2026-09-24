@@ -122,10 +122,11 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
   purchase attribution works via the browser pixel at minimum, but CAPI specifically still unknown).
 - [ ] **Domain verification status** — Business Settings → Brand Safety → Domains — confirms
   rockamoss.com is verified, needed for iOS14.5+ event prioritization once campaigns run.
-- [ ] **Rocka Moss Instagram — is it connected to this Business Manager, and does Ben have
-  co-manager access?** Business Settings → Accounts → Instagram Accounts. Needed for organic
-  posting, ad placements running "as" the IG account, and confirming the account itself (handle,
-  follower count) since none of that has been pulled yet.
+- [x] **Rocka Moss Instagram — connected and confirmed 2026-09-24.** `@rockamoss` (ID
+  `1784168160984053`), owned directly by the Rocka Moss business, not a personal account — same
+  clean ownership pattern as the Facebook Page. Ben has full access. 4 people total have access,
+  including a second full-access identity labeled "IG Rocka Moss" (likely the account's own
+  native login/admin, not a separate person — not yet confirmed).
 - [ ] **Who is "Darius Boyd"?** Found 2026-09-24 with full access to the Rocka Moss Facebook Page
   — may directly answer the brief's still-open "who is the other Rocka Moss co-founder" question
   (see the dedicated section below). Not yet confirmed either way.
