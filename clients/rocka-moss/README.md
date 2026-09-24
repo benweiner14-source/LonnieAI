@@ -41,6 +41,13 @@ see `ai-ugc-playbook.md`.
   storytelling hook; Aztlan Herbal Remedies) plus several adjacent wellness/Black-owned-brand
   references, including a cross-brand "personal confessional" hook pattern worth reusing and one
   fabricated-doctor-persona ad flagged as a caution, not a technique to copy.
+- **`target-demo.md`** — real Shopify customer-geography analysis (2026-09-24): two independent
+  data sources (real purchaser addresses + 90-day session geography) both show the customer base
+  is Southeast-concentrated (South Carolina/Columbia metro + North Carolina/Charlotte metro
+  dominant, Georgia/Atlanta secondary), not evenly national. Includes a data-quality catch
+  (excluding bot/data-center traffic misread as real sessions) and a soft, flagged-as-unconfirmed
+  hypothesis about the customer base's likely demographic skew. Built specifically to ground the
+  AI UGC character sheet(s) — see Status below.
 
 ## The two buckets (from the brief)
 
@@ -86,3 +93,11 @@ see `ai-ugc-playbook.md`.
   `docs/frankie-shaw-ai-ugc-method.md` and `docs/tay-ai-ugc-dropship-method.md` → draft concrete ad
   concepts → generate via Seedance 2.0 (`docs/seedance-comfy-handoff.md`). No consent question
   remains for this path — it never touches Christian's or anyone real's likeness.
+- **Step 1 of that pipeline is done: real target-demo data pulled and written up in
+  `target-demo.md` (2026-09-24).** Two independent Shopify data sources (real purchaser addresses
+  + 90-day session geography) both show the customer base is concentrated in South Carolina
+  (Columbia metro) and North Carolina (Charlotte metro), with Georgia (Atlanta-area) secondary —
+  not evenly national. One hypothesis flagged for Ben/Christian to confirm before locking a
+  character's specific look (a likely skew toward Black women customers, inferred cautiously from
+  first-name patterns, cross-checked against `competitor-research.md`'s independent findings).
+  Next: draft 1-2 concrete AI UGC character/ad concepts grounded in this profile.

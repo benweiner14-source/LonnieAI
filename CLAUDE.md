@@ -1471,3 +1471,54 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 - **Next concrete step, not yet started:** pull real Shopify customer/target-demo signal (the
   Shopify MCP's `list-customers`/`run-analytics-query` tools are already connected in this
   session) to ground the character sheet(s) in actual data before generating anything.
+
+## Pulled real Shopify target-demo data — a genuinely major, previously-unknown finding (2026-09-24)
+- **Ben offered to manually pull session-by-location data; checked first whether the Shopify MCP
+  already had it — it did, no need to make him do it by hand.** `list-customers` doesn't return
+  address fields, so pulled real purchaser addresses via a direct GraphQL query against
+  `Customer.defaultAddress` (validated first via `validate_graphql_codeblocks`, per the Shopify
+  MCP's own required workflow) across ~86 of the most recent customer records, and session
+  geography via `run-analytics-query` `GROUP BY session_region`/`session_city` (90 days, 743
+  sessions).
+- **Headline finding, confirmed by two independent sources: Rocka Moss's real customer base is
+  Southeast-concentrated, not evenly national.** Real purchaser addresses: **58% South Carolina**
+  (21/36 addresses with ≥1 order), concentrated in the **Columbia metro area** (Columbia itself
+  plus Irmo, Lexington, Hopkins, Warrenville) with a secondary Charleston-area cluster
+  (Summerville). Order-weighted (repeat customers counted per order): South Carolina still 57%.
+  Independently, session geography lands on the same place: **South Carolina is the #1 region by
+  sessions (157), North Carolina #2 (108)** — and by city, **Columbia is #1 (78 sessions)**,
+  Charlotte #3 (60), Atlanta #7 (18), with the same smaller cities (Irmo, Summerville,
+  Simpsonville, Lexington, Savannah, Hopkins) showing up in both datasets independently. This is a
+  materially different picture from treating Rocka Moss as targeting broadly across the brief's
+  named expansion cities (Chicago, Atlanta, +1) — those read as aspirational future targets, while
+  the **real, current customer geography is Carolinas-first**, something no prior doc in this
+  project had surfaced.
+- **Caught a real data-quality issue while validating the session numbers, not after the fact:**
+  several top "session" cities are actually well-known cloud/data-center hub towns — Council
+  Bluffs, Iowa (a Google data center; 42 of the region's 52 Iowa sessions), Boardman + Prineville,
+  Oregon (Google/Amazon/Meta data centers; 36 of 40 Oregon sessions), and Ashburn, Virginia (the
+  largest US data-center corridor; 10 of 36 Virginia sessions) — almost certainly bot/crawler/VPN
+  traffic, not real shoppers. Excluded from the "clean" recalculation (South Carolina still leads
+  at ~32% of non-datacenter-tainted sessions, North Carolina ~22%). Flagged explicitly as a lesson
+  for any future traffic analysis on this store — the earlier `kpi-targets.md` session pull never
+  caught this since it only looked at country-level data, not city-level.
+- **A softer, explicitly-flagged-as-unconfirmed signal:** scanning first names in the same customer
+  sample suggested a majority-female customer base with a real concentration of names commonly
+  associated with Black American communities. Presented this carefully as an inference from names
+  only, not confirmed demographic data (Shopify doesn't capture age/gender/ethnicity directly, and
+  name-based inference is unreliable on its own) — but flagged it as *directionally consistent*
+  with independent evidence already in `competitor-research.md` (Black Girl Vitamins and Culture
+  Connection 360 flagged as strong positioning/tonal references, and Culture Connection 360's real
+  Atlanta location ties back to the Canton, GA purchasers found in this same pull). Recommended
+  confirming with Ben/Christian before locking a specific character's look, not treating it as
+  settled.
+- **Built `clients/rocka-moss/target-demo.md`** — the full sourced writeup, method notes, and a
+  "What this means for the AI UGC character sheet" section (ground settings in Southeast/Columbia-
+  or Charlotte-coded everyday environments, relatable-not-aspirational casting per Frankie Shaw's
+  own principle, feature Strawberry Shortcake first). **Only aggregate figures saved — no customer
+  names, emails, or exact addresses went into the repo**, consistent with this project's standing
+  PII discipline. Cross-referenced from `README.md` (new file entry + Status update marking step 1
+  of Ben's stated pipeline as done) and `ai-ugc-playbook.md`'s Next Steps (step 1 checked off,
+  step 2 updated to reference the new profile).
+- **Next up:** draft 1-2 concrete AI UGC character/ad concepts grounded in this profile, before
+  generating and locking an actual character sheet.
