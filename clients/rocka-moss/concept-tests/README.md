@@ -67,7 +67,34 @@ framing (off-center, slightly cut off) rather than more lighting/skin-texture la
 `docs/tay-ai-ugc-dropship-method.md` and this project's own iPhone-selfie work both point at
 framing/POV as the strongest authenticity signal, stronger than texture-level prompt tweaks alone.
 
+## v3 — the real root cause: no camera device implied, so it read as a posed portrait (2026-09-24)
+
+Ben's follow-up on v2: **"it just feels like it's posed... no one is sitting in their kitchen
+[taking] a highly professional photo posed holding a jar."** His fix, stated directly: **"I
+whipped out my phone, I'm taking a selfie, or I'm standing my iPhone up... using that as a stand
+to take a selfie."** The real diagnosis: v1/v2 never implied any camera device at all — no phone
+in her hand, no propped-phone framing cue — so the model defaulted to composing it like a
+professional portrait shot by someone else, the exact same root-cause pattern this project's own
+`skills/iphone-selfie-style/SKILL.md` already solved for the CGI-avatar work (genre-anchoring
+beats meta camera-position instructions). Rebuilt around the **propped-phone-on-the-counter**
+technique Ben specifically named — a real, common amateur-UGC move, distinct from a held-out
+selfie: genre-led as "a real, candid photo captured by her own iPhone, propped up standing against
+a container on the kitchen counter... using it as a makeshift stand/tripod," explicit "phone is
+out of frame, it's the camera taking this shot" instruction, and a wider/further-back framing
+(since a propped phone sits further away than a held one) with a slightly imperfect/tilted angle
+and mid-motion, not-looking-at-camera body language instead of a held pose.
+
+**`concept1_product-intro_v3_propped-phone.png`** — genuine step change. She's caught mid-motion
+reaching toward the jar (sitting on the counter, not yet gripped), looking down/away rather than
+at the camera, no posed smile, wider off-center framing with real kitchen clutter (dishes in the
+sink, knives, coffee maker) — reads as an actual candid propped-phone photo, not a professional
+portrait. One honest trade to flag: this changes the beat from "already holding the product up"
+to "reaching for it," a fair, more candid variant of the same moment, not a beat this project
+invented arbitrarily — matches the "caught mid-motion, not posed" instruction directly. **Sent to
+Ben for judgment, not self-certified.**
+
 ## Next step
 
-Waiting on Ben's read of v2 before calling Concept 1's still locked. The label-text gap from v1 is
-now mostly resolved as a side effect of this fix, not something that needs separate chasing.
+Waiting on Ben's read of v3. If this lands, it's the technique to reuse for Concept 2 and any
+future stills in this pack — propped-phone framing, not held-selfie, whenever the character needs
+both hands free or a wider candid shot.

@@ -1667,3 +1667,31 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   project's own standing finding that POV/framing is the strongest authenticity signal.
 - Saved to `concept-tests/concept1_product-intro_v2_kitchen-realism.png`, updated that folder's
   README with the full before/after reasoning.
+
+## Found the real root cause of the "posed" feel — no implied camera device (2026-09-24)
+- **Ben's follow-up on v2 nailed the actual diagnosis:** "it just feels like it's posed... no one
+  is sitting in their kitchen [taking] a highly professional photo posed holding a jar" — and his
+  own fix, stated directly: "I whipped out my phone, I'm taking a selfie, or I'm standing my
+  iPhone up... using that as a stand to take a selfie." Realized v1/v2 never implied ANY camera
+  device at all (no phone in hand, no propped-phone framing) — so the model defaulted to composing
+  it like a professional portrait shot by someone else. **Same root-cause pattern this project's
+  own `skills/iphone-selfie-style/SKILL.md` already solved the hard way for the CGI-avatar work**
+  (genre-anchoring the photographic genre up front beats meta camera-position instructions after
+  the fact) — recognized and applied that lesson here instead of re-deriving it from scratch.
+- **Rebuilt around the specific technique Ben named: propped-phone-on-the-counter**, distinct from
+  a held-out selfie — genre-led as "a real, candid photo captured by her own iPhone, propped up
+  standing against a container on the kitchen counter... using it as a makeshift stand/tripod,"
+  explicit "phone is out of frame, it's the camera taking this shot" instruction, wider/further-
+  back framing (a propped phone sits further away than a held one), slightly imperfect/tilted
+  angle, and mid-motion not-looking-at-camera body language instead of a held pose.
+- **Real step change in the result:** she's caught mid-motion reaching toward the jar (sitting on
+  the counter, not yet gripped), looking down/away rather than at camera, no posed smile, wider
+  off-center framing with genuine kitchen clutter (dishes in the sink, knives, coffee maker) —
+  reads as an actual candid propped-phone photo, not a professional portrait. One honest trade
+  flagged in the doc: this changes the beat from "already holding the product up" to "reaching for
+  it" — a fair, more candid variant of the same moment, not an arbitrary change, and it directly
+  matches the "caught mid-motion" instruction rather than drifting off-concept.
+- **Not self-certified** — sent to Ben for judgment, same standing discipline as every other test
+  in this repo. Saved to `concept-tests/concept1_product-intro_v3_propped-phone.png`, updated that
+  folder's README with the full diagnosis and fix, flagged this propped-phone technique as the one
+  to reuse for Concept 2 and future stills whenever a wider candid shot or free hands are needed.
