@@ -1,7 +1,28 @@
-# RM-Char-01 — AI UGC Character Reference Candidates (2026-09-24)
+# RM-Char-01 — AI UGC Character Reference Set (2026-09-24)
 
 3 seed variants generated for the synthetic AI UGC character described in `ai-ugc-concepts.md`
-and grounded in `target-demo.md`. **Not yet locked — waiting on Ben's pick.**
+and grounded in `target-demo.md`. **✅ Locked: seed B, Ben's pick (2026-09-24).**
+
+## Extended reference set — face + body + angle
+
+Ben asked whether this would include a character turnaround (different angles, body proportions)
+— a single close-up selfie doesn't establish body type at all, and Concept 1 ("Morning Ritual")
+specifically needs a full-body mirror selfie. Rather than a formal 3D-style orthographic
+turnaround (front/side/back T-pose), used this repo's own proven pattern instead: purpose-tagged
+reference images (face, body, angle), same multi-image role-tagging technique used throughout this
+project. Generated 2 more images as GPT Image 2.5 **edits** of the locked seed B image (`medias`
+role `"image"`, seed B's own output as the base) — this keeps the exact same face/hair/skin tone
+rather than regenerating from scratch:
+
+- `rm-char-01_full-body-mirror.png` — full-body mirror selfie, bedroom setting. **Doubles as the
+  actual base shot for Concept 1** ("Morning Ritual"), not just a body reference — same character,
+  phone correctly shows its back (not the screen) in the reflection per the established
+  mirror-selfie recipe.
+- `rm-char-01_three-quarter.png` — three-quarter angle, medium-full shot (knees up), kitchen
+  setting, different pose/angle for general body-proportion consistency.
+
+Both checked directly for identity consistency against seed B (same face, hair, skin tone) and for
+brand-safety leaks (none found — no visible text, logos, or brand names in either background).
 
 ## Recipe
 
@@ -33,7 +54,8 @@ realism law already documented in `docs/frankie-shaw-ai-ugc-method.md`.
 
 ## Next step
 
-**Ben picks one** (or asks for another round with different specifics — hair style, outfit, exact
-setting) to lock as the actual `RM-Char-01` reference. Once locked, that one image becomes the
-identity reference for both concepts in `ai-ugc-concepts.md` going forward — same image reused
-across every future generation for this character, not regenerated per scene.
+`rm-char-01_seed-b.png` is the locked identity reference. Combined with the two extension images
+above, that's face + full-body + three-quarter angle — enough to generate Concept 1 and Concept 2
+consistently. Next: validate Concept 1 as a still (it's effectively already shot — the full-body
+mirror image above just needs the Rocka Moss product added via the same multi-image role-tagging
+technique), then animate via Seedance/Genjutsu.

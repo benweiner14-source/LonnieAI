@@ -231,6 +231,40 @@ actual CAC/ROAS against these targets without manual dashboard-reading.
 - ~~Who is the other Rocka Moss co-founder~~ — **resolved 2026-09-24: JaVon.** See
   `access-checklist.md`.
 
+## Does the "$500-1,000/month" figure Ben told Christian still hold up? (2026-09-24)
+
+**Yes — it holds up, and now with real data behind it instead of a guess.** Ben had told
+Christian this was the ad-spend commitment level needed to make the engagement worthwhile.
+Checked it against the real confirmed CAC range from the historical campaign data above (not the
+aspirational $9-11 target, which was never actually hit):
+
+| Monthly spend | Orders/mo at best-case real CAC ($31.72) | Orders/mo at blended real CAC ($41.48) | Orders/mo at worst-case real CAC ($129.31) |
+|---|---|---|---|
+| $500 | 16 | 12 | 4 |
+| $750 | 24 | 18 | 6 |
+| $1,000 | 32 | 24 | 8 |
+
+**Read against the store's own organic baseline** (13-18 orders/month recently, ~34 at the Feb
+2026 peak): **$500-1,000/month at anything close to Rocka-Campaign-2026's real efficiency
+($31.72 CAC) would roughly match-to-double the store's best month ever, purely from paid.**
+Even at the blended CAC across both real purchase campaigns ($41.48), $750-1,000/month lands in
+the same range as the store's best organic month. That's a genuinely meaningful, achievable lift
+— the number isn't undersized.
+
+**One real caveat, not a reason to raise the budget, just a timeline expectation to set with
+Christian:** at $500-1,000/month, weekly spend is roughly $115-230, which — even at the best real
+CAC — produces only ~3-7 conversions/week. Meta's own guidance for an ad set to exit the learning
+phase quickly wants closer to 50 conversions/week; well below that, campaigns typically take
+longer to stabilize and Meta's auto-optimization has less signal to work with. **This doesn't mean
+$500-1,000/month won't work** — it means expect a slower ramp-up/learning period than a
+larger-budget account would see, not immediate steady-state performance from week one.
+
+**Bottom line to tell Christian:** $500-1,000/month is a real, defensible number — grounded in
+this account's own actual historical performance, not a guess — capable of meaningfully growing
+order volume beyond what the store has ever hit organically. The honest caveat is patience during
+the first few weeks while the algorithm has time to learn, not a concern about the budget being
+too small.
+
 ## Sources
 Three Shopify Analytics reports pulled manually before the connector came online (Returning
 Customers, Customer Cohort Analysis, Net Sales Over Time) — aggregate figures only, individual

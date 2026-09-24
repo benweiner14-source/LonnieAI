@@ -1584,3 +1584,27 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   all 3 to Ben to pick, consistent with this project's standing discipline that nothing gets
   called "confirmed" until Ben's eyes are on the actual output. Once he picks one, that image
   becomes the reused identity reference for both concepts in `ai-ugc-concepts.md`.
+
+## Ben picked seed B, asked about a turnaround sheet — extended the reference set instead (2026-09-24)
+- **Ben confirmed seed B as the locked identity.** Also asked whether a character turnaround sheet
+  (different angles, body proportions) was part of the plan — a fair catch, since all 3 candidates
+  were close-up selfies that never established body type, and Concept 1 ("Morning Ritual")
+  specifically needs a full-body mirror selfie to work at all.
+- **Explained the real answer before spending more credits, rather than assuming:** this repo's
+  proven photoreal-UGC recipe doesn't use a formal 3D-style orthographic turnaround (front/side/
+  back T-pose) — it uses purpose-tagged reference images (face, body, style), the same
+  multi-image role-tagging technique used throughout this project. Proposed 2 specific images
+  instead of a generic "more angles" request: a full-body mirror selfie (which would double as
+  Concept 1's actual base shot, not just a body reference) and a three-quarter medium shot.
+- **Generated both as GPT Image 2.5 edits of the locked seed B image** (`medias` role `"image"`,
+  seed B's own output as the base) rather than regenerating from text — keeps the exact same face/
+  hair/skin tone instead of risking a different-looking "consistent" character. Checked
+  `get_prompting_guide(topic: "openai-images")` first rather than guessing the edit mechanics.
+  First `submit_batch` attempt failed validation (batch items only accept `value`/`name` for
+  media references, not `prompt_id` like the standalone `partner_generate` tool does) — fixed by
+  passing the already-fetched GCS signed URL as `value` instead.
+- **Both landed well** — same face as seed B, phone correctly shows its back (not the screen) in
+  the mirror reflection per the established mirror-selfie recipe, no visible logos/text in either
+  background. Saved to `character-sheet/`, updated its README to document the locked pick and the
+  extension images, updated `README.md`'s Status. **RM-Char-01 now has face + full-body + a second
+  angle — ready to generate both concepts.**

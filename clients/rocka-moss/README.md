@@ -51,10 +51,10 @@ see `ai-ugc-playbook.md`.
 - **`ai-ugc-concepts.md`** — 2 concrete AI UGC character/ad concepts (2026-09-24), grounded in
   `target-demo.md`'s findings: a synthetic Black woman character, Southeast-coded everyday
   settings, Strawberry Shortcake as the lead flavor.
-- **`character-sheet/`** — 3 generated candidates for the RM-Char-01 identity (2026-09-24, GPT
-  Image 2.5 Sunburst), all clean on the brand-safety check. **Not yet locked — waiting on Ben to
-  pick one** before it becomes the reused identity reference for both concepts in
-  `ai-ugc-concepts.md`.
+- **`character-sheet/`** — RM-Char-01's locked identity (2026-09-24, GPT Image 2.5 Sunburst): 3
+  seed candidates, Ben picked seed B, plus 2 extension images (full-body mirror selfie, three-
+  quarter angle) generated as edits of the locked face to add body/angle consistency. All clean
+  on the brand-safety check. Ready to feed into both concepts in `ai-ugc-concepts.md`.
 
 ## The two buckets (from the brief)
 
