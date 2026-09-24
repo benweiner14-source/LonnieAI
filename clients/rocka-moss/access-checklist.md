@@ -54,18 +54,13 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
   (`InventoryItem.unitCost`): **`null` on every variant, all 4 products.** No COGS data exists in
   Shopify at all — margin has to stay the brief's 50-60% estimate until Christian/Ben supplies
   real per-unit cost numbers directly; this isn't pullable from Shopify itself.
-- [ ] **Meta Pixel / Conversions API install status** — **partially answered without Business
-  Suite access.** Checked the live product page's own JS (Shopify's web pixel manager config,
-  visible in page source): **a Facebook Pixel is already installed** — pixel ID `682325200982123`,
-  connected via Shopify's own Facebook & Instagram sales channel app (client-side/browser pixel
-  only, confirmed firing standard events like `Viewed Product`). Whether **server-side Conversions
-  API** is also on can't be told from the page source alone — needs Business Suite or the
-  Shopify Admin's Facebook & Instagram app settings to confirm. Worth searching for this exact
-  pixel ID once Business Suite access exists, rather than creating a new one from scratch — it may
-  already have historical event data. Also found a **second, unidentified marketing pixel**
-  installed (config code `D65JE4JC77U8VIJAA8H0`, app client ID `4383523`) — worth checking under
-  Shopify Admin → Settings → Customer events to identify (TikTok/Pinterest/Google are common
-  guesses, not confirmed).
+- [~] **Meta Pixel / Conversions API install status** — partially answered via page-source
+  scraping (2026-09-23): a Facebook Pixel is already installed, ID `682325200982123`, connected
+  via Shopify's own Facebook & Instagram sales channel app (client-side/browser only confirmed).
+  **Now that Meta Business Suite access exists (2026-09-24), the rest of this item — CAPI status,
+  historical event data, and identifying the second unidentified pixel `D65JE4JC77U8VIJAA8H0` —
+  moved to the new "Non-Shopify — Meta Business Suite access confirmed" section below, since it's
+  checked in Business Suite/Events Manager, not Shopify Admin.**
 - [ ] **Email/SMS tool connection status** — checked the live homepage and product page source
   for common tool footprints (Klaviyo, Omnisend, Attentive, Postscript, Mailchimp) — **no evidence
   found in the client-side page source**, but this isn't conclusive (some tools only load
@@ -97,10 +92,48 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
   page has exactly one real `<h1>` (product title, was previously a styled `<div>`). Full
   investigation trail in `CLAUDE.md`'s "H1 investigation" entry.
 
-## Non-Shopify — still open from `PROJECT_BRIEF.md`'s access checklist
-- [ ] Does Rocka Moss have a Meta Business Manager at all? (the brief's own "first check")
-- [ ] Meta Business Suite partner access (Page, Instagram, Ad Account, Pixel — "Manage" level)
-- [ ] Rocka Moss Instagram login/co-manager access (nice-to-have)
+## Non-Shopify — Meta Business Suite access confirmed 2026-09-24, next-check list below
+- [x] **Meta Business Suite partner access** — Ben confirmed 2026-09-24. No Business Suite MCP
+  connector exists in this session (`ListConnectors` confirmed only Gmail is connected) — this is
+  Ben's own login access, same pattern as Shopify admin before the Shopify MCP came online. This
+  session can't pull Business Suite data directly; the items below are what to check/report back,
+  not things this session ran itself.
+- [ ] **Does Rocka Moss have a Meta Business Manager at all, and does it own the Page/Ad
+  Account/Pixel already, or does Ben's own account?** The brief's own "first check" — confirm
+  this before anything else, since it determines who has admin control if the relationship ever
+  ends. Business Suite → Business Settings → Accounts.
+- [ ] **Identify both pixels found via page-source scraping (2026-09-23)** — go to Business
+  Settings → Data Sources → Pixels/Datasets: confirm `682325200982123` (the one already firing
+  via Shopify's Facebook & Instagram sales channel app) shows real historical event data, and
+  identify the second, unidentified one (`D65JE4JC77U8VIJAA8H0`, app client ID `4383523`) —
+  common guesses are TikTok/Pinterest/Google but not confirmed, check under Events Manager or ask
+  Christian directly if Business Suite doesn't surface it.
+- [ ] **Server-side Conversions API status on the primary pixel** — Events Manager → the pixel →
+  "Overview"/"Diagnostics" tab, check whether a server-side connection exists alongside the
+  browser pixel (client-side-only was confirmed via page source; CAPI status could not be).
+- [ ] **Domain verification status** — Business Settings → Brand Safety → Domains — confirms
+  rockamoss.com is verified, needed for iOS14.5+ event prioritization once campaigns run.
+- [ ] **Does a Meta Ad Account already exist, active or dormant?** Business Settings → Accounts →
+  Ad Accounts. If yes: check for any prior spend/campaign history (changes whether this is a
+  cold-start account for measurement purposes) and pull the account ID/currency/timezone. If no:
+  this is the actual creation step blocking campaign launch (brief Phase 4/5).
+- [ ] **Rocka Moss Instagram — is it connected to this Business Manager, and does Ben have
+  co-manager access?** Business Settings → Accounts → Instagram Accounts. Needed for organic
+  posting, ad placements running "as" the IG account, and confirming the account itself (handle,
+  follower count) since none of that has been pulled yet.
+- [ ] **Confirm the `IG-EMAIL-1R9EMRC9` discount code's source** — the Shopify-side discount pull
+  (2026-09-23) found this code implies *some* automated email/IG flow already exists; Business
+  Suite's Instagram/Messenger automation settings (or Shopify Admin → Settings → Apps, still
+  separately open below) may show what's actually sending it.
+- **Once the above is confirmed, the natural next question is ad-account setup itself** — this
+  project already has concrete, ready-to-use structure for that step:
+  `docs/tay-ai-ugc-dropship-method.md`'s CBO/$25-50-day/single-country/broad-targeting launch
+  structure, and the `ads-meta` skill (installed 2026-09-24) for a full account-health audit once
+  there's an actual account/pixel/campaign to point it at — its audit framework is evidence-based
+  (Pixel install, CAPI, event dedup, domain verification, campaign structure, audiences,
+  attribution) and explicitly avoids guessing at anything it can't confirm from real account data,
+  so it's the right next step to run once Ben can hand over real screenshots/exports from the
+  screens above, not before.
 - [x] **Any existing creative assets Rocka Moss already has** — done 2026-09-24 (was stale/still
   showing open even though this was already fulfilled 2026-09-23): the Google Drive "Photography
   and Media" folder Ben shared *is* Rocka Moss's existing creative assets — real product photos,

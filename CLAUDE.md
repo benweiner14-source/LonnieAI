@@ -1344,3 +1344,27 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   adjacent brands not written up is wanted later — didn't write up all 71 ads individually, only
   the direct competitors plus the brands with real strategic relevance (whitelisting pattern,
   demographic/tonal fit, or a distinct format worth studying).
+
+## Meta Business Suite access confirmed — no MCP connector, gave Ben a concrete next-check list (2026-09-24)
+- **Ben said he now has Meta Business Suite access.** Checked `ListConnectors` first rather than
+  assuming — confirmed no Meta/Facebook Business Suite connector exists in this session (only
+  Gmail). Same situation as Shopify before its MCP connector came online: this is Ben's own login
+  access, not something this session can query directly — gave him a concrete list of screens to
+  check and report back, rather than claiming to pull the data myself.
+- **Loaded the `ads-meta` skill** (installed 2026-09-24) to structure the list against its real
+  audit framework rather than guessing at what matters — it's evidence-based (Pixel/CAPI install,
+  event dedup, domain verification, account/campaign structure, audiences, attribution) and
+  explicitly won't score anything it can't confirm from real account data, so it's the right tool
+  for a full audit once real screenshots/exports exist, not before.
+- **Tied the checklist to what's already known, not generic Meta-audit boilerplate:** confirm
+  Business Manager ownership (brief's own "first check" — who actually controls the Page/Ad
+  Account/Pixel); resolve both pixels found via page-source scraping 2026-09-23 (`682325200982123`
+  confirmed firing client-side via Shopify's own app — check its CAPI/server-side status and real
+  event history; `D65JE4JC77U8VIJAA8H0` still unidentified); domain verification; whether an ad
+  account already exists (changes whether this is a cold-start account); Instagram connection/
+  co-manager access; and whether Business Suite's automation settings explain the
+  `IG-EMAIL-1R9EMRC9` discount code's origin (flagged 2026-09-23 as implying some automated flow
+  already exists).
+- Updated `access-checklist.md` (new section replacing the old "still open" Business Suite items,
+  the Shopify-side Pixel/CAPI item trimmed to point at it instead of duplicating) and `README.md`'s
+  Status line.
