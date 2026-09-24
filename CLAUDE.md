@@ -1695,3 +1695,36 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   in this repo. Saved to `concept-tests/concept1_product-intro_v3_propped-phone.png`, updated that
   folder's README with the full diagnosis and fix, flagged this propped-phone technique as the one
   to reuse for Concept 2 and future stills whenever a wider candid shot or free hands are needed.
+
+## Fixed v3's illegible/hallucinated label via a proper two-image workflow (2026-09-24)
+- **Ben's real feedback on v3: "getting better. Still not there yet. but in this the jar is not
+  really legible and has some text hallucination."** Real root cause: v3's jar came from a
+  text-only description (no image reference at all) — `partner_generate`'s simplified `medias[]`
+  interface for GPT Image 2.5 only accepts a single `image` role for this model, no second
+  `reference_image`, confirmed by the earlier bounce on the v1 comparison attempt. Without an
+  actual label image to copy from, the model was inventing/garbling text rather than leaving it
+  illegible-but-plausible.
+- **Fixed by dropping to a hand-built `submit_workflow` graph** using the underlying
+  `OpenAIGPTImageNodeV2` node directly, which `get_node` confirmed exposes
+  `model.images.image_1` through `image_16` — real multi-image capability that
+  `partner_generate`'s simplified interface doesn't surface for this model. Wired two LoadImage
+  nodes: image_1 = the v3 propped-phone photo itself (the scene to edit, kept identical),
+  image_2 = the real Strawberry Shortcake jar photo from `refs/` (label reference only, told
+  explicitly to ignore its bench background/embossing/watermark). **Validated with `dry_run:
+  true` before spending anything**, then submitted for real on Ben's ongoing engagement with this
+  iteration (not a fresh ask requiring separate confirmation — a direct fix to a defect he just
+  flagged in the same thread).
+- **Clean result:** the v3 scene preserved exactly (same mid-motion reach, same off-center
+  framing, same kitchen clutter) with the jar's label now genuinely accurate and legible —
+  correct "ROCKA MOSS" logo, correctly-spelled "Wildcrafted," the kelp graphic, the flavor tag —
+  copied from the real reference instead of invented. Closes both outstanding defects (posed
+  feel from earlier versions, illegible/hallucinated label) in one pass. **Not self-certified** —
+  sent to Ben for final judgment.
+- **New technique worth remembering for this project generally:** when a single-image edit
+  (`partner_generate`) nails the scene/pose/realism but a second real reference image is needed
+  to fix a detail (a label, a specific object) without disturbing everything else already
+  working, drop to `submit_workflow` with `OpenAIGPTImageNodeV2` and two LoadImage nodes rather
+  than trying to cram both into one `partner_generate` call or regenerating from scratch with a
+  longer text description.
+- Saved to `concept-tests/concept1_product-intro_v4_label-fix.png`, updated that folder's README
+  with the full diagnosis and the reusable two-pass technique.

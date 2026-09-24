@@ -93,8 +93,32 @@ to "reaching for it," a fair, more candid variant of the same moment, not a beat
 invented arbitrarily — matches the "caught mid-motion, not posed" instruction directly. **Sent to
 Ben for judgment, not self-certified.**
 
+## v4 — fixed the hallucinated/illegible label via a proper multi-image edit (2026-09-24)
+
+Ben's real feedback on v3: "getting better. Still not there yet. but in this the jar is not really
+legible and has some text hallucination." Real root cause: v3's jar was described in text only
+(no image reference) — GPT-2.5's simplified `partner_generate` edit path only accepts one
+`image` role, no second `reference_image`, which is why the label kept getting invented/garbled
+rather than illegible-but-plausible. **Fixed by dropping down to a hand-built `submit_workflow`
+graph** using the `OpenAIGPTImageNodeV2` node directly, which exposes `model.images.image_1`
+through `image_16` (confirmed via `get_node`) — something `partner_generate`'s simplified
+`medias[]` interface doesn't surface for this model. Wired **two** LoadImage nodes: image_1 = the
+v3 propped-phone photo itself (the scene to edit, kept identical), image_2 = the real Strawberry
+Shortcake jar photo from `refs/` (label reference only, explicitly told to ignore its bench
+background/embossing/watermark). Validated with `dry_run: true` before spending.
+
+**`concept1_product-intro_v4_label-fix.png`** — the v3 scene preserved exactly (same mid-motion
+reach, same off-center framing, same kitchen clutter) with the jar's label now genuinely accurate
+and legible: correct "ROCKA MOSS" logo, correctly-spelled "Wildcrafted," the kelp graphic, the
+flavor tag — copied from the real reference instead of invented. No embossed glass text. **Sent to
+Ben for final judgment**, but this closes the two outstanding defects (posed feel, illegible/
+hallucinated label) in one pass.
+
 ## Next step
 
-Waiting on Ben's read of v3. If this lands, it's the technique to reuse for Concept 2 and any
-future stills in this pack — propped-phone framing, not held-selfie, whenever the character needs
-both hands free or a wider candid shot.
+Waiting on Ben's read of v4. If this lands, it's the full technique to reuse going forward for any
+shot needing both a candid propped-phone scene AND an accurate product label: build the scene via
+a single-image edit first (get pose/setting/realism right), then do a second pass with the real
+product photo wired in via `submit_workflow`'s two-image `OpenAIGPTImageNodeV2` path to fix the
+label without disturbing the scene — not something `partner_generate`'s simpler interface can do
+in one call for this model.
