@@ -46,8 +46,12 @@ see `ai-ugc-playbook.md`.
   is Southeast-concentrated (South Carolina/Columbia metro + North Carolina/Charlotte metro
   dominant, Georgia/Atlanta secondary), not evenly national. Includes a data-quality catch
   (excluding bot/data-center traffic misread as real sessions) and a soft, flagged-as-unconfirmed
-  hypothesis about the customer base's likely demographic skew. Built specifically to ground the
-  AI UGC character sheet(s) — see Status below.
+  hypothesis about the customer base's likely demographic skew (since confirmed by Ben directly).
+  Built specifically to ground the AI UGC character sheet(s) — see Status below.
+- **`ai-ugc-concepts.md`** — 2 concrete AI UGC character/ad concepts (2026-09-24), grounded in
+  `target-demo.md`'s findings: a synthetic Black woman character, Southeast-coded everyday
+  settings, Strawberry Shortcake as the lead flavor. Concepts only — nothing generated yet, ready
+  to greenlight.
 
 ## The two buckets (from the brief)
 

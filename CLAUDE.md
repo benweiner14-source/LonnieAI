@@ -1527,3 +1527,29 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   targeting note to state the casting direction plainly (a Black woman, Southeast-coded setting,
   Women <30/general-wellness archetype) instead of flagging it as unconfirmed. Moving straight to
   drafting concrete character/ad concepts next.
+
+## Drafted 2 concrete AI UGC character/ad concepts, grounded in the real data (2026-09-24)
+- **Built `clients/rocka-moss/ai-ugc-concepts.md`** — a synthetic Black-woman character
+  (`RM-Char-01`, an internal working label, not on-screen text), Southeast-coded everyday settings
+  described visually (never a literal place name in the prompt — carrying forward the standing
+  lesson from Zion/Kazumi/Selena's packs about place names rendering as literal signage), and 2
+  full concepts using `ai-ugc-playbook.md`'s 5-beat transformational formula:
+  - **Concept 1, "Morning Ritual"** — home/lifestyle, mirror-selfie sub-genre (reusing the
+    technique already built and validated for Selena's photoreal pack), Strawberry Shortcake
+    (the real confirmed sales leader), psychology hypothesis "a ritual, not a chore."
+  - **Concept 2, "In-Car, Kind Of Random"** — in-car confessional, psychology hypothesis
+    "consolidation, not another pill," deliberately structured after MuscleMax Nutrition's real,
+    proven consolidation-pain hook found in `competitor-research.md` — rewritten entirely in
+    Rocka Moss's own voice/specifics, not copied wording, per the standing reproduction-caution
+    discipline.
+- **Flagged honestly, not glossed over: no real Rocka Moss customer reviews exist yet**
+  (`seo-audit.md` confirmed zero visible reviews) — so both concepts use category-level
+  psychology hypotheses informed by real competitor research, explicitly not presented as the
+  "psychology pillar map" technique's proper verbatim-customer-quote-backed pillars. Labeled both
+  as testable creative bets, not locked psychology, and made sure no fabricated "a customer said"
+  line appears anywhere in the actual ad copy.
+- **Concepts only — nothing generated yet.** Character sheet needs to be generated and locked
+  first (GPT Image 2.5 Sunburst, 2-3 regenerations), then Concept 1 validated as a still before
+  animating or drafting Concept 2's still — same validate-before-batch discipline as every other
+  pack in this repo. Waiting on Ben's go-ahead to spend on actual generation.
+- Updated `README.md` (new file entry) and `ai-ugc-playbook.md`'s Next Steps (step 2 checked off).

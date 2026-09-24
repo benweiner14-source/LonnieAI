@@ -289,10 +289,9 @@ gym — without naming the city in the prompt text itself).
    South Carolina (Columbia metro) + North Carolina (Charlotte metro) dominant, Georgia
    (Atlanta-area) secondary; one demographic hypothesis flagged for Ben/Christian to confirm
    before locking a specific character look.
-2. Draft 2-3 concrete concepts using the Section 0 framework above (pick a format, a scenario, a
-   5-beat outline) before writing any generation prompt — concept first, prompt second, grounded
-   in `target-demo.md`'s findings (Southeast setting, relatable-not-aspirational casting,
-   Strawberry Shortcake as the lead flavor).
+2. ~~Draft 2-3 concrete concepts~~ — **done 2026-09-24, see `ai-ugc-concepts.md`.** 2 concepts
+   built (Morning Ritual / mirror selfie, In-Car Confessional), grounded in `target-demo.md`'s
+   findings and Ben's confirmed casting direction.
 3. Source 2-3 clean reference photos of the actual current Rocka Moss bottle/label.
 4. Generate and lock a synthetic AI UGC character sheet via GPT Image 2.5 (regenerate 2-3 times,
    same approach as `clients/ai-ugc-agency/session-reference.md`'s character-reference step),
