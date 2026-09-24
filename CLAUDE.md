@@ -1410,3 +1410,18 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   updated `access-checklist.md`'s Business Manager/Ad Account items from open to confirmed-done
   with the real findings, plus a cross-reference to the co-founder open-question section for the
   Darius Boyd lead.
+- **Continued the walkthrough — Instagram and Pixel/CAPI both resolved cleanly, better than
+  expected on CAPI.** `@rockamoss` (ID `1784168160984053`) is owned directly by the Rocka Moss
+  business, Ben has full access — resolves that checklist item. Then Data Sources → Datasets &
+  pixels showed **"Rocka Moss's pixel" (`682325200982123`) is already receiving events from BOTH
+  Conversions API and Meta Pixel** — server-side CAPI was an open question as of the last entry,
+  now fully confirmed connected, not just the browser pixel. 3 other dormant/unused pixel-like
+  datasets also turned up ("Rocka Moss Meta Pixel," "Moss v2," "Shopify1," all "No data
+  connected") — flagged as likely abandoned setup attempts, not urgent. The second unidentified
+  pixel from the original page-source scrape (`D65JE4JC77U8VIJAA8H0`) doesn't match any of Meta's
+  4 datasets by ID format — almost certainly a different platform's pixel entirely, deprioritized
+  now that Meta's own pixel is confirmed fully healthy. Updated `access-checklist.md` and
+  `kpi-targets.md` to mark both items resolved. Only domain verification remains open on the
+  original 5-item Business Suite list.
+- **Hit a transient GitHub 502 on push, retried successfully** — noted since the standing git
+  guidance allows retrying network-error pushes.

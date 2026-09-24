@@ -209,12 +209,13 @@ actual CAC/ROAS against these targets without manual dashboard-reading.
   open lever worth flagging to Christian on its own.
 - ~~Confirm cost-per-item/COGS~~ — done 2026-09-23: confirmed **no COGS entered in Shopify at
   all**, margin stays the brief's 50-60% estimate until Christian supplies real numbers directly.
-- **Meta Pixel/CAPI install status — mostly resolved 2026-09-24.** Meta Business Suite access
+- **Meta Pixel/CAPI install status — fully resolved 2026-09-24.** Meta Business Suite access
   confirmed; ad account `RockaMossBTL` (ID `721440597562823`) exists, owned by Rocka Moss, with a
   payment method attached (MasterCard, $0 balance owed, $106.83/day Meta-set spending limit — not
-  blocked on billing) and real historical spend against pixel `682325200982123`, confirming its
-  purchase-attribution chain genuinely works end-to-end. Server-side CAPI status specifically
-  still needs a direct Events Manager check — not yet confirmed either way.
+  blocked on billing). "Rocka Moss's pixel" (ID `682325200982123`) is confirmed **receiving events
+  from both Conversions API and Meta Pixel** — server-side CAPI is already connected, not just the
+  browser pixel — combined with the real historical purchase attribution in the campaign CSV
+  above, this pixel's setup is solid and ready to use for new campaigns.
 - The $14K-vs-actual discrepancy is no longer blocking work (see "Decision" above) but is still
   worth asking Christian about eventually, since it may point at a real revenue channel this
   data doesn't see.

@@ -111,15 +111,20 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
   stopped, what the custom-conversion event was, why CPA varied 4x between the two purchase
   campaigns) in `kpi-targets.md`'s new correction section. **Billing confirmed healthy**: MasterCard
   on file, $0 balance owed, Meta-set daily spending limit $106.83 — not blocked on payment setup.
-- [ ] **Identify both pixels found via page-source scraping (2026-09-23)** — the historical
-  campaign data confirms pixel `682325200982123` has real, working purchase attribution (10 real
-  conversions credited) — its health is no longer in question. Still open: identify the second,
-  unidentified pixel (`D65JE4JC77U8VIJAA8H0`, app client ID `4383523`) via Business Settings →
-  Data Sources, and confirm which pixel(s) fed the historical campaigns above.
-- [ ] **Server-side Conversions API status on the primary pixel** — Events Manager → the pixel →
-  "Overview"/"Diagnostics" tab, check whether a server-side connection exists alongside the
-  browser pixel (client-side-only was confirmed via page source; the historical campaigns prove
-  purchase attribution works via the browser pixel at minimum, but CAPI specifically still unknown).
+- [x] **Pixel + Conversions API status — fully confirmed 2026-09-24, better than expected.**
+  Business Settings → Data Sources → Datasets & pixels: **"Rocka Moss's pixel"** (ID
+  `682325200982123`) shows "Dataset is receiving events... from Conversions API and Meta Pixel" —
+  **both the browser pixel AND server-side CAPI are already connected and live**, not just
+  client-side as the earlier page-source check could confirm. Combined with the real historical
+  purchase attribution found in the campaign CSV, this pixel's setup is solid.
+  - **3 other dormant, unused pixel-like datasets also exist** ("Rocka Moss Meta Pixel," "Moss
+    v2," "Shopify1," all "No data connected") — likely abandoned setup attempts, not urgent, just
+    worth asking Christian about if a cleanup pass ever happens.
+  - **The second, unidentified pixel found via page-source scraping (`D65JE4JC77U8VIJAA8H0`)
+    does NOT match any of the 4 Meta datasets above** — its ID format doesn't look like a Meta
+    pixel ID at all, so it's almost certainly a different platform's tracking pixel (TikTok/
+    Pinterest were the original guesses) rather than something resolvable in Meta Business Suite.
+    Still unidentified — lower priority now that Meta's own pixel is confirmed fully healthy.
 - [ ] **Domain verification status** — Business Settings → Brand Safety → Domains — confirms
   rockamoss.com is verified, needed for iOS14.5+ event prioritization once campaigns run.
 - [x] **Rocka Moss Instagram — connected and confirmed 2026-09-24.** `@rockamoss` (ID
