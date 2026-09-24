@@ -219,6 +219,14 @@ actual CAC/ROAS against these targets without manual dashboard-reading.
 - The $14K-vs-actual discrepancy is no longer blocking work (see "Decision" above) but is still
   worth asking Christian about eventually, since it may point at a real revenue channel this
   data doesn't see.
+- **Meta Business Suite walkthrough complete (2026-09-24) — all 5 setup checks clean.** Business
+  Manager/Page ownership, Ad Account (`RockaMossBTL`, billing healthy), Instagram (`@rockamoss`),
+  Pixel + server-side CAPI (both connected and proven via real historical purchases), and domain
+  verification (`rockamoss.com` verified) are all confirmed in good shape — see
+  `access-checklist.md` for the full walkthrough. Nothing left blocking a new campaign launch from
+  the infrastructure side. What remains is Christian-facing: why the 4 historical campaigns went
+  inactive, what TestOFF's custom conversion event was, and why CPA varied 4x between the two
+  purchase campaigns (see the correction section above).
 
 ## Sources
 Three Shopify Analytics reports pulled manually before the connector came online (Returning

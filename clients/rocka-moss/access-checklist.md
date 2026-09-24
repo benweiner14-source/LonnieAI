@@ -125,8 +125,16 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
     pixel ID at all, so it's almost certainly a different platform's tracking pixel (TikTok/
     Pinterest were the original guesses) rather than something resolvable in Meta Business Suite.
     Still unidentified — lower priority now that Meta's own pixel is confirmed fully healthy.
-- [ ] **Domain verification status** — Business Settings → Brand Safety → Domains — confirms
-  rockamoss.com is verified, needed for iOS14.5+ event prioritization once campaigns run.
+- [x] **Domain verification status — confirmed 2026-09-24: `rockamoss.com` is Verified.** Business
+  Settings → Brand Safety and suitability → Domains. (4 duplicate `whayhb-g1.myshopify.com`
+  entries also showed up, all "Not Verified" — Shopify's backend subdomain from repeated
+  Facebook & Instagram app connection attempts, not the real domain, harmless clutter, no action
+  needed.)
+
+**All 5 original Business Suite check items are now resolved — Business Manager, Ad Account,
+Instagram, Pixel/CAPI, and domain verification are all confirmed clean.** What's left open isn't
+a setup gap, it's the 3 real questions from the campaign history (why they stopped, the custom
+conversion event, the CPA gap) plus the Darius Boyd co-founder question — see above.
 - [x] **Rocka Moss Instagram — connected and confirmed 2026-09-24.** `@rockamoss` (ID
   `1784168160984053`), owned directly by the Rocka Moss business, not a personal account — same
   clean ownership pattern as the Facebook Page. Ben has full access. 4 people total have access,

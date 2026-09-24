@@ -58,14 +58,17 @@ see `ai-ugc-playbook.md`.
   `access-checklist.md`'s "Parked" section.
 - Brief received and filed (2026-09-22). **Shopify admin access confirmed 2026-09-23**, with a
   live Shopify MCP connector now available in this session (see `access-checklist.md` and
-  `kpi-targets.md` for what's been pulled). A Meta/Facebook Pixel was found already installed
-  (found via page source, not Business Suite — see `access-checklist.md`). **Meta Business Suite
-  access confirmed 2026-09-24** (Ben's own login, no MCP connector for it in this session — see
-  `access-checklist.md`'s new section for the concrete next-check list: Business Manager
-  ownership, both pixels' real status, domain verification, ad account existence, Instagram
-  connection). **Real Rocka Moss reference photos now exist in `refs/`** (sourced 2026-09-23 from
-  a Drive folder Ben shared, see `refs/README.md`) — no generations run for this client yet, but
-  product-shot/testimonial validation is now unblocked.
+  `kpi-targets.md` for what's been pulled). **Meta Business Suite access confirmed and fully
+  walked through 2026-09-24** (Ben's own login, no MCP connector for it in this session, checked
+  screen by screen) — all 5 setup checks came back clean: Business Manager/Page ownership, Ad
+  Account (`RockaMossBTL`, billing healthy), Instagram (`@rockamoss`), Pixel + server-side CAPI
+  (both connected, proven via real historical purchases), and domain verification. **Also found
+  Rocka Moss has already run real paid Meta ads before** (4 campaigns, $463.48 total spend, 10
+  real purchases) — corrected the "zero paid marketing" assumption that had been in the brief and
+  `kpi-targets.md` — see that doc's correction section. Nothing left blocking infrastructure-wise
+  for a new campaign launch. **Real Rocka Moss reference photos now exist in `refs/`** (sourced
+  2026-09-23 from a Drive folder Ben shared, see `refs/README.md`) — no generations run for this
+  client yet, but product-shot/testimonial validation is now unblocked.
 - `ai-ugc-playbook.md` is a **mapping document** — it translates lessons already proven on
   Zion/Kazumi/Selena onto Rocka Moss's needs. It hasn't been validated against real Rocka Moss
   product/brand references yet. Treat every recipe in it as a starting point to test, not a

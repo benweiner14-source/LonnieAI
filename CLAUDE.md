@@ -1425,3 +1425,14 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   original 5-item Business Suite list.
 - **Hit a transient GitHub 502 on push, retried successfully** — noted since the standing git
   guidance allows retrying network-error pushes.
+- **Last screen (Domains) closed out all 5 original checks: `rockamoss.com` is Verified.** 4
+  duplicate `whayhb-g1.myshopify.com` entries also showed up, all "Not Verified" — Shopify's
+  backend subdomain from repeated Facebook & Instagram app connection attempts, harmless clutter,
+  not the real domain, no action needed. **All 5 Business Suite setup checks (Business Manager/
+  Page ownership, Ad Account + billing, Instagram, Pixel/CAPI, domain verification) are now
+  confirmed clean — nothing left blocking a new campaign launch from the infrastructure side.**
+  What's left open is Christian-facing, not a setup gap: why the 4 historical campaigns went
+  inactive, what TestOFF's custom conversion event was, why CPA varied 4x between the two purchase
+  campaigns, and whether Darius Boyd is the brief's "other co-founder." Updated
+  `access-checklist.md`, `kpi-targets.md`, and `README.md`'s Status section to reflect the
+  walkthrough is complete.
