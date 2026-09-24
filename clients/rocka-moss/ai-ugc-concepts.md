@@ -115,5 +115,6 @@ with this project's standing reproduction-caution discipline.
 Generate and lock `RM-Char-01`'s character sheet first (GPT Image 2.5 Sunburst, 2-3 regenerations
 to confirm a consistent identity) — both concepts above depend on that one locked reference.
 Then validate Concept 1 as a still before animating or drafting Concept 2's still, same
-validate-before-batch discipline as every other pack in this repo. Not yet started — this doc is
-concepts only, waiting on Ben's go-ahead to spend on generation.
+validate-before-batch discipline as every other pack in this repo. **✅ Character sheet locked,
+Concept 1 through v4 rendered — see `concept-tests/README.md`.** Both concepts are also now
+available in a structured JSON form (`ai-ugc-json-schema.md`) for faster iteration going forward.

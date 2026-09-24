@@ -60,6 +60,12 @@ see `ai-ugc-playbook.md`.
   won on identity/pose consistency; Nano Banana Pro rendered more label text but with a typo and
   identity drift — confirms the project's standing engine choice empirically on this exact
   character/product combo, not just by assumption.
+- **`ai-ugc-json-schema.md`** — a structured JSON schema for planning/iterating on concepts and
+  shots (Ben's "JSON prompting" idea, referenced but undetailed in
+  `docs/frankie-shaw-ai-ugc-method.md`), with Concepts 1 and 2 converted into it. A planning/
+  handoff layer, not a new generation technique — makes each iteration round (camera device,
+  realism constraints, beats) a field edit instead of re-derived prose, per the real back-and-forth
+  already logged in `concept-tests/README.md`.
 
 ## The two buckets (from the brief)
 
