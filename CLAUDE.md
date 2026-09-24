@@ -1553,3 +1553,34 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   animating or drafting Concept 2's still — same validate-before-batch discipline as every other
   pack in this repo. Waiting on Ben's go-ahead to spend on actual generation.
 - Updated `README.md` (new file entry) and `ai-ugc-playbook.md`'s Next Steps (step 2 checked off).
+
+## Generated the RM-Char-01 character sheet — 3 candidates, waiting on Ben's pick (2026-09-24)
+- **Ben said "go ahead and generate the character sheet"** — this counted as the explicit spend
+  confirmation the Comfy Cloud MCP's spend gate requires (the tool bounced once asking for it,
+  re-called with `confirm: true` on the strength of that message rather than asking Ben to repeat
+  himself).
+- **Followed `clients/ai-ugc-agency/session-reference.md`'s character-reference recipe exactly**
+  (a single selfie-style portrait regenerated 2-3 times to lock a face), not Kazumi's 3-view
+  front/three-quarter/profile pattern — this character gets reused as one locked `@Image1`-style
+  identity for downstream Seedance shots, same as that doc's own pattern.
+- **Submitted 3 seeds in one `submit_batch` call** (GPT Image 2.5 Sunburst, 9:16, identical
+  prompt genre-anchored as "a real, candid iPhone selfie-style photo of a Black woman in her
+  mid-20s," natural coily hair, natural unsmoothed skin texture, minimal makeup, casual oversized
+  tee, modest apartment kitchen, warm window light only, explicit no-text/no-logo/no-signage
+  clause) — all 3 succeeded.
+- **Hit and fixed a real download bug, not a generation bug:** copy-pasted a mismatched
+  disposition parameter against the wrong URL signature for one file, which downloaded a GCS
+  `SignatureDoesNotMatch` XML error instead of the image (caught immediately via `file` — it said
+  "XML document," not "PNG image data" — before assuming the generation itself had failed).
+  Re-downloaded using the exact, unmodified `url` field from the batch output and it resolved
+  cleanly. Worth remembering: never hand-assemble these signed URLs from mixed fields, always use
+  one field's value verbatim.
+- **All 3 candidates read as genuinely photoreal and candid** — natural coily hair, unsmoothed
+  skin, minimal makeup, casual apartment-kitchen settings with warm natural light, no posed/
+  produced feel. **Checked directly for brand-safety leaks (not just trusting the prompt's "no
+  logos" clause) — all 3 clean**, no visible text, logos, or brand names anywhere in frame.
+- **Saved all 3 to `clients/rocka-moss/character-sheet/`** with a README documenting the recipe
+  and a short description of each candidate's outfit/setting. **Not locking one myself** — sent
+  all 3 to Ben to pick, consistent with this project's standing discipline that nothing gets
+  called "confirmed" until Ben's eyes are on the actual output. Once he picks one, that image
+  becomes the reused identity reference for both concepts in `ai-ugc-concepts.md`.

@@ -50,8 +50,11 @@ see `ai-ugc-playbook.md`.
   Built specifically to ground the AI UGC character sheet(s) — see Status below.
 - **`ai-ugc-concepts.md`** — 2 concrete AI UGC character/ad concepts (2026-09-24), grounded in
   `target-demo.md`'s findings: a synthetic Black woman character, Southeast-coded everyday
-  settings, Strawberry Shortcake as the lead flavor. Concepts only — nothing generated yet, ready
-  to greenlight.
+  settings, Strawberry Shortcake as the lead flavor.
+- **`character-sheet/`** — 3 generated candidates for the RM-Char-01 identity (2026-09-24, GPT
+  Image 2.5 Sunburst), all clean on the brand-safety check. **Not yet locked — waiting on Ben to
+  pick one** before it becomes the reused identity reference for both concepts in
+  `ai-ugc-concepts.md`.
 
 ## The two buckets (from the brief)
 
