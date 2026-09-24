@@ -1182,3 +1182,19 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 - Saved all 3 versions to `clients/rocka-moss/test-renders/` for the record
   (`strawberry_studio_v1.png`, `_v2_noemboss_partial.png`, `_v2_smoothglass.png` — the last one
   is the version to reuse), updated `test-renders/README.md` and `access-checklist.md` to match.
+
+## Real gap found: Meta Ad Library competitor research was never on the working checklist
+- **Ben asked directly whether competitor Ad Library research was already tracked — it wasn't.**
+  Checked and confirmed: it's literally **step 1 of the 6-step pitch** in
+  `PROJECT_BRIEF.md`'s "Key Messaging" section ("Pull every sea moss competitor ad running right
+  now on Instagram/Facebook") and its own dedicated Phase 3 ("Competitor Research"), but it never
+  got carried from the brief into `access-checklist.md`'s actual working to-do list — a real miss
+  on my part, not something already covered elsewhere.
+  - **Tried pulling it directly: blocked.** `facebook.com/ads/library` 403s on plain fetching —
+    same JS-wall pattern this project hit repeatedly on Instagram/Twitter/TikTok/Kick during
+    Selena's reference sourcing. Didn't push further, same standing posture as those blocks.
+  - Added a new "Competitor research (Meta Ad Library)" section to `access-checklist.md` with the
+    brief's own two paths forward: manual (Ben screenshots 10-15 winning ads himself, same
+    upload pattern as every other image-sourcing block in this project) or Apify (reusing the
+    session-only token pattern already established) if he wants it automated. Not yet started
+    either way — his call which path.

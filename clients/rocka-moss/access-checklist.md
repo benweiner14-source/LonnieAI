@@ -103,6 +103,27 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
 - [ ] Rocka Moss Instagram login/co-manager access (nice-to-have)
 - [ ] Any existing creative assets Rocka Moss already has (nice-to-have)
 
+## Competitor research (Meta Ad Library) — flagged as a real gap, 2026-09-24
+- [ ] **Pull every sea moss / Black-wellness competitor ad running right now.** This was missed —
+  it's literally **step 1 of the 6-step pitch** in `PROJECT_BRIEF.md`'s "Key Messaging" section
+  ("Pull every sea moss competitor ad running right now on Instagram/Facebook — see what's
+  working before spending a dollar") and its own dedicated Phase 3 ("Competitor Research"), but
+  never made it onto this working checklist until Ben caught the gap directly. Needs to happen
+  before writing any ad copy or building the creative reference folder the brief's Phase 2 ad
+  tool calls for.
+  - **Tried a direct pull (2026-09-24): blocked.** `facebook.com/ads/library` returns a 403 to
+    plain fetching — same JS-rendering/auth-wall pattern this project has hit repeatedly on
+    Instagram/Twitter/TikTok/Kick during Selena's reference-photo sourcing. Not pushed further
+    (same standing posture as those earlier blocks).
+  - **Two ways forward, per the brief's own two paths:**
+    1. **Manual (reliable, no new access needed):** Ben searches Meta Ad Library himself
+       ("sea moss," "black wellness," known competitor brand names), screenshots 10-15 winning
+       ads, uploads them the same way as the GTA Loading-Screen key art / Selena's refs.
+    2. **Apify, if automation is wanted:** Ben has supplied a session-only Apify token before for
+       Instagram scraping; Apify has actors built for Meta Ad Library specifically. A fresh token
+       would let this get pulled directly instead of manual screenshotting.
+  - **Not yet started either way** — Ben's call on which path.
+
 ## Creative/content — refs now exist, validate before batching
 - [x] **Source reference photos of the actual bottle/label** — done 2026-09-23. Ben shared a
   Google Drive folder ("Photography and Media") with real Rocka Moss brand photography; 5 real
