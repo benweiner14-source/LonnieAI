@@ -114,11 +114,44 @@ flavor tag — copied from the real reference instead of invented. No embossed g
 Ben for final judgment**, but this closes the two outstanding defects (posed feel, illegible/
 hallucinated label) in one pass.
 
+## v5 — schema-driven single-pass regeneration (2026-09-24)
+
+Ben asked to try Concept 1 again using `ai-ugc-json-schema.md`'s v2 schema — a real test of
+whether writing the full spec (role-tagged refs + `reference_fidelity` + `negative_prompt` +
+`canvas`) up front gets to v4-quality output in **one** generation instead of the four iterative
+rounds (v1→v4) it took to discover the same fixes piecemeal.
+
+**Built directly from the schema, not chained off v3/v4.** Used `submit_workflow` +
+`OpenAIGPTImageNodeV2` with two LoadImage nodes from the start (not as a second corrective pass):
+image_1 = `character-sheet/rm-char-01_three-quarter.png` (identity + kitchen environment, told to
+ignore its pose), image_2 = `refs/rockamoss_strawberry_jar_bench.jpg` (label only, told to ignore
+its bench background/embossing/watermark — same "this jar's glass is smooth, unlike the
+reference's embossed glass" wording that fixed the original product-shot test). The prompt text
+compiled the schema's `final_generation_instruction` + `negative_prompt` fields directly: genre-led
+propped-phone-on-counter POV, mid-motion reach (not posed), off-center wide framing, morning window
+light, plus an explicit negative list (no visible phone, no embossed glass, no illegible label, no
+studio lighting, no CGI look, no extra/fused fingers). `dry_run: true` validated first, `n: 2` for
+two seeds in one job, 1152×2048 (exact 9:16).
+
+**`concept1_v5_schema_seedA.png` / `concept1_v5_schema_seedB.png`** — both landed cleanly on the
+first attempt: accurate legible label (logo, "Wildcrafted" script, teal tagline, flavor tag,
+mineral claim, net weight, no hallucinated text, no embossed glass), no visible phone anywhere in
+frame, off-center mid-motion framing (not posed), real kitchen clutter, natural window light, no
+CGI/studio tell. Seed B added an unprompted smoothie-prep detail (banana, strawberries, blender on
+a cutting board) reinforcing the narrative. **One thing flagged for Ben's eye, not resolved
+here:** skin tone/curl pattern reads slightly different between the two seeds — normal seed
+variance, but worth checking which (if either) still reads as a close match to the locked RM-Char-01
+reference. **Sent to Ben for judgment**, not self-certified.
+
+**Real validation of the schema's value:** this is the first time this project got scene + label +
+no-phone-in-frame all correct in a single generation, on the first attempt, for this concept —
+compare to v1-v4's four-round discovery process for the same three fixes. Worth using this
+"write the full schema first, generate once" pattern as the default going forward, falling back to
+the iterative single-field-fix approach only when something in a first pass still needs isolating.
+
 ## Next step
 
-Waiting on Ben's read of v4. If this lands, it's the full technique to reuse going forward for any
-shot needing both a candid propped-phone scene AND an accurate product label: build the scene via
-a single-image edit first (get pose/setting/realism right), then do a second pass with the real
-product photo wired in via `submit_workflow`'s two-image `OpenAIGPTImageNodeV2` path to fix the
-label without disturbing the scene — not something `partner_generate`'s simpler interface can do
-in one call for this model.
+Waiting on Ben's read of v5 (and a call on which seed, if either, is the stronger identity match).
+If v5 holds up, the schema-first single-pass method above becomes the default technique for
+Concept 2 and any future shot — write the JSON spec fully, then generate once via `submit_workflow`
++ two LoadImage nodes, rather than iterating field-by-field as v1-v4 did.

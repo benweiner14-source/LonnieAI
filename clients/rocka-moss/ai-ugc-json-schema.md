@@ -225,9 +225,16 @@ already applied to the Frankie Shaw/Tay YouTube material and the ad-reverse-engi
     "seed_variants": "2-3"
   },
   "final_generation_instruction": "Recreate the confirmed v3 kitchen scene exactly — same off-center framing, same mid-motion reach toward the jar, same morning window light, same lived-in counter clutter, same face/hair/skin matching RM-Char-01's locked reference. Change only the jar's label: replace the illegible text with an accurate reproduction of the Rocka Moss Strawberry Shortcake label from the second reference image (logo, wordmark, teal tagline bar, flavor tag, mineral claim, net weight, gold lid), on a completely smooth unmarked glass jar — do not copy the second reference photo's own embossed glass wording or background. No visible phone anywhere in frame. No real place-name signage.",
-  "status": "rendered — v4 sent to Ben for final judgment, not yet locked"
+  "status": "v5 rendered — regenerated in ONE pass straight from this schema (see concept-tests/README.md v5), sent to Ben for judgment; supersedes the v1-v4 iterative discovery process as the reference technique"
 }
 ```
+
+**v5 result (2026-09-24):** generating directly from this schema — two role-tagged reference
+images + the compiled `final_generation_instruction`/`negative_prompt` text, in a single
+`submit_workflow` call — landed scene + accurate label + no-visible-phone all correct on the first
+attempt (`concept-tests/concept1_v5_schema_seedA.png` / `_seedB.png`). Confirms the schema's actual
+value: writing the full spec before generating beats discovering the same fixes one iteration at a
+time. Use this "schema first, generate once" order for Concept 2 and future shots.
 
 ## Concept 2 — "In-Car, Kind Of Random" as JSON
 
