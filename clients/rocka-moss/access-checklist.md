@@ -138,32 +138,29 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
        would let this get pulled directly instead of manual screenshotting.
   - **Not yet started either way** — Ben's call on which path.
 
-## Skills the brief names that were never installed — flagged as a real gap, 2026-09-24
-Only `coreyhaines31/marketingskills` (21 skills, see `.claude/skills/README.md`) ever got
-installed. Three other skill repos `PROJECT_BRIEF.md`'s "Skills Stack" section names by name were
-never pulled in — this had been mentioned once in passing in `CLAUDE.md`'s skill-install log but
-never turned into an actual to-do or acted on:
-- [ ] **`AgriciDaniel/claude-ads`** — the brief's biggest single gap. An 8-command suite this repo
-  has none of: `/ads dna` (brand-profile.json from rockamoss.com — "everything else reads from
-  this file," meant to run first), `/ads photoshoot` (5-style product photography — Studio,
-  Floating, Ingredient, In Use, Lifestyle; this repo's own `ai-ugc-playbook.md` recipe covers the
-  same ground independently, but not via this tool), `/ads create` / `/ads generate` (campaign
-  brief → ad image assets), `/ads meta` (50-check Meta account audit, run once Pixel/CAPI live),
-  `/ads math` (CPA/ROAS/breakeven calculator — `kpi-targets.md` has done this math by hand
-  instead), `/ads budget` (budget/bid review, relevant once past the test month), `/ads landing`
-  (landing-page quality assessment against rockamoss.com — distinct from the parked full-rebrand
-  item below; this is a narrower CRO-style check the brief says to run "before spending ad budget
-  sending traffic there").
-- [ ] **`tenfoldmarc/meta-ads-generator-skill`** — one-prompt product-URL-in, 4 finished Meta ad
-  creatives out; scrapes 30-50 real customer reviews + 5-10 competitor ads before generating
-  anything (ties directly into the competitor-research gap above).
-- [ ] **`hyperfx-ai/marketing-skills`** (`meta-ads-library`) — the automated Apify-based Ad
-  Library scraper named in the competitor-research section above; requires Hyper MCP setup at
-  app.hyperfx.ai/mcp, not configured in this session.
-- **Not installed without asking first** — cloning third-party skill repos expands this repo's
-  tool surface and license footprint (same consideration as the `coreyhaines31` install, which
-  Ben explicitly greenlit). Ben's call whether to pull in `AgriciDaniel/claude-ads` and/or
-  `tenfoldmarc/meta-ads-generator-skill` the same way.
+## Skills the brief names — 2 of 3 gaps closed 2026-09-24
+Only `coreyhaines31/marketingskills` (21 skills) had been installed as of 2026-09-23. Three other
+skill repos `PROJECT_BRIEF.md`'s "Skills Stack" section names by name were missing — Ben asked to
+install both installable ones on 2026-09-24:
+- [x] **`AgriciDaniel/claude-ads`** — installed 2026-09-24, scoped down. The live upstream repo
+  has grown into a full 12-platform "Claude Ads" operating system (way beyond what the brief
+  describes) with live campaign-mutation commands — vendored only the Meta-only,
+  non-account-mutating subset matching the brief's 8 named commands plus 3 more directly useful
+  ones (`ads-dna`, `ads-photoshoot`, `ads-create`, `ads-generate`, `ads-meta`, `ads-math`,
+  `ads-budget`, `ads-landing`, `ads-competitor`, `ads-creative`, `ads-plan`). Full
+  installed/excluded reasoning in `.claude/skills/README.md`.
+- [ ] **`tenfoldmarc/meta-ads-generator-skill`** — **not installed, blocked on licensing.**
+  Checked 2026-09-24: this repo has no LICENSE file at all (unlike the other two, both MIT) — no
+  explicit grant to redistribute its files. Its actual content wasn't vendored, consistent with
+  this project's standing no-raw-copyrighted-content discipline (same as the Frankie Shaw/Tay
+  YouTube material). One genuinely useful idea from it — the "psychology pillar map" technique
+  (synthesize competitor/review research into 4-6 named purchase-driver pillars, each backed by a
+  real customer quote, before drafting ad angles) — was captured in our own words and folded into
+  `ai-ugc-playbook.md` instead. If the actual tool is wanted, needs either Ben's own permission
+  from tenfoldmarc or building an equivalent using this project's own Comfy Cloud path.
+- [ ] **`hyperfx-ai/marketing-skills`** (`meta-ads-library`) — still not installed, requires Hyper
+  MCP setup at app.hyperfx.ai/mcp (not configured in this session) — the automated path for the
+  competitor-research gap above; the manual/Apify paths there still stand as the current options.
 
 ## Creative/content — refs now exist, validate before batching
 - [x] **Source reference photos of the actual bottle/label** — done 2026-09-23. Ben shared a

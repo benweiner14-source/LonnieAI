@@ -75,6 +75,20 @@ mind rather than picking one blind.
   `skills/iphone-selfie-style/SKILL.md` arrived at the hard way (two failed fixes before
   genre-anchoring worked) — two unrelated sources landing on the same rule is a good sign to keep
   leaning on it here.
+- **The "psychology pillar map" technique** — a structure worth using before drafting any Rocka
+  Moss ad angle, surfaced from `tenfoldmarc/meta-ads-generator-skill`'s pipeline (2026-09-24; its
+  actual files weren't vendored into this repo, no license grant to redistribute them — this is
+  the technique in our own words, not copied text). Before writing angles: synthesize competitor
+  research and real customer reviews into **4-6 named psychology pillars** — the actual emotional/
+  rational drivers behind why someone buys sea moss (e.g. "energy without the crash," "actually
+  tastes good, not medicinal," "something my grandmother would approve of"). Each pillar needs:
+  a **name**, the underlying **trigger** (the real fear/desire), a **verbatim customer quote**
+  proving it's real (never fabricated — same standing rule against invented testimonials
+  elsewhere in this repo), how **competitors** address it or miss it, and the **angle** Rocka Moss
+  should take that's different. Pick the top pillars by emotional charge × least-covered-by-
+  competitors, draft one ad concept per pillar. This slots in naturally once the Meta Ad Library
+  competitor pull (`access-checklist.md`) and real customer reviews exist — don't run it on
+  guessed psychology.
 
 ---
 

@@ -1225,3 +1225,33 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   open question, and fixed the stale creative-assets line. **Did not install the two new
   third-party skill repos without asking** — same consideration as the `coreyhaines31` install,
   which Ben explicitly greenlit; this is his call to make the same way.
+
+## Installed 2 of the 3 missing skill repos, blocked on the third for a real licensing reason
+- **Ben said "Yes, go ahead and install both."** Cloned `AgriciDaniel/claude-ads` and
+  `tenfoldmarc/meta-ads-generator-skill` to inspect before vendoring.
+- **`AgriciDaniel/claude-ads`: installed, MIT licensed, but scoped down hard.** The live upstream
+  repo has grown far beyond what the brief describes — a full 12-ad-platform "Claude Ads"
+  operating system with a Python backend, control-plane, install/uninstall scripts, and live
+  campaign-mutation commands (`/ads launch --apply`, `/ads optimize --apply`) gated behind its
+  own credential system. **Did not run the upstream `install.sh`** (would pull in all 12
+  platforms plus live-mutation tooling this project doesn't need or have credentials for) —
+  instead vendored just the individual self-contained skill files for the brief's 8 named
+  commands plus 3 more directly useful ones, matching the brief's own "Meta-only play" scope:
+  `ads-dna`, `ads-photoshoot`, `ads-create`, `ads-generate`, `ads-meta`, `ads-math`, `ads-budget`,
+  `ads-landing`, `ads-competitor`, `ads-creative`, `ads-plan`, plus a shared
+  `claude-ads-references/` folder of the Meta-specific and platform-agnostic reference docs.
+  Deliberately excluded every other-platform audit skill, the live-mutation commands, and the
+  control-plane plumbing — full reasoning in `.claude/skills/README.md`.
+- **`tenfoldmarc/meta-ads-generator-skill`: NOT installed — genuinely blocked, not a judgment
+  call.** Checked and confirmed this repo has no LICENSE file and no license mention anywhere,
+  unlike the other two (both MIT) — no explicit grant to redistribute its content. Its files
+  weren't vendored, same standing no-raw-copyrighted-content discipline this project already
+  applies to the Frankie Shaw/Tay YouTube material. Did capture one genuinely useful idea from its
+  pipeline in our own words: the **"psychology pillar map" technique** (synthesize competitor +
+  real customer-review research into 4-6 named purchase-driver pillars, each backed by a verbatim
+  quote, before drafting ad angles) — folded into `ai-ugc-playbook.md`'s Section 0, explicitly
+  noting it should run once the Meta Ad Library competitor pull and real reviews exist, not on
+  guessed psychology.
+- Updated `.claude/skills/README.md` (full install/exclude reasoning for both repos) and
+  `clients/rocka-moss/access-checklist.md` (2 of 3 skill gaps now closed, the third's blocker
+  explained).
