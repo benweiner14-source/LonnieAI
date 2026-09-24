@@ -265,6 +265,25 @@ order volume beyond what the store has ever hit organically. The honest caveat i
 the first few weeks while the algorithm has time to learn, not a concern about the budget being
 too small.
 
+### A simple, conservative script to actually say to Christian
+
+Deliberately uses the **blended** real CAC ($41.48, averaging in the old campaign that performed
+badly, not just the good one) and a conservative ~$40 order value — under-promises rather than
+cherry-picks the best historical number:
+
+> "We're planning to spend $500 to $1,000 a month on ads. Based on how this exact ad account has
+> actually performed before, that should bring in roughly **12 to 24 new customers a month**.
+> That first-order revenue basically just covers the ad spend itself — this isn't a month-one
+> profit play, it's building volume. The real payoff is after that: about a third of Rocka Moss
+> customers already come back and buy again on their own, so a chunk of those new customers should
+> reorder in the following months at no extra ad cost. It'll take a few weeks to hit its stride
+> while the algorithm learns, so don't expect it to be perfect on day one."
+
+Math behind it: $500 ÷ $41.48 ≈ 12 orders → ~$482 revenue (vs. $500 spent). $1,000 ÷ $41.48 ≈ 24
+orders → ~$964 revenue (vs. $1,000 spent) — both close to breakeven on first-order revenue alone,
+on purpose, since the real return is the repeat-purchase pipeline on top of that, not month-1
+profit.
+
 ## Sources
 Three Shopify Analytics reports pulled manually before the connector came online (Returning
 Customers, Customer Cohort Analysis, Net Sales Over Time) — aggregate figures only, individual
