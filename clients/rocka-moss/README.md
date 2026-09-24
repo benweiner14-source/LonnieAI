@@ -55,6 +55,11 @@ see `ai-ugc-playbook.md`.
   seed candidates, Ben picked seed B, plus 2 extension images (full-body mirror selfie, three-
   quarter angle) generated as edits of the locked face to add body/angle consistency. All clean
   on the brand-safety check. Ready to feed into both concepts in `ai-ugc-concepts.md`.
+- **`concept-tests/`** — Concept 1's first real still (2026-09-24), the "introduce the product"
+  beat, tested GPT Image 2.5 Sunburst vs. Nano Banana Pro side by side at Ben's request. GPT-2.5
+  won on identity/pose consistency; Nano Banana Pro rendered more label text but with a typo and
+  identity drift — confirms the project's standing engine choice empirically on this exact
+  character/product combo, not just by assumption.
 
 ## The two buckets (from the brief)
 

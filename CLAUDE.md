@@ -1608,3 +1608,38 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
   background. Saved to `character-sheet/`, updated its README to document the locked pick and the
   extension images, updated `README.md`'s Status. **RM-Char-01 now has face + full-body + a second
   angle — ready to generate both concepts.**
+
+## Generated Concept 1's first real still — GPT Image 2.5 vs. Nano Banana Pro comparison (2026-09-24)
+- **Ben asked to generate Concept 1 (product-intro beat), then also try Nano Banana Pro alongside
+  the standing GPT Image 2.5 recipe** — a legitimate ask worth honoring directly rather than
+  reasserting the standing recipe from memory; this project hadn't actually tested Nano Banana Pro
+  on this specific character/product combination before, only assumed the general "Nano Banana is
+  the CGI engine, GPT-2.5 is the photoreal engine" split still applied.
+- **First submission attempt got "Denied by user" at the permission layer** — a different failure
+  mode than the tool's own internal spend-gate (which had bounced cleanly with a confirmation
+  prompt earlier in the session). Didn't blindly retry the identical call per the standing
+  guidance on tool denials — asked Ben directly what happened. He asked what settings the call
+  used instead of confirming/denying further, so gave a full plain-language breakdown of the
+  exact engine/params/images/prompt before re-submitting on his "yeah go ahead."
+  - **Two genuine technical fixes needed before it would even queue, both hit before any spend:**
+    (1) GPT Image 2.5's edit path only accepts roles `image`/`mask` via `partner_generate` —
+    a second `reference_image` role isn't supported at all for this model, contradicting my
+    initial assumption; (2) Nano Banana Pro's multi-image path needs public `value` URLs, not
+    Comfy-uploaded `name` files — passing an uploaded file as a second image forced it down a
+    single-image-only persist route. **Fixed by dropping the second reference image entirely for
+    both engines** and describing the real product label in precise text instead (matching this
+    project's own already-proven single-reference-image product-photo recipe) — both calls then
+    queued and completed cleanly with zero wasted spend from the earlier failed attempts.
+- **Real, useful comparison result, not just confirmation:** GPT Image 2.5 held her identity, pose,
+  and the bedroom setting almost exactly against the locked reference, but rendered most of the
+  jar's small label text blank/illegible (the known GPT-Image-family small-text limit flagged on
+  the very first product-shot test). Nano Banana Pro rendered more of the label text — the "ROCKA
+  MOSS" logo is actually legible here — but with a real spelling error ("Wildcrafted" →
+  "Wilderafted") and visible identity/pose drift (she's looking down at the jar instead of at
+  camera, slightly different room framing). **Recommended GPT Image 2.5 as the stronger pick**
+  (consistent identity across a shot series matters more than sharp side-label text, and a blank-
+  but-plausible label reads more like a real phone photo than a typo does) — this empirically
+  confirms the project's standing engine choice on this exact character/product pairing, not just
+  by carrying the assumption forward from Selena's pack.
+- **Saved both to `clients/rocka-moss/concept-tests/`** with a README documenting the technique,
+  both results, and the read/recommendation. Updated `README.md`'s Status section.
