@@ -69,6 +69,46 @@ against actual scale**, not the brief's $10K figure. See "Realistic Month 1 volu
   monthly cohort sizes — roughly 10–20% in most months, with a couple of high outliers (45%, 60%)
   on cohorts too small (n=11, n=5) to trust as a trend.
 
+## ⚠️ Correction (2026-09-24): Rocka Moss has ALREADY run paid Meta ads — "zero paid marketing" was wrong
+
+`PROJECT_BRIEF.md` and every doc in this repo up to now (including this one's own CTR section
+below) assumed Rocka Moss has never run paid ads. **That's false.** Ben pulled a real Meta Ads
+Manager campaign export (`RockaMossBTL` ad account, ID `721440597562823`, owned directly by the
+Rocka Moss business) covering Aug 2025–present. 4 campaigns exist, **all currently inactive**:
+
+| Campaign | Result | Result type | Cost/result | Spent | Impressions | Reach |
+|---|---|---|---|---|---|---|
+| Test2 | — | (no results) | — | $4.23 | 456 | 391 |
+| TestOFF | 97 | custom conversion (event ID `24231000873195869`, not yet identified — likely a soft top-funnel event given the low cost) | $0.46 | $44.45 | 5,018 | 4,493 |
+| Official-Campaign-2 | 1 | `fb_pixel_purchase` (real purchase) | $129.31 | $129.31 | 5,443 | 4,039 |
+| Rocka-Campaign-2026 | 9 | `fb_pixel_purchase` (real purchase) | $31.72 | $285.49 | 15,907 | 6,229 |
+
+**Totals: $463.48 spent, 26,824 impressions, 15,152 reach, 10 real purchases attributed via the
+pixel.** Blended CAC across the two purchase-attributed campaigns: **$41.48/purchase** — above
+the $23–28 breakeven ceiling below, but the two campaigns performed very differently
+(Official-Campaign-2 at $129.31/purchase vs. Rocka-Campaign-2026 at $31.72/purchase, a 4x gap on
+a small sample — worth understanding why before writing off either approach).
+
+**What this actually confirms, positively:** the Facebook Pixel (`682325200982123`, found via
+page-source scraping 2026-09-23) has real, working end-to-end purchase attribution — these aren't
+hypothetical events, Meta credited 10 real conversions to it. That's a stronger pixel-health
+signal than anything a Business Suite settings screen alone would show.
+
+**Open questions for Ben/Christian, not guessed at:**
+- Why did all 4 campaigns go inactive — ran out of a manual budget, deliberately paused, or
+  something else? (The CSV's "Reporting starts" 2025-08-19 is the report's query window, not
+  necessarily when campaigns actually launched — the real delivery dates need checking in Ads
+  Manager directly.)
+- What is the custom conversion event behind TestOFF's 97 results (Events Manager → Custom
+  Conversions, event ID `24231000873195869`)? At $0.46/result it's almost certainly a cheap
+  top-funnel event (ViewContent/AddToCart/Lead), not a purchase — useful context, not a comparable
+  CAC.
+- What was different between Official-Campaign-2 and Rocka-Campaign-2026 (creative, targeting,
+  objective)? The 4x CPA gap is a real signal worth understanding before any new campaign design.
+
+**This account is NOT a cold-start account** — correcting the framing for any future `ads-meta`
+skill audit, which explicitly treats real delivery/spend history differently from a fresh account.
+
 ## Revised CAC / ROAS targets
 
 **Using the real repeat-customer AOV ($46.96) instead of the brief's flat $34.99 bottle price** —
@@ -145,12 +185,16 @@ going forward should account for these** — a "no discount" full-price framing 
 what's already live; worth deciding with Christian whether to formalize/replace the informal
 codes once a real influencer program starts, or keep them running alongside it.
 
-## CTR — still not grounded, unchanged
-No Rocka Moss *ad* history exists (separate from the store data above, which is organic/existing
-traffic, not paid). General Meta/DTC-wellness UGC benchmark: roughly **1–2%+** is healthy for a
-resonant hook; **under ~0.8%** after real spend usually points at the hook/creative, not the
-targeting — see `docs/frankie-shaw-ai-ugc-method.md`'s hook/format material. CTR doesn't
-determine profitability on its own — CAC and ROAS do.
+## CTR — real ad history exists now (see correction above), CTR itself still not pulled
+The "no Rocka Moss ad history exists" line here was wrong — 4 real campaigns ran, see the
+correction section above. **CTR specifically wasn't in the campaign CSV Ben pulled** (that export
+covered results/cost/spend/impressions/reach, not clicks/CTR) — worth pulling a CTR-inclusive
+report from Ads Manager if it's useful context for judging whether past creative's hooks worked,
+separate from the CAC/purchase data already in hand. Until then, general Meta/DTC-wellness UGC
+benchmark still applies as a fallback: roughly **1–2%+** is healthy for a resonant hook; **under
+~0.8%** after real spend usually points at the hook/creative, not the targeting — see
+`docs/frankie-shaw-ai-ugc-method.md`'s hook/format material. CTR doesn't determine profitability
+on its own — CAC and ROAS do.
 
 ## How to track this once ads are live
 `docs/tay-ai-ugc-dropship-method.md`'s AI-assisted daily reporting pattern (Claude connected to
@@ -165,12 +209,12 @@ actual CAC/ROAS against these targets without manual dashboard-reading.
   open lever worth flagging to Christian on its own.
 - ~~Confirm cost-per-item/COGS~~ — done 2026-09-23: confirmed **no COGS entered in Shopify at
   all**, margin stays the brief's 50-60% estimate until Christian supplies real numbers directly.
-- **Meta Pixel/CAPI install status — partially confirmed 2026-09-23 without Business Suite
-  access**, via the live page's own pixel-manager config: a Facebook Pixel **is** already
-  installed (ID `682325200982123`, via Shopify's Facebook & Instagram sales channel), client-side
-  events confirmed firing. Server-side Conversions API status still needs Business Suite or the
-  Shopify app's own settings to confirm. Worth searching for this exact pixel ID once Business
-  Suite access exists rather than starting fresh.
+- **Meta Pixel/CAPI install status — mostly resolved 2026-09-24.** Meta Business Suite access
+  confirmed; ad account `RockaMossBTL` (ID `721440597562823`) exists, owned by Rocka Moss, with a
+  payment method attached (MasterCard, $0 balance owed, $106.83/day Meta-set spending limit — not
+  blocked on billing) and real historical spend against pixel `682325200982123`, confirming its
+  purchase-attribution chain genuinely works end-to-end. Server-side CAPI status specifically
+  still needs a direct Events Manager check — not yet confirmed either way.
 - The $14K-vs-actual discrepancy is no longer blocking work (see "Decision" above) but is still
   worth asking Christian about eventually, since it may point at a real revenue channel this
   data doesn't see.

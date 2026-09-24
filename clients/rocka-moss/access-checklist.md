@@ -98,29 +98,37 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
   Ben's own login access, same pattern as Shopify admin before the Shopify MCP came online. This
   session can't pull Business Suite data directly; the items below are what to check/report back,
   not things this session ran itself.
-- [ ] **Does Rocka Moss have a Meta Business Manager at all, and does it own the Page/Ad
-  Account/Pixel already, or does Ben's own account?** The brief's own "first check" — confirm
-  this before anything else, since it determines who has admin control if the relationship ever
-  ends. Business Suite → Business Settings → Accounts.
-- [ ] **Identify both pixels found via page-source scraping (2026-09-23)** — go to Business
-  Settings → Data Sources → Pixels/Datasets: confirm `682325200982123` (the one already firing
-  via Shopify's Facebook & Instagram sales channel app) shows real historical event data, and
-  identify the second, unidentified one (`D65JE4JC77U8VIJAA8H0`, app client ID `4383523`) —
-  common guesses are TikTok/Pinterest/Google but not confirmed, check under Events Manager or ask
-  Christian directly if Business Suite doesn't surface it.
+- [x] **Does Rocka Moss have a Meta Business Manager, and does it own the Page/Ad Account/Pixel?**
+  **Confirmed 2026-09-24 — yes, cleanly.** Facebook Page (ID `674650849075325`) is owned directly
+  by the "Rocka Moss" business portfolio, not a personal account. 4 people have access; Ben has
+  full access, and a second person with full access — **"Darius Boyd"** — may be the "other Rocka
+  Moss co-founder" flagged as an open question in the brief's Open Questions section (see below,
+  not yet confirmed which).
+- [x] **Does a Meta Ad Account already exist?** **Confirmed 2026-09-24 — yes: `RockaMossBTL`**
+  (ID `721440597562823`), owned directly by Rocka Moss. **Real prior campaign history exists —
+  this account is NOT cold-start.** 4 campaigns (all now inactive) ran ~$463.48 total spend with
+  10 real purchases attributed via the pixel — full breakdown and open questions (why campaigns
+  stopped, what the custom-conversion event was, why CPA varied 4x between the two purchase
+  campaigns) in `kpi-targets.md`'s new correction section. **Billing confirmed healthy**: MasterCard
+  on file, $0 balance owed, Meta-set daily spending limit $106.83 — not blocked on payment setup.
+- [ ] **Identify both pixels found via page-source scraping (2026-09-23)** — the historical
+  campaign data confirms pixel `682325200982123` has real, working purchase attribution (10 real
+  conversions credited) — its health is no longer in question. Still open: identify the second,
+  unidentified pixel (`D65JE4JC77U8VIJAA8H0`, app client ID `4383523`) via Business Settings →
+  Data Sources, and confirm which pixel(s) fed the historical campaigns above.
 - [ ] **Server-side Conversions API status on the primary pixel** — Events Manager → the pixel →
   "Overview"/"Diagnostics" tab, check whether a server-side connection exists alongside the
-  browser pixel (client-side-only was confirmed via page source; CAPI status could not be).
+  browser pixel (client-side-only was confirmed via page source; the historical campaigns prove
+  purchase attribution works via the browser pixel at minimum, but CAPI specifically still unknown).
 - [ ] **Domain verification status** — Business Settings → Brand Safety → Domains — confirms
   rockamoss.com is verified, needed for iOS14.5+ event prioritization once campaigns run.
-- [ ] **Does a Meta Ad Account already exist, active or dormant?** Business Settings → Accounts →
-  Ad Accounts. If yes: check for any prior spend/campaign history (changes whether this is a
-  cold-start account for measurement purposes) and pull the account ID/currency/timezone. If no:
-  this is the actual creation step blocking campaign launch (brief Phase 4/5).
 - [ ] **Rocka Moss Instagram — is it connected to this Business Manager, and does Ben have
   co-manager access?** Business Settings → Accounts → Instagram Accounts. Needed for organic
   posting, ad placements running "as" the IG account, and confirming the account itself (handle,
   follower count) since none of that has been pulled yet.
+- [ ] **Who is "Darius Boyd"?** Found 2026-09-24 with full access to the Rocka Moss Facebook Page
+  — may directly answer the brief's still-open "who is the other Rocka Moss co-founder" question
+  (see the dedicated section below). Not yet confirmed either way.
 - [ ] **Confirm the `IG-EMAIL-1R9EMRC9` discount code's source** — the Shopify-side discount pull
   (2026-09-23) found this code implies *some* automated email/IG flow already exists; Business
   Suite's Instagram/Messenger automation settings (or Shopify Admin → Settings → Apps, still
@@ -149,6 +157,10 @@ All of the above is in `kpi-targets.md` and `seo-audit.md` with full detail.
   wording, and the `/ads math` skill's PPC reporting is explicitly meant to support "the
   conversation with the Rocka Moss co-founders" (plural) about what the ad spend is generating.
   Not something this repo can resolve — Ben's to confirm directly with Christian.
+  - **Possible lead, not yet confirmed:** the Meta Business Suite Page-access check (2026-09-24)
+    found a "Darius Boyd" with full access to the Rocka Moss Facebook Page alongside Ben — worth
+    checking whether this is the co-founder the brief refers to, rather than treating this as
+    fully separate/unresolved.
 
 ## Competitor research (Meta Ad Library) — done 2026-09-24, widened same day
 - [x] **Pull every sea moss / Black-wellness competitor ad running right now.** Closes step 1 of

@@ -1368,3 +1368,45 @@ Owner: Ben (benweiner14@gmail.com). Repo: `benweiner14-source/lonnieai`, working
 - Updated `access-checklist.md` (new section replacing the old "still open" Business Suite items,
   the Shopify-side Pixel/CAPI item trimmed to point at it instead of duplicating) and `README.md`'s
   Status line.
+
+## Walked Ben through Business Suite screen-by-screen — found real ad history, corrected a wrong assumption (2026-09-24)
+- **Ben pushed back on the first, too-abstract checklist** ("Not sure what you're asking") —
+  rewrote it as 5 concrete numbered steps with exact menu paths, no jargon-first framing. Lesson
+  for this project: give step-by-step UI navigation with a specific question per screen, same
+  pattern that worked for the earlier H1 Shopify-theme walkthrough, not a menu of technical
+  concepts to self-serve from.
+- **Screen 1 (Business Settings → Accounts → Pages):** Rocka Moss's Facebook Page (ID
+  `674650849075325`) is owned directly by the "Rocka Moss" business portfolio, not a personal
+  account — the good outcome for the brief's own "who actually controls this" first-check
+  question. 4 people have access; besides Ben, **"Darius Boyd"** has full access — flagged as a
+  possible answer to the brief's still-open "who is the other co-founder" question, not confirmed.
+- **Screen 2 (Ad Accounts) + a real campaign-history CSV Ben pulled from Ads Manager — the major
+  finding: Rocka Moss has ALREADY run paid Meta ads.** This directly contradicts the "zero paid
+  marketing" assumption baked into `PROJECT_BRIEF.md` and this repo's own `kpi-targets.md` up to
+  now. Ad account `RockaMossBTL` (ID `721440597562823`), owned by Rocka Moss. 4 campaigns, all
+  now inactive, Aug 2025–present:
+  - Test2: no results, $4.23 spent.
+  - TestOFF: 97 results via a custom conversion event (ID `24231000873195869`, not yet
+    identified — at $0.46/result almost certainly a cheap top-funnel event, not a purchase),
+    $44.45 spent.
+  - Official-Campaign-2: 1 real purchase (`fb_pixel_purchase`) at $129.31 CPA, $129.31 spent.
+  - Rocka-Campaign-2026: 9 real purchases at $31.72 CPA, $285.49 spent.
+  - **Totals: $463.48 spent, 26,824 impressions, 15,152 reach, 10 real purchases.** Blended CAC
+    across the two purchase campaigns: $41.48 — above the $23-28 breakeven ceiling already in
+    `kpi-targets.md`, though the two campaigns performed very differently (a real 4x CPA gap worth
+    understanding, not yet explained).
+  - **Positive side-effect finding:** this proves pixel `682325200982123`'s purchase-attribution
+    chain genuinely works end-to-end (10 real conversions credited), a stronger health signal than
+    anything a settings screen alone would show — corrected the standing framing that this
+    account is a cold-start account for any future Meta-ads audit.
+  - Real open questions for Ben/Christian, flagged rather than guessed at: why all 4 campaigns
+    went inactive, what TestOFF's custom conversion event actually is, and what was different
+    between the two purchase campaigns that produced such a different CPA.
+- **Screen 3 (Ad account → Billing & payments):** confirmed healthy — MasterCard on file, $0
+  balance owed, Meta-set daily spending limit $106.83. Not blocked on payment setup.
+- **Corrected the record rather than just appending:** rewrote `kpi-targets.md`'s CTR section
+  (previously flatly said "no Rocka Moss ad history exists," now false) and its Next Steps Pixel
+  line, added a full "⚠️ Correction" section with the campaign table and open questions, and
+  updated `access-checklist.md`'s Business Manager/Ad Account items from open to confirmed-done
+  with the real findings, plus a cross-reference to the co-founder open-question section for the
+  Darius Boyd lead.
