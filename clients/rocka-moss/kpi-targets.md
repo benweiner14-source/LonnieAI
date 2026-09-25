@@ -284,6 +284,18 @@ orders → ~$964 revenue (vs. $1,000 spent) — both close to breakeven on first
 on purpose, since the real return is the repeat-purchase pipeline on top of that, not month-1
 profit.
 
+## Creative launch-batch size, derived from the numbers above (2026-09-25)
+
+Ben asked whether 2-3 video ads + 3-4 product/lifestyle stills (5-7 total creatives) was too many
+to spread the $500-1,000/month budget behind. The weekly-conversion table above already answers
+this: at $500-1,000/month and the real blended CAC ($41.48), that's **12-24 conversions/month —
+only 3-7/week, total, across the whole budget.** Meta's own learning-phase guidance wants ~50
+conversions/week on a single ad set; this account sits well below that already, before splitting
+the thin signal across 6-7 creatives. **Decision: launch 3-4 creatives live at once (2 video + 2
+stills) in one CBO ad set, hold the rest in reserve as round 2** — cheap to hold since AI
+generation isn't a real-shoot cost, swapped in once round 1 has enough data to retire a weak
+performer. See `ai-ugc-playbook.md`'s "Launch-batch size" section for the full reasoning.
+
 ## Sources
 Three Shopify Analytics reports pulled manually before the connector came online (Returning
 Customers, Customer Cohort Analysis, Net Sales Over Time) — aggregate figures only, individual

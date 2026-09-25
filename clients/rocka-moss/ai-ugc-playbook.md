@@ -292,12 +292,34 @@ gym — without naming the city in the prompt text itself).
 2. ~~Draft 2-3 concrete concepts~~ — **done 2026-09-24, see `ai-ugc-concepts.md`.** 2 concepts
    built (Morning Ritual / mirror selfie, In-Car Confessional), grounded in `target-demo.md`'s
    findings and Ben's confirmed casting direction.
-3. Source 2-3 clean reference photos of the actual current Rocka Moss bottle/label.
-4. Generate and lock a synthetic AI UGC character sheet via GPT Image 2.5 (regenerate 2-3 times,
-   same approach as `clients/ai-ugc-agency/session-reference.md`'s character-reference step),
-   grounded in the target-demo profile from step 1 — no real person's face reference needed.
-5. Validate one Studio product shot and one AI-UGC-character testimonial still before batching
-   either direction — same discipline as every prompt pack in this repo.
+3. ~~Source 2-3 clean reference photos of the actual current Rocka Moss bottle/label~~ — done, see
+   `refs/README.md`.
+4. ~~Generate and lock a synthetic AI UGC character sheet~~ — done 2026-09-24, see
+   `character-sheet/README.md` (RM-Char-01, seed B locked, plus full-body and three-quarter
+   extension images).
+5. ~~Validate one Studio product shot and one AI-UGC-character testimonial still~~ — Studio shot
+   confirmed (`test-renders/`); Concept 1 in progress through `concept-tests/README.md` v1-v5,
+   pending Ben's final pick between v4 and v5.
 6. Confirm ElevenLabs voice is ready before attempting a lip-synced Seedance clip — that step is
    blocked on having the actual audio file, same gating issue this repo already hit on Kazumi's
    lip-sync test (`CLAUDE.md`).
+
+## Launch-batch size — real budget math, not a round number (2026-09-25)
+
+Ben asked whether 2-3 video assets + 3-4 product/lifestyle stills (5-7 total) was too many to
+spread the paid-spend budget behind. Checked against `kpi-targets.md`'s real numbers: at the
+confirmed $500-1,000/month budget and this account's real blended CAC (~$41.48), that's only
+**12-24 conversions a month — 3-7 a week, total, across everything.** Meta's own guidance wants
+closer to 50 conversions/week on a single ad set just to exit the learning phase cleanly; this
+account is already well below that on the *whole* budget before splitting it further. Spreading
+3-7 weekly conversions across 6-7 creatives leaves most of them with close to zero signal — not
+enough for CBO to identify a winner, and not enough to read results with any confidence.
+
+**Decision: launch fewer live at once.** First live round is **3-4 total creatives in one CBO ad
+set — 2 video ads + 2 stills** — not the full 5-7 planned. CBO auto-shifts budget toward whichever
+creative wins, so this isn't manual even-splitting; it just needs each of the 3-4 to get enough
+impressions to be legible. The remaining 1-2 stills (and a possible 3rd video concept) are **held
+in reserve, not wasted work** — since AI generation is cheap relative to a real shoot, they become
+round 2: swapped in once the first round has a couple weeks of data and the weakest performer gets
+retired. Matches the Tay-method structure already cited above ("iterate within the same ad set via
+quick-duplicate," not launch-everything-at-once).
