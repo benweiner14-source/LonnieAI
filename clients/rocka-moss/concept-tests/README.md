@@ -149,9 +149,52 @@ compare to v1-v4's four-round discovery process for the same three fixes. Worth 
 "write the full schema first, generate once" pattern as the default going forward, falling back to
 the iterative single-field-fix approach only when something in a first pass still needs isolating.
 
-## Next step
+## Next step (superseded by Concept 2's first pass below)
 
 Waiting on Ben's read of v5 (and a call on which seed, if either, is the stronger identity match).
 If v5 holds up, the schema-first single-pass method above becomes the default technique for
 Concept 2 and any future shot — write the JSON spec fully, then generate once via `submit_workflow`
 + two LoadImage nodes, rather than iterating field-by-field as v1-v4 did.
+
+---
+
+# Concept 2 ("In-Car, Kind Of Random") — in-car confessional (2026-09-25)
+
+First generation of Concept 2, using the same schema-first single-pass method that worked for
+Concept 1 v5 — role-tagged identity ref + product ref, `submit_workflow` + `OpenAIGPTImageNodeV2`,
+compiled `final_generation_instruction` + `negative_prompt`, `dry_run: true` validated first,
+`n: 2`. image_1 = `character-sheet/rm-char-01_three-quarter.png` (identity only, told to ignore its
+kitchen background/pose since this is a different scene), image_2 =
+`refs/rockamoss_strawberry_jar_bench.jpg` (label only, same embossing/bench-background exclusion as
+every other product-ref use in this project).
+
+## v1 — real result, two real deviations flagged
+
+**`concept2_v1_schema_seedA.png` / `concept2_v1_schema_seedB.png`** — strong on identity (arguably
+tighter match to RM-Char-01 than Concept 1 v5's seed B), label accuracy (logo, "Wildcrafted"
+script, flavor tag, mineral claim, net weight, no hallucinated text, no embossed glass), no visible
+phone anywhere in frame, natural daylight, genuine mid-sentence "talking to a friend" energy — not
+posed, not looking composed for camera. No real signage, no CGI tell.
+
+**Two real deviations from the written concept, not self-certified as fine:**
+1. **Product presentation.** The concept's beat says "holds up the jar, maybe takes a spoonful
+   mid-sentence — not a clean product-reveal shot," but both seeds show her holding the jar
+   directly toward camera, label fully faced-out — closer to a product-reveal shot than the loose,
+   incidental handling the concept called for.
+2. **Framing tighter than scripted.** The prompt's `camera_device` field said "propped on the
+   dashboard," matching Concept 1's further-back propped-phone logic — but both outputs read as a
+   close held-out selfie distance, not a dashboard-propped wide shot. The model didn't honor that
+   part of the instruction as literally as Concept 1's kitchen-counter version did.
+
+**Sent to Ben for judgment, deviations flagged directly** rather than presented as a clean win —
+same discipline as flagging Concept 1 v5's seed-variance issue. If either deviation needs fixing,
+the likely lever (per this project's own standing lesson) is a more concrete physical instruction
+for what "held loosely" looks like — e.g. "resting in her lap, not raised toward the lens" — rather
+than a bare negation of "not presented," which this project has repeatedly found doesn't reliably
+steer composition on its own.
+
+## Next step
+
+Waiting on Ben's read of Concept 2 v1. Once both concepts have a confirmed still, the launch-batch
+plan (`ai-ugc-playbook.md`) calls for 2 video ads live in round 1 — these two concepts are meant to
+be exactly that pair, animated via Seedance/Genjutsu once their stills are locked.
